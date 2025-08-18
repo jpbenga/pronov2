@@ -98,7 +98,8 @@
                 API_DATA.stats = data.backtestData.stats;
                 document.getElementById('loader').style.display = 'none';
                 
-                renderPerformanceStats(API_DATA.stats);
+                renderPerformanceStats(data.globalMarketStats);
+                
                 await processBacktestResults();
                 selectDate(selectedDate);
             } catch (error) {
@@ -110,12 +111,12 @@
         function renderPerformanceStats(stats) {
             const container = document.getElementById('performance-stats-container');
             let tableHtml = `<h3 class="section-title">Analyse de Performance des Marchés (7 derniers jours)</h3>
-                             <table class="stats-table">
-                                <thead><tr><th>Marché</th><th>Total</th><th>Succès</th><th>Taux</th><th>Statut (>67%)</th></tr></thead>
-                                <tbody>`;
+                                <table class="stats-table">
+                                    <thead><tr><th>Marché</th><th>Total</th><th>Succès</th><th>Taux</th><th>Statut (>67%)</th></tr></thead>
+                                    <tbody>`;
             const sortedStats = Object.entries(stats).sort((a, b) => b[1].total - a[1].total);
             for (const [betType, data] of sortedStats) {
-                const rate = data.rate || (data.success / data.total) * 100;
+                const rate = data.rate;
                 const status = rate >= 67 ? '<span class="status-accepted">Accepté</span>' : '<span class="status-refused">Refusé</span>';
                 tableHtml += `<tr><td>${betType}</td><td>${data.total}</td><td>${data.success}</td><td>${rate.toFixed(2)}%</td><td>${status}</td></tr>`;
             }
