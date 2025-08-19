@@ -7,22 +7,34 @@ const strategyModules = fs.readdirSync(strategiesPath)
     .filter(file => file.endsWith('.js'))
     .map(file => {
         const strategy = require(path.join(strategiesPath, file));
-        strategy.strategyName = path.basename(file, '.js'); 
+        if (strategy.marketType) {
+            strategy.strategyName = strategy.marketType;
+        } else if (strategy.marketFamily) {
+            strategy.strategyName = strategy.marketFamily.join(', ');
+        } else {
+            strategy.strategyName = path.basename(file, '.js');
+        }
         return strategy;
     });
 
 async function getMatchDetails(fixture, isBacktest) {
-    const { league, teams, fixture: { id: fixtureId } } = fixture;
-    const season = new Date(fixture.fixture.date).getFullYear();
+    const { league, teams, fixture: { id: fixtureId, date } } = fixture;
+    const currentSeason = new Date(date).getFullYear();
     const leagueId = league.id;
 
-    const oddsPromise = !isBacktest ? apiClient.request('football', '/odds', { fixture: fixtureId }) : Promise.resolve(null);
+    let homeStatsData = await apiClient.request('football', '/teams/statistics', { team: teams.home.id, league: leagueId, season: currentSeason });
+    let awayStatsData = await apiClient.request('football', '/teams/statistics', { team: teams.away.id, league: leagueId, season: currentSeason });
 
-    const [homeStatsData, awayStatsData, oddsResponse] = await Promise.all([
-        apiClient.request('football', '/teams/statistics', { team: teams.home.id, league: leagueId, season }),
-        apiClient.request('football', '/teams/statistics', { team: teams.away.id, league: leagueId, season }),
-        oddsPromise
-    ]);
+    const isEarlySeason = (homeStatsData?.data?.response?.fixtures?.played?.total ?? 0) < 5;
+
+    if (isEarlySeason) {
+        const prevSeason = currentSeason - 1;
+        homeStatsData = await apiClient.request('football', '/teams/statistics', { team: teams.home.id, league: leagueId, season: prevSeason });
+        awayStatsData = await apiClient.request('football', '/teams/statistics', { team: teams.away.id, league: leagueId, season: prevSeason });
+    }
+
+    const oddsPromise = !isBacktest ? apiClient.request('football', '/odds', { fixture: fixtureId }) : Promise.resolve(null);
+    const oddsResponse = await oddsPromise;
 
     return {
         stats: { homeStats: homeStatsData?.data?.response, awayStats: awayStatsData?.data?.response },
@@ -30,16 +42,15 @@ async function getMatchDetails(fixture, isBacktest) {
     };
 }
 
-function getOddsForMarket(oddsData, market, bookmakerPriority) {
-    if (!oddsData) return null;
-    for (const bookmaker of bookmakerPriority) {
-        const bookmakerData = oddsData.bookmakers.find(b => b.id === bookmaker.id);
-        if (bookmakerData) {
-            const bet = bookmakerData.bets.find(b => b.id === market.id);
-            if (bet) {
-                const value = bet.values.find(v => v.value === market.value);
-                if (value) return { odd: parseFloat(value.odd), bookmakerName: bookmaker.name };
-            }
+function getUnibetOddsForMarket(oddsData, market, bookmakerConfig) {
+    if (!oddsData || !bookmakerConfig || bookmakerConfig.length === 0) return null;
+    const unibetId = bookmakerConfig[0].id;
+    const unibetData = oddsData.bookmakers.find(b => b.id === unibetId);
+    if (unibetData) {
+        const bet = unibetData.bets.find(b => b.id === market.id);
+        if (bet) {
+            const value = bet.values.find(v => v.value === market.value);
+            if (value) return { odd: parseFloat(value.odd), bookmakerName: 'Unibet' };
         }
     }
     return null;
@@ -55,11 +66,9 @@ async function generatePredictions(allFixtures, settings, leagues, marketWhiteli
 
         const homeStandings = fixture.homeStandings;
         const awayStandings = fixture.awayStandings;
-        
         if (!homeStandings || !awayStandings) continue;
 
         const details = await getMatchDetails(fixture, isBacktest);
-
         if (!details || !details.stats.homeStats || !details.stats.awayStats) continue;
         
         const isFavoriteHome = homeStandings.rank < awayStandings.rank;
@@ -76,6 +85,14 @@ async function generatePredictions(allFixtures, settings, leagues, marketWhiteli
         };
 
         for (const strategy of strategyModules) {
+            const isStrategyAllowed = !marketWhitelist || 
+                                      (strategy.marketType && marketWhitelist.has(strategy.marketType)) ||
+                                      (strategy.marketFamily && strategy.marketFamily.some(mf => marketWhitelist.has(mf)));
+
+            if (!isStrategyAllowed) {
+                continue;
+            }
+            
             const result = strategy.execute(matchData);
             if (result) {
                 const picksToAdd = Array.isArray(result) ? result : [result];
@@ -84,14 +101,20 @@ async function generatePredictions(allFixtures, settings, leagues, marketWhiteli
                     date: fixture.fixture.date, 
                     home_team: fixture.teams.home.name, 
                     away_team: fixture.teams.away.name, 
-                    goals: fixture.goals 
+                    home_logo: fixture.teams.home.logo,
+                    away_logo: fixture.teams.away.logo,
+                    goals: fixture.goals,
+                    leagueName: fixture.league.name
                 };
                 
                 picksToAdd.forEach(pick => {
+                    if (marketWhitelist && !marketWhitelist.has(pick.betType)) {
+                        return;
+                    }
                     if (isBacktest) {
                         allPicks.push({ match: simplifiedMatch, ...pick, isFavoriteHome, odds: null, bookmakerName: 'N/A' });
                     } else {
-                        const oddsResult = getOddsForMarket(details.oddsData, pick.market, settings.bookmakerPriority);
+                        const oddsResult = getUnibetOddsForMarket(details.oddsData, pick.market, settings.bookmakerPriority);
                         if (oddsResult) {
                             allPicks.push({ match: simplifiedMatch, ...pick, isFavoriteHome, odds: oddsResult.odd, bookmakerName: oddsResult.bookmakerName });
                         }
@@ -101,11 +124,12 @@ async function generatePredictions(allFixtures, settings, leagues, marketWhiteli
         }
     }
 
-    if (marketWhitelist) {
-        return allPicks.filter(p => marketWhitelist.has(p.betType.startsWith("Double Chance") ? "Double Chance Favori" : p.betType));
-    }
+    const { confidenceThreshold } = settings.analysisParams;
+    const confidentPicks = allPicks.filter(p => p.score >= confidenceThreshold);
+
+    console.log(`INFO: [Analyzer] ${allPicks.length} pronostics bruts générés, ${confidentPicks.length} retenus après filtre de confiance (${confidenceThreshold}%).`);
     
-    return allPicks;
+    return confidentPicks;
 }
 
 module.exports = { generatePredictions };

@@ -1,25 +1,28 @@
-// strategies/football/ticket_strategies/jackpot.js
 const { shuffleArray } = require('../../../utils.js');
 
 function build(eligiblePicks, params) {
-    const { maxTickets, minTotalOdd = 30 } = params;
+    const { maxTickets = 2, minSize = 10, maxSize = 15 } = params;
     const tickets = [];
-    
-    const candidates = [...eligiblePicks].sort((a, b) => (b.odds || 0) - (a.odds || 0));
-    
-    let attemptSize = 5;
-    while (tickets.length < maxTickets && attemptSize <= 10) {
-        if (candidates.length < attemptSize) break;
-        const shuffled = shuffleArray([...candidates]);
-        const newTicket = { picks: shuffled.slice(0, attemptSize) };
-        const totalOdds = newTicket.picks.reduce((acc, p) => acc * p.odds, 1);
 
-        // --- CORRECTION : On ne garde que les tickets avec une cote suffisante ---
-        if (totalOdds >= minTotalOdd) {
-             tickets.push(newTicket);
-        }
-        attemptSize++;
+    if (eligiblePicks.length < minSize) {
+        return [];
     }
+    
+    const candidates = [...eligiblePicks].sort((a, b) => b.score - a.score);
+
+    for (let i = 0; i < maxTickets; i++) {
+        const startIndex = i * maxSize;
+        const ticketSize = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
+
+        if (candidates.length >= startIndex + ticketSize) {
+            const ticketPicks = candidates.slice(startIndex, startIndex + ticketSize);
+            tickets.push({ picks: shuffleArray(ticketPicks) });
+        } else {
+            break;
+        }
+    }
+
     return tickets;
 }
+
 module.exports = { build };

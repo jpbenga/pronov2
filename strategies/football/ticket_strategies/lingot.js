@@ -1,26 +1,32 @@
-// strategies/football/ticket_strategies/lingot.js
 function build(eligiblePicks, params) {
-    const { maxMatches, singleMatchMinOdd, singleMatchMaxOdd, maxTickets, maxTotalOdd = 2.3 } = params;
+    const { maxTickets = 10 } = params;
     const tickets = [];
 
-    const singlePicks = eligiblePicks.filter(p => p.odds >= singleMatchMinOdd && p.odds <= singleMatchMaxOdd);
-    singlePicks.forEach(pick => tickets.push({ picks: [pick] }));
+    const candidates = [...eligiblePicks].sort((a, b) => b.score - a.score);
 
-    const comboPicks = eligiblePicks.filter(p => p.odds >= params.minOddPerPick);
-    if (comboPicks.length >= maxMatches) {
-        for (let i = 0; i < comboPicks.length; i++) {
-            for (let j = i + 1; j < comboPicks.length; j++) {
-                const combo = [comboPicks[i], comboPicks[j]];
-                const totalOdds = combo.reduce((acc, p) => acc * p.odds, 1);
-                // --- CORRECTION : On borne la cote totale ---
-                if (totalOdds <= maxTotalOdd) {
-                    tickets.push({ picks: combo });
-                }
-            }
-        }
+    if (candidates.length === 0) {
+        return [];
     }
-    return tickets
-        .sort((a,b) => b.picks.reduce((acc, p) => acc * p.odds, 1) - a.picks.reduce((acc, p) => acc * p.odds, 1))
-        .slice(0, maxTickets);
+
+    // Étape 1 : Créer des tickets simples pour les 5 meilleurs pronostics
+    const singlePicks = candidates.slice(0, 5);
+    singlePicks.forEach(pick => {
+        tickets.push({ picks: [pick] });
+    });
+
+    // Étape 2 : Créer des combinés de 2 avec le meilleur pronostic comme ancre
+    const anchorPick = candidates[0];
+    const otherPicks = candidates.slice(1, 10);
+
+    otherPicks.forEach(otherPick => {
+        // On s'assure de ne pas combiner deux pronostics du même match
+        if (anchorPick.match.id !== otherPick.match.id) {
+            tickets.push({ picks: [anchorPick, otherPick] });
+        }
+    });
+
+    // On s'assure de ne pas dépasser le nombre max de tickets et on retourne
+    return tickets.slice(0, maxTickets);
 }
+
 module.exports = { build };

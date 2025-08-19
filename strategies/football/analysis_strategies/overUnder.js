@@ -1,32 +1,29 @@
-// strategies/football/analysis_strategies/overUnder.js
+function calculateFormScore(formString) {
+    if (!formString) return 0;
+    return formString.split('').reduce((acc, char) => (char === 'W' ? acc + 3 : char === 'D' ? acc + 1 : acc), 0);
+}
 
-// Fonction utilitaire interne, extraite de server.js
 function calculateScore(projected, boundary, scale) {
     return Math.max(5, Math.min(95, 50 + (projected - boundary) * scale));
 }
 
 function execute(matchData) {
-    // Cette stratégie génère plusieurs picks (Over 1.5, Under 2.5, etc.)
     const picks = [];
-
-    // Extrait des données nécessaires
     const { home, away } = matchData.standings;
-    const { homeStats, awayStats } = matchData;
+    const { homeStats, awayStats } = matchData.stats;
 
-    // --- Logique extraite de server.js ---
-    const homeAvgFor = parseFloat(homeStats?.goals?.for?.average?.total || 0);
-    const homeAvgAgainst = parseFloat(homeStats?.goals?.against?.average?.total || 0);
-    const awayAvgFor = parseFloat(awayStats?.goals?.for?.average?.total || 0);
-    const awayAvgAgainst = parseFloat(awayStats?.goals?.against?.average?.total || 0);
+    if (!home || !away || !homeStats?.goals?.for?.average?.total || !awayStats?.goals?.for?.average?.total) {
+        return null;
+    }
+
+    const homeAvgFor = parseFloat(homeStats.goals.for.average.total);
+    const homeAvgAgainst = parseFloat(homeStats.goals.against.average.total);
+    const awayAvgFor = parseFloat(awayStats.goals.for.average.total);
+    const awayAvgAgainst = parseFloat(awayStats.goals.against.average.total);
     
-    const homeFormScore = (home.form || '').split('').reduce((acc, char) => (char === 'W' ? acc + 3 : char === 'D' ? acc + 1 : acc), 0);
-    const awayFormScore = (away.form || '').split('').reduce((acc, char) => (char === 'W' ? acc + 3 : char === 'D' ? acc + 1 : acc), 0);
-    const formMomentum = (homeFormScore - awayFormScore) / 15 * 0.1;
-
+    const formMomentum = (calculateFormScore(home.form) - calculateFormScore(away.form)) / 15 * 0.1;
     const projectedGoals = ((homeAvgFor + awayAvgFor + homeAvgAgainst + awayAvgAgainst) / 2) + formMomentum;
-    // --- Fin de la logique ---
     
-    // Définition des différents paris Over/Under à calculer
     const boundaries = [
         { name: 'Over 1.5', boundary: 1.5, scale: 15, market: {id: 5, value: 'Over 1.5'} },
         { name: 'Under 1.5', boundary: 1.5, scale: 15, market: {id: 5, value: 'Under 1.5'} },
@@ -52,4 +49,7 @@ function execute(matchData) {
     return picks;
 }
 
-module.exports = { execute };
+module.exports = {
+    execute,
+    marketFamily: ['Over 1.5', 'Under 1.5', 'Over 2.5', 'Under 2.5', 'Over 3.5', 'Under 3.5']
+};

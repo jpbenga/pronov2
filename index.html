@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oracle V2 - Calendrier des Pronostics</title>
     <style>
-        :root { --main-bg: #1a1d22; --card-bg: #2b2f36; --border-color: #444952; --text-primary: #e0e0e0; --text-secondary: #a0a4ab; --accent-color: #3b82f6; --success: #22c55e; --fail: #ef4444; --pending: #f59e0b;
+        :root { 
+            --main-bg: #1a1d22; --card-bg: #2b2f36; --border-color: #444952; --text-primary: #e0e0e0; 
+            --text-secondary: #a0a4ab; --accent-color: #3b82f6; --success: #22c55e; --fail: #ef4444; --pending: #f59e0b;
             --score-high: #22c55e; --score-medium: #f59e0b; --score-low: #f87171;
-            --market-over: #c026d3; --market-under: #2563eb; --market-btts: #db2777; --market-dc: #16a34a; }
+            
+            --market-over: #c026d3; --market-under: #2563eb; --market-btts: #db2777; --market-dc: #16a34a;
+            --market-winner: #6366f1; --market-ht: #f59e0b; --market-team: #06b6d4;
+        }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background-color: var(--main-bg); color: var(--text-primary); }
         .container { max-width: 1600px; margin: auto; padding: 20px; }
         header { text-align: center; margin-bottom: 30px; }
@@ -23,13 +28,16 @@
         .section-title { font-size: 1.4em; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; }
         .profile-section { margin-bottom: 30px; }
         .ticket-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; }
-        .ticket { border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--card-bg); overflow: hidden; }
+        .ticket { border: 1px solid var(--border-color); border-left: 5px solid transparent; border-radius: 8px; background-color: var(--card-bg); overflow: hidden; transition: all 0.2s ease-in-out; }
         .ticket-header { padding: 10px 15px; border-bottom: 1px solid var(--border-color); background-color: rgba(0,0,0,0.2); }
         .ticket-body { padding: 15px; }
-        .match { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 15px; padding: 10px 0; border-bottom: 1px solid var(--border-color); font-size: 14px; }
+        .match { display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 10px; padding: 10px; border-bottom: 1px solid var(--border-color); font-size: 14px; border-radius: 4px; margin-bottom: -1px; }
         .match:last-child { border-bottom: none; }
         .match-info small { color: var(--text-secondary); }
-        .bet-type { padding: 4px 8px; border-radius: 4px; color: white; font-weight: bold; font-size: 0.8em; }
+        .team-display { display: flex; align-items: center; gap: 8px; }
+        .team-logo { width: 20px; height: 20px; object-fit: contain; }
+        .match-score { font-weight: bold; color: var(--accent-color); font-size: 1.1em; }
+        .bet-type { padding: 4px 8px; border-radius: 4px; color: white; font-weight: bold; font-size: 0.8em; text-align: center;}
         .confidence-score { font-weight: bold; padding: 4px 8px; border-radius: 4px; }
         #loader { text-align: center; padding: 20px; font-size: 1.2em; }
         .stats-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
@@ -37,6 +45,12 @@
         .stats-table th { background-color: #333; }
         .status-accepted { color: var(--success); font-weight: bold; }
         .status-refused { color: var(--fail); font-weight: bold; }
+        .ticket.ticket-success { border-left-color: var(--success); background-color: rgba(34, 197, 94, 0.05); }
+        .ticket.ticket-fail { border-left-color: var(--fail); opacity: 0.75; }
+        .match.pick-success { background-color: rgba(34, 197, 94, 0.1); }
+        .match.pick-fail { background-color: rgba(239, 68, 68, 0.05); text-decoration: line-through; color: var(--text-secondary); }
+        .match.pick-fail strong { color: var(--text-secondary); }
+        .winner-team { color: var(--success); font-weight: bold; }
     </style>
 </head>
 <body>
@@ -118,7 +132,9 @@
             for (const [betType, data] of sortedStats) {
                 const rate = data.rate;
                 const status = rate >= 67 ? '<span class="status-accepted">Accepté</span>' : '<span class="status-refused">Refusé</span>';
-                tableHtml += `<tr><td>${betType}</td><td>${data.total}</td><td>${data.success}</td><td>${rate.toFixed(2)}%</td><td>${status}</td></tr>`;
+                if (data.total > 0) {
+                    tableHtml += `<tr><td>${betType}</td><td>${data.total}</td><td>${data.success}</td><td>${rate.toFixed(2)}%</td><td>${status}</td></tr>`;
+                }
             }
             tableHtml += '</tbody></table>';
             container.innerHTML = tableHtml;
@@ -140,7 +156,7 @@
                 const date = btn.dataset.date;
                 let dailyTotal = 0, dailySuccess = 0;
                 for (const profileName in API_DATA.backtest) {
-                    const ticketsForDate = API_DATA.backtest[profileName].filter(ticket => ticket.picks.some(p => p.match.date.startsWith(date)));
+                    const ticketsForDate = API_DATA.backtest[profileName].filter(ticket => ticket.picks.length > 0 && ticket.picks[0].match.date.startsWith(date));
                     if (ticketsForDate.length > 0) {
                         dailyTotal += ticketsForDate.length;
                         ticketsForDate.forEach(ticket => {
@@ -151,7 +167,7 @@
                 const statsDiv = document.getElementById(`stats-${date}`);
                 if (dailyTotal > 0) {
                     statsDiv.textContent = `${dailySuccess} / ${dailyTotal}`;
-                    statsDiv.className = `day-stats ${dailySuccess > 0 ? 'success' : 'fail'}`;
+                    statsDiv.className = `day-stats ${dailySuccess === dailyTotal ? 'success' : 'fail'}`;
                 }
             });
         }
@@ -162,17 +178,18 @@
             container.innerHTML = `<h2>Pronostics pour le ${formattedDate}</h2>`;
             
             const isPast = new Date(dateString) < new Date(getFormattedDate(new Date()));
+            const context = isPast ? 'backtest' : 'predictions';
             const dataToShow = isPast ? API_DATA.backtest : API_DATA.predictions;
 
             let contentFound = false;
             for (const profileName in dataToShow) {
                 const allTicketsForProfile = dataToShow[profileName];
-                const ticketsForDate = allTicketsForProfile.filter(ticket => ticket.picks.some(p => p.match.date.startsWith(dateString)));
+                const ticketsForDate = allTicketsForProfile.filter(ticket => ticket.picks.length > 0 && ticket.picks[0].match.date.startsWith(dateString));
                 
                 if (ticketsForDate.length > 0) {
                     contentFound = true;
                     let profileHtml = `<div class="profile-section"><h3 class="profile-title">${profileName} (${ticketsForDate.length} ticket${ticketsForDate.length > 1 ? 's' : ''})</h3><div class="ticket-container">`;
-                    ticketsForDate.forEach(ticket => profileHtml += buildTicketHtml(ticket, profileName));
+                    ticketsForDate.forEach(ticket => profileHtml += buildTicketHtml(ticket, profileName, context));
                     profileHtml += `</div></div>`;
                     container.innerHTML += profileHtml;
                 }
@@ -180,62 +197,112 @@
             if (!contentFound) container.innerHTML += '<p style="text-align: center;">Aucun ticket à afficher pour ce jour.</p>';
         }
 
-        function buildTicketHtml(ticket, profileName) {
+        function buildTicketHtml(ticket, profileName, context) {
             let matchesHtml = '';
             const totalOdds = ticket.picks.reduce((acc, p) => acc * (p.odds || 1), 1);
-
-            if (profileName.toLowerCase().includes('lingot')) {
-                if (ticket.picks.length === 1 && (totalOdds < 1.5 || totalOdds > 1.9)) return '';
-                if (ticket.picks.length > 1 && totalOdds > 2.3) return '';
-            }
-            if (profileName.toLowerCase().includes('jackpot') && totalOdds < 30) return '';
             
             ticket.picks.forEach(p => {
                 const matchDate = new Date(p.match.date);
                 const dateText = `${matchDate.toLocaleDateString('fr-FR')} - ${matchDate.toLocaleTimeString('fr-FR', {hour: '2-digit', minute:'2-digit'})}`;
+                
                 let marketColor = 'var(--text-secondary)';
-                if (p.betType.includes('Over')) marketColor = 'var(--market-over)';
-                if (p.betType.includes('Under')) marketColor = 'var(--market-under)';
+                if (p.betType.includes('Over 1.5') || p.betType.includes('Over 2.5') || p.betType.includes('Over 3.5')) marketColor = 'var(--market-over)';
+                if (p.betType.includes('Under 1.5') || p.betType.includes('Under 2.5') || p.betType.includes('Under 3.5')) marketColor = 'var(--market-under)';
                 if (p.betType.includes('BTTS')) marketColor = 'var(--market-btts)';
                 if (p.betType.includes('Double Chance')) marketColor = 'var(--market-dc)';
+                if (p.betType.includes('Favori Gagnant')) marketColor = 'var(--market-winner)';
+                if (p.betType.includes('MT1') || p.betType.includes('MT2')) marketColor = 'var(--market-ht)';
+                if (p.betType.includes('Domicile') || p.betType.includes('Extérieur')) marketColor = 'var(--market-team)';
+
                 let scoreColor = 'var(--score-low)';
                 if (p.score >= 95) scoreColor = 'var(--score-high)';
                 else if (p.score >= 90) scoreColor = 'var(--score-medium)';
+                
+                let scoreHtml = '';
+                let matchClass = 'match';
+                let homeTeamHtml = `<div class="team-display"><img src="${p.match.home_logo}" class="team-logo"> <strong>${p.match.home_team}</strong></div>`;
+                let awayTeamHtml = `<div class="team-display"><img src="${p.match.away_logo}" class="team-logo"> <strong>${p.match.away_team}</strong></div>`;
 
-                matchesHtml += `<div class="match">
-                    <div class="match-info"><strong>${p.match.home_team} vs ${p.match.away_team}</strong><br><small>${dateText}</small></div>
+                if (context === 'backtest') {
+                    const result = API_DATA.results[p.match.id];
+                    if (result) {
+                        scoreHtml = `<div class="match-score">${result.home} - ${result.away}</div>`;
+                        const pickSuccess = isPickSuccessInternal(p, result.home, result.away);
+                        if (pickSuccess === true) matchClass += ' pick-success';
+                        if (pickSuccess === false) matchClass += ' pick-fail';
+
+                        if (result.home > result.away) {
+                            homeTeamHtml = `<div class="team-display"><img src="${p.match.home_logo}" class="team-logo"> <strong class="winner-team">${p.match.home_team}</strong></div>`;
+                        } else if (result.away > result.home) {
+                            awayTeamHtml = `<div class="team-display"><img src="${p.match.away_logo}" class="team-logo"> <strong class="winner-team">${p.match.away_team}</strong></div>`;
+                        }
+                    }
+                }
+
+                matchesHtml += `<div class="${matchClass}">
+                    <div class="match-info">
+                        ${homeTeamHtml}
+                        ${awayTeamHtml}
+                        <small>${dateText}</small>
+                    </div>
+                    ${scoreHtml}
                     <div class="bet-type" style="background-color:${marketColor}">${p.betType} @${p.odds || 'N/A'}</div>
                     <div class="confidence-score" style="background-color:${scoreColor}">${p.score.toFixed(0)}%</div>
                 </div>`;
             });
 
-            return `<div class="ticket">
+            let ticketClass = 'ticket';
+            if (context === 'backtest') {
+                const success = isTicketSuccess(ticket);
+                if (success === true) {
+                    ticketClass += ' ticket-success';
+                } else if (success === false) {
+                    ticketClass += ' ticket-fail';
+                }
+            }
+
+            return `<div class="${ticketClass}">
                         <div class="ticket-header">Cote Totale: <strong>${totalOdds.toFixed(2)}</strong></div>
                         <div class="ticket-body">${matchesHtml}</div>
                     </div>`;
         }
         
         function isTicketSuccess(ticket) {
+            if (!ticket.picks || ticket.picks.length === 0) return null;
+            
+            const resultsKnown = ticket.picks.every(pick => API_DATA.results[pick.match.id]);
+            if (!resultsKnown) return null;
+
             return ticket.picks.every(pick => {
                 const result = API_DATA.results[pick.match.id];
-                return result ? isPickSuccess(pick, result.home, result.away) === true : false;
+                return isPickSuccessInternal(pick, result.home, result.away) === true;
             });
         }
         
-        function isPickSuccess(pick, homeGoals, awayGoals) {
+        function isPickSuccessInternal(pick, homeGoals, awayGoals) {
             if (homeGoals === null || awayGoals === null) return null;
-            const favIsHome = pick.favoriteName === pick.match.home_team;
-            const favWins = (favIsHome && homeGoals > awayGoals) || (!favIsHome && awayGoals > homeGoals);
+
+            const isFavoriteHome = pick.isFavoriteHome;
+            if (isFavoriteHome === undefined) return null;
+
+            const favWins = (isFavoriteHome && homeGoals > awayGoals) || (!isFavoriteHome && awayGoals > homeGoals);
+
             if (pick.betType.startsWith('Double Chance')) return favWins || homeGoals === awayGoals;
-            if (pick.betType === 'BTTS') return homeGoals > 0 && awayGoals > 0;
-            if (pick.betType === 'BTTS - Non') return homeGoals === 0 || awayGoals === 0;
+            if (pick.betType.startsWith('Favori Gagnant')) return favWins;
+            if (pick.betType.startsWith('BTTS - Oui')) return homeGoals > 0 && awayGoals > 0;
+            if (pick.betType.startsWith('BTTS - Non')) return homeGoals === 0 || awayGoals === 0;
+            
             const totalGoals = homeGoals + awayGoals;
-            if(pick.betType === 'Over 1.5') return totalGoals > 1.5;
-            if(pick.betType === 'Under 1.5') return totalGoals < 1.5;
-            if(pick.betType === 'Over 2.5') return totalGoals > 2.5;
-            if(pick.betType === 'Under 2.5') return totalGoals < 2.5;
-            if(pick.betType === 'Over 3.5') return totalGoals > 3.5;
-            if(pick.betType === 'Under 3.5') return totalGoals < 3.5;
+            if(pick.betType.startsWith('Over 1.5')) return totalGoals > 1.5;
+            if(pick.betType.startsWith('Under 1.5')) return totalGoals < 1.5;
+            if(pick.betType.startsWith('Over 2.5')) return totalGoals > 2.5;
+            if(pick.betType.startsWith('Under 2.5')) return totalGoals < 2.5;
+            if(pick.betType.startsWith('Over 3.5')) return totalGoals > 3.5;
+            if(pick.betType.startsWith('Under 3.5')) return totalGoals < 3.5;
+            
+            // Gestion des nouveaux marchés
+            if (pick.betType.startsWith('Over 0.5 MT1')) return (homeGoals + awayGoals - (pick.match.goals.home + pick.match.goals.away - (pick.match.score.halftime.home + pick.match.score.halftime.away))) > 0.5;
+
             return null;
         }
     </script>

@@ -5,28 +5,25 @@ const sport = 'football';
 
 function getFootballSeason(dateObject) {
     const year = dateObject.getFullYear();
-    const month = dateObject.getMonth(); // 0-indexed (Jan=0, Jul=6)
-    if (month < 6) { // Si on est avant juillet, on est sur la fin de la saison N-1
+    const month = dateObject.getMonth();
+    if (month < 6) {
         return year - 1;
     }
-    return year; // Sinon, on est sur la nouvelle saison N
+    return year;
 }
 
-// --- VERSION CORRIGÉE ---
 async function fetchFixturesForDateRange(from, to, status = null) {
     const { leagues } = loadSportConfig(sport);
     let allFixtures = [];
 
     console.log(`INFO: [DataCollector] Demande de matchs pour ${leagues.length} ligues du ${from} au ${to}...`);
 
-    // 1. Déterminer toutes les saisons possibles dans l'intervalle
     const seasonFrom = getFootballSeason(new Date(from));
     const seasonTo = getFootballSeason(new Date(to));
-    const seasonsToQuery = [...new Set([seasonFrom, seasonTo])]; // Utilise un Set pour éviter les doublons
+    const seasonsToQuery = [...new Set([seasonFrom, seasonTo])]; 
 
     console.log(`INFO: [DataCollector] Saisons calculées pour cet intervalle : ${seasonsToQuery.join(', ')}`);
 
-    // 2. Boucler sur les saisons ET les ligues
     for (const season of seasonsToQuery) {
         for (const league of leagues) {
             try {
@@ -39,19 +36,16 @@ async function fetchFixturesForDateRange(from, to, status = null) {
                     allFixtures.push(...response.data.response);
                 }
             } catch (error) {
-                console.error(`WARN: [DataCollector] Erreur pour la ligue ${league.name} (ID: ${league.id}) saison ${season}. Passage à la suivante.`, error.message);
+                console.error(`WARN: [DataCollector] Erreur pour la ligue ${league.name} (ID: ${league.id}) saison ${season}.`, error.message);
             }
         }
     }
     
-    // 3. Optionnel mais recommandé : dédoublonner les matchs au cas où l'API en renverrait pour les deux saisons
     const uniqueFixtures = Array.from(new Map(allFixtures.map(fixture => [fixture.fixture.id, fixture])).values());
 
     console.log(`INFO: [DataCollector] ${uniqueFixtures.length} matchs trouvés au total.`);
     return uniqueFixtures;
 }
-// --- FIN DE LA CORRECTION ---
-
 
 async function getFutureMatchData() {
     console.log("INFO: [DataCollector] Collecte des matchs futurs...");

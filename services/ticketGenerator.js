@@ -7,33 +7,50 @@ function generateTickets(sport, allPicks, context = 'predictions') {
     const { settings } = loadSportConfig(sport);
     const { tickets: ticketProfiles } = settings;
     const profilesToRun = ticketProfiles[context].filter(p => p.enabled);
-    const finalTickets = {};
-
-    // --- CORRECTION DÉFINITIVE DU FILTRE GLOBAL ---
-    // On utilise la bonne clé: "confidenceThreshold" et non "globalConfidenceThreshold"
-    const confidenceThreshold = settings.analysisParams.confidenceThreshold;
     
-    // On applique le seuil comme toute première étape.
+    const confidenceThreshold = settings.analysisParams.confidenceThreshold;
     const confidentPicks = allPicks.filter(p => p.score >= confidenceThreshold);
     
     console.log(`INFO: ${allPicks.length} pronostics bruts, ${confidentPicks.length} retenus après filtre de confiance global (${confidenceThreshold}%)`);
-    // --- FIN DE LA CORRECTION ---
 
-    for (const profile of profilesToRun) {
-        try {
-            const strategyPath = path.join(__dirname, '..', 'strategies', sport, 'ticket_strategies', `${profile.strategy}.js`);
-            const ticketStrategy = require(strategyPath);
-            
-            const generated = ticketStrategy.build(confidentPicks, profile.params);
-            
-            finalTickets[profile.profileName] = generated;
-            console.log(`- Profil "${profile.profileName}" a généré ${generated.length} ticket(s).`);
+    const picksByDate = {};
+    confidentPicks.forEach(pick => {
+        const date = pick.match.date.split('T')[0];
+        if (!picksByDate[date]) {
+            picksByDate[date] = [];
+        }
+        picksByDate[date].push(pick);
+    });
 
-        } catch (error) {
-            console.error(`ERREUR: Impossible de générer les tickets pour le profil "${profile.profileName}".`, error);
-            finalTickets[profile.profileName] = [];
+    const finalTickets = {};
+    profilesToRun.forEach(p => {
+        finalTickets[p.profileName] = [];
+    });
+
+    for (const date in picksByDate) {
+        const dailyPicks = picksByDate[date];
+
+        for (const profile of profilesToRun) {
+            try {
+                const strategyPath = path.join(__dirname, '..', 'strategies', sport, 'ticket_strategies', `${profile.strategy}.js`);
+                const ticketStrategy = require(strategyPath);
+                
+                const dailyGeneratedTickets = ticketStrategy.build(dailyPicks, profile.params, context);
+                
+                if (dailyGeneratedTickets.length > 0) {
+                    finalTickets[profile.profileName].push(...dailyGeneratedTickets);
+                }
+
+            } catch (error) {
+                console.error(`ERREUR: Impossible de générer les tickets pour le profil "${profile.profileName}" pour la date ${date}.`, error);
+            }
         }
     }
+
+    for (const profileName in finalTickets) {
+        console.log(`- Profil "${profileName}" a généré ${finalTickets[profileName].length} ticket(s).`);
+    }
+
     return finalTickets;
 }
 
