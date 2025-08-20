@@ -1,118 +1,412 @@
 {
   "leagues": {
     "39": {
-      "lastAnalyzedRound": "Regular Season - 1"
+      "analyzedRounds": {
+        "Regular Season - 1": "c21521bb6e25d5e65419e107da0c0f30"
+      }
     },
     "40": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 1": "f5bbd4c2e6b6fd36340d3b7fbebac363",
+        "Regular Season - 2": "92a15eeb037325f530c0d966f7b616a2"
+      }
     },
     "61": {
-      "lastAnalyzedRound": "Regular Season - 1"
+      "analyzedRounds": {
+        "Regular Season - 1": "a8eb78373dd0e04ad715c7ca7bfe22c6"
+      }
+    },
+    "62": {
+      "analyzedRounds": {
+        "Regular Season - 2": "05cc48d09b05b4f2b0553b474d57f78f"
+      }
     },
     "71": {
-      "lastAnalyzedRound": "Regular Season - 9"
+      "analyzedRounds": {
+        "Regular Season - 2": "60c46252162ea8b268220bb7c305736a",
+        "Regular Season - 5": "a7c7b220d3160d8bcc7717e8808146e6",
+        "Regular Season - 9": "321cad1cb31864b6e9317e8541653271",
+        "Regular Season - 10": "43b9c1be8b9e25eac7b51c252db97794",
+        "Regular Season - 11": "9d59ab7dd08b0279fd560ccced845bd2"
+      }
     },
     "79": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 1": "5ea748bc89e47ebef0878e640c05e63f",
+        "Regular Season - 2": "8a8bbf7bb49768a0fe3c818c97076a0c"
+      }
     },
     "88": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 1": "c186b91b720495d4eb79ed78e95da506",
+        "Regular Season - 2": "0caa04cd97691a4b763a4e983ed240bb"
+      }
+    },
+    "94": {
+      "analyzedRounds": {
+        "Regular Season - 2": "433401b4781822c3cc32af9d65a31db1"
+      }
     },
     "95": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 1": "e14d03d10d4f374d32f048d42b8bcbe0",
+        "Regular Season - 2": "c1bbe77d77a9185f3685f37bf4af8463"
+      }
     },
     "98": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 1": "6cc7d3136e5d02b2116af04808277453",
+        "Regular Season - 2": "ca0a67ce04b117be8df37b836ac953fa",
+        "Regular Season - 6": "6efad025fae5a23a6731bff3e71095c1",
+        "Regular Season - 7": "36ac653c82d300359d8215ce9b7280ed",
+        "Regular Season - 10": "f1ce8f6bcde3f3bdc6b1e4db4d2dbf3c",
+        "Regular Season - 12": "ca735f14a298217e306faf8bc28e058e",
+        "Regular Season - 20": "4a317b53e99b8ed38c06ec8ad16fc542",
+        "Regular Season - 11": "013ad01789639c24d1c38a38370d1999",
+        "Regular Season - 13": "22f2202a86b31d0f3d71d6477e37f753",
+        "Regular Season - 16": "01ef674a93ce3e5b27ac4c441555a42d",
+        "Regular Season - 18": "f2a69306c81162151b9cb9ff5e653c55",
+        "Regular Season - 19": "f25b2c10454bbf79047f4f8ce40c56f9",
+        "Regular Season - 21": "13979bbe2c8c32324cfb106eeeeccf57",
+        "Regular Season - 24": "6325aec18a5bca0f2882b1d5042ab023",
+        "Regular Season - 25": "7dda3f050fedf45f83de5f26e49bf5f1",
+        "Regular Season - 26": "2ef019216d39892ede18f093e78a6fda"
+      }
     },
     "103": {
-      "lastAnalyzedRound": "Regular Season - 17"
+      "analyzedRounds": {
+        "Regular Season - 2": "0fc94a217205ce6fa87cee9e0883828d",
+        "Regular Season - 16": "ab017fb0a3c4b7aa6dfc9fa16a065334",
+        "Regular Season - 4": "69fd5c55908299ba2a588c9efe64c393",
+        "Regular Season - 18": "a6e65dca563226449ed63c0a754319f1",
+        "Regular Season - 5": "0a4c4fca7bac5c36296fec790046b5d7",
+        "Regular Season - 15": "d19f6b0957fc0281d87432f5a0ff654d",
+        "Regular Season - 9": "4a348025779d301375d4c7a25064120a",
+        "Regular Season - 12": "a07353b8ec2944383304d83b88e65cdf",
+        "Regular Season - 14": "8e2950e1376aa9bf4b406eacb1f54907"
+      }
     },
     "110": {
-      "lastAnalyzedRound": "Regular Season - 1"
+      "analyzedRounds": {
+        "Regular Season - 1": "939d38ea1023d0593eabf192df6ca225"
+      }
     },
     "113": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 3": "e1843be86a66ba2a61d88a48817424f7",
+        "Regular Season - 5": "af41e4e9ff726429a081ca5028a7a0c5",
+        "Regular Season - 7": "bcdd2ead635dc27c645a124b01923269",
+        "Regular Season - 8": "10741b1f163addb4f134e73cae989e22",
+        "Regular Season - 10": "0a65a5ff51c05f726d835f77f359c094",
+        "Regular Season - 11": "091d5de24e6aa476bd3013c1032196a3",
+        "Regular Season - 12": "56407c95ead700438aa71e1031641625",
+        "Regular Season - 15": "958e1ccfbcb628bdcb3afcdfc7d0baa3",
+        "Regular Season - 20": "b29e9927d1bbd84c90d71938df30deca"
+      }
     },
     "119": {
-      "lastAnalyzedRound": "Regular Season - 5"
+      "analyzedRounds": {
+        "Regular Season - 2": "cd6b9a35d74cd6ba71d32adb5cb8c113",
+        "Regular Season - 4": "bce26bd1ffc85d1d30120fa39d0ad751",
+        "Regular Season - 5": "1a18074632ca15b44aee56f5efe5960f"
+      }
     },
     "128": {
-      "lastAnalyzedRound": "1st Phase - 11"
+      "analyzedRounds": {
+        "1st Phase - 1": "3e0a855bca62efb0efa33cc97d93bd58",
+        "1st Phase - 2": "3215537e5196447d1e00c6baa1689c67",
+        "1st Phase - 3": "ddc0cbe29c6b48d015a5e2b974afb25c",
+        "1st Phase - 4": "e272bf596afdde5fc5f852b317b11b09",
+        "1st Phase - 5": "01aa0f1dc1b4cf352a7c43cfad53f339",
+        "1st Phase - 6": "60d514984625006b092c47a40c316f4f",
+        "1st Phase - 7": "a737a7afa9e9080e1d253a3435ea18a0",
+        "1st Phase - 8": "157f4a456dbe16c424ea2792e7887849",
+        "1st Phase - 9": "0a7624deaad66f24163b344583ed56be",
+        "1st Phase - 10": "dc4ed23cb79714266d5a1d38d96a0a2d",
+        "1st Phase - 11": "b880bbbc7f26d084846af76c66736519",
+        "1st Phase - 12": "cdcee1b8dd58865dab3dcd1a030c9c7f",
+        "1st Phase - 13": "38a43bb91fd72ae4ab06233648ddfc54",
+        "1st Phase - 14": "f96a2aee50c7165222c735b07a6eba73",
+        "1st Phase - 15": "94e44043d5181031d332fa6bacd7d131",
+        "1st Phase - 16": "b02ca6b3600a33952d704ba651ac4a81"
+      }
     },
     "140": {
-      "lastAnalyzedRound": "Regular Season - 1"
+      "analyzedRounds": {
+        "Regular Season - 1": "e2bed771122e956bc428a776388c3647"
+      }
     },
     "141": {
-      "lastAnalyzedRound": "Regular Season - 1"
+      "analyzedRounds": {
+        "Regular Season - 1": "bf4c5a0d57737625698a089d500f8269"
+      }
     },
     "144": {
-      "lastAnalyzedRound": "Regular Season - 4"
+      "analyzedRounds": {
+        "Regular Season - 1": "d94897889338989bbf7ea9ec4fd1d822",
+        "Regular Season - 2": "8576e7415caebafad69d5b03461e5f42",
+        "Regular Season - 3": "4171c796a1ed3f2c546d7f38c2a93d5d",
+        "Regular Season - 4": "5e3920e3246e3f6bf3f5e723bd7a9808"
+      }
     },
     "164": {
-      "lastAnalyzedRound": "Regular Season - 4"
+      "analyzedRounds": {
+        "Regular Season - 3": "a2737868d2a6712504927d9d66947368",
+        "Regular Season - 5": "4a7fd7eea7fb75bb8eba923b05909a6f",
+        "Regular Season - 8": "71f9fbef5317521b588622baeaceaf93",
+        "Regular Season - 11": "400f1767748a3b40e11cced7644c1b0d",
+        "Regular Season - 12": "c0f8e6b7b064fad922600d5a6573c894",
+        "Regular Season - 13": "9f610d0734d7e937b9f7ea168ce7fc10",
+        "Regular Season - 14": "e213d65ac65ac6ffcfed782a02b5eb28",
+        "Regular Season - 18": "f36e14392988914856b25c6f0a591926",
+        "Regular Season - 19": "9b156211cc38fb93c9ee73eccd4818a5"
+      }
     },
     "169": {
-      "lastAnalyzedRound": "Regular Season - 9"
+      "analyzedRounds": {
+        "Regular Season - 1": "f5e4e96d561651a6ce826916698c6618",
+        "Regular Season - 2": "57ab9aae4e292db91ff1edc4991310f2",
+        "Regular Season - 4": "c6036d914f53e2b1a2d4cc427323c368",
+        "Regular Season - 5": "bab9284729967b8ca1c4ce32614135e5",
+        "Regular Season - 7": "cdf08969c458b2100ea4cf563ed76483",
+        "Regular Season - 10": "151bf4e8c2beb589bbeb9799831be19b",
+        "Regular Season - 14": "7532d51a00199b8013502435422ca65a",
+        "Regular Season - 15": "e8b1c769ac96101dfe9e5dfcf3968853",
+        "Regular Season - 16": "a5c0697bbf7f2c55b938963efb7f265d",
+        "Regular Season - 18": "71edd5878ecef06919ee62eaa06149c3",
+        "Regular Season - 21": "4ae6786d7f48afb8675102e1e7dd4741"
+      }
     },
     "172": {
-      "lastAnalyzedRound": "Regular Season - 4"
+      "analyzedRounds": {
+        "Regular Season - 4": "61ddb39de3f70bcacabed3b776dad542"
+      }
     },
     "179": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 1": "20a756b02f4c5232ae20cfe8c2fb0cda",
+        "Regular Season - 2": "15a326515c8a279dc055ce81402798a7"
+      }
+    },
+    "203": {
+      "analyzedRounds": {
+        "Regular Season - 2": "6a42355f2a84b0e7e98473b4cb6c3936"
+      }
     },
     "207": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 2": "12d7323d11832fc20a0868e89aee4d44",
+        "Regular Season - 3": "fbe56e2a64028922f9746fbfbcc6ca2b"
+      }
     },
     "210": {
-      "lastAnalyzedRound": "Regular Season - 3"
+      "analyzedRounds": {
+        "Regular Season - 1": "ec19df39868d8a2a34c1532abd37d700",
+        "Regular Season - 3": "d22fc9502186bff472fce112ac9cb19b"
+      }
     },
     "218": {
-      "lastAnalyzedRound": "Regular Season - 3"
+      "analyzedRounds": {
+        "Regular Season - 2": "09bb86d83d663280fb3d830371ae9878",
+        "Regular Season - 3": "e5b9c85fc7ee4201a11776a6b809988a"
+      }
     },
     "235": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 5": "f1f82a4523db8c061cea7c168b8f559a"
+      }
     },
     "239": {
-      "lastAnalyzedRound": "Apertura - 7"
+      "analyzedRounds": {
+        "Apertura - 1": "92e970a7a45f50c304fc7f738802f4b2",
+        "Apertura - 5": "e1e26496ab15bbc47d21584bc5c09fbc",
+        "Apertura - 6": "054f3379a540486be84a5438c5004253",
+        "Apertura - 7": "97528fdfe5699ddd9288e703b92a4305",
+        "Apertura - 17": "4c4f51d4b3a39bbe22f66f58b704db15",
+        "Apertura - 16": "e9b27e5d24f08a474eca68d38241ca87",
+        "Apertura - 12": "87687977f6bb59c5233ba262904c3402",
+        "Apertura - 14": "b52b2e0164bd520dbe4530a790fa1b96",
+        "Apertura - 15": "03ff3dbb68b98de576e835f047a30bcc",
+        "Apertura - Quadrangular - 2": "9372fe358870b660fd29ec7c690a7fd4",
+        "Apertura - Quadrangular - 3": "cdc8b4672f020fc99b57626a476c5a74",
+        "Apertura - Quadrangular - 5": "cb8a7b54b97df119dcaa79ffc2cdf387",
+        "Apertura - Quadrangular - 6": "c87639eb7071df7b3c0feb5b21a7cb13",
+        "Apertura - Quadrangular - FInals": "41a59665d3ab0dcc6526eeb46bb1c691",
+        "Clausura - 4": "495c2d25a433e28458b330c3ec4c4082",
+        "Clausura - 5": "189331c12286b7475d5371202022977c",
+        "Clausura - 6": "c8bd0b14d8f2a05383fc1ba3c3434dad"
+      }
     },
     "240": {
-      "lastAnalyzedRound": "Apertura - 4"
+      "analyzedRounds": {
+        "Apertura - 3": "d9b15749c237c0108211dc14882f10a1",
+        "Apertura - 6": "5db3a0a825ea9b2a6fb5a6d7198e1cb8",
+        "Apertura - 8": "3b2e544a17b53874a37a052375816775",
+        "Apertura - 9": "278e88d53cb852126b40d5ae1ae0d969",
+        "Apertura - 13": "49d83d67b9c8823a78a4f351360c7908",
+        "Apertura - 14": "c0c2cba0af9f9f24639f2f569d34e90d",
+        "Apertura - 15": "4675a1b77738dc4ca51ebac653ce7863",
+        "Apertura - 16": "58ea2dddd79d3c9c6b2204152f6cb435",
+        "Apertura - Quadrangular - 3": "43f2776245f3eae2d342d7fc1110ff87",
+        "Apertura - Quadrangular - 4": "e6f63e1774b6080a7a6b3f656e3886b1",
+        "Apertura - Quadrangular - 6": "9137a6906b91693dd361948b28ea22a0",
+        "Clausura - 3": "15f7e92918da027b26e4ea17b969237d",
+        "Clausura - 4": "657c6cf20598e304a4742cfc23dc7b31",
+        "Clausura - 5": "82a17bfc418dde2370579b1d00b0c14d"
+      }
     },
     "244": {
-      "lastAnalyzedRound": "Regular Season - 4"
+      "analyzedRounds": {
+        "Regular Season - 1": "a566e720199d0f44869cbda8316377ce",
+        "Regular Season - 15": "b52e22b1caec96aca4ca04d0cc063edd",
+        "Regular Season - 13": "66fa36df8493cb568462f0db61657075",
+        "Regular Season - 6": "f9d8d879ca98749d2e3381969d1d99bd",
+        "Regular Season - 7": "1cb67c41848f39356b261ea22a45fe7d",
+        "Regular Season - 8": "e838de0eea3a80a9fc845523cabd2d1d",
+        "Regular Season - 9": "25157dcb111c2c097a31f8ac3f562d3d",
+        "Regular Season - 10": "0c634b9d593f6a91047a0c7bc945e845",
+        "Regular Season - 11": "b702ee47eac400689fab749005c6bdea",
+        "Regular Season - 12": "c5c29cb7412e657ccee31d997bc6a78f",
+        "Regular Season - 14": "65a38042fe7cd2710e30a56607b8d31c",
+        "Regular Season - 16": "be7c67b87cdd475678368918116e28ef",
+        "Regular Season - 19": "57bc2b4d7e02f5026b482a958bc48e0f",
+        "Regular Season - 20": "656c3eaf599b5d847c56583b78a5061f"
+      }
     },
     "253": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 1": "ef89ad79fd2a3ada0fd41c0a82e94c07",
+        "Regular Season - 6": "77da5c0a7972f13f54a82ae912807917",
+        "Regular Season - 9": "16cebea38129e0578275692f308912e2",
+        "Regular Season - 10": "63aaa4eedb7eac5a81d0884aa0cbc6a5",
+        "Regular Season - 11": "67eb3b3a8bf34adcbe37cc00d13e3656",
+        "Regular Season - 12": "a3da97d7c05ddd185626348ba659ec1b",
+        "Regular Season - 13": "bc1bc26c31a9172af0169a9fa1cec525",
+        "Regular Season - 15": "9c68d177d78142c31fcc325169037c6f",
+        "Regular Season - 16": "a4adde659074b0e52f25ecd2e7389e5b"
+      }
+    },
+    "262": {
+      "analyzedRounds": {
+        "Apertura - 3": "008b2927e781555accbc9a91329fb71d",
+        "Apertura - 5": "cc3623d246e5eb3df41aa86b4c0b9ad9"
+      }
     },
     "265": {
-      "lastAnalyzedRound": "Regular Season - 8"
+      "analyzedRounds": {
+        "Regular Season - 5": "c9e502f6c6c2ace4894434fb3fcad250",
+        "Regular Season - 9": "25e9ff09634fd30b42afff780fda05cf",
+        "Regular Season - 10": "dd3f3eb098b95d9243ee2c52cec3dbcd",
+        "Regular Season - 11": "ceb12e91666b86394892706d7165b0bf",
+        "Regular Season - 12": "90a1bb9327d36eae199ff0896d5a2b5d",
+        "Regular Season - 13": "d12908f8b75a6b0d0320da72b93a6cf5",
+        "Regular Season - 14": "b2f1a6de2c93bc4098374eb73d515eda",
+        "Regular Season - 15": "e8bb475cb78ef43d947517d7e3ddd229",
+        "Regular Season - 17": "3ddd3439680faadb2bf9ecde934d7347",
+        "Regular Season - 18": "ae5c85669acd4d4cd2c14ddbbf1f512c"
+      }
     },
     "271": {
-      "lastAnalyzedRound": "Regular Season - 4"
+      "analyzedRounds": {
+        "Regular Season - 2": "77bf575391f3f4663a3aa2e8fa7c5cbd",
+        "Regular Season - 4": "2f76f36de82b676e751ee08503843581"
+      }
     },
     "283": {
-      "lastAnalyzedRound": "Regular Season - 1"
+      "analyzedRounds": {
+        "Regular Season - 4": "22d6699b972ecf6c39203475b9ed878a",
+        "Regular Season - 6": "cf40269f9ee549e5a0d40b0ee3ab7c8f"
+      }
     },
     "284": {
-      "lastAnalyzedRound": "Regular Season - 3"
+      "analyzedRounds": {
+        "Regular Season - 1": "62863812cdac3ea5990dc672cd821fed",
+        "Regular Season - 2": "9d3953638a097b398df63644d68d7f64"
+      }
     },
     "292": {
-      "lastAnalyzedRound": "Regular Season - 6"
+      "analyzedRounds": {
+        "Regular Season - 2": "cfe6983e055fa6c06f416254107a2810",
+        "Regular Season - 18": "26061216b8feee547bb28acff6f56055",
+        "Regular Season - 7": "05ea242f5b105023fe80a3cf2c24fcd2",
+        "Regular Season - 9": "d3d8b64437ba3684e7949b9ae4c3b1a6",
+        "Regular Season - 19": "2c4e3d820bad150e80eb6dfced95962b",
+        "Regular Season - 11": "bd941e2b0de3e145afc319d34846c0af",
+        "Regular Season - 12": "4817fe5b2f98671f093c325c521ca170",
+        "Regular Season - 14": "4eed0d24ec1ad944e534603d448d2179",
+        "Regular Season - 16": "5dc41f018edc613b90a162bdfc36f183",
+        "Regular Season - 23": "fe21d8c262d06478f6d0b3ef5a04e3e4",
+        "Regular Season - 26": "87ff9f1da7468aa063a9c554c8f43b04"
+      }
     },
     "327": {
-      "lastAnalyzedRound": "Regular Season - 2"
+      "analyzedRounds": {
+        "Regular Season - 2": "17c0a6d4783a853569aa693249a4525c",
+        "Regular Season - 3": "67a7c926c2fb4b5f507b134582cf996a",
+        "Regular Season - 4": "8163a38c2c4333e2e8484464bd9514b0",
+        "Regular Season - 5": "3b5cc2958fe0d72e4bd295e3b94d2f48",
+        "Regular Season - 7": "8ec0c82affaa9ab4ca0765d58cfb4f00",
+        "Regular Season - 9": "01f11fed8ec7d90afdedb664c9650b64",
+        "Regular Season - 11": "ca95d43156f66c44e5cf5dd82b21efb7",
+        "Regular Season - 15": "8786fb01677ea74544a8706f1c2447a2",
+        "Regular Season - 17": "8a64972fedf29c6438e0d555e06444b2",
+        "Regular Season - 19": "788b5cc4736d1b8cf95f274e5eb8f6fb",
+        "Regular Season - 20": "c3cd61cf56f5336ab6d833186a03e60a",
+        "Regular Season - 21": "f97bf7070d295ef1858b2c4661412a69"
+      }
     },
     "329": {
-      "lastAnalyzedRound": "Regular Season - 4"
+      "analyzedRounds": {
+        "Regular Season - 3": "011ef6f31287e9014ae4fb2b382bfb15",
+        "Regular Season - 4": "5d09e70c0e4987e6b2dcdc960fa92f55",
+        "Regular Season - 6": "11b1529e31698c27c01255ba66bdf3c1",
+        "Regular Season - 7": "695658101d80e15ec46593b3abb86158",
+        "Regular Season - 9": "e21d0a79f6b5d82652fe1009b4a196b7",
+        "Regular Season - 10": "86f2d8470999896003d8df2a25567848",
+        "Regular Season - 12": "ccfa4291229fdbc1fb37a53dc356ff97",
+        "Regular Season - 13": "b2314c11e9c80651d3ff0f12b6785cb3",
+        "Regular Season - 15": "938a352db969b52809858e0fe09d2b20",
+        "Regular Season - 20": "d12e48b0011d6cf8de6f48bb04010c2e",
+        "Regular Season - 17": "66fbfd61c77c4c9851c0ef8b4bf57873",
+        "Regular Season - 18": "fff7ce9ba4956978611c01e2e44cf483"
+      }
+    },
+    "334": {
+      "analyzedRounds": {
+        "Regular Season - 2": "d4e2f2513c8495f5d4811cfc2cbb70c0"
+      }
     },
     "345": {
-      "lastAnalyzedRound": "Regular Season - 1"
+      "analyzedRounds": {
+        "Regular Season - 4": "24e53332ab1dc27640e5b343998305ee"
+      }
     },
     "357": {
-      "lastAnalyzedRound": "Regular Season - 3"
+      "analyzedRounds": {
+        "Regular Season - 1": "5f55c1e711ed428d78e7528dbdba4620",
+        "Regular Season - 4": "824eb433de435bd10e583fdac8fdf229",
+        "Regular Season - 5": "ae67b09a61921d41bc7f8621221578b7",
+        "Regular Season - 9": "6ba60ad29c3b2d52463edd2995196fd4",
+        "Regular Season - 12": "cfe2c69f10e5ea6392df3200089f1b95",
+        "Regular Season - 14": "3269e93cc6463750bc01677185b56822",
+        "Regular Season - 15": "8dd1f9c991b9fde44259fe0e1b629a6f",
+        "Regular Season - 16": "e2f22e027cc8e18b64d5786a965a992c",
+        "Regular Season - 24": "7cb3c9b9cdb49f1c5116c7e44ab8642e",
+        "Regular Season - 17": "22487c04cc9938600bcca6922d3414a9",
+        "Regular Season - 18": "db0a6e9306a62cccf6f2a89f646ad15d",
+        "Regular Season - 25": "af4ee19a20bb170b29aff7a4c48a1758",
+        "Regular Season - 21": "5adc46152ce8a7d3799e332a92cbb0ca",
+        "Regular Season - 23": "028411435ace5cc7b1fe444524d20a2b",
+        "Regular Season - 26": "c3f863c7356dc38656f05e44e5ae03f2",
+        "Regular Season - 27": "8777878c7ec6cc9da00649a6c2a2c8b2"
+      }
     },
     "373": {
-      "lastAnalyzedRound": "Regular Season - 3"
+      "analyzedRounds": {
+        "Regular Season - 3": "c976316ff688aeedf8b5670c309b53d7",
+        "Regular Season - 4": "572aa671b57740310161374630257114",
+        "Regular Season - 5": "e132b673eb2d91ccd2f373a374ae7e11"
+      }
     }
   }
 }

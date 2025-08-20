@@ -2,19 +2,14 @@ const path = require('path');
 const { loadSportConfig } = require('../config.js');
 
 function generateTickets(sport, allPicks, context = 'predictions') {
-    console.log(`INFO: [TicketGenerator] Démarrage de la génération de tickets pour "${sport}"...`);
+    console.log(`INFO: [TicketGenerator] Démarrage de la génération de tickets pour le contexte "${context}" avec ${allPicks.length} pronostics...`);
     
     const { settings } = loadSportConfig(sport);
     const { tickets: ticketProfiles } = settings;
     const profilesToRun = ticketProfiles[context].filter(p => p.enabled);
-    
-    const confidenceThreshold = settings.analysisParams.confidenceThreshold;
-    const confidentPicks = allPicks.filter(p => p.score >= confidenceThreshold);
-    
-    console.log(`INFO: ${allPicks.length} pronostics bruts, ${confidentPicks.length} retenus après filtre de confiance global (${confidenceThreshold}%)`);
 
     const picksByDate = {};
-    confidentPicks.forEach(pick => {
+    allPicks.forEach(pick => {
         const date = pick.match.date.split('T')[0];
         if (!picksByDate[date]) {
             picksByDate[date] = [];

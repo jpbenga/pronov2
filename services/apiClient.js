@@ -43,8 +43,6 @@ async function request(sport, endpoint, params = {}) {
     const RETRY_DELAY = 1500;
     let lastError = null;
 
-    console.log(`API Call Queued for ${sport}: ${endpoint} with params ${JSON.stringify(params)}`);
-
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
         try {
             const response = await limiter.schedule(() => api.get(endpoint, { params }));
@@ -54,7 +52,6 @@ async function request(sport, endpoint, params = {}) {
             throw new Error("Réponse de l'API vide ou invalide.");
         } catch (error) {
             lastError = error;
-            console.warn(`WARN: Tentative ${attempt}/${MAX_RETRIES} échouée pour ${endpoint}. Erreur: ${error.message}`);
             if (attempt < MAX_RETRIES) {
                 await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
             }
