@@ -5,6 +5,7 @@ const dataCollector = require('./services/dataCollector');
 const analysisEngine = require('./services/analysisEngine');
 const ticketGenerator = require('./services/ticketGenerator');
 const statsService = require('./services/statsService');
+const stateManager = require('./stateManager');
 const apiClient = require('./services/apiClient');
 const { loadSportConfig } = require('./config.js');
 
@@ -19,47 +20,64 @@ app.get('/api/analyze', async (req, res) => {
     try {
         const sport = 'football';
         const { settings } = loadSportConfig(sport);
-        const { performanceThreshold, rankGapThreshold } = settings.analysisParams;
-
-        console.log("Étape 0: Collecte et enrichissement des données passées...");
-        const pastDataRaw = await dataCollector.getPastMatchData(sport);
-        const pastData = await statsService.enrichFixturesWithStandings(pastDataRaw);
         
-        console.log("\nÉtape 1: Analyse statistique globale des marchés...");
-        const globalMarketPerformance = statsService.calculateGlobalMarketStats(pastData);
-        const marketWhitelist = new Set();
-        for (const market in globalMarketPerformance) {
-            if (globalMarketPerformance[market].rate >= performanceThreshold) {
-                marketWhitelist.add(market);
+        const state = stateManager.loadState();
+        
+        console.log("Étape 1: Recherche des nouvelles journées terminées à backtester...");
+        const roundsToAnalyze = await dataCollector.getRoundsToAnalyze(state);
+        
+        let responseData = {
+            globalMarketStats: {},
+            backtestData: { picks: [], tickets: {}, stats: {} },
+            predictionData: { picks: [], tickets: {} },
+            message: ""
+        };
+
+        if (roundsToAnalyze.length > 0) {
+            console.log(`${roundsToAnalyze.length} nouvelle(s) journée(s) à traiter pour le backtest.`);
+            let newPicksForBacktest = [];
+            let allFixturesForStats = [];
+
+            for(const round of roundsToAnalyze) {
+                console.log(` -> Analyse de ${round.leagueName} - ${round.round}`);
+                const enrichedFixtures = await statsService.enrichFixturesWithStandings(round.fixtures);
+                allFixturesForStats.push(...enrichedFixtures);
+                const picks = await analysisEngine.runAnalysis(sport, enrichedFixtures);
+                newPicksForBacktest.push(...picks);
+                
+                if (!state.leagues) state.leagues = {};
+                state.leagues[round.leagueId] = { lastAnalyzedRound: round.round };
             }
+            
+            stateManager.saveState(state);
+            
+            const globalMarketPerformance = statsService.calculateGlobalMarketStats(allFixturesForStats);
+            const { fullStats } = await statsService.calculatePerformanceStats(newPicksForBacktest);
+            const backtestTickets = ticketGenerator.generateTickets(sport, newPicksForBacktest, 'backtest');
+            
+            responseData.message = `Analyse de ${roundsToAnalyze.length} nouvelle(s) journée(s) terminée.`;
+            responseData.globalMarketStats = globalMarketPerformance;
+            responseData.backtestData = { picks: newPicksForBacktest, tickets: backtestTickets, stats: fullStats };
+
+        } else {
+            console.log("Aucune nouvelle journée à backtester. Génération des prédictions futures...");
+            
+            const futureDataRaw = await dataCollector.getFutureMatchData();
+            const futureData = await statsService.enrichFixturesWithStandings(futureDataRaw);
+
+            const highRankGapMatches = futureData.filter(fixture => {
+                const rankGap = Math.abs(fixture.homeStandings.rank - fixture.awayStandings.rank);
+                return rankGap >= settings.analysisParams.rankGapThreshold;
+            });
+
+            const futurePicks = await analysisEngine.runAnalysis(sport, highRankGapMatches);
+            const predictionTickets = ticketGenerator.generateTickets(sport, futurePicks, 'predictions');
+            
+            responseData.message = "Prédictions générées.";
+            responseData.predictionData = { picks: futurePicks, tickets: predictionTickets };
         }
-        console.log(`Marchés retenus après filtre global : [${Array.from(marketWhitelist).join(', ')}]`);
-
-        console.log("\nÉtape 2: Backtest sur les marchés retenus...");
-        const pastPicks = await analysisEngine.runAnalysis(sport, pastData, marketWhitelist);
-        const { whitelist, fullStats } = await statsService.calculatePerformanceStats(pastPicks);
-        console.log(`Stratégies retenues après backtest : [${Array.from(whitelist).join(', ')}]`);
-
-        console.log("\nÉtape 3: Analyse du futur sur les marchés retenus...");
-        const futureDataRaw = await dataCollector.getFutureMatchData(sport);
-        const futureData = await statsService.enrichFixturesWithStandings(futureDataRaw);
-
-        const highRankGapMatches = futureData.filter(fixture => {
-            const rankGap = Math.abs(fixture.homeStandings.rank - fixture.awayStandings.rank);
-            return rankGap >= rankGapThreshold;
-        });
-        console.log(`INFO: ${futureData.length} matchs futurs trouvés, ${highRankGapMatches.length} retenus après filtre d'écart de classement (>=${rankGapThreshold}).`);
-
-        const futurePicks = await analysisEngine.runAnalysis(sport, highRankGapMatches, marketWhitelist);
         
-        const backtestTickets = ticketGenerator.generateTickets(sport, pastPicks, 'backtest');
-        const predictionTickets = ticketGenerator.generateTickets(sport, futurePicks, 'predictions');
-
-        res.json({
-            globalMarketStats: globalMarketPerformance,
-            backtestData: { picks: pastPicks, tickets: backtestTickets, stats: fullStats },
-            predictionData: { picks: futurePicks, tickets: predictionTickets }
-        });
+        res.json(responseData);
 
     } catch(error) {
         console.error("ERREUR GLOBALE DURANT L'ANALYSE:", error);
@@ -72,10 +90,8 @@ app.post('/api/check-results', async (req, res) => {
     if (!fixtureIds || !Array.isArray(fixtureIds) || fixtureIds.length === 0) {
         return res.status(400).json({ error: 'Liste d\'IDs de matchs requise.' });
     }
-    
     const results = {};
     try {
-        // On remplace Promise.all par une boucle séquentielle pour éviter le rate limiting
         for (const id of fixtureIds) {
             const response = await apiClient.request('football', '/fixtures', { id });
             const fixture = response?.data?.response[0];

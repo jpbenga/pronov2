@@ -1,31 +1,69 @@
-// services/statsService.js
-
 const apiClient = require('./apiClient');
 const { loadSportConfig } = require('../config.js');
 
 async function enrichFixturesWithStandings(fixtures) {
     const enrichedFixtures = [];
     const standingsCache = new Map();
+    const MAX_RETRIES = 5;
+    const RETRY_DELAY = 1000;
 
     for (const fixture of fixtures) {
         const { league, teams } = fixture;
-        const season = new Date(fixture.fixture.date).getFullYear();
+        const currentSeason = new Date(fixture.fixture.date).getFullYear();
+        const prevSeason = currentSeason - 1;
         const leagueId = league.id;
-        const cacheKey = `${leagueId}_${season}`;
+        
+        let standings = [];
+        const currentSeasonCacheKey = `${leagueId}_${currentSeason}`;
+        const prevSeasonCacheKey = `${leagueId}_${prevSeason}`;
 
-        if (!standingsCache.has(cacheKey)) {
-            const standingsData = await apiClient.request('football', '/standings', { league: leagueId, season });
-            standingsCache.set(cacheKey, standingsData?.data?.response[0]?.league?.standings[0] || []);
+        const getAndCacheStandings = async (season, cacheKey) => {
+            if (standingsCache.has(cacheKey)) {
+                return standingsCache.get(cacheKey);
+            }
+
+            let responseData = null;
+            for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+                try {
+                    const response = await apiClient.request('football', '/standings', { league: leagueId, season });
+                    const currentStandings = response?.data?.response[0]?.league?.standings;
+                    if (currentStandings && currentStandings.length > 0) {
+                        responseData = currentStandings;
+                        break;
+                    }
+                    if (attempt === MAX_RETRIES) throw new Error("Réponse de l'API vide ou invalide après plusieurs tentatives.");
+                } catch (error) {
+                    if (attempt < MAX_RETRIES) {
+                        await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+                    } else {
+                        console.warn(`WARN: Échec final de la récupération du classement pour la ligue ${league.name} (ID: ${leagueId}), saison ${season}.`);
+                    }
+                }
+            }
+            
+            const finalStandings = responseData ? responseData.flat() : [];
+            standingsCache.set(cacheKey, finalStandings);
+            return finalStandings;
+        };
+        
+        standings = await getAndCacheStandings(currentSeason, currentSeasonCacheKey);
+
+        if (!standings || standings.length === 0) {
+            standings = await getAndCacheStandings(prevSeason, prevSeasonCacheKey);
         }
         
-        const standings = standingsCache.get(cacheKey);
-        const homeStandings = standings.find(t => t.team.id === teams.home.id);
-        const awayStandings = standings.find(t => t.team.id === teams.away.id);
+        if (standings && standings.length > 0) {
+            const homeStandings = standings.find(t => t.team.id === teams.home.id);
+            const awayStandings = standings.find(t => t.team.id === teams.away.id);
 
-        if (homeStandings && awayStandings) {
-            enrichedFixtures.push({ ...fixture, homeStandings, awayStandings });
+            if (homeStandings && awayStandings) {
+                enrichedFixtures.push({ ...fixture, homeStandings, awayStandings });
+            }
         }
     }
+    
+    console.log(`\n--- RÉSUMÉ ENRICHISSEMENT ---`);
+    console.log(`Fixtures avant: ${fixtures.length}, Fixtures après: ${enrichedFixtures.length}`);
     return enrichedFixtures;
 }
 
@@ -94,7 +132,7 @@ function calculateGlobalMarketStats(pastFixtures) {
             marketCounts['Favori Gagnant'].total++; if (favWins) marketCounts['Favori Gagnant'].success++;
         }
     }
-
+    
     const finalStats = {};
     for (const market in marketCounts) {
         const { success, total } = marketCounts[market];
@@ -107,6 +145,7 @@ function calculateGlobalMarketStats(pastFixtures) {
     
     console.log("--- Statistiques Globales des Marchés ---");
     console.table(Object.fromEntries(Object.entries(finalStats).map(([key, val]) => [key, val.rate])));
+
     return finalStats;
 }
 
@@ -118,11 +157,14 @@ function getStatsBetType(betType) {
 
 function isPickSuccess(pick, homeGoals, awayGoals) {
     if (homeGoals === null || awayGoals === null || pick.isFavoriteHome === undefined) return null;
+    
     const favWins = (pick.isFavoriteHome && homeGoals > awayGoals) || (!pick.isFavoriteHome && awayGoals > homeGoals);
+    
     if (pick.betType.startsWith('Double Chance')) return favWins || homeGoals === awayGoals;
     if (pick.betType.startsWith('Favori Gagnant')) return favWins;
-    if (pick.betType === 'BTTS') return homeGoals > 0 && awayGoals > 0;
+    if (pick.betType === 'BTTS - Oui') return homeGoals > 0 && awayGoals > 0;
     if (pick.betType === 'BTTS - Non') return homeGoals === 0 || awayGoals === 0;
+    
     const totalGoals = homeGoals + awayGoals;
     if (pick.betType === 'Over 1.5') return totalGoals > 1.5;
     if (pick.betType === 'Under 1.5') return totalGoals < 1.5;
@@ -130,6 +172,7 @@ function isPickSuccess(pick, homeGoals, awayGoals) {
     if (pick.betType === 'Under 2.5') return totalGoals < 2.5;
     if (pick.betType === 'Over 3.5') return totalGoals > 3.5;
     if (pick.betType === 'Under 3.5') return totalGoals < 3.5;
+    
     return null;
 }
 
@@ -139,18 +182,22 @@ async function calculatePerformanceStats(pastPicks) {
     pastPicks.forEach(pick => {
         const result = pick.match.goals;
         if (!result || result.home === null) return;
+        
         const success = isPickSuccess(pick, result.home, result.away);
         if (success === null) return;
+        
         const statsBetType = getStatsBetType(pick.betType);
         if (!stats[statsBetType]) stats[statsBetType] = { total: 0, success: 0 };
         stats[statsBetType].total++;
         if (success) stats[statsBetType].success++;
     });
+    
     const whitelist = new Set();
     const { performanceThreshold } = loadSportConfig('football').settings.analysisParams;
+    
     for (const betType in stats) {
         const rate = (stats[betType].success / stats[betType].total) * 100;
-        const isAccepted = rate >= performanceThreshold && stats[betType].total > 5;
+        const isAccepted = rate >= performanceThreshold && stats[betType].total > 2;
         if (isAccepted) whitelist.add(betType);
     }
     return { whitelist, fullStats: stats };

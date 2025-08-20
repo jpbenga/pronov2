@@ -43,7 +43,7 @@ async function getMatchDetails(fixture, isBacktest) {
 }
 
 function getUnibetOddsForMarket(oddsData, market, bookmakerConfig) {
-    if (!oddsData || !bookmakerConfig || bookmakerConfig.length === 0) return null;
+    if (!oddsData || !bookmakerConfig || !bookmakerConfig.length === 0) return null;
     const unibetId = bookmakerConfig[0].id;
     const unibetData = oddsData.bookmakers.find(b => b.id === unibetId);
     if (unibetData) {
@@ -57,7 +57,7 @@ function getUnibetOddsForMarket(oddsData, market, bookmakerConfig) {
 }
 
 async function generatePredictions(allFixtures, settings, leagues, marketWhitelist = null) {
-    const allPicks = [];
+    const rawPicks = [];
 
     for (const fixture of allFixtures) {
         const isBacktest = fixture.fixture.status.short === 'FT';
@@ -112,11 +112,11 @@ async function generatePredictions(allFixtures, settings, leagues, marketWhiteli
                         return;
                     }
                     if (isBacktest) {
-                        allPicks.push({ match: simplifiedMatch, ...pick, isFavoriteHome, odds: null, bookmakerName: 'N/A' });
+                        rawPicks.push({ match: simplifiedMatch, ...pick, isFavoriteHome, odds: null, bookmakerName: 'N/A' });
                     } else {
                         const oddsResult = getUnibetOddsForMarket(details.oddsData, pick.market, settings.bookmakerPriority);
                         if (oddsResult) {
-                            allPicks.push({ match: simplifiedMatch, ...pick, isFavoriteHome, odds: oddsResult.odd, bookmakerName: oddsResult.bookmakerName });
+                            rawPicks.push({ match: simplifiedMatch, ...pick, isFavoriteHome, odds: oddsResult.odd, bookmakerName: oddsResult.bookmakerName });
                         }
                     }
                 });
@@ -125,11 +125,11 @@ async function generatePredictions(allFixtures, settings, leagues, marketWhiteli
     }
 
     const { confidenceThreshold } = settings.analysisParams;
-    const confidentPicks = allPicks.filter(p => p.score >= confidenceThreshold);
+    const finalPicks = rawPicks.filter(p => p.score >= confidenceThreshold);
 
-    console.log(`INFO: [Analyzer] ${allPicks.length} pronostics bruts générés, ${confidentPicks.length} retenus après filtre de confiance (${confidenceThreshold}%).`);
+    console.log(`INFO: [Analyzer] ${rawPicks.length} pronostics bruts générés, ${finalPicks.length} retenus après filtre de confiance (${confidenceThreshold}%).`);
     
-    return confidentPicks;
+    return finalPicks;
 }
 
 module.exports = { generatePredictions };
