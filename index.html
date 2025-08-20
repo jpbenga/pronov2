@@ -3,714 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oracle Football - Analyse & Prédictions</title>
+    <title>Oracle V2 - Calendrier des Pronostics</title>
     <style>
-        :root {
-            --bg-color: #f5f5f5; --card-bg: #ffffff; --text-color: #333; --border-color: #ddd;
-            --primary-color: #007bff; --primary-hover: #0056b3; --accent-color: #bb86fc;
-            --success-color: #28a745; --fail-color: #dc3545; --pending-color: #6c757d;
-            --warning-color: #ffc107; --warning-bg-light: #fff3cd;
-            --success-bg-light: #d4edda; --fail-bg-light: #f8d7da;
-            --bet-dc: #6f42c1; --bet-under: #17a2b8; --bet-over: #fd7e14; --bet-btts: #28a745;
-            --jackpot-color: #e83e8c; --montante-color: #fd7e14;
+        :root { 
+            --main-bg: #1a1d22; --card-bg: #2b2f36; --border-color: #444952; --text-primary: #e0e0e0; 
+            --text-secondary: #a0a4ab; --accent-color: #3b82f6; --success: #22c55e; --fail: #ef4444; --pending: #f59e0b;
+            --score-high: #22c55e; --score-medium: #f59e0b; --score-low: #f87171;
+            
+            --market-over: #c026d3; --market-under: #2563eb; --market-btts: #db2777; --market-dc: #16a34a;
+            --market-winner: #6366f1; --market-ht: #f59e0b; --market-team: #06b6d4;
         }
-        body { font-family: Arial, sans-serif; padding: 20px; background: var(--bg-color); line-height: 1.4; color: var(--text-color); }
-        .container { max-width: 1400px; margin: 0 auto; background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: #333; text-align: center; margin-bottom: 20px; }
-        h2.section-header, h3.daily-header { background: #e9ecef; padding: 15px; margin: 40px 0 15px 0; border-radius: 5px; font-size: 1.4em; border-left: 4px solid var(--primary-color); text-align: left;}
-        h3.daily-header { font-size: 1.2em; border-left-color: #6c757d; }
-        h3.daily-header.montante-header { border-left-color: var(--montante-color); }
-        h3.strategy-title { margin-top: 30px; font-size: 1.2em; color: #555; border-bottom: 2px solid #eee; padding-bottom: 10px; text-align:left; }
-        h3.strategy-title.jackpot { color: var(--jackpot-color); }
-        h3.strategy-title.montante { color: var(--montante-color); }
-        p.strategy-desc { font-style: italic; color: #666; text-align: left; margin: -5px 0 20px 0; max-width: 80%; }
-        button { background: var(--primary-color); color: white; border: none; padding: 15px 30px; font-size: 16px; border-radius: 5px; cursor: pointer; display: inline-block; margin: 0 10px; transition: background-color 0.3s; }
-        button.nav-btn { background-color: #6c757d; }
-        button.nav-btn.active { background-color: var(--primary-color); font-weight: bold; }
-        button#run-analysis { display: block; margin: 20px auto; }
-        .nav-container { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 20px;}
-        .status { padding: 15px; border-radius: 5px; margin-bottom: 20px; font-weight: bold; text-align: center; font-size: 1.1em; }
-        .status.loading { background: #d1ecf1; color: #0c5460; }
-        .status.success { background: var(--success-bg-light); color: #155724; }
-        .status.error { background: var(--fail-bg-light); color: #721c24; }
-        
-        .progress-container { display: none; margin: 20px 0; background-color: #e9ecef; border-radius: 5px; padding: 3px; }
-        .progress-bar { height: 20px; width: 0%; background-color: var(--primary-color); border-radius: 4px; transition: width 0.5s ease-in-out; text-align: center; color: white; line-height: 20px; font-size: 12px;}
-
-        .stats-section-title { font-size: 1.3em; margin-top: 20px; padding-bottom: 10px; border-bottom: 2px solid #eee; text-align:left;}
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-bottom: 20px;}
-        .stats-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .stats-table th, .stats-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border-color); }
-        .stats-table th { background: #f8f9fa; font-weight: bold; }
-        .stats-table td:nth-child(2), .stats-table td:nth-child(3), .stats-table td:nth-child(4) { text-align: center; }
-        .rate-cell { font-weight: bold; }
-        .status-cell span { padding: 5px 10px; border-radius: 4px; color: white; font-size: 12px; font-weight: bold; }
-        .status-accepted { background-color: var(--success-color); }
-        .status-refused { background-color: var(--fail-color); }
-
-        .picks-table-container { max-height: 600px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 5px; }
-        .picks-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .picks-table th, .picks-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
-        .picks-table th { background: #f8f9fa; font-weight: bold; position: sticky; top: 0; }
-        .picks-table tr:hover { background: #f1f1f1; }
-        .team-logo { width: 20px; height: 20px; margin-right: 8px; vertical-align: middle; }
-        .early-season-warning { cursor: help; font-size: 16px; margin-left: 8px; }
-        .bet-type { font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 12px; color: #fff; display: inline-block; }
-        .bet-dc { background: var(--bet-dc); } .bet-under { background: var(--bet-under); }
-        .bet-over { background: var(--bet-over); } .bet-btts { background: var(--bet-btts); }
-        .result-icon { font-weight: bold; font-size: 18px; text-align: center; }
-        .result-success { color: var(--success-color); } .result-failure { color: var(--fail-color); }
-        .result-pending { color: var(--pending-color); }
-        .empty-day { text-align: center; color: #666; font-style: italic; padding: 40px; }
-        
-        .bilan-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        .bilan-table th, .bilan-table td { padding: 12px 15px; text-align: center; border: 1px solid var(--border-color); }
-        .bilan-table th { background: #f8f9fa; }
-        .roi-cell { font-weight: bold; font-size: 1.2em; }
-        .tickets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; }
-        .ticket { background-color: #fdfdfd; border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; }
-        .ticket-picks-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 10px; }
-        .ticket-picks-table th { text-align:left; font-weight:bold; padding: 8px 4px; border-bottom: 2px solid #eee; }
-        .ticket-picks-table td { padding: 6px 4px; border-bottom: 1px solid #eee; vertical-align: middle;}
-        .ticket-picks-table tr:last-child td { border-bottom: none; }
-        .ticket-summary { font-weight: bold; text-align: center; padding: 10px; background: #e9ecef; border-radius: 5px; margin-top: 10px; }
-        .ticket-success { border-left: 5px solid var(--success-color) }
-        .ticket-failure { border-left: 5px solid var(--fail-color) }
-        .ticket-pending { border-left: 5px solid var(--pending-color) }
-        .ticket.jackpot { border-left: 5px solid var(--jackpot-color); }
-        .row-success { background-color: var(--success-bg-light) !important; }
-        .row-failure { background-color: var(--fail-bg-light) !important; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background-color: var(--main-bg); color: var(--text-primary); }
+        .container { max-width: 1600px; margin: auto; padding: 20px; }
+        header { text-align: center; margin-bottom: 30px; }
+        .calendar-nav { display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 30px; padding: 10px; background-color: var(--card-bg); border-radius: 12px; }
+        .day-btn { padding: 10px 15px; cursor: pointer; background-color: transparent; border: 2px solid transparent; color: var(--text-secondary); font-size: 0.9em; text-align: center; border-radius: 8px; transition: all 0.2s; }
+        .day-btn.active, .day-btn:hover { background-color: var(--accent-color); color: white; }
+        .day-btn.past { border-color: #555; }
+        .day-btn span { display: block; font-size: 1.2em; font-weight: bold; }
+        .day-stats { font-size: 0.8em; margin-top: 4px; }
+        .day-stats.success { color: var(--success); }
+        .day-stats.fail { color: var(--fail); }
+        #content-area h2 { text-align: center; font-size: 1.8em; margin-bottom: 20px; }
+        .section-title { font-size: 1.4em; color: var(--accent-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; }
+        .profile-section { margin-bottom: 30px; }
+        .ticket-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; }
+        .ticket { border: 1px solid var(--border-color); border-left: 5px solid transparent; border-radius: 8px; background-color: var(--card-bg); overflow: hidden; transition: all 0.2s ease-in-out; }
+        .ticket-header { padding: 10px 15px; border-bottom: 1px solid var(--border-color); background-color: rgba(0,0,0,0.2); }
+        .ticket-body { padding: 15px; }
+        .match { display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 10px; padding: 10px; border-bottom: 1px solid var(--border-color); font-size: 14px; border-radius: 4px; margin-bottom: -1px; }
+        .match:last-child { border-bottom: none; }
+        .match-info small { color: var(--text-secondary); }
+        .team-display { display: flex; align-items: center; gap: 8px; }
+        .team-logo { width: 20px; height: 20px; object-fit: contain; }
+        .match-score { font-weight: bold; color: var(--accent-color); font-size: 1.1em; }
+        .bet-type { padding: 4px 8px; border-radius: 4px; color: white; font-weight: bold; font-size: 0.8em; text-align: center;}
+        .confidence-score { font-weight: bold; padding: 4px 8px; border-radius: 4px; }
+        #loader { text-align: center; padding: 20px; font-size: 1.2em; }
+        .stats-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        .stats-table th, .stats-table td { padding: 12px; border: 1px solid var(--border-color); text-align: left; }
+        .stats-table th { background-color: #333; }
+        .status-accepted { color: var(--success); font-weight: bold; }
+        .status-refused { color: var(--fail); font-weight: bold; }
+        .ticket.ticket-success { border-left-color: var(--success); background-color: rgba(34, 197, 94, 0.05); }
+        .ticket.ticket-fail { border-left-color: var(--fail); opacity: 0.75; }
+        .match.pick-success { background-color: rgba(34, 197, 94, 0.1); }
+        .match.pick-fail { background-color: rgba(239, 68, 68, 0.05); text-decoration: line-through; color: var(--text-secondary); }
+        .match.pick-fail strong { color: var(--text-secondary); }
+        .winner-team { color: var(--success); font-weight: bold; }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Oracle Football - Analyse & Prédictions</h1>
-    <button id="run-analysis">Lancer l'Analyse Complète</button>
-    <div id="status" class="status" style="display:none;"></div>
-    <div class="progress-container" id="progress-container">
-        <div class="progress-bar" id="progress-bar"></div>
-    </div>
-    
-    <div class="nav-container" id="nav-container" style="display:none;">
-        <button class="nav-btn active" id="nav-backtest">Bilan & Backtest (J-7)</button>
-        <button class="nav-btn" id="nav-predictions">Prédictions (J+7)</button>
-        <button class="nav-btn" id="nav-bilan-suggestions">Bilan des Suggestions</button>
+    <div class="container">
+        <header><h1>Oracle V2</h1></header>
+        <main>
+            <div id="calendar-container" class="calendar-nav"></div>
+            <div id="loader"><button id="analyze-btn" onclick="fetchAnalysis()">Lancer l'Analyse Initiale</button></div>
+            <div id="performance-stats-container"></div>
+            <div id="content-area"></div>
+        </main>
     </div>
 
-    <div id="backtest-view">
-        <div id="strategy-performance-container"></div>
-        <div id="stats-container"></div>
-        <div id="backtest-picks-container"></div>
-        <div id="strategy-backtest-container"></div>
-    </div>
+    <script>
+        const API_DATA = { predictions: {}, backtest: {}, results: {}, stats: {} };
+        let selectedDate = null;
 
-    <div id="prediction-view" style="display:none;">
-        <div id="montante-container"></div>
-        <div id="suggested-tickets-container"></div>
-        <div id="prediction-picks-container"></div>
-    </div>
+        document.addEventListener('DOMContentLoaded', renderCalendar);
 
-    <div id="suggestions-bilan-view" style="display:none;">
-        <h2 class="section-header">Bilan des Tickets Suggérés</h2>
-        <div style="text-align: center; margin-bottom: 20px;">
-            <button id="check-results-btn">Vérifier les Résultats</button>
-            <button id="clear-suggestions-btn" style="background-color: var(--fail-color);">Effacer l'historique</button>
-        </div>
-        <div id="suggestions-bilan-container" class="tickets-grid">
-            </div>
-    </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Elements du DOM ---
-    const runBtn = document.getElementById('run-analysis');
-    const statusDiv = document.getElementById('status');
-    const navContainer = document.getElementById('nav-container');
-    const navBacktest = document.getElementById('nav-backtest');
-    const navPredictions = document.getElementById('nav-predictions');
-    const navBilanSuggestions = document.getElementById('nav-bilan-suggestions');
-    const backtestView = document.getElementById('backtest-view');
-    const predictionView = document.getElementById('prediction-view');
-    const suggestionsBilanView = document.getElementById('suggestions-bilan-view');
-    const progressContainer = document.getElementById('progress-container');
-    const progressBar = document.getElementById('progress-bar');
-    
-    const statsContainer = document.getElementById('stats-container');
-    const strategyPerformanceContainer = document.getElementById('strategy-performance-container');
-    const backtestPicksContainer = document.getElementById('backtest-picks-container');
-    const strategyBacktestContainer = document.getElementById('strategy-backtest-container');
-    const predictionPicksContainer = document.getElementById('prediction-picks-container');
-    const suggestedTicketsContainer = document.getElementById('suggested-tickets-container');
-    const montanteContainer = document.getElementById('montante-container');
-    const suggestionsBilanContainer = document.getElementById('suggestions-bilan-container');
-    const checkResultsBtn = document.getElementById('check-results-btn');
-    const clearSuggestionsBtn = document.getElementById('clear-suggestions-btn');
-
-    let progressInterval;
-
-    // --- Fonctions utilitaires ---
-    const updateStatus = (message, type) => {
-        statusDiv.textContent = message;
-        statusDiv.className = `status ${type}`;
-        statusDiv.style.display = 'block';
-    };
-
-    const startProgressBar = (durationInSeconds) => {
-        progressContainer.style.display = 'block';
-        let progress = 0;
-        const increment = 100 / durationInSeconds;
+        function getFormattedDate(date) { return date.toISOString().split('T')[0]; }
         
-        progressInterval = setInterval(() => {
-            progress += increment;
-            if (progress >= 100) {
-                progress = 99;
-            }
-            progressBar.style.width = `${progress}%`;
-            progressBar.textContent = `${Math.round(progress)}%`;
-        }, 1000);
-    };
+        function renderCalendar() {
+            const container = document.getElementById('calendar-container');
+            container.innerHTML = '';
+            const today = new Date();
+            selectedDate = getFormattedDate(today);
 
-    const stopProgressBar = (isSuccess = true) => {
-        clearInterval(progressInterval);
-        if (isSuccess) {
-            progressBar.style.width = '100%';
-            progressBar.textContent = '100%';
-        }
-        setTimeout(() => {
-            progressContainer.style.display = 'none';
-            progressBar.style.width = '0%';
-            progressBar.textContent = '';
-        }, 1500);
-    };
-
-    const getBetTypeClass = (betType) => {
-        if (!betType) return '';
-        if (betType.includes('Chance') || betType.includes('Victoire')) return 'bet-dc';
-        if (betType.includes('Under')) return 'bet-under';
-        if (betType.includes('Over')) return 'bet-over';
-        if (betType.includes('BTTS')) return 'bet-btts';
-        return '';
-    };
-    
-    const getStatsBetType = (pick) => {
-        if (pick.finalBetType.startsWith('Victoire')) return 'Victoire Favori';
-        if (pick.finalBetType.startsWith('Double Chance')) return 'Double Chance';
-        return pick.strategyName;
-    };
-
-    const isSuccess = (pick, homeGoals, awayGoals) => {
-        if (homeGoals === null || awayGoals === null) return null;
-        const totalGoals = homeGoals + awayGoals;
-        const favIsHome = pick.match.favoriteName === pick.match.homeName;
-        const favWins = (favIsHome && homeGoals > awayGoals) || (!favIsHome && awayGoals > homeGoals);
-
-        const statsBetType = getStatsBetType(pick);
-        if(statsBetType === "Victoire Favori") return favWins;
-        if(statsBetType === "Double Chance") return favWins || homeGoals === awayGoals;
-
-        switch (pick.strategyName) {
-            case 'Over 1.5': return totalGoals > 1.5; case 'Under 1.5': return totalGoals < 1.5;
-            case 'Over 2.5': return totalGoals > 2.5; case 'Under 2.5': return totalGoals < 2.5;
-            case 'Over 3.5': return totalGoals > 3.5; case 'Under 3.5': return totalGoals < 3.5;
-            case 'BTTS': return homeGoals > 0 && awayGoals > 0; case 'BTTS - Non': return homeGoals === 0 || awayGoals === 0;
-            default: return null;
-        }
-    };
-
-    // --- Fonctions d'affichage pour le Backtest ---
-    const renderStrategyPerformance = (performanceData) => {
-        if (!performanceData || performanceData.length === 0) {
-            strategyPerformanceContainer.innerHTML = '';
-            return;
-        }
-        let tableHtml = `<h2 class="section-header">Performance des Stratégies (J-7)</h2>
-            <p style="text-align:center; margin-top:-15px; margin-bottom: 25px;">Seules les stratégies avec un taux de réussite > 67% seront utilisées pour les prédictions.</p>
-            <table class="stats-table" style="max-width: 600px; margin: 0 auto 40px auto;">
-            <thead><tr><th>Type de Pari</th><th style="text-align:center;">Taux de Réussite</th><th style="text-align:center;">Statut</th></tr></thead>
-            <tbody>`;
-        
-        performanceData.sort((a, b) => b.rate - a.rate);
-        
-        for (const item of performanceData) {
-            const statusClass = item.status === 'Accepté' ? 'status-accepted' : 'status-refused';
-            const rateColor = item.status === 'Accepté' ? 'var(--success-color)' : 'var(--fail-color)';
-            tableHtml += `<tr>
-                <td><b>${item.name}</b></td>
-                <td class="rate-cell" style="text-align:center; color:${rateColor};">${item.rate.toFixed(1)}%</td>
-                <td class="status-cell" style="text-align:center;"><span class="${statusClass}">${item.status}</span></td>
-            </tr>`;
-        }
-
-        tableHtml += '</tbody></table>';
-        strategyPerformanceContainer.innerHTML = tableHtml;
-    };
-
-    const renderStats = (statsData) => {
-        if (!statsData) { statsContainer.innerHTML = ''; return; }
-        const renderSingleBetTypeTable = (betTypes, title) => {
-            if (!betTypes || Object.keys(betTypes).length === 0) return `<h4>${title}</h4><p>Aucune donnée.</p>`;
-            let table = `<h4>${title}</h4><table class="stats-table"><thead><tr><th>Type</th><th>Total</th><th>Succès</th><th>Taux</th></tr></thead><tbody>`;
-            const sortedBetTypes = Object.entries(betTypes).sort((a,b) => b[1].total - a[1].total);
-            for(const [name, data] of sortedBetTypes) {
-                table += `<tr><td>${name}</td><td>${data.total}</td><td>${data.success}</td><td class="rate-cell" style="color: ${data.rate >= 50 ? 'var(--success-color)' : 'var(--fail-color)'}">${data.rate.toFixed(1)}%</td></tr>`
-            }
-            table += `</tbody></table>`;
-            return table;
-        }
-        
-        let html = `<h2 class="section-header">Bilan Statistique Détaillé</h2>`;
-        html += `<div class="stats-grid">
-            <div>${renderSingleBetTypeTable(statsData.earlySeason.betTypes, 'Performance en Début de Saison (< J6)')}</div>
-            <div>${renderSingleBetTypeTable(statsData.regularSeason.betTypes, 'Performance en Saison Régulière (>= J6)')}</div>
-        </div>`
-        statsContainer.innerHTML = html;
-    };
-
-    const renderBacktestPickList = (dailyPicks) => {
-        if (!dailyPicks || Object.keys(dailyPicks).length === 0) {
-            backtestPicksContainer.innerHTML = `<h2 class="section-header">Détails des Pronostics du Backtest (Confiance >= 85%)</h2><div class="empty-day">Aucun pronostic trouvé.</div>`;
-            return;
-        }
-        let sectionHtml = `<h2 class="section-header">Détails des Pronostics du Backtest (Confiance >= 85%)</h2>`;
-        const sortedDates = Object.keys(dailyPicks).sort();
-        for (const date of sortedDates) {
-            const picks = dailyPicks[date];
-            const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            sectionHtml += `<h3 class="daily-header">${formattedDate}</h3>`;
-            if (picks.length === 0) {
-                sectionHtml += `<div class="empty-day">Aucun pronostic.</div>`;
-            } else {
-                sectionHtml += `<div class="picks-table-container"><table class="picks-table"><thead><tr><th>Match</th><th>Pari</th><th>Cote</th><th>Confiance</th><th>Résultat</th></tr></thead><tbody>`;
-                picks.forEach(pick => {
-                    const earlySeasonIcon = pick.match.isBeforeRound6 ? `<span class="early-season-warning" title="Prudence : Début de saison (< 6 journées)">⚠️</span>` : '';
-                    const matchHTML = `
-                        <div>
-                            <img src="${pick.match.homeLogo}" class="team-logo">${pick.match.homeName} vs <img src="${pick.match.awayLogo}" class="team-logo">${pick.match.awayName} (${pick.match.score}) ${earlySeasonIcon}
-                            <br><small style="color: #666;">${pick.match.leagueName} - ${pick.match.leagueCountry}</small>
-                        </div>`;
-                    const resultIcon = pick.isSuccess ? '✓' : '✗';
-                    const resultClass = pick.isSuccess ? 'result-success' : 'result-failure';
-                    const oddsDisplay = pick.odds ? `<b>${pick.odds.toFixed(2)}</b>` : '-';
-                    sectionHtml += `<tr><td>${matchHTML}</td><td><span class="bet-type ${getBetTypeClass(pick.finalBetType)}">${pick.finalBetType}</span></td><td>${oddsDisplay}</td><td>${pick.score.toFixed(3)}%</td><td class="result-icon ${resultClass}">${resultIcon}</td></tr>`;
-                });
-                sectionHtml += `</tbody></table></div>`;
+            for (let i = -7; i <= 7; i++) {
+                const date = new Date();
+                date.setDate(today.getDate() + i);
+                const dateString = getFormattedDate(date);
+                const dayBtn = document.createElement('button');
+                dayBtn.className = 'day-btn';
+                dayBtn.dataset.date = dateString;
+                dayBtn.onclick = () => selectDate(dateString);
+                const dayName = date.toLocaleDateString('fr-FR', { weekday: 'short' });
+                dayBtn.innerHTML = `${dayName}<span>${date.getDate()}</span><div class="day-stats" id="stats-${dateString}"></div>`;
+                if (new Date(dateString) < new Date(getFormattedDate(today))) dayBtn.classList.add('past');
+                if (dateString === selectedDate) dayBtn.classList.add('active');
+                container.appendChild(dayBtn);
             }
         }
-        backtestPicksContainer.innerHTML = sectionHtml;
-    };
-    
-    const renderStrategyBacktest = (strategyResults) => {
-        if (!strategyResults) { strategyBacktestContainer.innerHTML = ''; return; }
-        
-        const renderTicket = (ticket, isJackpot = false, isMontante = false) => {
-            let picksHtml = '';
-            ticket.picks.forEach(pick => {
-                const earlySeasonIcon = pick.match.isBeforeRound6 ? `<span class="early-season-warning" title="Prudence : Début de saison (< 6 journées)">⚠️</span>` : '';
-                const rowClass = ticket.isSuccess !== null ? (pick.isSuccess ? 'row-success' : 'row-failure') : '';
-                const matchScore = `(${pick.match.score})`;
-                const oddsDisplay = pick.odds ? `<b>${pick.odds.toFixed(2)}</b>` : '-';
-                picksHtml += `<tr class="${rowClass}">
-                        <td>
-                            <img src="${pick.match.homeLogo}" class="team-logo">${pick.match.homeName} vs <img src="${pick.match.awayLogo}" class="team-logo">${pick.match.awayName} <small>${matchScore}</small> ${earlySeasonIcon}
-                            <br><small style="color: #666;">${pick.match.leagueName} - ${pick.match.leagueCountry}</small>
-                        </td>
-                        <td><span class="bet-type ${getBetTypeClass(pick.finalBetType)}">${pick.finalBetType}</span></td>
-                        <td>${pick.score.toFixed(3)}%</td><td>${oddsDisplay}</td></tr>`;
-            });
-            const ticketResultClass = ticket.isSuccess ? 'ticket-success' : (ticket.isSuccess === false ? 'ticket-failure' : 'ticket-pending');
-            const specialClass = isJackpot ? 'jackpot' : '';
-            return `<div class="ticket ${ticketResultClass} ${specialClass}"><table class="ticket-picks-table"><thead><tr><th>Match</th><th>Pari</th><th>Confiance</th><th>Cote</th></tr></thead><tbody>${picksHtml}</tbody></table><div class="ticket-summary">Cote totale: ${ticket.totalOdds ? ticket.totalOdds.toFixed(2) : '-'}</div></div>`;
-        };
 
-        const renderBilan = (data, title, desc, options = {}) => {
-            if (!data) return '';
-            const { isJackpot = false, isMontante = false } = options;
-            const roiColor = data.roi > 0 ? 'var(--success-color)' : 'var(--fail-color)';
-            let titleClass = '';
-            if(isJackpot) titleClass = 'jackpot';
-            if(isMontante) titleClass = 'montante';
-
-            let html = `<h3 class="strategy-title ${titleClass}">${title}</h3><p class="strategy-desc">${desc}</p><table class="bilan-table"><thead><tr><th>Tickets Générés</th><th>Gagnants</th><th>Taux</th><th>ROI</th></tr></thead>
-                <tbody><tr><td>${data.total}</td><td>${data.success}</td><td>${data.rate.toFixed(1)}%</td><td class="roi-cell" style="color:${roiColor}">${data.roi}%</td></tr></tbody></table>`;
-            if (data.tickets && data.tickets.length > 0) html += `<h4>Exemples de tickets générés :</h4><div class="tickets-grid">${data.tickets.map(t => renderTicket(t, isJackpot, isMontante)).join('')}</div>`;
-            return html;
-        };
-
-        let finalHtml = `<h2 class="section-header">Backtest des Stratégies de Tickets</h2><p style="text-align:center; margin-top:-15px;">Basé sur les pronostics éligibles (Confiance > 85% ET type de pari performant). Le score des matchs de début de saison est pondéré.</p>`;
-        finalHtml += renderBilan(strategyResults.montante, 'Le Défi Quotidien : Objectif Cote 3', "Backtest des tickets générés pour se rapprocher d'une cote de 3.", {isMontante: true});
-        finalHtml += renderBilan(strategyResults.jackpot, 'Tickets "Jackpot"', "Tente de créer des tickets à cote très élevée avec les pronostics les plus sûrs.", {isJackpot: true});
-        finalHtml += renderBilan(strategyResults.segmentation.lingots, 'Segmentation : "Lingots d\'Or"', "Combine par 2 les pronostics du Top 20% (les plus fiables).");
-        finalHtml += renderBilan(strategyResults.segmentation.pieces, 'Segmentation : "Pièces de Collection"', "Combine par 4 les pronostics du milieu de classement (50%).");
-        finalHtml += renderBilan(strategyResults.segmentation.pepites, 'Segmentation : "Pépites Spéculatives"', "Combine par 3 les pronostics du bas de classement (30%).");
-        finalHtml += renderBilan(strategyResults.distribution, 'Distribution Croisée', "Répartit les pronostics sur 5 tickets (max 20) pour diversifier le risque.");
-        finalHtml += renderBilan(strategyResults.pivots, 'Système : "Pivots & Satellites"', "Combine 3 'pivots' (top pronos) avec des pronostics secondaires (limité à 30 tickets).");
-        
-        strategyBacktestContainer.innerHTML = finalHtml;
-    };
-
-    // --- Fonctions d'affichage pour les Prédictions ---
-    const renderPredictionPickList = (dailyPicks) => {
-        if (!dailyPicks || Object.keys(dailyPicks).length === 0) {
-            predictionPicksContainer.innerHTML = `<h2 class="section-header">Pronostics Éligibles Détaillés (J+7)</h2><div class="empty-day">Aucun pronostic à venir n'a passé le double filtre (confiance > 85% et stratégie performante).</div>`;
-            return;
-        }
-        let sectionHtml = `<h2 class="section-header">Pronostics Éligibles Détaillés (J+7)</h2><p style="text-align:center; margin-top:-15px;">Uniquement les pronostics avec une confiance > 85% (pondérée pour le début de saison) ET dont le type de pari a eu une performance > 67% au backtest.</p>`;
-        const sortedDates = Object.keys(dailyPicks).sort();
-        for (const date of sortedDates) {
-            const picks = dailyPicks[date];
-            const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            sectionHtml += `<h3 class="daily-header">${formattedDate}</h3>`;
-            if (picks.length === 0) {
-                sectionHtml += `<div class="empty-day">Aucun pronostic éligible pour ce jour.</div>`;
-            } else {
-                sectionHtml += `<div class="picks-table-container"><table class="picks-table"><thead><tr><th>Match</th><th>Pari</th><th>Cote</th><th>Confiance</th></tr></thead><tbody>`;
-                picks.forEach(pick => {
-                    const earlySeasonIcon = pick.match.isBeforeRound6 ? `<span class="early-season-warning" title="Prudence : Début de saison (< 6 journées)">⚠️</span>` : '';
-                    const matchHTML = `
-                        <div>
-                            <img src="${pick.match.homeLogo}" class="team-logo">${pick.match.homeName} vs <img src="${pick.match.awayLogo}" class="team-logo">${pick.match.awayName} ${earlySeasonIcon}
-                            <br><small style="color: #666;">${pick.match.leagueName} - ${pick.match.leagueCountry}</small>
-                        </div>`;
-                    const oddsDisplay = pick.odds ? `<b>${pick.odds.toFixed(2)}</b>` : '-';
-                    sectionHtml += `<tr><td>${matchHTML}</td><td><span class="bet-type ${getBetTypeClass(pick.finalBetType)}">${pick.finalBetType}</span></td><td>${oddsDisplay}</td><td>${pick.score.toFixed(3)}%</td></tr>`;
-                });
-                sectionHtml += `</tbody></table></div>`;
-            }
-        }
-        predictionPicksContainer.innerHTML = sectionHtml;
-    };
-
-    const renderSuggestedTickets = (strategyResults) => {
-        if (!strategyResults) { suggestedTicketsContainer.innerHTML = ''; return; }
-        
-        const renderTicket = (ticket, isJackpot = false) => {
-            let picksHtml = '';
-            ticket.picks.forEach(pick => {
-                const earlySeasonIcon = pick.match.isBeforeRound6 ? `<span class="early-season-warning" title="Prudence : Début de saison (< 6 journées)">⚠️</span>` : '';
-                const oddsDisplay = pick.odds ? `<b>${pick.odds.toFixed(2)}</b>` : '-';
-                picksHtml += `<tr>
-                        <td>
-                            <img src="${pick.match.homeLogo}" class="team-logo">${pick.match.homeName} vs <img src="${pick.match.awayLogo}" class="team-logo">${pick.match.awayName} ${earlySeasonIcon}
-                            <br><small style="color: #666;">${pick.match.leagueName} - ${pick.match.leagueCountry}</small>
-                        </td>
-                        <td><span class="bet-type ${getBetTypeClass(pick.finalBetType)}">${pick.finalBetType}</span></td>
-                        <td>${pick.score.toFixed(3)}%</td><td>${oddsDisplay}</td></tr>`;
-            });
-            const totalOdds = ticket.totalOdds || ticket.picks.reduce((acc, p) => acc * (p.odds || 1), 1);
-            const jackpotClass = isJackpot ? 'jackpot' : '';
-            return `<div class="ticket ${jackpotClass}"><table class="ticket-picks-table"><thead><tr><th>Match</th><th>Pari</th><th>Confiance</th><th>Cote</th></tr></thead><tbody>${picksHtml}</tbody></table><div class="ticket-summary">Cote totale: ${totalOdds.toFixed(2)}</div></div>`;
-        };
-
-        const renderBilan = (data, title, desc, isJackpot = false) => {
-             if (!data) return '';
-            let html = `<h3 class="strategy-title ${isJackpot ? 'jackpot' : ''}">${title}</h3><p class="strategy-desc">${desc}</p>`;
-            if (data.tickets && data.tickets.length > 0) {
-                html += `<h4>${data.tickets.length} ticket(s) suggéré(s) :</h4><div class="tickets-grid">${data.tickets.map(t => renderTicket(t, isJackpot)).join('')}</div>`;
-            } else {
-                html += `<p style="text-align:center; font-style:italic;">Pas assez de pronostics éligibles pour générer ce type de ticket.</p>`;
-            }
-            return html;
-        };
-
-        let finalHtml = '<h2 class="section-header">Suggestions de Tickets (J+7)</h2>';
-        finalHtml += renderBilan(strategyResults.segmentation.lingots, 'Segmentation : "Lingots d\'Or"', "Combine par 2 les pronostics du Top 20% (les plus fiables).");
-        finalHtml += renderBilan(strategyResults.segmentation.pieces, 'Segmentation : "Pièces de Collection"', "Combine par 4 les pronostics du milieu de classement (50%).");
-        finalHtml += renderBilan(strategyResults.segmentation.pepites, 'Segmentation : "Pépites Spéculatives"', "Combine par 3 les pronostics du bas de classement (30%).");
-        finalHtml += renderBilan(strategyResults.distribution, 'Distribution Croisée', "Répartit les pronostics sur 5 tickets (max 20) pour diversifier le risque.");
-        finalHtml += renderBilan(strategyResults.pivots, 'Système : "Pivots & Satellites"', "Combine 3 'pivots' (top pronos) avec des pronostics secondaires (limité à 30 tickets).");
-        finalHtml += renderBilan(strategyResults.jackpot, 'Tickets "Jackpot"', "Tente de créer des tickets à cote très élevée avec les pronostics les plus sûrs.", true);
-        suggestedTicketsContainer.innerHTML = finalHtml;
-    };
-    
-    const renderMontanteTickets = (dailyMontante) => {
-        if (!dailyMontante || Object.keys(dailyMontante).length === 0) {
-            montanteContainer.innerHTML = '';
-            return;
+        function selectDate(dateString) {
+            if (!API_DATA.predictions) return; 
+            selectedDate = dateString;
+            document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.day-btn[data-date="${dateString}"]`).classList.add('active');
+            renderContentForDate(dateString);
         }
 
-        const renderTicket = (ticket) => {
-            let picksHtml = '';
-            ticket.picks.forEach(pick => {
-                 const earlySeasonIcon = pick.match.isBeforeRound6 ? `<span class="early-season-warning" title="Prudence : Début de saison (< 6 journées)">⚠️</span>` : '';
-                const oddsDisplay = pick.odds ? `<b>${pick.odds.toFixed(2)}</b>` : '-';
-                picksHtml += `<tr>
-                        <td>
-                            <img src="${pick.match.homeLogo}" class="team-logo">${pick.match.homeName} vs <img src="${pick.match.awayLogo}" class="team-logo">${pick.match.awayName} ${earlySeasonIcon}
-                            <br><small style="color: #666;">${pick.match.leagueName} - ${pick.match.leagueCountry}</small>
-                        </td>
-                        <td><span class="bet-type ${getBetTypeClass(pick.finalBetType)}">${pick.finalBetType}</span></td>
-                        <td>${oddsDisplay}</td></tr>`;
-            });
-            const totalOdds = ticket.picks.reduce((acc, p) => acc * (p.odds || 1), 1);
-            return `<div class="ticket"><table class="ticket-picks-table"><thead><tr><th>Match</th><th>Pari</th><th>Cote</th></tr></thead><tbody>${picksHtml}</tbody></table><div class="ticket-summary">Cote totale: ${totalOdds.toFixed(2)}</div></div>`;
-        };
-
-        let finalHtml = `<h2 class="section-header" style="border-left-color: var(--montante-color);">Le Défi du Jour : Objectif Cote 3</h2>`;
-        const sortedDates = Object.keys(dailyMontante).sort();
-
-        for(const date of sortedDates) {
-            const tickets = dailyMontante[date];
-            const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            finalHtml += `<h3 class="daily-header montante-header">${formattedDate}</h3>`;
-            if (tickets && tickets.length > 0) {
-                finalHtml += `<p style="text-align:center;">Top ${tickets.length} des combinaisons diversifiées se rapprochant d'une cote de 3 :</p>`;
-                finalHtml += `<div class="tickets-grid">${tickets.map(renderTicket).join('')}</div>`;
-            } else {
-                 finalHtml += `<div class="empty-day">Pas assez de pronostics pour trouver une combinaison proche de la cote 3.</div>`;
-            }
-        }
-        montanteContainer.innerHTML = finalHtml;
-    };
-
-    // --- Fonctions pour le bilan des suggestions ---
-    const renderStoredTickets = () => {
-        const tickets = JSON.parse(localStorage.getItem('oracle_suggested_tickets')) || [];
-        suggestionsBilanContainer.innerHTML = '';
-
-        if (tickets.length === 0) {
-            suggestionsBilanContainer.innerHTML = `<div class="empty-day" style="grid-column: 1 / -1;">Aucun ticket suggéré n'a été sauvegardé. Lancez une analyse pour en générer.</div>`;
-            return;
-        }
-        
-        tickets.sort((a, b) => {
-            const statusOrder = { 'inprogress': 1, 'pending': 2, 'success': 3, 'failure': 4 };
-            if (statusOrder[a.status] !== statusOrder[b.status]) {
-                return statusOrder[a.status] - statusOrder[b.status];
-            }
-            return parseInt(b.id.split('-')[1]) - parseInt(a.id.split('-')[1]);
-        });
-
-        tickets.forEach(ticket => {
-            let picksHtml = '';
-            ticket.picks.forEach(pick => {
-                let rowClass = '';
-                let resultIcon = '...';
-                if (pick.isSuccess === true) { rowClass = 'row-success'; resultIcon = '✓'; }
-                else if (pick.isSuccess === false) { rowClass = 'row-failure'; resultIcon = '✗'; }
+        async function fetchAnalysis() {
+            document.getElementById('loader').innerHTML = '<p>Analyse complète en cours...</p>';
+            try {
+                const response = await fetch('/api/analyze');
+                const data = await response.json();
+                API_DATA.predictions = data.predictionData.tickets;
+                API_DATA.backtest = data.backtestData.tickets;
+                API_DATA.stats = data.backtestData.stats;
+                document.getElementById('loader').style.display = 'none';
                 
-                const earlySeasonIcon = pick.match.isBeforeRound6 ? `<span class="early-season-warning" title="Prudence : Début de saison (< 6 journées)">⚠️</span>` : '';
-                const oddsDisplay = pick.odds ? `<b>${pick.odds.toFixed(2)}</b>` : '-';
-                const scoreDisplay = pick.match.score !== 'À venir' ? `<small>(${pick.match.score})</small>` : '';
-
-                picksHtml += `<tr class="${rowClass}">
-                    <td>
-                        <img src="${pick.match.homeLogo}" class="team-logo">${pick.match.homeName} vs <img src="${pick.match.awayLogo}" class="team-logo">${pick.match.awayName} ${scoreDisplay} ${earlySeasonIcon}
-                        <br><small style="color: #666;">${pick.match.leagueName} - ${pick.match.leagueCountry}</small>
-                    </td>
-                    <td><span class="bet-type ${getBetTypeClass(pick.finalBetType)}">${pick.finalBetType}</span></td>
-                    <td>${oddsDisplay}</td>
-                    <td style="text-align:center;">${resultIcon}</td>
-                </tr>`;
-            });
-            
-            let ticketResultClass = '';
-            let summaryText = `Cote totale: ${ticket.totalOdds ? ticket.totalOdds.toFixed(2) : '-'}`;
-            if (ticket.status === 'success') {
-                ticketResultClass = 'ticket-success';
-                summaryText = `✅ GAGNANT ! | ${summaryText}`;
-            } else if (ticket.status === 'failure') {
-                ticketResultClass = 'ticket-failure';
-                summaryText = `❌ PERDANT | ${summaryText}`;
-            } else if (ticket.status === 'inprogress') {
-                ticketResultClass = 'ticket-pending';
-                summaryText = `⏱️ EN COURS | ${summaryText}`;
+                renderPerformanceStats(data.globalMarketStats);
+                
+                await processBacktestResults();
+                selectDate(selectedDate);
+            } catch (error) {
+                console.error('Erreur:', error);
+                document.getElementById('loader').innerHTML = '<p style="color: red;">Erreur durant l\'analyse.</p>';
             }
-
-            const strategyNameRaw = ticket.id.split('-')[0] || 'inconnue';
-            const strategyTitle = strategyNameRaw.replace(/\./g, ' ').replace(/_/g, ' ');
-
-            const ticketHtml = `<div class="ticket ${ticketResultClass}">
-                    <h4 style="text-align:center; margin-top:0; text-transform: capitalize;">Ticket (${strategyTitle})</h4>
-                    <table class="ticket-picks-table">
-                        <thead><tr><th>Match</th><th>Pari</th><th>Cote</th><th>Rés.</th></tr></thead>
-                        <tbody>${picksHtml}</tbody>
-                    </table>
-                    <div class="ticket-summary">${summaryText}</div>
-                </div>`;
-            suggestionsBilanContainer.innerHTML += ticketHtml;
-        });
-    };
-
-    checkResultsBtn.addEventListener('click', async () => {
-        const storedTickets = JSON.parse(localStorage.getItem('oracle_suggested_tickets')) || [];
-        if (storedTickets.length === 0) {
-            alert("Aucun ticket à vérifier.");
-            return;
         }
         
-        const fixtureIds = [...new Set(storedTickets.flatMap(t => t.picks.map(p => p.match.id)))];
-        
-        updateStatus('Vérification des résultats en cours...', 'loading');
-        try {
-            const response = await fetch('/check-results', {
+        function renderPerformanceStats(stats) {
+            const container = document.getElementById('performance-stats-container');
+            let tableHtml = `<h3 class="section-title">Analyse de Performance des Marchés (7 derniers jours)</h3>
+                                <table class="stats-table">
+                                    <thead><tr><th>Marché</th><th>Total</th><th>Succès</th><th>Taux</th><th>Statut (>67%)</th></tr></thead>
+                                    <tbody>`;
+            const sortedStats = Object.entries(stats).sort((a, b) => b[1].total - a[1].total);
+            for (const [betType, data] of sortedStats) {
+                const rate = data.rate;
+                const status = rate >= 67 ? '<span class="status-accepted">Accepté</span>' : '<span class="status-refused">Refusé</span>';
+                if (data.total > 0) {
+                    tableHtml += `<tr><td>${betType}</td><td>${data.total}</td><td>${data.success}</td><td>${rate.toFixed(2)}%</td><td>${status}</td></tr>`;
+                }
+            }
+            tableHtml += '</tbody></table>';
+            container.innerHTML = tableHtml;
+        }
+
+        async function processBacktestResults() {
+            const allFixtureIds = new Set();
+            Object.values(API_DATA.backtest).flat().forEach(ticket => ticket.picks.forEach(p => allFixtureIds.add(p.match.id)));
+
+            if (allFixtureIds.size === 0) return;
+            const response = await fetch('/api/check-results', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ fixtureIds })
+                body: JSON.stringify({ fixtureIds: [...allFixtureIds] })
             });
-            if (!response.ok) throw new Error('La réponse du serveur n\'est pas valide.');
-            
-            const results = await response.json();
-            
-            storedTickets.forEach(ticket => {
-                let hasFailedPick = false;
-                let finishedPicks = 0;
+            API_DATA.results = await response.json();
 
-                ticket.picks.forEach(pick => {
-                    const result = results[pick.match.id];
-                    if (result && pick.isSuccess === null) {
-                        pick.isSuccess = isSuccess(pick, result.home, result.away);
-                        pick.match.score = `${result.home} - ${result.away}`;
-                    }
-                    if (pick.isSuccess === false) hasFailedPick = true;
-                    if (pick.isSuccess !== null) finishedPicks++;
-                });
-
-                if (hasFailedPick) {
-                    ticket.status = 'failure';
-                } else if (finishedPicks === ticket.picks.length) {
-                    ticket.status = 'success';
-                } else if (finishedPicks > 0) {
-                    ticket.status = 'inprogress';
-                } else {
-                    ticket.status = 'pending';
-                }
-            });
-            
-            localStorage.setItem('oracle_suggested_tickets', JSON.stringify(storedTickets));
-            renderStoredTickets();
-            updateStatus('Résultats mis à jour !', 'success');
-            
-        } catch (error) {
-            updateStatus(`Erreur lors de la vérification : ${error.message}`, 'error');
-        }
-    });
-
-    clearSuggestionsBtn.addEventListener('click', () => {
-        if (confirm("Êtes-vous sûr de vouloir supprimer tous les tickets suggérés de l'historique ?")) {
-            localStorage.removeItem('oracle_suggested_tickets');
-            renderStoredTickets();
-            alert("Historique effacé.");
-        }
-    });
-
-    // --- Événements ---
-    navBacktest.addEventListener('click', () => {
-        backtestView.style.display = 'block';
-        predictionView.style.display = 'none';
-        suggestionsBilanView.style.display = 'none';
-        navBacktest.classList.add('active');
-        navPredictions.classList.remove('active');
-        navBilanSuggestions.classList.remove('active');
-    });
-
-    navPredictions.addEventListener('click', () => {
-        backtestView.style.display = 'none';
-        predictionView.style.display = 'block';
-        suggestionsBilanView.style.display = 'none';
-        navBacktest.classList.remove('active');
-        navPredictions.classList.add('active');
-        navBilanSuggestions.classList.remove('active');
-    });
-
-    navBilanSuggestions.addEventListener('click', () => {
-        backtestView.style.display = 'none';
-        predictionView.style.display = 'none';
-        suggestionsBilanView.style.display = 'block';
-        navBacktest.classList.remove('active');
-        navPredictions.classList.remove('active');
-        navBilanSuggestions.classList.add('active');
-    });
-
-    runBtn.addEventListener('click', async () => {
-        runBtn.disabled = true;
-        navContainer.style.display = 'none';
-        backtestView.style.display = 'none';
-        predictionView.style.display = 'none';
-        suggestionsBilanView.style.display = 'none';
-        updateStatus('Lancement de l\'analyse globale...', 'loading');
-        startProgressBar(90);
-        
-        try {
-            const response = await fetch('/analyze-all');
-            if (!response.ok) throw new Error(`Erreur serveur: ${response.statusText}`);
-            const data = await response.json();
-            
-            stopProgressBar(true);
-            updateStatus('Analyse complète terminée avec succès !', 'success');
-            
-            // Rendu de la vue Backtest
-            renderStrategyPerformance(data.backtestData.strategyPerformance);
-            renderStats(data.backtestData.stats);
-            renderBacktestPickList(data.backtestData.dailyPicks);
-            renderStrategyBacktest(data.backtestData.strategyResults);
-            
-            // Rendu de la vue Prédictions
-            renderMontanteTickets(data.predictionData.suggestedTickets.montante);
-            renderSuggestedTickets(data.predictionData.suggestedTickets);
-            renderPredictionPickList(data.predictionData.dailyPicks);
-
-            // Logique de stockage des tickets suggérés
-            const strategies = data.predictionData.suggestedTickets;
-            let newTickets = [];
-            for (const strategyKey in strategies) { 
-                if (strategyKey === 'montante') {
-                    for(const date in strategies[strategyKey]) {
-                        const dailyTickets = strategies[strategyKey][date];
-                         dailyTickets.forEach((ticket, index) => {
-                             newTickets.push({
-                                id: `montante.${date}-${Date.now()}-${index}`,
-                                totalOdds: ticket.picks.reduce((acc, p) => acc * (p.odds || 1), 1),
-                                picks: ticket.picks.map(p => ({ ...p, isSuccess: null })),
-                                status: 'pending'
-                            });
-                         });
-                    }
-                    continue;
-                }
-                
-                const processStrategy = (stratData, baseName) => {
-                     if (stratData && stratData.tickets && stratData.tickets.length > 0) {
-                        stratData.tickets.forEach((ticket, index) => {
-                            newTickets.push({
-                                id: `${baseName}-${Date.now()}-${index}`,
-                                totalOdds: ticket.totalOdds,
-                                picks: ticket.picks.map(p => ({ ...p, isSuccess: null })),
-                                status: 'pending'
-                            });
+            document.querySelectorAll('.day-btn.past').forEach(btn => {
+                const date = btn.dataset.date;
+                let dailyTotal = 0, dailySuccess = 0;
+                for (const profileName in API_DATA.backtest) {
+                    const ticketsForDate = API_DATA.backtest[profileName].filter(ticket => ticket.picks.length > 0 && ticket.picks[0].match.date.startsWith(date));
+                    if (ticketsForDate.length > 0) {
+                        dailyTotal += ticketsForDate.length;
+                        ticketsForDate.forEach(ticket => {
+                            if (isTicketSuccess(ticket)) dailySuccess++;
                         });
                     }
                 }
+                const statsDiv = document.getElementById(`stats-${date}`);
+                if (dailyTotal > 0) {
+                    statsDiv.textContent = `${dailySuccess} / ${dailyTotal}`;
+                    statsDiv.className = `day-stats ${dailySuccess === dailyTotal ? 'success' : 'fail'}`;
+                }
+            });
+        }
 
-                if (strategyKey === 'segmentation') {
-                     for(const subStrategyName in strategies[strategyKey]) {
-                        processStrategy(strategies[strategyKey][subStrategyName], `${strategyKey}.${subStrategyName}`);
-                    }
-                } else {
-                     processStrategy(strategies[strategyKey], strategyKey);
+        function renderContentForDate(dateString) {
+            const container = document.getElementById('content-area');
+            const formattedDate = new Date(dateString).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+            container.innerHTML = `<h2>Pronostics pour le ${formattedDate}</h2>`;
+            
+            const isPast = new Date(dateString) < new Date(getFormattedDate(new Date()));
+            const context = isPast ? 'backtest' : 'predictions';
+            const dataToShow = isPast ? API_DATA.backtest : API_DATA.predictions;
+
+            let contentFound = false;
+            for (const profileName in dataToShow) {
+                const allTicketsForProfile = dataToShow[profileName];
+                const ticketsForDate = allTicketsForProfile.filter(ticket => ticket.picks.length > 0 && ticket.picks[0].match.date.startsWith(dateString));
+                
+                if (ticketsForDate.length > 0) {
+                    contentFound = true;
+                    let profileHtml = `<div class="profile-section"><h3 class="profile-title">${profileName} (${ticketsForDate.length} ticket${ticketsForDate.length > 1 ? 's' : ''})</h3><div class="ticket-container">`;
+                    ticketsForDate.forEach(ticket => profileHtml += buildTicketHtml(ticket, profileName, context));
+                    profileHtml += `</div></div>`;
+                    container.innerHTML += profileHtml;
                 }
             }
-    
-            if (newTickets.length > 0) {
-                const storedTickets = JSON.parse(localStorage.getItem('oracle_suggested_tickets')) || [];
-                localStorage.setItem('oracle_suggested_tickets', JSON.stringify([...storedTickets, ...newTickets]));
-                renderStoredTickets();
+            if (!contentFound) container.innerHTML += '<p style="text-align: center;">Aucun ticket à afficher pour ce jour.</p>';
+        }
+
+        function buildTicketHtml(ticket, profileName, context) {
+            let matchesHtml = '';
+            const totalOdds = ticket.picks.reduce((acc, p) => acc * (p.odds || 1), 1);
+            
+            ticket.picks.forEach(p => {
+                const matchDate = new Date(p.match.date);
+                const dateText = `${matchDate.toLocaleDateString('fr-FR')} - ${matchDate.toLocaleTimeString('fr-FR', {hour: '2-digit', minute:'2-digit'})}`;
+                
+                let marketColor = 'var(--text-secondary)';
+                if (p.betType.includes('Over 1.5') || p.betType.includes('Over 2.5') || p.betType.includes('Over 3.5')) marketColor = 'var(--market-over)';
+                if (p.betType.includes('Under 1.5') || p.betType.includes('Under 2.5') || p.betType.includes('Under 3.5')) marketColor = 'var(--market-under)';
+                if (p.betType.includes('BTTS')) marketColor = 'var(--market-btts)';
+                if (p.betType.includes('Double Chance')) marketColor = 'var(--market-dc)';
+                if (p.betType.includes('Favori Gagnant')) marketColor = 'var(--market-winner)';
+                if (p.betType.includes('MT1') || p.betType.includes('MT2')) marketColor = 'var(--market-ht)';
+                if (p.betType.includes('Domicile') || p.betType.includes('Extérieur')) marketColor = 'var(--market-team)';
+
+                let scoreColor = 'var(--score-low)';
+                if (p.score >= 95) scoreColor = 'var(--score-high)';
+                else if (p.score >= 90) scoreColor = 'var(--score-medium)';
+                
+                let scoreHtml = '';
+                let matchClass = 'match';
+                let homeTeamHtml = `<div class="team-display"><img src="${p.match.home_logo}" class="team-logo"> <strong>${p.match.home_team}</strong></div>`;
+                let awayTeamHtml = `<div class="team-display"><img src="${p.match.away_logo}" class="team-logo"> <strong>${p.match.away_team}</strong></div>`;
+
+                if (context === 'backtest') {
+                    const result = API_DATA.results[p.match.id];
+                    if (result) {
+                        scoreHtml = `<div class="match-score">${result.home} - ${result.away}</div>`;
+                        const pickSuccess = isPickSuccessInternal(p, result.home, result.away);
+                        if (pickSuccess === true) matchClass += ' pick-success';
+                        if (pickSuccess === false) matchClass += ' pick-fail';
+
+                        if (result.home > result.away) {
+                            homeTeamHtml = `<div class="team-display"><img src="${p.match.home_logo}" class="team-logo"> <strong class="winner-team">${p.match.home_team}</strong></div>`;
+                        } else if (result.away > result.home) {
+                            awayTeamHtml = `<div class="team-display"><img src="${p.match.away_logo}" class="team-logo"> <strong class="winner-team">${p.match.away_team}</strong></div>`;
+                        }
+                    }
+                }
+
+                matchesHtml += `<div class="${matchClass}">
+                    <div class="match-info">
+                        ${homeTeamHtml}
+                        ${awayTeamHtml}
+                        <small>${dateText}</small>
+                    </div>
+                    ${scoreHtml}
+                    <div class="bet-type" style="background-color:${marketColor}">${p.betType} @${p.odds || 'N/A'}</div>
+                    <div class="confidence-score" style="background-color:${scoreColor}">${p.score.toFixed(0)}%</div>
+                </div>`;
+            });
+
+            let ticketClass = 'ticket';
+            if (context === 'backtest') {
+                const success = isTicketSuccess(ticket);
+                if (success === true) {
+                    ticketClass += ' ticket-success';
+                } else if (success === false) {
+                    ticketClass += ' ticket-fail';
+                }
             }
 
-            navContainer.style.display = 'block';
-            navBacktest.click();
-
-
-        } catch (error) {
-            stopProgressBar(false);
-            updateStatus(`Erreur critique: ${error.message}. Vérifiez la console du navigateur.`, 'error');
-        } finally {
-            runBtn.disabled = false;
+            return `<div class="${ticketClass}">
+                        <div class="ticket-header">Cote Totale: <strong>${totalOdds.toFixed(2)}</strong></div>
+                        <div class="ticket-body">${matchesHtml}</div>
+                    </div>`;
         }
-    });
+        
+        function isTicketSuccess(ticket) {
+            if (!ticket.picks || ticket.picks.length === 0) return null;
+            
+            const resultsKnown = ticket.picks.every(pick => API_DATA.results[pick.match.id]);
+            if (!resultsKnown) return null;
 
-    renderStoredTickets();
-});
-</script>
+            return ticket.picks.every(pick => {
+                const result = API_DATA.results[pick.match.id];
+                return isPickSuccessInternal(pick, result.home, result.away) === true;
+            });
+        }
+        
+        function isPickSuccessInternal(pick, homeGoals, awayGoals) {
+            if (homeGoals === null || awayGoals === null) return null;
+
+            const isFavoriteHome = pick.isFavoriteHome;
+            if (isFavoriteHome === undefined) return null;
+
+            const favWins = (isFavoriteHome && homeGoals > awayGoals) || (!isFavoriteHome && awayGoals > homeGoals);
+
+            if (pick.betType.startsWith('Double Chance')) return favWins || homeGoals === awayGoals;
+            if (pick.betType.startsWith('Favori Gagnant')) return favWins;
+            if (pick.betType.startsWith('BTTS - Oui')) return homeGoals > 0 && awayGoals > 0;
+            if (pick.betType.startsWith('BTTS - Non')) return homeGoals === 0 || awayGoals === 0;
+            
+            const totalGoals = homeGoals + awayGoals;
+            if(pick.betType.startsWith('Over 1.5')) return totalGoals > 1.5;
+            if(pick.betType.startsWith('Under 1.5')) return totalGoals < 1.5;
+            if(pick.betType.startsWith('Over 2.5')) return totalGoals > 2.5;
+            if(pick.betType.startsWith('Under 2.5')) return totalGoals < 2.5;
+            if(pick.betType.startsWith('Over 3.5')) return totalGoals > 3.5;
+            if(pick.betType.startsWith('Under 3.5')) return totalGoals < 3.5;
+            
+            // Gestion des nouveaux marchés
+            if (pick.betType.startsWith('Over 0.5 MT1')) return (homeGoals + awayGoals - (pick.match.goals.home + pick.match.goals.away - (pick.match.score.halftime.home + pick.match.score.halftime.away))) > 0.5;
+
+            return null;
+        }
+    </script>
 </body>
 </html>

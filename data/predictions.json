@@ -1,0 +1,26 @@
+[
+    {
+        "date": "2025-08-18",
+        "home_team": "Team G",
+        "away_team": "Team H",
+        "status": "scheduled",
+        "predicted_winner": "home",
+        "confidence": 0.85
+    },
+    {
+        "date": "2025-08-19",
+        "home_team": "Team I",
+        "away_team": "Team J",
+        "status": "scheduled",
+        "predicted_winner": "draw",
+        "confidence": 0.7
+    },
+    {
+        "date": "2025-08-20",
+        "home_team": "Team K",
+        "away_team": "Team L",
+        "status": "scheduled",
+        "predicted_winner": "away",
+        "confidence": 0.55
+    }
+]
