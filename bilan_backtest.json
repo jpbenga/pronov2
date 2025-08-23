@@ -1,0 +1,652 @@
+{
+  "totalMatchesAnalyzed": 351,
+  "globalSummary": {
+    "0-59": {
+      "success": 702,
+      "total": 2361
+    },
+    "60-69": {
+      "success": 1093,
+      "total": 1445
+    },
+    "70-79": {
+      "success": 1569,
+      "total": 1825
+    },
+    "80-89": {
+      "success": 915,
+      "total": 1014
+    },
+    "90-100": {
+      "success": 1957,
+      "total": 2130
+    }
+  },
+  "perMarketSummary": {
+    "match_over_0.5": {
+      "0-59": {
+        "success": 15,
+        "total": 22
+      },
+      "60-69": {
+        "success": 81,
+        "total": 94
+      },
+      "70-79": {
+        "success": 163,
+        "total": 168
+      },
+      "80-89": {
+        "success": 55,
+        "total": 56
+      },
+      "90-100": {
+        "success": 11,
+        "total": 11
+      }
+    },
+    "match_over_1.5": {
+      "0-59": {
+        "success": 25,
+        "total": 73
+      },
+      "60-69": {
+        "success": 90,
+        "total": 109
+      },
+      "70-79": {
+        "success": 92,
+        "total": 105
+      },
+      "80-89": {
+        "success": 44,
+        "total": 45
+      },
+      "90-100": {
+        "success": 19,
+        "total": 19
+      }
+    },
+    "match_over_2.5": {
+      "0-59": {
+        "success": 79,
+        "total": 208
+      },
+      "60-69": {
+        "success": 58,
+        "total": 70
+      },
+      "70-79": {
+        "success": 34,
+        "total": 40
+      },
+      "80-89": {
+        "success": 16,
+        "total": 17
+      },
+      "90-100": {
+        "success": 16,
+        "total": 16
+      }
+    },
+    "match_over_3.5": {
+      "0-59": {
+        "success": 91,
+        "total": 320
+      },
+      "60-69": {
+        "success": 13,
+        "total": 15
+      },
+      "70-79": {
+        "success": 7,
+        "total": 7
+      },
+      "80-89": {
+        "success": 4,
+        "total": 4
+      },
+      "90-100": {
+        "success": 5,
+        "total": 5
+      }
+    },
+    "match_under_1.5": {
+      "0-59": {
+        "success": 77,
+        "total": 347
+      },
+      "60-69": {
+        "success": 3,
+        "total": 3
+      },
+      "70-79": {
+        "success": 1,
+        "total": 1
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0
+      }
+    },
+    "match_under_2.5": {
+      "0-59": {
+        "success": 85,
+        "total": 284
+      },
+      "60-69": {
+        "success": 32,
+        "total": 36
+      },
+      "70-79": {
+        "success": 15,
+        "total": 15
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1
+      }
+    },
+    "match_under_3.5": {
+      "0-59": {
+        "success": 38,
+        "total": 107
+      },
+      "60-69": {
+        "success": 49,
+        "total": 76
+      },
+      "70-79": {
+        "success": 41,
+        "total": 60
+      },
+      "80-89": {
+        "success": 61,
+        "total": 66
+      },
+      "90-100": {
+        "success": 42,
+        "total": 42
+      }
+    },
+    "btts": {
+      "0-59": {
+        "success": 0,
+        "total": 24
+      },
+      "60-69": {
+        "success": 1,
+        "total": 7
+      },
+      "70-79": {
+        "success": 2,
+        "total": 11
+      },
+      "80-89": {
+        "success": 17,
+        "total": 41
+      },
+      "90-100": {
+        "success": 180,
+        "total": 268
+      }
+    },
+    "btts_no": {
+      "0-59": {
+        "success": 0,
+        "total": 336
+      },
+      "60-69": {
+        "success": 0,
+        "total": 12
+      },
+      "70-79": {
+        "success": 0,
+        "total": 2
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 1
+      }
+    },
+    "home_over_0.5": {
+      "0-59": {
+        "success": 93,
+        "total": 163
+      },
+      "60-69": {
+        "success": 137,
+        "total": 151
+      },
+      "70-79": {
+        "success": 22,
+        "total": 22
+      },
+      "80-89": {
+        "success": 11,
+        "total": 11
+      },
+      "90-100": {
+        "success": 4,
+        "total": 4
+      }
+    },
+    "away_over_0.5": {
+      "0-59": {
+        "success": 88,
+        "total": 163
+      },
+      "60-69": {
+        "success": 133,
+        "total": 151
+      },
+      "70-79": {
+        "success": 27,
+        "total": 27
+      },
+      "80-89": {
+        "success": 7,
+        "total": 7
+      },
+      "90-100": {
+        "success": 3,
+        "total": 3
+      }
+    },
+    "home_under_2.5": {
+      "0-59": {
+        "success": 8,
+        "total": 44
+      },
+      "60-69": {
+        "success": 41,
+        "total": 67
+      },
+      "70-79": {
+        "success": 130,
+        "total": 142
+      },
+      "80-89": {
+        "success": 62,
+        "total": 62
+      },
+      "90-100": {
+        "success": 36,
+        "total": 36
+      }
+    },
+    "home_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 10
+      },
+      "60-69": {
+        "success": 6,
+        "total": 8
+      },
+      "70-79": {
+        "success": 8,
+        "total": 13
+      },
+      "80-89": {
+        "success": 32,
+        "total": 36
+      },
+      "90-100": {
+        "success": 277,
+        "total": 284
+      }
+    },
+    "away_under_2.5": {
+      "0-59": {
+        "success": 16,
+        "total": 39
+      },
+      "60-69": {
+        "success": 56,
+        "total": 79
+      },
+      "70-79": {
+        "success": 115,
+        "total": 128
+      },
+      "80-89": {
+        "success": 80,
+        "total": 80
+      },
+      "90-100": {
+        "success": 25,
+        "total": 25
+      }
+    },
+    "away_under_3.5": {
+      "0-59": {
+        "success": 0,
+        "total": 5
+      },
+      "60-69": {
+        "success": 11,
+        "total": 14
+      },
+      "70-79": {
+        "success": 8,
+        "total": 11
+      },
+      "80-89": {
+        "success": 44,
+        "total": 48
+      },
+      "90-100": {
+        "success": 268,
+        "total": 273
+      }
+    },
+    "ht_over_0.5": {
+      "0-59": {
+        "success": 14,
+        "total": 36
+      },
+      "60-69": {
+        "success": 75,
+        "total": 112
+      },
+      "70-79": {
+        "success": 89,
+        "total": 121
+      },
+      "80-89": {
+        "success": 54,
+        "total": 60
+      },
+      "90-100": {
+        "success": 20,
+        "total": 22
+      }
+    },
+    "st_over_0.5": {
+      "0-59": {
+        "success": 12,
+        "total": 29
+      },
+      "60-69": {
+        "success": 27,
+        "total": 45
+      },
+      "70-79": {
+        "success": 96,
+        "total": 121
+      },
+      "80-89": {
+        "success": 78,
+        "total": 92
+      },
+      "90-100": {
+        "success": 62,
+        "total": 64
+      }
+    },
+    "ht_under_2.5": {
+      "0-59": {
+        "success": 3,
+        "total": 6
+      },
+      "60-69": {
+        "success": 2,
+        "total": 10
+      },
+      "70-79": {
+        "success": 18,
+        "total": 27
+      },
+      "80-89": {
+        "success": 56,
+        "total": 73
+      },
+      "90-100": {
+        "success": 215,
+        "total": 235
+      }
+    },
+    "ht_under_3.5": {
+      "0-59": {
+        "success": 1,
+        "total": 1
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0
+      },
+      "80-89": {
+        "success": 3,
+        "total": 3
+      },
+      "90-100": {
+        "success": 332,
+        "total": 347
+      }
+    },
+    "st_under_2.5": {
+      "0-59": {
+        "success": 5,
+        "total": 22
+      },
+      "60-69": {
+        "success": 27,
+        "total": 42
+      },
+      "70-79": {
+        "success": 51,
+        "total": 79
+      },
+      "80-89": {
+        "success": 81,
+        "total": 97
+      },
+      "90-100": {
+        "success": 104,
+        "total": 111
+      }
+    },
+    "st_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 4
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0
+      },
+      "70-79": {
+        "success": 2,
+        "total": 2
+      },
+      "80-89": {
+        "success": 4,
+        "total": 7
+      },
+      "90-100": {
+        "success": 312,
+        "total": 338
+      }
+    },
+    "home_ht_under_1.5": {
+      "0-59": {
+        "success": 11,
+        "total": 20
+      },
+      "60-69": {
+        "success": 28,
+        "total": 47
+      },
+      "70-79": {
+        "success": 183,
+        "total": 209
+      },
+      "80-89": {
+        "success": 61,
+        "total": 63
+      },
+      "90-100": {
+        "success": 12,
+        "total": 12
+      }
+    },
+    "home_st_under_1.5": {
+      "0-59": {
+        "success": 11,
+        "total": 39
+      },
+      "60-69": {
+        "success": 92,
+        "total": 120
+      },
+      "70-79": {
+        "success": 139,
+        "total": 155
+      },
+      "80-89": {
+        "success": 37,
+        "total": 37
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0
+      }
+    },
+    "away_ht_under_1.5": {
+      "0-59": {
+        "success": 9,
+        "total": 21
+      },
+      "60-69": {
+        "success": 46,
+        "total": 57
+      },
+      "70-79": {
+        "success": 184,
+        "total": 202
+      },
+      "80-89": {
+        "success": 57,
+        "total": 58
+      },
+      "90-100": {
+        "success": 13,
+        "total": 13
+      }
+    },
+    "away_st_under_1.5": {
+      "0-59": {
+        "success": 17,
+        "total": 38
+      },
+      "60-69": {
+        "success": 85,
+        "total": 120
+      },
+      "70-79": {
+        "success": 142,
+        "total": 157
+      },
+      "80-89": {
+        "success": 36,
+        "total": 36
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0
+      }
+    }
+  },
+  "marketOccurrences": {
+    "match_over_0.5": 325,
+    "ht_under_0.5": 99,
+    "st_over_0.5": 275,
+    "home_under_0.5": 84,
+    "away_over_0.5": 258,
+    "home_ht_under_0.5": 169,
+    "away_ht_under_0.5": 200,
+    "home_st_under_0.5": 169,
+    "away_st_over_0.5": 190,
+    "match_under_1.5": 81,
+    "ht_under_1.5": 220,
+    "st_under_1.5": 184,
+    "home_under_1.5": 204,
+    "away_under_1.5": 208,
+    "home_ht_under_1.5": 295,
+    "away_ht_under_1.5": 309,
+    "home_st_under_1.5": 279,
+    "away_st_under_1.5": 280,
+    "match_under_2.5": 148,
+    "ht_under_2.5": 294,
+    "st_under_2.5": 268,
+    "home_under_2.5": 277,
+    "away_under_2.5": 292,
+    "home_ht_under_2.5": 338,
+    "away_ht_under_2.5": 341,
+    "home_st_under_2.5": 327,
+    "away_st_under_2.5": 329,
+    "match_under_3.5": 231,
+    "ht_under_3.5": 336,
+    "st_under_3.5": 320,
+    "home_under_3.5": 325,
+    "away_under_3.5": 331,
+    "home_ht_under_3.5": 349,
+    "away_ht_under_3.5": 350,
+    "home_st_under_3.5": 347,
+    "away_st_under_3.5": 345,
+    "btts": 200,
+    "ht_over_0.5": 252,
+    "home_over_0.5": 267,
+    "away_ht_over_0.5": 151,
+    "home_st_over_0.5": 182,
+    "away_st_under_0.5": 161,
+    "match_over_1.5": 270,
+    "st_over_1.5": 167,
+    "away_over_1.5": 143,
+    "away_st_over_1.5": 71,
+    "st_under_0.5": 76,
+    "home_ht_over_0.5": 182,
+    "ht_over_1.5": 131,
+    "away_ht_over_1.5": 42,
+    "match_over_2.5": 203,
+    "ht_over_2.5": 57,
+    "home_over_1.5": 147,
+    "home_ht_over_1.5": 56,
+    "home_over_2.5": 74,
+    "match_over_3.5": 120,
+    "away_under_0.5": 93,
+    "match_under_0.5": 26,
+    "home_st_over_1.5": 72,
+    "st_over_2.5": 83,
+    "home_st_over_2.5": 24,
+    "st_over_3.5": 31,
+    "home_over_3.5": 26,
+    "away_over_2.5": 59,
+    "away_over_3.5": 20,
+    "home_ht_over_2.5": 13,
+    "away_st_over_2.5": 22,
+    "ht_over_3.5": 15,
+    "away_ht_over_2.5": 10,
+    "away_st_over_3.5": 6,
+    "home_ht_over_3.5": 2,
+    "home_st_over_3.5": 4,
+    "away_ht_over_3.5": 1
+  }
+}

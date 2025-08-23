@@ -1,13 +1,14 @@
 const axios = require('axios');
 const express = require('express');
 const chalk = require('chalk');
+const fs = require('fs');
 
 // --- CONFIGURATION ---
 const PORT = 3000;
-const API_KEY = '7f7700a471beeeb52aecde406a3870ba'; // Remplacez par votre clé API
+const API_KEY = '7f7700a471beeeb52aecde406a3870ba';
 const API_HOST = 'v3.football.api-sports.io';
 const LEAGUES_TO_ANALYZE = [
-    // ... (votre liste de ligues)
+    // ... (your league list)
     { name: 'Bundesliga', id: 78 }, { name: 'Bundesliga 2', id: 79 },
     { name: 'Premier League', id: 39 }, { name: 'Championship', id: 40 },
     { name: 'Saudi Pro League', id: 307 }, { name: 'Liga Profesional', id: 128 },
@@ -37,16 +38,18 @@ const LEAGUES_TO_ANALYZE = [
 ];
 const MAX_ATTEMPTS = 5;
 
-// --- VARIABLES GLOBALES POUR L'APP WEB ---
+// --- GLOBAL VARIABLES ---
 let detailedResults = [];
-let trancheAnalysis = {}; 
+let trancheAnalysis = {};
+let marketOccurrences = {}; // NEW: For the occurrence summary
 let analysisStatus = "Analyse non démarrée.";
+let totalMatchesAnalyzed = 0;
 
 const app = express();
 const api = axios.create({ baseURL: `https://${API_HOST}`, headers: { 'x-apisports-key': API_KEY }, timeout: 20000 });
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-// --- FONCTIONS UTILITAIRES (inchangées) ---
+// --- UTILITY FUNCTIONS ---
 function calculateScore(value, threshold, scale) { return Math.max(0, Math.min(100, Math.round(50 + ((value - threshold) * scale)))); }
 function analyzeMatchMarkets(fixture) { const r={},f=fixture.goals,h=fixture.score.halftime;if(f.home===null||f.away===null||h.home===null||h.away===null)return null;const s={home:f.home-h.home,away:f.away-h.away};r.btts=f.home>0&&f.away>0;[0.5,1.5,2.5,3.5].forEach(t=>{r[`match_over_${t}`]=f.home+f.away>t;r[`match_under_${t}`]=f.home+f.away<t;r[`ht_over_${t}`]=h.home+h.away>t;r[`ht_under_${t}`]=h.home+h.away<t;r[`st_over_${t}`]=s.home+s.away>t;r[`st_under_${t}`]=s.home+s.away<t;r[`home_over_${t}`]=f.home>t;r[`home_under_${t}`]=f.home<t;r[`away_over_${t}`]=f.away>t;r[`away_under_${t}`]=f.away<t;r[`home_ht_over_${t}`]=h.home>t;r[`home_ht_under_${t}`]=h.home<t;r[`away_ht_over_${t}`]=h.away>t;r[`away_ht_under_${t}`]=h.away<t;r[`home_st_over_${t}`]=s.home>t;r[`home_st_under_${t}`]=s.home<t;r[`away_st_over_${t}`]=s.away>t;r[`away_st_under_${t}`]=s.away<t});return r; }
 async function getTeamStats(teamId, leagueId, season) {
@@ -57,18 +60,27 @@ async function getTeamStats(teamId, leagueId, season) {
             const response = await api.get('/teams/statistics', { params: { team: teamId, league: leagueId, season: season } });
             if (response.data && response.data.response) return response.data.response;
         } catch (error) {
-            const reason = error.response ? `API Error ${error.response.status}` : error.message;
-            console.log(chalk.yellow(`      -> Tentative ${attempts}/${MAX_ATTEMPTS} (stats équipe ${teamId}) échouée : ${reason}`));
+            console.log(chalk.yellow(`      -> Tentative ${attempts}/${MAX_ATTEMPTS} (stats équipe ${teamId}) échouée`));
         }
         if (attempts < MAX_ATTEMPTS) await sleep(1500);
     }
-    console.log(chalk.red(`      -> ERREUR FINALE: Impossible de récupérer les stats pour l'équipe ${teamId} après ${MAX_ATTEMPTS} tentatives.`));
+    console.log(chalk.red(`      -> ERREUR FINALE: Stats pour équipe ${teamId}`));
     return null;
 }
 
-// --- ANALYSEUR DE BACKTESTING (inchangé) ---
+const initTrancheObject = () => ({
+    '0-59': { success: 0, total: 0 },
+    '60-69': { success: 0, total: 0 },
+    '70-79': { success: 0, total: 0 },
+    '80-89': { success: 0, total: 0 },
+    '90-100': { success: 0, total: 0 }
+});
+
+// --- BACKTESTING ANALYZER ---
 async function runBacktestAnalyzer() {
     analysisStatus = "Analyse en cours...";
+    totalMatchesAnalyzed = 0;
+    marketOccurrences = {}; // NEW: Reset on start
     console.log(chalk.blue.bold("--- Démarrage de l'analyseur de backtesting ---"));
     const season = new Date().getFullYear();
 
@@ -92,6 +104,19 @@ async function runBacktestAnalyzer() {
                 console.log(chalk.green(`\n    Analyse de : ${matchLabel}`));
                 const [homeStats, awayStats] = await Promise.all([ getTeamStats(fixture.teams.home.id, league.id, season), getTeamStats(fixture.teams.away.id, league.id, season) ]);
                 if (!homeStats || !awayStats) continue;
+
+                const marketResults = analyzeMatchMarkets(fixture);
+                if (!marketResults) continue;
+
+                totalMatchesAnalyzed++;
+
+                // NEW: Populate market occurrences
+                for (const market in marketResults) {
+                    if (marketResults[market] === true) {
+                        marketOccurrences[market] = (marketOccurrences[market] || 0) + 1;
+                    }
+                }
+                
                 const homeAvgFor = parseFloat(homeStats.goals.for.average.total);
                 const homeAvgAgainst = parseFloat(homeStats.goals.against.average.total);
                 const awayAvgFor = parseFloat(awayStats.goals.for.average.total);
@@ -102,43 +127,62 @@ async function runBacktestAnalyzer() {
                 const projectedAwayGoals = (awayAvgFor + homeAvgAgainst) / 2;
                 const projectedHTGoals = projectedGoals * 0.45;
                 const projectedSTGoals = projectedGoals * 0.55;
-                const confidenceScores = {
-                    'match_over_0.5': calculateScore(projectedGoals, 0.5, 10),'match_over_1.5': calculateScore(projectedGoals, 1.5, 15),'match_over_2.5': calculateScore(projectedGoals, 2.5, 22),'match_over_3.5': calculateScore(projectedGoals, 3.5, 25),'match_under_1.5': 100 - calculateScore(projectedGoals, 1.5, 15),'match_under_2.5': 100 - calculateScore(projectedGoals, 2.5, 22),'match_under_3.5': 100 - calculateScore(projectedGoals, 3.5, 25),'btts': calculateScore(bttsPotential, 1.25, 40),'btts_no': 100 - calculateScore(bttsPotential, 1.25, 40),'home_over_0.5': calculateScore(projectedHomeGoals, 0.5, 12),'away_over_0.5': calculateScore(projectedAwayGoals, 0.5, 12),'home_under_2.5': 100 - calculateScore(projectedHomeGoals, 2.5, 20),'home_under_3.5': 100 - calculateScore(projectedHomeGoals, 3.5, 23),'away_under_2.5': 100 - calculateScore(projectedAwayGoals, 2.5, 20),'away_under_3.5': 100 - calculateScore(projectedAwayGoals, 3.5, 23),'ht_over_0.5': calculateScore(projectedHTGoals, 0.5, 30),'st_over_0.5': calculateScore(projectedSTGoals, 0.5, 28),'ht_under_2.5': 100 - calculateScore(projectedHTGoals, 2.5, 35),'ht_under_3.5': 100 - calculateScore(projectedHTGoals, 3.5, 38),'st_under_2.5': 100 - calculateScore(projectedSTGoals, 2.5, 33),'st_under_3.5': 100 - calculateScore(projectedSTGoals, 3.5, 36),'home_ht_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.45, 1.5, 28),'home_st_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.55, 1.5, 26),'away_ht_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.45, 1.5, 28),'away_st_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.55, 1.5, 26),
-                };
-                const marketResults = analyzeMatchMarkets(fixture);
-                detailedResults.push({
-                    leagueName: league.name, matchLabel, scoreLabel: `(Mi-temps: ${fixture.score.halftime.home}-${fixture.score.halftime.away}, Final: ${fixture.score.fulltime.home}-${fixture.score.fulltime.away})`, results: marketResults, scores: confidenceScores
-                });
+                const confidenceScores = { 'match_over_0.5': calculateScore(projectedGoals, 0.5, 10),'match_over_1.5': calculateScore(projectedGoals, 1.5, 15),'match_over_2.5': calculateScore(projectedGoals, 2.5, 22),'match_over_3.5': calculateScore(projectedGoals, 3.5, 25),'match_under_1.5': 100 - calculateScore(projectedGoals, 1.5, 15),'match_under_2.5': 100 - calculateScore(projectedGoals, 2.5, 22),'match_under_3.5': 100 - calculateScore(projectedGoals, 3.5, 25),'btts': calculateScore(bttsPotential, 1.25, 40),'btts_no': 100 - calculateScore(bttsPotential, 1.25, 40),'home_over_0.5': calculateScore(projectedHomeGoals, 0.5, 12),'away_over_0.5': calculateScore(projectedAwayGoals, 0.5, 12),'home_under_2.5': 100 - calculateScore(projectedHomeGoals, 2.5, 20),'home_under_3.5': 100 - calculateScore(projectedHomeGoals, 3.5, 23),'away_under_2.5': 100 - calculateScore(projectedAwayGoals, 2.5, 20),'away_under_3.5': 100 - calculateScore(projectedAwayGoals, 3.5, 23),'ht_over_0.5': calculateScore(projectedHTGoals, 0.5, 30),'st_over_0.5': calculateScore(projectedSTGoals, 0.5, 28),'ht_under_2.5': 100 - calculateScore(projectedHTGoals, 2.5, 35),'ht_under_3.5': 100 - calculateScore(projectedHTGoals, 3.5, 38),'st_under_2.5': 100 - calculateScore(projectedSTGoals, 2.5, 33),'st_under_3.5': 100 - calculateScore(projectedSTGoals, 3.5, 36),'home_ht_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.45, 1.5, 28),'home_st_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.55, 1.5, 26),'away_ht_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.45, 1.5, 28),'away_st_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.55, 1.5, 26), };
+
+                detailedResults.push({ leagueName: league.name, matchLabel, scoreLabel: `(Mi-temps: ${fixture.score.halftime.home}-${fixture.score.halftime.away}, Final: ${fixture.score.fulltime.home}-${fixture.score.fulltime.away})`, results: marketResults, scores: confidenceScores });
+                
                 for (const market in confidenceScores) {
                     if (!trancheAnalysis[market]) {
-                        trancheAnalysis[market] = Array(10).fill(null).map(() => ({ success: 0, total: 0 }));
+                        trancheAnalysis[market] = initTrancheObject();
                     }
                     const score = confidenceScores[market];
-                    const trancheIndex = Math.min(9, Math.floor(score / 10));
                     const wasSuccess = marketResults[market];
-                    trancheAnalysis[market][trancheIndex].total++;
+                    let trancheKey;
+                    if (score < 60) trancheKey = '0-59';
+                    else if (score < 70) trancheKey = '60-69';
+                    else if (score < 80) trancheKey = '70-79';
+                    else if (score < 90) trancheKey = '80-89';
+                    else trancheKey = '90-100';
+                    trancheAnalysis[market][trancheKey].total++;
                     if (wasSuccess) {
-                        trancheAnalysis[market][trancheIndex].success++;
+                        trancheAnalysis[market][trancheKey].success++;
                     }
                 }
                 await sleep(500);
             }
-        } catch (error) {
-            console.log(chalk.red.bold(`\n   ❌ ERREUR FINALE pour ${league.name}: ${error.message}`));
-        }
+        } catch (error) { console.log(chalk.red.bold(`\n   ❌ ERREUR FINALE pour ${league.name}: ${error.message}`)); }
     }
-    analysisStatus = "Analyse terminée. Les résultats sont disponibles.";
+    analysisStatus = `Analyse terminée. ${totalMatchesAnalyzed} matchs analysés.`;
     console.log(chalk.blue.bold("\n--- ANALYSE TERMINÉE ---"));
+
+    try {
+        const globalTrancheSummary = initTrancheObject();
+        for (const market in trancheAnalysis) {
+            for (const key in trancheAnalysis[market]) {
+                globalTrancheSummary[key].success += trancheAnalysis[market][key].success;
+                globalTrancheSummary[key].total += trancheAnalysis[market][key].total;
+            }
+        }
+        const finalReport = {
+            totalMatchesAnalyzed: totalMatchesAnalyzed,
+            globalSummary: globalTrancheSummary,
+            perMarketSummary: trancheAnalysis,
+            marketOccurrences: marketOccurrences // NEW: Add occurrences to the JSON file
+        };
+        fs.writeFileSync('bilan_backtest.json', JSON.stringify(finalReport, null, 2));
+        console.log(chalk.magenta.bold('-> Bilan du backtest sauvegardé dans le fichier bilan_backtest.json'));
+    } catch (error) {
+        console.error(chalk.red('Erreur lors de la sauvegarde du fichier JSON:'), error);
+    }
 }
 
-// --- SERVEUR WEB ---
+// --- WEB SERVER ---
 app.get('/', (req, res) => {
-    // MODIFIÉ: Le HTML est maintenant généré ici
     let html = `
         <!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Résultats du Backtest</title>
         <style>
             body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #121212; color: #e0e0e0; margin: 0; padding: 20px; }
-            h1, h2, h3 { color: #bb86fc; border-bottom: 2px solid #373737; padding-bottom: 10px; }
+            h1, h2 { color: #bb86fc; border-bottom: 2px solid #373737; padding-bottom: 10px; }
             .status { background-color: #1e1e1e; border: 1px solid #373737; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
             .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
             .card { background-color: #1e1e1e; border: 1px solid #373737; border-radius: 8px; padding: 20px; }
@@ -153,50 +197,51 @@ app.get('/', (req, res) => {
             <h1>Résultats du Backtest de Confiance</h1>
             <div class="status"><strong>Statut :</strong> ${analysisStatus}</div>`;
 
-    // NOUVEAU: Bilan Global par Tranche de Confiance
     if (Object.keys(trancheAnalysis).length > 0) {
-        const globalTrancheSummary = Array(10).fill(null).map(() => ({ success: 0, total: 0 }));
+        const globalTrancheSummary = initTrancheObject();
         for (const market in trancheAnalysis) {
-            for (let i = 0; i < 10; i++) {
-                globalTrancheSummary[i].success += trancheAnalysis[market][i].success;
-                globalTrancheSummary[i].total += trancheAnalysis[market][i].total;
+            for (const key in trancheAnalysis[market]) {
+                globalTrancheSummary[key].success += trancheAnalysis[market][key].success;
+                globalTrancheSummary[key].total += trancheAnalysis[market][key].total;
             }
         }
+        const trancheKeys = ['0-59', '60-69', '70-79', '80-89', '90-100'];
 
-        html += `
-            <h2>Bilan Global (Tous Marchés Confondus)</h2>
-            <div class="card">
-                <table>
-                    <thead><tr><th>Tranche de Confiance</th><th>Prédictions Correctes</th><th>Total Prédictions</th><th>Taux de Réussite</th></tr></thead>
-                    <tbody>`;
-        globalTrancheSummary.forEach((tranche, i) => {
+        html += `<h2>Bilan Global (Tous Marchés Confondus)</h2><div class="card"><table>
+                    <thead><tr><th>Tranche de Confiance</th><th>Prédictions Correctes</th><th>Total Prédictions</th><th>Taux de Réussite</th></tr></thead><tbody>`;
+        trancheKeys.forEach(key => {
+            const tranche = globalTrancheSummary[key];
             if (tranche.total > 0) {
                 const rate = (tranche.success / tranche.total) * 100;
                 const rateClass = rate >= 75 ? 'rate-high' : rate >= 50 ? 'rate-medium' : 'rate-low';
-                html += `
-                    <tr class="${rateClass}">
-                        <td>${i * 10} - ${i * 10 + 9}%</td>
-                        <td>${tranche.success}</td>
-                        <td>${tranche.total}</td>
-                        <td class="score">${rate.toFixed(2)}%</td>
-                    </tr>`;
+                html += `<tr class="${rateClass}"><td>${key}%</td><td>${tranche.success}</td><td>${tranche.total}</td><td class="score">${rate.toFixed(2)}%</td></tr>`;
             }
         });
         html += `</tbody></table></div>`;
-    }
 
+        // NEW: Market Occurrence Summary Table
+        if (totalMatchesAnalyzed > 0) {
+            html += `<h2>Bilan d'Apparition des Marchés</h2><div class="card"><table>
+                        <thead><tr><th>Marché</th><th>Taux Apparition</th><th>Occurrences</th></tr></thead><tbody>`;
+            const sortedMarkets = Object.keys(marketOccurrences).sort();
+            for (const market of sortedMarkets) {
+                const count = marketOccurrences[market];
+                const rate = (count / totalMatchesAnalyzed * 100).toFixed(2);
+                html += `<tr><td>${market}</td><td>${rate}%</td><td>${count}</td></tr>`;
+            }
+            html += `</tbody></table></div>`;
+        }
 
-    // Bilan par marché (inchangé)
-    if (Object.keys(trancheAnalysis).length > 0) {
         html += `<h2>Bilan par Tranche de Confiance (par Marché)</h2><div class="container">`;
         const sortedMarketsForTranche = Object.keys(trancheAnalysis).sort();
         for (const market of sortedMarketsForTranche) {
             html += `<div class="card"><div class="card-header">${market}</div><table><thead><tr><th>Tranche</th><th>Réussite</th><th>Total</th><th>Taux</th></tr></thead><tbody>`;
-            trancheAnalysis[market].forEach((tranche, i) => {
+            trancheKeys.forEach(key => {
+                const tranche = trancheAnalysis[market][key];
                 if (tranche.total > 0) {
                     const rate = (tranche.success / tranche.total) * 100;
                     const rateClass = rate >= 75 ? 'rate-high' : rate >= 50 ? 'rate-medium' : 'rate-low';
-                    html += `<tr class="${rateClass}"><td>${i * 10}-${i * 10 + 9}%</td><td>${tranche.success}</td><td>${tranche.total}</td><td class="score">${rate.toFixed(2)}%</td></tr>`;
+                    html += `<tr class="${rateClass}"><td>${key}%</td><td>${tranche.success}</td><td>${tranche.total}</td><td class="score">${rate.toFixed(2)}%</td></tr>`;
                 }
             });
             html += `</tbody></table></div>`;
@@ -204,7 +249,6 @@ app.get('/', (req, res) => {
         html += `</div>`;
     }
 
-    // Résultats détaillés (inchangé)
     if (detailedResults.length > 0) {
         html += `<h2>Résultats Détaillés par Match</h2><div class="container">`;
         detailedResults.forEach(match => {
@@ -219,12 +263,11 @@ app.get('/', (req, res) => {
         });
         html += `</div>`;
     }
-
     html += `</body></html>`;
     res.send(html);
 });
 
-// --- DÉMARRAGE ---
+// --- START SERVER ---
 app.listen(PORT, () => {
     console.log(chalk.inverse(`\n🚀 Serveur web démarré. Ouvrez http://localhost:${PORT} dans votre navigateur.`));
     runBacktestAnalyzer();

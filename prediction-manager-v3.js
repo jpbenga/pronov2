@@ -8,7 +8,6 @@ const PORT = 3001;
 const API_KEY = '7f7700a471beeeb52aecde406a3870ba'; // Remplacez par votre clé API
 const API_HOST = 'v3.football.api-sports.io';
 const LEAGUES_TO_ANALYZE = [
-    // ... (votre liste de ligues)
     { name: 'Bundesliga', id: 78 }, { name: 'Bundesliga 2', id: 79 },
     { name: 'Premier League', id: 39 }, { name: 'Championship', id: 40 },
     { name: 'Saudi Pro League', id: 307 }, { name: 'Liga Profesional', id: 128 },
@@ -182,9 +181,9 @@ function getIntuitiveBestBet(scores) {
 // --- MOTEUR DE PRÉDICTION ---
 async function runPredictionEngine() {
     analysisStatus = "Analyse en cours...";
+    totalMatchesAnalyzed = 0; // Réinitialisation au démarrage
     console.log(chalk.blue.bold("--- Démarrage du moteur de prédiction ---"));
     const season = new Date().getFullYear();
-    totalMatchesAnalyzed = 0;
 
     for (const league of LEAGUES_TO_ANALYZE) {
         console.log(chalk.cyan.bold(`\n[${LEAGUES_TO_ANALYZE.indexOf(league) + 1}/${LEAGUES_TO_ANALYZE.length}] Analyse de : ${league.name}`));
@@ -220,14 +219,24 @@ async function runPredictionEngine() {
                 const confidenceScores = { 'match_over_0.5': calculateScore(projectedGoals, 0.5, 10),'match_over_1.5': calculateScore(projectedGoals, 1.5, 15),'match_over_2.5': calculateScore(projectedGoals, 2.5, 22),'match_over_3.5': calculateScore(projectedGoals, 3.5, 25),'match_under_1.5': 100 - calculateScore(projectedGoals, 1.5, 15),'match_under_2.5': 100 - calculateScore(projectedGoals, 2.5, 22),'match_under_3.5': 100 - calculateScore(projectedGoals, 3.5, 25),'btts': calculateScore(bttsPotential, 1.25, 40),'btts_no': 100 - calculateScore(bttsPotential, 1.25, 40),'home_over_0.5': calculateScore(projectedHomeGoals, 0.5, 12),'away_over_0.5': calculateScore(projectedAwayGoals, 0.5, 12),'home_under_2.5': 100 - calculateScore(projectedHomeGoals, 2.5, 20),'home_under_3.5': 100 - calculateScore(projectedHomeGoals, 3.5, 23),'away_under_2.5': 100 - calculateScore(projectedAwayGoals, 2.5, 20),'away_under_3.5': 100 - calculateScore(projectedAwayGoals, 3.5, 23),'ht_over_0.5': calculateScore(projectedHTGoals, 0.5, 30),'st_over_0.5': calculateScore(projectedSTGoals, 0.5, 28),'ht_under_2.5': 100 - calculateScore(projectedHTGoals, 2.5, 35),'ht_under_3.5': 100 - calculateScore(projectedHTGoals, 3.5, 38),'st_under_2.5': 100 - calculateScore(projectedSTGoals, 2.5, 33),'st_under_3.5': 100 - calculateScore(projectedSTGoals, 3.5, 36),'home_ht_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.45, 1.5, 28),'home_st_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.55, 1.5, 26),'away_ht_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.45, 1.5, 28),'away_st_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.55, 1.5, 26), };
                 const fixtureDate = new Date(fixture.fixture.date);
                 
-                predictions[league.name].push({ matchLabel, date: fixtureDate.toLocaleDateString('fr-FR'), time: fixtureDate.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }), scores: confidenceScores, odds: parsedOdds });
-                totalMatchesAnalyzed++;
+                predictions[league.name].push({
+                    matchLabel,
+                    homeTeam: fixture.teams.home.name,
+                    awayTeam: fixture.teams.away.name,
+                    homeLogo: fixture.teams.home.logo,
+                    awayLogo: fixture.teams.away.logo,
+                    date: fixtureDate.toLocaleDateString('fr-FR'),
+                    time: fixtureDate.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }),
+                    scores: confidenceScores,
+                    odds: parsedOdds
+                });
+                totalMatchesAnalyzed++; // Incrémentation du compteur
                 
                 await sleep(500);
             }
         } catch (error) { console.log(chalk.red.bold(`\n   ❌ ERREUR pour ${league.name}: ${error.message}`)); }
     }
-    analysisStatus = `Prédictions prêtes. ${totalMatchesAnalyzed} matchs analysés.`;
+    analysisStatus = `Prédictions prêtes. ${totalMatchesAnalyzed} matchs analysés.`; // Mise à jour du statut avec le total
     console.log(chalk.blue.bold("\n--- PRÉDICTIONS TERMINÉES ---"));
 
     try {
