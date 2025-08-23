@@ -8,7 +8,7 @@ const PORT = 3000;
 const API_KEY = '7f7700a471beeeb52aecde406a3870ba';
 const API_HOST = 'v3.football.api-sports.io';
 const LEAGUES_TO_ANALYZE = [
-    // ... (your league list)
+    // ... (votre liste de ligues)
     { name: 'Bundesliga', id: 78 }, { name: 'Bundesliga 2', id: 79 },
     { name: 'Premier League', id: 39 }, { name: 'Championship', id: 40 },
     { name: 'Saudi Pro League', id: 307 }, { name: 'Liga Profesional', id: 128 },
@@ -41,7 +41,7 @@ const MAX_ATTEMPTS = 5;
 // --- GLOBAL VARIABLES ---
 let detailedResults = [];
 let trancheAnalysis = {};
-let marketOccurrences = {}; // NEW: For the occurrence summary
+let marketOccurrences = {};
 let analysisStatus = "Analyse non démarrée.";
 let totalMatchesAnalyzed = 0;
 
@@ -51,7 +51,54 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // --- UTILITY FUNCTIONS ---
 function calculateScore(value, threshold, scale) { return Math.max(0, Math.min(100, Math.round(50 + ((value - threshold) * scale)))); }
-function analyzeMatchMarkets(fixture) { const r={},f=fixture.goals,h=fixture.score.halftime;if(f.home===null||f.away===null||h.home===null||h.away===null)return null;const s={home:f.home-h.home,away:f.away-h.away};r.btts=f.home>0&&f.away>0;[0.5,1.5,2.5,3.5].forEach(t=>{r[`match_over_${t}`]=f.home+f.away>t;r[`match_under_${t}`]=f.home+f.away<t;r[`ht_over_${t}`]=h.home+h.away>t;r[`ht_under_${t}`]=h.home+h.away<t;r[`st_over_${t}`]=s.home+s.away>t;r[`st_under_${t}`]=s.home+s.away<t;r[`home_over_${t}`]=f.home>t;r[`home_under_${t}`]=f.home<t;r[`away_over_${t}`]=f.away>t;r[`away_under_${t}`]=f.away<t;r[`home_ht_over_${t}`]=h.home>t;r[`home_ht_under_${t}`]=h.home<t;r[`away_ht_over_${t}`]=h.away>t;r[`away_ht_under_${t}`]=h.away<t;r[`home_st_over_${t}`]=s.home>t;r[`home_st_under_${t}`]=s.home<t;r[`away_st_over_${t}`]=s.away>t;r[`away_st_under_${t}`]=s.away<t});return r; }
+
+// MODIFIÉ : La fonction inclut maintenant l'analyse des favoris, nuls, etc.
+function analyzeMatchMarkets(fixture, projectedHomeGoals, projectedAwayGoals) {
+    const results = {};
+    const ff = fixture.goals;
+    const fh = fixture.score.halftime;
+    if (ff.home === null || ff.away === null || fh.home === null || fh.away === null) return null;
+
+    // Détermination des faits du match
+    const didHomeWin = ff.home > ff.away;
+    const didAwayWin = ff.away > ff.home;
+    const wasDraw = ff.home === ff.away;
+    
+    // Détermination du favori selon notre modèle statistique
+    const isHomeFavoriteModel = projectedHomeGoals > projectedAwayGoals;
+
+    // Nouveaux marchés basés sur le favori et le nul
+    results['draw'] = wasDraw;
+    results['favorite_win'] = (isHomeFavoriteModel && didHomeWin) || (!isHomeFavoriteModel && didAwayWin);
+    results['outsider_win'] = (isHomeFavoriteModel && didAwayWin) || (!isHomeFavoriteModel && didHomeWin);
+    results['double_chance_favorite'] = results['favorite_win'] || wasDraw;
+    results['double_chance_outsider'] = results['outsider_win'] || wasDraw;
+
+    // Marchés existants
+    const sh = { home: ff.home - fh.home, away: ff.away - fh.away };
+    results.btts = ff.home > 0 && ff.away > 0;
+    [0.5, 1.5, 2.5, 3.5].forEach(t => {
+        results[`match_over_${t}`] = ff.home + ff.away > t;
+        results[`match_under_${t}`] = ff.home + ff.away < t;
+        results[`ht_over_${t}`] = fh.home + fh.away > t;
+        results[`ht_under_${t}`] = fh.home + fh.away < t;
+        results[`st_over_${t}`] = sh.home + sh.away > t;
+        results[`st_under_${t}`] = sh.home + sh.away < t;
+        results[`home_over_${t}`] = ff.home > t;
+        results[`home_under_${t}`] = ff.home < t;
+        results[`away_over_${t}`] = ff.away > t;
+        results[`away_under_${t}`] = ff.away < t;
+        results[`home_ht_over_${t}`] = fh.home > t;
+        results[`home_ht_under_${t}`] = fh.home < t;
+        results[`away_ht_over_${t}`] = fh.away > t;
+        results[`away_ht_under_${t}`] = fh.away < t;
+        results[`home_st_over_${t}`] = sh.home > t;
+        results[`home_st_under_${t}`] = sh.home < t;
+        results[`away_st_over_${t}`] = sh.away > t;
+        results[`away_st_under_${t}`] = sh.away < t;
+    });
+    return results;
+}
 async function getTeamStats(teamId, leagueId, season) {
     let attempts = 0;
     while (attempts < MAX_ATTEMPTS) {
@@ -67,7 +114,6 @@ async function getTeamStats(teamId, leagueId, season) {
     console.log(chalk.red(`      -> ERREUR FINALE: Stats pour équipe ${teamId}`));
     return null;
 }
-
 const initTrancheObject = () => ({
     '0-59': { success: 0, total: 0 },
     '60-69': { success: 0, total: 0 },
@@ -80,7 +126,9 @@ const initTrancheObject = () => ({
 async function runBacktestAnalyzer() {
     analysisStatus = "Analyse en cours...";
     totalMatchesAnalyzed = 0;
-    marketOccurrences = {}; // NEW: Reset on start
+    marketOccurrences = {};
+    trancheAnalysis = {};
+    detailedResults = [];
     console.log(chalk.blue.bold("--- Démarrage de l'analyseur de backtesting ---"));
     const season = new Date().getFullYear();
 
@@ -104,30 +152,43 @@ async function runBacktestAnalyzer() {
                 console.log(chalk.green(`\n    Analyse de : ${matchLabel}`));
                 const [homeStats, awayStats] = await Promise.all([ getTeamStats(fixture.teams.home.id, league.id, season), getTeamStats(fixture.teams.away.id, league.id, season) ]);
                 if (!homeStats || !awayStats) continue;
+                
+                const homeAvgFor = parseFloat(homeStats.goals.for.average.total);
+                const homeAvgAgainst = parseFloat(homeStats.goals.against.average.total);
+                const awayAvgFor = parseFloat(awayStats.goals.for.average.total);
+                const awayAvgAgainst = parseFloat(awayStats.goals.against.average.total);
+                const projectedHomeGoals = (homeAvgFor + awayAvgAgainst) / 2;
+                const projectedAwayGoals = (awayAvgFor + homeAvgAgainst) / 2;
 
-                const marketResults = analyzeMatchMarkets(fixture);
+                // MODIFIÉ : On passe les buts projetés pour l'analyse
+                const marketResults = analyzeMatchMarkets(fixture, projectedHomeGoals, projectedAwayGoals);
                 if (!marketResults) continue;
 
                 totalMatchesAnalyzed++;
-
-                // NEW: Populate market occurrences
                 for (const market in marketResults) {
                     if (marketResults[market] === true) {
                         marketOccurrences[market] = (marketOccurrences[market] || 0) + 1;
                     }
                 }
                 
-                const homeAvgFor = parseFloat(homeStats.goals.for.average.total);
-                const homeAvgAgainst = parseFloat(homeStats.goals.against.average.total);
-                const awayAvgFor = parseFloat(awayStats.goals.for.average.total);
-                const awayAvgAgainst = parseFloat(awayStats.goals.against.average.total);
-                const projectedGoals = (homeAvgFor + awayAvgFor + homeAvgAgainst + awayAvgAgainst) / 2;
+                const projectedGoals = projectedHomeGoals + projectedAwayGoals;
                 const bttsPotential = ((homeAvgFor + awayAvgAgainst) / 2) + ((awayAvgFor + homeAvgAgainst) / 2);
-                const projectedHomeGoals = (homeAvgFor + awayAvgAgainst) / 2;
-                const projectedAwayGoals = (awayAvgFor + homeAvgAgainst) / 2;
                 const projectedHTGoals = projectedGoals * 0.45;
                 const projectedSTGoals = projectedGoals * 0.55;
-                const confidenceScores = { 'match_over_0.5': calculateScore(projectedGoals, 0.5, 10),'match_over_1.5': calculateScore(projectedGoals, 1.5, 15),'match_over_2.5': calculateScore(projectedGoals, 2.5, 22),'match_over_3.5': calculateScore(projectedGoals, 3.5, 25),'match_under_1.5': 100 - calculateScore(projectedGoals, 1.5, 15),'match_under_2.5': 100 - calculateScore(projectedGoals, 2.5, 22),'match_under_3.5': 100 - calculateScore(projectedGoals, 3.5, 25),'btts': calculateScore(bttsPotential, 1.25, 40),'btts_no': 100 - calculateScore(bttsPotential, 1.25, 40),'home_over_0.5': calculateScore(projectedHomeGoals, 0.5, 12),'away_over_0.5': calculateScore(projectedAwayGoals, 0.5, 12),'home_under_2.5': 100 - calculateScore(projectedHomeGoals, 2.5, 20),'home_under_3.5': 100 - calculateScore(projectedHomeGoals, 3.5, 23),'away_under_2.5': 100 - calculateScore(projectedAwayGoals, 2.5, 20),'away_under_3.5': 100 - calculateScore(projectedAwayGoals, 3.5, 23),'ht_over_0.5': calculateScore(projectedHTGoals, 0.5, 30),'st_over_0.5': calculateScore(projectedSTGoals, 0.5, 28),'ht_under_2.5': 100 - calculateScore(projectedHTGoals, 2.5, 35),'ht_under_3.5': 100 - calculateScore(projectedHTGoals, 3.5, 38),'st_under_2.5': 100 - calculateScore(projectedSTGoals, 2.5, 33),'st_under_3.5': 100 - calculateScore(projectedSTGoals, 3.5, 36),'home_ht_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.45, 1.5, 28),'home_st_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.55, 1.5, 26),'away_ht_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.45, 1.5, 28),'away_st_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.55, 1.5, 26), };
+
+                // MODIFIÉ : Ajout des scores pour les nouveaux marchés
+                const goalDiff = Math.abs(projectedHomeGoals - projectedAwayGoals);
+                const favoriteScore = Math.min(100, 50 + (goalDiff * 25));
+                const drawScore = Math.max(0, 80 - (goalDiff * 40));
+                
+                const confidenceScores = {
+                    'favorite_win': favoriteScore,
+                    'outsider_win': 100 - favoriteScore,
+                    'draw': drawScore,
+                    'double_chance_favorite': Math.min(100, favoriteScore + (drawScore * 0.5)),
+                    'double_chance_outsider': Math.min(100, (100 - favoriteScore) + (drawScore * 0.5)),
+                    'match_over_0.5': calculateScore(projectedGoals, 0.5, 10),'match_over_1.5': calculateScore(projectedGoals, 1.5, 15),'match_over_2.5': calculateScore(projectedGoals, 2.5, 22),'match_over_3.5': calculateScore(projectedGoals, 3.5, 25),'match_under_1.5': 100 - calculateScore(projectedGoals, 1.5, 15),'match_under_2.5': 100 - calculateScore(projectedGoals, 2.5, 22),'match_under_3.5': 100 - calculateScore(projectedGoals, 3.5, 25),'btts': calculateScore(bttsPotential, 1.25, 40),'btts_no': 100 - calculateScore(bttsPotential, 1.25, 40),'home_over_0.5': calculateScore(projectedHomeGoals, 0.5, 12),'away_over_0.5': calculateScore(projectedAwayGoals, 0.5, 12),'home_under_2.5': 100 - calculateScore(projectedHomeGoals, 2.5, 20),'home_under_3.5': 100 - calculateScore(projectedHomeGoals, 3.5, 23),'away_under_2.5': 100 - calculateScore(projectedAwayGoals, 2.5, 20),'away_under_3.5': 100 - calculateScore(projectedAwayGoals, 3.5, 23),'ht_over_0.5': calculateScore(projectedHTGoals, 0.5, 30),'st_over_0.5': calculateScore(projectedSTGoals, 0.5, 28),'ht_under_2.5': 100 - calculateScore(projectedHTGoals, 2.5, 35),'ht_under_3.5': 100 - calculateScore(projectedHTGoals, 3.5, 38),'st_under_2.5': 100 - calculateScore(projectedSTGoals, 2.5, 33),'st_under_3.5': 100 - calculateScore(projectedSTGoals, 3.5, 36),'home_ht_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.45, 1.5, 28),'home_st_under_1.5': 100 - calculateScore(projectedHomeGoals * 0.55, 1.5, 26),'away_ht_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.45, 1.5, 28),'away_st_under_1.5': 100 - calculateScore(projectedAwayGoals * 0.55, 1.5, 26),
+                };
 
                 detailedResults.push({ leagueName: league.name, matchLabel, scoreLabel: `(Mi-temps: ${fixture.score.halftime.home}-${fixture.score.halftime.away}, Final: ${fixture.score.fulltime.home}-${fixture.score.fulltime.away})`, results: marketResults, scores: confidenceScores });
                 
@@ -167,7 +228,7 @@ async function runBacktestAnalyzer() {
             totalMatchesAnalyzed: totalMatchesAnalyzed,
             globalSummary: globalTrancheSummary,
             perMarketSummary: trancheAnalysis,
-            marketOccurrences: marketOccurrences // NEW: Add occurrences to the JSON file
+            marketOccurrences: marketOccurrences
         };
         fs.writeFileSync('bilan_backtest.json', JSON.stringify(finalReport, null, 2));
         console.log(chalk.magenta.bold('-> Bilan du backtest sauvegardé dans le fichier bilan_backtest.json'));
@@ -176,7 +237,7 @@ async function runBacktestAnalyzer() {
     }
 }
 
-// --- WEB SERVER ---
+// --- SERVEUR WEB ---
 app.get('/', (req, res) => {
     let html = `
         <!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Résultats du Backtest</title>
@@ -219,13 +280,12 @@ app.get('/', (req, res) => {
         });
         html += `</tbody></table></div>`;
 
-        // NEW: Market Occurrence Summary Table
         if (totalMatchesAnalyzed > 0) {
             html += `<h2>Bilan d'Apparition des Marchés</h2><div class="card"><table>
                         <thead><tr><th>Marché</th><th>Taux Apparition</th><th>Occurrences</th></tr></thead><tbody>`;
             const sortedMarkets = Object.keys(marketOccurrences).sort();
             for (const market of sortedMarkets) {
-                const count = marketOccurrences[market];
+                const count = marketOccurrences[market] || 0;
                 const rate = (count / totalMatchesAnalyzed * 100).toFixed(2);
                 html += `<tr><td>${market}</td><td>${rate}%</td><td>${count}</td></tr>`;
             }
@@ -257,7 +317,7 @@ app.get('/', (req, res) => {
             sortedMarkets.forEach(market => {
                 const score = match.scores[market];
                 const result = match.results[market];
-                html += `<tr><td>${market}</td><td class="score">${score}</td><td class="${result ? 'win' : 'loss'}">${result ? 'Gagné' : 'Perdu'}</td></tr>`;
+                html += `<tr><td>${market}</td><td class="score">${score !== undefined ? Math.round(score) : 'N/A'}</td><td class="${result ? 'win' : 'loss'}">${result ? 'Vrai' : 'Faux'}</td></tr>`;
             });
             html += `</tbody></table></div>`;
         });
@@ -267,7 +327,7 @@ app.get('/', (req, res) => {
     res.send(html);
 });
 
-// --- START SERVER ---
+// --- DÉMARRAGE ---
 app.listen(PORT, () => {
     console.log(chalk.inverse(`\n🚀 Serveur web démarré. Ouvrez http://localhost:${PORT} dans votre navigateur.`));
     runBacktestAnalyzer();

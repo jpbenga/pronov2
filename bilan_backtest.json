@@ -2,109 +2,219 @@
   "totalMatchesAnalyzed": 351,
   "globalSummary": {
     "0-59": {
-      "success": 702,
-      "total": 2361
+      "success": 871,
+      "total": 3172
     },
     "60-69": {
-      "success": 1093,
-      "total": 1445
+      "success": 1178,
+      "total": 1634
     },
     "70-79": {
-      "success": 1569,
-      "total": 1825
+      "success": 1681,
+      "total": 2053
     },
     "80-89": {
-      "success": 915,
-      "total": 1014
+      "success": 996,
+      "total": 1132
     },
     "90-100": {
-      "success": 1957,
-      "total": 2130
+      "success": 2299,
+      "total": 2539
     }
   },
   "perMarketSummary": {
+    "favorite_win": {
+      "0-59": {
+        "success": 53,
+        "total": 153
+      },
+      "60-69": {
+        "success": 45,
+        "total": 82
+      },
+      "70-79": {
+        "success": 53,
+        "total": 62
+      },
+      "80-89": {
+        "success": 13,
+        "total": 14
+      },
+      "90-100": {
+        "success": 39,
+        "total": 40
+      }
+    },
+    "outsider_win": {
+      "0-59": {
+        "success": 61,
+        "total": 351
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0
+      }
+    },
+    "draw": {
+      "0-59": {
+        "success": 23,
+        "total": 165
+      },
+      "60-69": {
+        "success": 18,
+        "total": 58
+      },
+      "70-79": {
+        "success": 32,
+        "total": 102
+      },
+      "80-89": {
+        "success": 14,
+        "total": 26
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0
+      }
+    },
+    "double_chance_favorite": {
+      "0-59": {
+        "success": 0,
+        "total": 0
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0
+      },
+      "90-100": {
+        "success": 290,
+        "total": 351
+      }
+    },
+    "double_chance_outsider": {
+      "0-59": {
+        "success": 20,
+        "total": 138
+      },
+      "60-69": {
+        "success": 24,
+        "total": 51
+      },
+      "70-79": {
+        "success": 36,
+        "total": 64
+      },
+      "80-89": {
+        "success": 46,
+        "total": 72
+      },
+      "90-100": {
+        "success": 22,
+        "total": 26
+      }
+    },
     "match_over_0.5": {
       "0-59": {
         "success": 15,
         "total": 22
       },
       "60-69": {
-        "success": 81,
-        "total": 94
+        "success": 83,
+        "total": 96
       },
       "70-79": {
         "success": 163,
-        "total": 168
+        "total": 169
       },
       "80-89": {
-        "success": 55,
-        "total": 56
+        "success": 54,
+        "total": 54
       },
       "90-100": {
-        "success": 11,
-        "total": 11
+        "success": 10,
+        "total": 10
       }
     },
     "match_over_1.5": {
       "0-59": {
         "success": 25,
-        "total": 73
+        "total": 72
       },
       "60-69": {
-        "success": 90,
-        "total": 109
+        "success": 88,
+        "total": 108
       },
       "70-79": {
-        "success": 92,
-        "total": 105
+        "success": 96,
+        "total": 109
       },
       "80-89": {
-        "success": 44,
-        "total": 45
+        "success": 43,
+        "total": 44
       },
       "90-100": {
-        "success": 19,
-        "total": 19
+        "success": 18,
+        "total": 18
       }
     },
     "match_over_2.5": {
       "0-59": {
-        "success": 79,
-        "total": 208
+        "success": 82,
+        "total": 211
       },
       "60-69": {
-        "success": 58,
-        "total": 70
+        "success": 56,
+        "total": 68
       },
       "70-79": {
-        "success": 34,
-        "total": 40
+        "success": 35,
+        "total": 41
       },
       "80-89": {
         "success": 16,
         "total": 17
       },
       "90-100": {
-        "success": 16,
-        "total": 16
+        "success": 14,
+        "total": 14
       }
     },
     "match_over_3.5": {
       "0-59": {
-        "success": 91,
-        "total": 320
+        "success": 93,
+        "total": 322
       },
       "60-69": {
         "success": 13,
         "total": 15
       },
       "70-79": {
-        "success": 7,
-        "total": 7
+        "success": 6,
+        "total": 6
       },
       "80-89": {
-        "success": 4,
-        "total": 4
+        "success": 3,
+        "total": 3
       },
       "90-100": {
         "success": 5,
@@ -136,15 +246,15 @@
     "match_under_2.5": {
       "0-59": {
         "success": 85,
-        "total": 284
+        "total": 285
       },
       "60-69": {
-        "success": 32,
-        "total": 36
+        "success": 31,
+        "total": 34
       },
       "70-79": {
-        "success": 15,
-        "total": 15
+        "success": 16,
+        "total": 16
       },
       "80-89": {
         "success": 15,
@@ -157,46 +267,46 @@
     },
     "match_under_3.5": {
       "0-59": {
-        "success": 38,
-        "total": 107
+        "success": 40,
+        "total": 109
       },
       "60-69": {
-        "success": 49,
-        "total": 76
+        "success": 47,
+        "total": 75
       },
       "70-79": {
-        "success": 41,
-        "total": 60
+        "success": 40,
+        "total": 58
       },
       "80-89": {
-        "success": 61,
-        "total": 66
+        "success": 59,
+        "total": 64
       },
       "90-100": {
-        "success": 42,
-        "total": 42
+        "success": 45,
+        "total": 45
       }
     },
     "btts": {
       "0-59": {
         "success": 0,
-        "total": 24
+        "total": 23
       },
       "60-69": {
         "success": 1,
-        "total": 7
+        "total": 9
       },
       "70-79": {
-        "success": 2,
-        "total": 11
+        "success": 3,
+        "total": 14
       },
       "80-89": {
-        "success": 17,
-        "total": 41
+        "success": 19,
+        "total": 38
       },
       "90-100": {
-        "success": 180,
-        "total": 268
+        "success": 177,
+        "total": 267
       }
     },
     "btts_no": {
@@ -223,33 +333,33 @@
     },
     "home_over_0.5": {
       "0-59": {
-        "success": 93,
-        "total": 163
+        "success": 92,
+        "total": 162
       },
       "60-69": {
-        "success": 137,
-        "total": 151
+        "success": 141,
+        "total": 155
       },
       "70-79": {
         "success": 22,
         "total": 22
       },
       "80-89": {
-        "success": 11,
-        "total": 11
+        "success": 9,
+        "total": 9
       },
       "90-100": {
-        "success": 4,
-        "total": 4
+        "success": 3,
+        "total": 3
       }
     },
     "away_over_0.5": {
       "0-59": {
-        "success": 88,
+        "success": 90,
         "total": 163
       },
       "60-69": {
-        "success": 133,
+        "success": 131,
         "total": 151
       },
       "70-79": {
@@ -257,52 +367,52 @@
         "total": 27
       },
       "80-89": {
-        "success": 7,
-        "total": 7
+        "success": 8,
+        "total": 8
       },
       "90-100": {
-        "success": 3,
-        "total": 3
+        "success": 2,
+        "total": 2
       }
     },
     "home_under_2.5": {
       "0-59": {
-        "success": 8,
-        "total": 44
+        "success": 9,
+        "total": 43
       },
       "60-69": {
-        "success": 41,
-        "total": 67
+        "success": 43,
+        "total": 70
       },
       "70-79": {
-        "success": 130,
-        "total": 142
+        "success": 127,
+        "total": 140
       },
       "80-89": {
-        "success": 62,
-        "total": 62
+        "success": 64,
+        "total": 64
       },
       "90-100": {
-        "success": 36,
-        "total": 36
+        "success": 34,
+        "total": 34
       }
     },
     "home_under_3.5": {
       "0-59": {
-        "success": 2,
-        "total": 10
+        "success": 1,
+        "total": 7
       },
       "60-69": {
-        "success": 6,
-        "total": 8
+        "success": 7,
+        "total": 10
       },
       "70-79": {
-        "success": 8,
-        "total": 13
+        "success": 6,
+        "total": 11
       },
       "80-89": {
-        "success": 32,
-        "total": 36
+        "success": 34,
+        "total": 39
       },
       "90-100": {
         "success": 277,
@@ -311,90 +421,90 @@
     },
     "away_under_2.5": {
       "0-59": {
-        "success": 16,
-        "total": 39
+        "success": 17,
+        "total": 41
       },
       "60-69": {
         "success": 56,
-        "total": 79
+        "total": 77
       },
       "70-79": {
         "success": 115,
-        "total": 128
+        "total": 129
       },
       "80-89": {
-        "success": 80,
-        "total": 80
+        "success": 81,
+        "total": 81
       },
       "90-100": {
-        "success": 25,
-        "total": 25
+        "success": 23,
+        "total": 23
       }
     },
     "away_under_3.5": {
       "0-59": {
         "success": 0,
-        "total": 5
+        "total": 4
       },
       "60-69": {
         "success": 11,
-        "total": 14
+        "total": 15
       },
       "70-79": {
-        "success": 8,
-        "total": 11
+        "success": 7,
+        "total": 10
       },
       "80-89": {
-        "success": 44,
-        "total": 48
+        "success": 41,
+        "total": 45
       },
       "90-100": {
-        "success": 268,
-        "total": 273
+        "success": 272,
+        "total": 277
       }
     },
     "ht_over_0.5": {
       "0-59": {
-        "success": 14,
-        "total": 36
+        "success": 15,
+        "total": 37
       },
       "60-69": {
-        "success": 75,
-        "total": 112
+        "success": 74,
+        "total": 111
       },
       "70-79": {
-        "success": 89,
-        "total": 121
+        "success": 87,
+        "total": 119
       },
       "80-89": {
-        "success": 54,
-        "total": 60
+        "success": 57,
+        "total": 63
       },
       "90-100": {
-        "success": 20,
-        "total": 22
+        "success": 19,
+        "total": 21
       }
     },
     "st_over_0.5": {
       "0-59": {
         "success": 12,
-        "total": 29
+        "total": 30
       },
       "60-69": {
-        "success": 27,
-        "total": 45
+        "success": 29,
+        "total": 44
       },
       "70-79": {
-        "success": 96,
-        "total": 121
+        "success": 94,
+        "total": 119
       },
       "80-89": {
-        "success": 78,
-        "total": 92
+        "success": 79,
+        "total": 96
       },
       "90-100": {
-        "success": 62,
-        "total": 64
+        "success": 61,
+        "total": 62
       }
     },
     "ht_under_2.5": {
@@ -404,19 +514,19 @@
       },
       "60-69": {
         "success": 2,
-        "total": 10
+        "total": 8
       },
       "70-79": {
-        "success": 18,
+        "success": 16,
         "total": 27
       },
       "80-89": {
-        "success": 56,
-        "total": 73
+        "success": 60,
+        "total": 78
       },
       "90-100": {
-        "success": 215,
-        "total": 235
+        "success": 213,
+        "total": 232
       }
     },
     "ht_under_3.5": {
@@ -444,23 +554,23 @@
     "st_under_2.5": {
       "0-59": {
         "success": 5,
-        "total": 22
+        "total": 21
       },
       "60-69": {
-        "success": 27,
-        "total": 42
+        "success": 26,
+        "total": 41
       },
       "70-79": {
-        "success": 51,
-        "total": 79
+        "success": 50,
+        "total": 78
       },
       "80-89": {
-        "success": 81,
-        "total": 97
+        "success": 82,
+        "total": 98
       },
       "90-100": {
-        "success": 104,
-        "total": 111
+        "success": 105,
+        "total": 113
       }
     },
     "st_under_3.5": {
@@ -477,12 +587,12 @@
         "total": 2
       },
       "80-89": {
-        "success": 4,
-        "total": 7
+        "success": 3,
+        "total": 6
       },
       "90-100": {
-        "success": 312,
-        "total": 338
+        "success": 313,
+        "total": 339
       }
     },
     "home_ht_under_1.5": {
@@ -496,33 +606,33 @@
       },
       "70-79": {
         "success": 183,
-        "total": 209
+        "total": 210
       },
       "80-89": {
-        "success": 61,
+        "success": 62,
         "total": 63
       },
       "90-100": {
-        "success": 12,
-        "total": 12
+        "success": 11,
+        "total": 11
       }
     },
     "home_st_under_1.5": {
       "0-59": {
         "success": 11,
-        "total": 39
+        "total": 38
       },
       "60-69": {
         "success": 92,
-        "total": 120
+        "total": 122
       },
       "70-79": {
-        "success": 139,
-        "total": 155
+        "success": 138,
+        "total": 153
       },
       "80-89": {
-        "success": 37,
-        "total": 37
+        "success": 38,
+        "total": 38
       },
       "90-100": {
         "success": 0,
@@ -531,20 +641,20 @@
     },
     "away_ht_under_1.5": {
       "0-59": {
-        "success": 9,
-        "total": 21
+        "success": 10,
+        "total": 22
       },
       "60-69": {
-        "success": 46,
-        "total": 57
+        "success": 43,
+        "total": 52
       },
       "70-79": {
-        "success": 184,
-        "total": 202
+        "success": 185,
+        "total": 205
       },
       "80-89": {
-        "success": 57,
-        "total": 58
+        "success": 58,
+        "total": 59
       },
       "90-100": {
         "success": 13,
@@ -553,20 +663,20 @@
     },
     "away_st_under_1.5": {
       "0-59": {
-        "success": 17,
-        "total": 38
+        "success": 18,
+        "total": 39
       },
       "60-69": {
-        "success": 85,
+        "success": 86,
         "total": 120
       },
       "70-79": {
-        "success": 142,
+        "success": 141,
         "total": 157
       },
       "80-89": {
-        "success": 36,
-        "total": 36
+        "success": 35,
+        "total": 35
       },
       "90-100": {
         "success": 0,
@@ -575,6 +685,8 @@
     }
   },
   "marketOccurrences": {
+    "favorite_win": 203,
+    "double_chance_favorite": 290,
     "match_over_0.5": 325,
     "ht_under_0.5": 99,
     "st_over_0.5": 275,
@@ -611,6 +723,8 @@
     "away_ht_under_3.5": 350,
     "home_st_under_3.5": 347,
     "away_st_under_3.5": 345,
+    "draw": 87,
+    "double_chance_outsider": 148,
     "btts": 200,
     "ht_over_0.5": 252,
     "home_over_0.5": 267,
@@ -627,6 +741,7 @@
     "away_ht_over_1.5": 42,
     "match_over_2.5": 203,
     "ht_over_2.5": 57,
+    "outsider_win": 61,
     "home_over_1.5": 147,
     "home_ht_over_1.5": 56,
     "home_over_2.5": 74,

@@ -8,7 +8,6 @@ const MIN_OCCURRENCE_RATE = 65;
 const MIN_CONFIDENCE_SCORE = 85;
 const MAX_TICKETS_PER_PROFILE = 20;
 
-// NOUVEAU : Fonction pour mélanger un tableau (algorithme Fisher-Yates)
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -17,11 +16,24 @@ function shuffle(array) {
     return array;
 }
 
+// NOUVEAU : Fonction pour attribuer une classe de couleur au marché
+function getMarketTagClass(market) {
+    if (market.startsWith('favorite') || market.startsWith('outsider') || market.startsWith('draw')) return 'tag-winner';
+    if (market.startsWith('double_chance')) return 'tag-double-chance';
+    if (market.startsWith('btts')) return 'tag-btts';
+    if (market.startsWith('home')) return 'tag-home';
+    if (market.startsWith('away')) return 'tag-away';
+    if (market.startsWith('ht') || market.startsWith('st')) return 'tag-halftime';
+    if (market.startsWith('match')) return 'tag-match';
+    return ''; // Fallback
+}
+
 
 // --- MOTEUR DE GÉNÉRATION DE TICKETS ---
 function generateAndServeTickets() {
-    console.log(chalk.blue.bold("--- Générateur de Tickets de Prédiction (v3 Corrigé) ---"));
-
+    console.log(chalk.blue.bold("--- Générateur de Tickets de Prédiction (v4) ---"));
+    
+    // ... (début de la fonction inchangé)
     let bilanData;
     let predictionsData;
     try {
@@ -31,7 +43,7 @@ function generateAndServeTickets() {
         console.log(chalk.green("   -> Fichiers chargés."));
     } catch (error) {
         console.error(chalk.red("Erreur : Fichiers de données non trouvés."));
-        console.error(chalk.red("Assurez-vous d'avoir (re)lancé 'prediction-manager.js' pour générer un fichier à jour avec les noms des équipes."));
+        console.error(chalk.red("Assurez-vous d'avoir (re)lancé les deux autres scripts pour générer les fichiers à jour."));
         return;
     }
 
@@ -42,7 +54,7 @@ function generateAndServeTickets() {
         console.error(chalk.red("Erreur: 'totalMatchesAnalyzed' non trouvé dans bilan_backtest.json."));
         return;
     }
-
+    
     console.log(chalk.cyan("   --- Marchés fiables retenus ---"));
     for (const market in bilanData.marketOccurrences) {
         const count = bilanData.marketOccurrences[market];
@@ -55,19 +67,16 @@ function generateAndServeTickets() {
 
     if (trustworthyMarkets.size === 0) {
         console.log(chalk.yellow("\nAucun marché n'atteint le seuil de fiabilité requis."));
-        // Continue pour afficher l'interface vide
     }
 
     let eligibleBets = [];
     for (const leagueName in predictionsData) {
         predictionsData[leagueName].forEach(match => {
-            // Vérification cruciale que les noms d'équipes existent
             if (!match.homeTeam || !match.awayTeam) return;
-
             for (const market in match.scores) {
                 const score = match.scores[market];
                 const odd = match.odds ? match.odds[market] : undefined;
-                if (trustworthyMarkets.has(market) && score > MIN_CONFIDENCE_SCORE) {
+                if (trustworthyMarkets.has(market) && score >= MIN_CONFIDENCE_SCORE) {
                     eligibleBets.push({ id: `${match.matchLabel}|${market}`, league: leagueName, matchLabel: match.matchLabel, homeTeam: match.homeTeam, awayTeam: match.awayTeam, homeLogo: match.homeLogo, awayLogo: match.awayLogo, date: match.date, time: match.time, market: market, score: score, odd: odd });
                 }
             }
@@ -75,23 +84,16 @@ function generateAndServeTickets() {
     }
     console.log(chalk.green(`\n   -> ${eligibleBets.length} paris potentiels trouvés pour les tickets.`));
 
-    const betsByDay = eligibleBets.reduce((acc, bet) => {
-        (acc[bet.date] = acc[bet.date] || []).push(bet);
-        return acc;
-    }, {});
-
+    // ... (le reste de la logique de génération de tickets est inchangée)
+    const betsByDay = eligibleBets.reduce((acc, bet) => { (acc[bet.date] = acc[bet.date] || []).push(bet); return acc; }, {});
     const finalTickets = {};
     const usageCounters = { Prudent: {}, Equilibre: {}, Audacieux: {} };
-
     for (const day in betsByDay) {
         console.log(chalk.cyan(`\n3. Génération des tickets pour le ${day}...`));
         finalTickets[day] = { Prudent: [], Equilibre: [], Audacieux: [] };
         const dayBets = betsByDay[day].sort((a, b) => b.score - a.score);
-
-        // Profil Prudent
         const safeBetsWithOdd150 = dayBets.filter(b => b.odd && b.odd >= 1.5);
         const safeBetsWithOdd120 = dayBets.filter(b => b.odd && b.odd >= 1.2);
-        
         safeBetsWithOdd150.forEach(bet => {
             if (finalTickets[day].Prudent.length >= MAX_TICKETS_PER_PROFILE) return;
             const betCount = usageCounters.Prudent[bet.id] || 0;
@@ -100,7 +102,6 @@ function generateAndServeTickets() {
                 usageCounters.Prudent[bet.id] = betCount + 1;
             }
         });
-
         for (let i = 0; i < safeBetsWithOdd120.length; i++) {
             if (finalTickets[day].Prudent.length >= MAX_TICKETS_PER_PROFILE) break;
             for (let j = i + 1; j < safeBetsWithOdd120.length; j++) {
@@ -117,8 +118,6 @@ function generateAndServeTickets() {
                 }
             }
         }
-        
-        // Profils Équilibré & Audacieux
         const highOddBets = dayBets.filter(b => b.odd && b.odd >= 1.35);
         generateCombinationTickets(shuffle([...highOddBets]), 4, 6, 'Equilibre', finalTickets[day], usageCounters);
         generateCombinationTickets(shuffle([...highOddBets]), 10, 15, 'Audacieux', finalTickets[day], usageCounters);
@@ -142,18 +141,29 @@ function generateAndServeTickets() {
                 .team-logo { width: 24px; height: 24px; }
                 .match-details { text-align: center; font-size: 0.8em; color: #aaa; margin-bottom: 10px; }
                 .bet-details { text-align: center; }
-                .bet-market { font-size: 1em; color: #fff; }
+                .bet-market { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.9em; margin-right: 5px; }
                 .bet-odd { font-weight: bold; color: #03dac6; }
                 .na { color: #666; }
+                
+                /* NOUVEAU : Tags de couleur par type de marché */
+                .tag-winner { background-color: #fd7e14; color: white; }
+                .tag-double-chance { background-color: #20c997; color: white; }
+                .tag-match { background-color: #007bff; color: white; }
+                .tag-btts { background-color: #6f42c1; color: white; }
+                .tag-home { background-color: #28a745; color: white; }
+                .tag-away { background-color: #dc3545; color: white; }
+                .tag-halftime { background-color: #ffc107; color: black; }
+                
+                /* NOUVEAU : Pastilles de couleur pour les scores de confiance */
+                .score-pill { display: inline-block; padding: 4px 8px; border-radius: 12px; font-size: 0.9em; color: #121212; font-weight: bold; }
+                .score-gold { background-color: #ffd700; }
+                .score-green { background-color: #28a745; color: white; }
+                .score-blue { background-color: #17a2b8; color: white; }
             </style>
             </head><body><h1>Tickets Recommandés</h1>`;
 
         let totalTicketsGenerated = 0;
-        Object.values(finalTickets).forEach(day => {
-            Object.values(day).forEach(profileTickets => {
-                totalTicketsGenerated += profileTickets.length;
-            });
-        });
+        Object.values(finalTickets).forEach(d => Object.values(d).forEach(p => totalTicketsGenerated += p.length));
 
         if (totalTicketsGenerated === 0) {
             html += `<p>Aucun ticket n'a pu être généré avec les critères actuels.</p>`;
@@ -170,7 +180,22 @@ function generateAndServeTickets() {
                         html += `<div class="ticket"><div class="ticket-header">Ticket #${i + 1} &nbsp;&nbsp;&nbsp;&nbsp; Cote Totale : <span class="bet-odd">${totalOddDisplay}</span></div><div class="ticket-body">`;
                         ticket.bets.forEach(bet => {
                             const oddDisplay = bet.odd ? `@ ${bet.odd.toFixed(2)}` : '<span class="na">@ N/A</span>';
-                            html += `<div class="bet-line"><div class="match-header"><img src="${bet.homeLogo}" class="team-logo" alt="${bet.homeTeam}"><span>${bet.homeTeam} vs ${bet.awayTeam}</span><img src="${bet.awayLogo}" class="team-logo" alt="${bet.awayTeam}"></div><div class="match-details">${bet.league} - ${bet.time}</div><div class="bet-details"><span class="bet-market">${bet.market} (Conf. ${bet.score}%)</span><span class="bet-odd"> ${oddDisplay}</span></div></div>`;
+                            
+                            // MODIFIÉ : Logique d'affichage avec les nouvelles couleurs
+                            const marketTagClass = getMarketTagClass(bet.market);
+                            let scorePillClass = 'score-blue';
+                            if (bet.score >= 95) scorePillClass = 'score-gold';
+                            else if (bet.score >= 88) scorePillClass = 'score-green';
+
+                            html += `<div class="bet-line">
+                                        <div class="match-header"><img src="${bet.homeLogo}" class="team-logo"><span>${bet.homeTeam} vs ${bet.awayTeam}</span><img src="${bet.awayLogo}" class="team-logo"></div>
+                                        <div class="match-details">${bet.league} - ${bet.time}</div>
+                                        <div class="bet-details">
+                                            <span class="bet-market ${marketTagClass}">${bet.market}</span>
+                                            <span class="score-pill ${scorePillClass}">${bet.score}%</span>
+                                            <span class="bet-odd"> ${oddDisplay}</span>
+                                        </div>
+                                     </div>`;
                         });
                         html += `</div></div>`;
                     });
@@ -202,12 +227,10 @@ function calculateTicketOdd(bets) {
 
 function generateCombinationTickets(bets, minSize, maxSize, profileName, finalTickets, usageCounters) {
     let availableBets = [...bets];
-
     while (availableBets.length >= minSize && finalTickets[profileName].length < MAX_TICKETS_PER_PROFILE) {
         let newTicket = [];
         let remainingBets = [];
         let matchLabelsInTicket = new Set();
-        
         for (const bet of availableBets) {
             const betCount = usageCounters[profileName][bet.id] || 0;
             if (betCount < 3 && !matchLabelsInTicket.has(bet.matchLabel) && newTicket.length < maxSize) {
@@ -217,7 +240,6 @@ function generateCombinationTickets(bets, minSize, maxSize, profileName, finalTi
                 remainingBets.push(bet);
             }
         }
-        
         if (newTicket.length >= minSize) {
             const ticket = { bets: newTicket, totalOdd: calculateTicketOdd(newTicket) };
             finalTickets[profileName].push(ticket);
