@@ -2,696 +2,1987 @@
   "totalMatchesAnalyzed": 351,
   "globalSummary": {
     "0-59": {
-      "success": 871,
-      "total": 3172
+      "success": 7480,
+      "total": 17868,
+      "avgPredicted": 564220.2647462653
     },
     "60-69": {
-      "success": 1178,
-      "total": 1634
+      "success": 1820,
+      "total": 2488,
+      "avgPredicted": 161181.556954646
     },
     "70-79": {
-      "success": 1681,
-      "total": 2053
+      "success": 1328,
+      "total": 1625,
+      "avgPredicted": 122508.73168987007
     },
     "80-89": {
-      "success": 996,
-      "total": 1132
+      "success": 1384,
+      "total": 1547,
+      "avgPredicted": 132264.56280747245
     },
     "90-100": {
-      "success": 2299,
-      "total": 2539
+      "success": 1679,
+      "total": 1744,
+      "avgPredicted": 167761.16224517056
     }
   },
   "perMarketSummary": {
-    "favorite_win": {
+    "home_over_0.5": {
       "0-59": {
-        "success": 53,
-        "total": 153
+        "success": 103,
+        "total": 151,
+        "avgPredicted": 47.87603718792942
       },
       "60-69": {
         "success": 45,
-        "total": 82
+        "total": 60,
+        "avgPredicted": 64.84574162909827
       },
       "70-79": {
-        "success": 53,
-        "total": 62
+        "success": 81,
+        "total": 98,
+        "avgPredicted": 74.45920667006499
       },
       "80-89": {
-        "success": 13,
-        "total": 14
-      },
-      "90-100": {
-        "success": 39,
-        "total": 40
-      }
-    },
-    "outsider_win": {
-      "0-59": {
-        "success": 61,
-        "total": 351
-      },
-      "60-69": {
-        "success": 0,
-        "total": 0
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0
-      }
-    },
-    "draw": {
-      "0-59": {
-        "success": 23,
-        "total": 165
-      },
-      "60-69": {
-        "success": 18,
-        "total": 58
-      },
-      "70-79": {
-        "success": 32,
-        "total": 102
-      },
-      "80-89": {
-        "success": 14,
-        "total": 26
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0
-      }
-    },
-    "double_chance_favorite": {
-      "0-59": {
-        "success": 0,
-        "total": 0
-      },
-      "60-69": {
-        "success": 0,
-        "total": 0
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0
-      },
-      "90-100": {
-        "success": 290,
-        "total": 351
-      }
-    },
-    "double_chance_outsider": {
-      "0-59": {
-        "success": 20,
-        "total": 138
-      },
-      "60-69": {
-        "success": 24,
-        "total": 51
-      },
-      "70-79": {
-        "success": 36,
-        "total": 64
-      },
-      "80-89": {
-        "success": 46,
-        "total": 72
-      },
-      "90-100": {
-        "success": 22,
-        "total": 26
-      }
-    },
-    "match_over_0.5": {
-      "0-59": {
-        "success": 15,
-        "total": 22
-      },
-      "60-69": {
-        "success": 83,
-        "total": 96
-      },
-      "70-79": {
-        "success": 163,
-        "total": 169
-      },
-      "80-89": {
-        "success": 54,
-        "total": 54
-      },
-      "90-100": {
-        "success": 10,
-        "total": 10
-      }
-    },
-    "match_over_1.5": {
-      "0-59": {
-        "success": 25,
-        "total": 72
-      },
-      "60-69": {
-        "success": 88,
-        "total": 108
-      },
-      "70-79": {
-        "success": 96,
-        "total": 109
-      },
-      "80-89": {
-        "success": 43,
-        "total": 44
-      },
-      "90-100": {
-        "success": 18,
-        "total": 18
-      }
-    },
-    "match_over_2.5": {
-      "0-59": {
-        "success": 82,
-        "total": 211
-      },
-      "60-69": {
-        "success": 56,
-        "total": 68
-      },
-      "70-79": {
-        "success": 35,
-        "total": 41
-      },
-      "80-89": {
-        "success": 16,
-        "total": 17
-      },
-      "90-100": {
-        "success": 14,
-        "total": 14
-      }
-    },
-    "match_over_3.5": {
-      "0-59": {
-        "success": 93,
-        "total": 322
-      },
-      "60-69": {
-        "success": 13,
-        "total": 15
-      },
-      "70-79": {
-        "success": 6,
-        "total": 6
-      },
-      "80-89": {
-        "success": 3,
-        "total": 3
+        "success": 33,
+        "total": 37,
+        "avgPredicted": 83.80948606680255
       },
       "90-100": {
         "success": 5,
-        "total": 5
+        "total": 5,
+        "avgPredicted": 91.0614424994234
       }
     },
-    "match_under_1.5": {
+    "home_under_0.5": {
       "0-59": {
-        "success": 77,
-        "total": 347
+        "success": 84,
+        "total": 351,
+        "avgPredicted": 19.449326029178284
       },
       "60-69": {
-        "success": 3,
-        "total": 3
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "70-79": {
-        "success": 1,
-        "total": 1
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "80-89": {
         "success": 0,
-        "total": 0
+        "total": 0,
+        "avgPredicted": 0
       },
       "90-100": {
         "success": 0,
-        "total": 0
+        "total": 0,
+        "avgPredicted": 0
       }
     },
-    "match_under_2.5": {
+    "home_over_1.5": {
       "0-59": {
-        "success": 85,
-        "total": 285
+        "success": 137,
+        "total": 339,
+        "avgPredicted": 34.116401083083616
       },
       "60-69": {
-        "success": 31,
-        "total": 34
-      },
-      "70-79": {
-        "success": 16,
-        "total": 16
-      },
-      "80-89": {
-        "success": 15,
-        "total": 15
-      },
-      "90-100": {
-        "success": 1,
-        "total": 1
-      }
-    },
-    "match_under_3.5": {
-      "0-59": {
-        "success": 40,
-        "total": 109
-      },
-      "60-69": {
-        "success": 47,
-        "total": 75
-      },
-      "70-79": {
-        "success": 40,
-        "total": 58
-      },
-      "80-89": {
-        "success": 59,
-        "total": 64
-      },
-      "90-100": {
-        "success": 45,
-        "total": 45
-      }
-    },
-    "btts": {
-      "0-59": {
-        "success": 0,
-        "total": 23
-      },
-      "60-69": {
-        "success": 1,
-        "total": 9
-      },
-      "70-79": {
-        "success": 3,
-        "total": 14
-      },
-      "80-89": {
-        "success": 19,
-        "total": 38
-      },
-      "90-100": {
-        "success": 177,
-        "total": 267
-      }
-    },
-    "btts_no": {
-      "0-59": {
-        "success": 0,
-        "total": 336
-      },
-      "60-69": {
-        "success": 0,
-        "total": 12
-      },
-      "70-79": {
-        "success": 0,
-        "total": 2
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 1
-      }
-    },
-    "home_over_0.5": {
-      "0-59": {
-        "success": 92,
-        "total": 162
-      },
-      "60-69": {
-        "success": 141,
-        "total": 155
-      },
-      "70-79": {
-        "success": 22,
-        "total": 22
-      },
-      "80-89": {
         "success": 9,
-        "total": 9
-      },
-      "90-100": {
-        "success": 3,
-        "total": 3
-      }
-    },
-    "away_over_0.5": {
-      "0-59": {
-        "success": 90,
-        "total": 163
-      },
-      "60-69": {
-        "success": 131,
-        "total": 151
+        "total": 11,
+        "avgPredicted": 64.57178636446613
       },
       "70-79": {
-        "success": 27,
-        "total": 27
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 76.97717356883315
       },
       "80-89": {
-        "success": 8,
-        "total": 8
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "90-100": {
-        "success": 2,
-        "total": 2
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_under_1.5": {
+      "0-59": {
+        "success": 164,
+        "total": 293,
+        "avgPredicted": 42.993841652242644
+      },
+      "60-69": {
+        "success": 29,
+        "total": 44,
+        "avgPredicted": 63.56359879263373
+      },
+      "70-79": {
+        "success": 10,
+        "total": 13,
+        "avgPredicted": 74.71738039866403
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 81.95331309108738
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_over_2.5": {
+      "0-59": {
+        "success": 74,
+        "total": 351,
+        "avgPredicted": 15.323616026850337
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "home_under_2.5": {
       "0-59": {
-        "success": 9,
-        "total": 43
+        "success": 102,
+        "total": 138,
+        "avgPredicted": 51.42754143879012
       },
       "60-69": {
-        "success": 43,
-        "total": 70
+        "success": 39,
+        "total": 54,
+        "avgPredicted": 65.29540113450572
       },
       "70-79": {
-        "success": 127,
-        "total": 140
+        "success": 65,
+        "total": 82,
+        "avgPredicted": 74.97948593874723
       },
       "80-89": {
-        "success": 64,
-        "total": 64
+        "success": 55,
+        "total": 61,
+        "avgPredicted": 84.78768827761746
       },
       "90-100": {
-        "success": 34,
-        "total": 34
+        "success": 16,
+        "total": 16,
+        "avgPredicted": 92.38072267795306
+      }
+    },
+    "home_over_3.5": {
+      "0-59": {
+        "success": 26,
+        "total": 351,
+        "avgPredicted": 5.442848988367825
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "home_under_3.5": {
       "0-59": {
-        "success": 1,
-        "total": 7
+        "success": 74,
+        "total": 78,
+        "avgPredicted": 53.30089381826872
       },
       "60-69": {
-        "success": 7,
-        "total": 10
+        "success": 57,
+        "total": 63,
+        "avgPredicted": 66.0350597509485
       },
       "70-79": {
-        "success": 6,
-        "total": 11
+        "success": 30,
+        "total": 35,
+        "avgPredicted": 75.75085328686329
       },
       "80-89": {
-        "success": 34,
-        "total": 39
+        "success": 61,
+        "total": 67,
+        "avgPredicted": 84.99000149424906
       },
       "90-100": {
-        "success": 277,
-        "total": 284
+        "success": 103,
+        "total": 108,
+        "avgPredicted": 94.68769960919708
+      }
+    },
+    "away_over_0.5": {
+      "0-59": {
+        "success": 105,
+        "total": 151,
+        "avgPredicted": 48.162796415728685
+      },
+      "60-69": {
+        "success": 57,
+        "total": 80,
+        "avgPredicted": 65.14576407048278
+      },
+      "70-79": {
+        "success": 56,
+        "total": 74,
+        "avgPredicted": 75.06148178486451
+      },
+      "80-89": {
+        "success": 32,
+        "total": 38,
+        "avgPredicted": 84.11196547080418
+      },
+      "90-100": {
+        "success": 8,
+        "total": 8,
+        "avgPredicted": 92.81553985214312
+      }
+    },
+    "away_under_0.5": {
+      "0-59": {
+        "success": 84,
+        "total": 351,
+        "avgPredicted": 19.437116686036084
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_over_1.5": {
+      "0-59": {
+        "success": 129,
+        "total": 333,
+        "avgPredicted": 33.62840215178105
+      },
+      "60-69": {
+        "success": 9,
+        "total": 13,
+        "avgPredicted": 63.27993892196473
+      },
+      "70-79": {
+        "success": 3,
+        "total": 3,
+        "avgPredicted": 74.8585242235332
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.01285179158332
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_under_1.5": {
+      "0-59": {
+        "success": 177,
+        "total": 295,
+        "avgPredicted": 42.72274776256353
+      },
+      "60-69": {
+        "success": 17,
+        "total": 37,
+        "avgPredicted": 64.38849755296877
+      },
+      "70-79": {
+        "success": 10,
+        "total": 19,
+        "avgPredicted": 73.94297904218513
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_over_2.5": {
+      "0-59": {
+        "success": 57,
+        "total": 349,
+        "avgPredicted": 15.334794079828617
+      },
+      "60-69": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 60.63658338763337
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "away_under_2.5": {
       "0-59": {
-        "success": 17,
-        "total": 41
+        "success": 113,
+        "total": 137,
+        "avgPredicted": 50.62749859351711
       },
       "60-69": {
-        "success": 56,
-        "total": 77
+        "success": 49,
+        "total": 61,
+        "avgPredicted": 65.28614841289067
       },
       "70-79": {
-        "success": 115,
-        "total": 129
+        "success": 54,
+        "total": 76,
+        "avgPredicted": 75.5219577870198
       },
       "80-89": {
-        "success": 81,
-        "total": 81
+        "success": 45,
+        "total": 55,
+        "avgPredicted": 84.51198522120013
       },
       "90-100": {
-        "success": 23,
-        "total": 23
+        "success": 16,
+        "total": 22,
+        "avgPredicted": 91.84697090394822
+      }
+    },
+    "away_over_3.5": {
+      "0-59": {
+        "success": 20,
+        "total": 351,
+        "avgPredicted": 5.685644372943325
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "away_under_3.5": {
       "0-59": {
-        "success": 0,
-        "total": 4
+        "success": 75,
+        "total": 79,
+        "avgPredicted": 53.205408431905
       },
       "60-69": {
-        "success": 11,
-        "total": 15
+        "success": 59,
+        "total": 63,
+        "avgPredicted": 65.79433694756578
       },
       "70-79": {
-        "success": 7,
-        "total": 10
+        "success": 34,
+        "total": 38,
+        "avgPredicted": 75.73168299721287
       },
       "80-89": {
-        "success": 41,
-        "total": 45
+        "success": 64,
+        "total": 70,
+        "avgPredicted": 85.45761776637559
       },
       "90-100": {
-        "success": 272,
-        "total": 277
+        "success": 93,
+        "total": 101,
+        "avgPredicted": 95.0121894429642
       }
     },
     "ht_over_0.5": {
       "0-59": {
-        "success": 15,
-        "total": 37
+        "success": 112,
+        "total": 165,
+        "avgPredicted": 46.97813020754181
       },
       "60-69": {
-        "success": 74,
-        "total": 111
+        "success": 59,
+        "total": 84,
+        "avgPredicted": 65.97175802500038
       },
       "70-79": {
-        "success": 87,
-        "total": 119
+        "success": 63,
+        "total": 81,
+        "avgPredicted": 74.7381779903638
       },
       "80-89": {
-        "success": 57,
-        "total": 63
+        "success": 18,
+        "total": 21,
+        "avgPredicted": 82.43050092370261
       },
       "90-100": {
-        "success": 19,
-        "total": 21
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
-    "st_over_0.5": {
+    "ht_under_0.5": {
       "0-59": {
-        "success": 12,
-        "total": 30
+        "success": 99,
+        "total": 351,
+        "avgPredicted": 22.00042138187563
       },
       "60-69": {
-        "success": 29,
-        "total": 44
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "70-79": {
-        "success": 94,
-        "total": 119
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "80-89": {
-        "success": 79,
-        "total": 96
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "90-100": {
-        "success": 61,
-        "total": 62
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "ht_over_1.5": {
+      "0-59": {
+        "success": 131,
+        "total": 351,
+        "avgPredicted": 31.379013665426097
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "ht_under_1.5": {
+      "0-59": {
+        "success": 168,
+        "total": 276,
+        "avgPredicted": 46.40584932660305
+      },
+      "60-69": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 64.84370991967197
+      },
+      "70-79": {
+        "success": 13,
+        "total": 17,
+        "avgPredicted": 71.58921258541307
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "ht_over_2.5": {
+      "0-59": {
+        "success": 57,
+        "total": 351,
+        "avgPredicted": 12.424157624872182
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "ht_under_2.5": {
       "0-59": {
-        "success": 3,
-        "total": 6
+        "success": 85,
+        "total": 104,
+        "avgPredicted": 51.2191442084378
       },
       "60-69": {
-        "success": 2,
-        "total": 8
+        "success": 52,
+        "total": 62,
+        "avgPredicted": 64.08198589040198
       },
       "70-79": {
-        "success": 16,
-        "total": 27
+        "success": 64,
+        "total": 79,
+        "avgPredicted": 75.93895549462304
       },
       "80-89": {
-        "success": 60,
-        "total": 78
+        "success": 77,
+        "total": 89,
+        "avgPredicted": 85.3271480669133
       },
       "90-100": {
-        "success": 213,
-        "total": 232
+        "success": 16,
+        "total": 17,
+        "avgPredicted": 90.93840522099435
       }
     },
     "ht_under_3.5": {
       "0-59": {
-        "success": 1,
-        "total": 1
+        "success": 77,
+        "total": 78,
+        "avgPredicted": 54.10269431817813
+      },
+      "60-69": {
+        "success": 57,
+        "total": 61,
+        "avgPredicted": 67.03797507498031
+      },
+      "70-79": {
+        "success": 29,
+        "total": 31,
+        "avgPredicted": 76.5028531659191
+      },
+      "80-89": {
+        "success": 50,
+        "total": 53,
+        "avgPredicted": 86.10293433575183
+      },
+      "90-100": {
+        "success": 123,
+        "total": 128,
+        "avgPredicted": 95.09977682459466
+      }
+    },
+    "st_over_0.5": {
+      "0-59": {
+        "success": 105,
+        "total": 140,
+        "avgPredicted": 49.36221638862582
+      },
+      "60-69": {
+        "success": 24,
+        "total": 34,
+        "avgPredicted": 64.39918157447448
+      },
+      "70-79": {
+        "success": 83,
+        "total": 104,
+        "avgPredicted": 74.58022611058662
+      },
+      "80-89": {
+        "success": 61,
+        "total": 71,
+        "avgPredicted": 84.18233447426564
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 91.2403183370709
+      }
+    },
+    "st_under_0.5": {
+      "0-59": {
+        "success": 76,
+        "total": 351,
+        "avgPredicted": 16.478483282655954
       },
       "60-69": {
         "success": 0,
-        "total": 0
+        "total": 0,
+        "avgPredicted": 0
       },
       "70-79": {
         "success": 0,
-        "total": 0
+        "total": 0,
+        "avgPredicted": 0
       },
       "80-89": {
-        "success": 3,
-        "total": 3
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "90-100": {
-        "success": 332,
-        "total": 347
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "st_over_1.5": {
+      "0-59": {
+        "success": 153,
+        "total": 333,
+        "avgPredicted": 38.14280295093629
+      },
+      "60-69": {
+        "success": 14,
+        "total": 17,
+        "avgPredicted": 62.908851027019466
+      },
+      "70-79": {
+        "success": 0,
+        "total": 1,
+        "avgPredicted": 70.23399774888256
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "st_under_1.5": {
+      "0-59": {
+        "success": 168,
+        "total": 327,
+        "avgPredicted": 41.16905785253769
+      },
+      "60-69": {
+        "success": 16,
+        "total": 24,
+        "avgPredicted": 62.35334309792384
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "st_over_2.5": {
+      "0-59": {
+        "success": 83,
+        "total": 351,
+        "avgPredicted": 18.40826391366081
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "st_under_2.5": {
       "0-59": {
-        "success": 5,
-        "total": 21
+        "success": 119,
+        "total": 145,
+        "avgPredicted": 49.740323946324516
       },
       "60-69": {
-        "success": 26,
-        "total": 41
+        "success": 46,
+        "total": 73,
+        "avgPredicted": 65.52360702060736
       },
       "70-79": {
-        "success": 50,
-        "total": 78
+        "success": 61,
+        "total": 82,
+        "avgPredicted": 74.18727816509521
       },
       "80-89": {
-        "success": 82,
-        "total": 98
+        "success": 42,
+        "total": 51,
+        "avgPredicted": 83.524946510703
       },
       "90-100": {
-        "success": 105,
-        "total": 113
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "st_over_3.5": {
+      "0-59": {
+        "success": 31,
+        "total": 351,
+        "avgPredicted": 6.962313599307429
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "st_under_3.5": {
       "0-59": {
-        "success": 2,
-        "total": 4
+        "success": 76,
+        "total": 78,
+        "avgPredicted": 52.261548384861385
+      },
+      "60-69": {
+        "success": 59,
+        "total": 61,
+        "avgPredicted": 64.69076021422615
+      },
+      "70-79": {
+        "success": 28,
+        "total": 37,
+        "avgPredicted": 74.43999478121475
+      },
+      "80-89": {
+        "success": 74,
+        "total": 88,
+        "avgPredicted": 84.76101464835718
+      },
+      "90-100": {
+        "success": 83,
+        "total": 87,
+        "avgPredicted": 93.33841015627276
+      }
+    },
+    "home_ht_over_0.5": {
+      "0-59": {
+        "success": 174,
+        "total": 341,
+        "avgPredicted": 38.72401479167646
+      },
+      "60-69": {
+        "success": 7,
+        "total": 9,
+        "avgPredicted": 63.5165095890013
+      },
+      "70-79": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 71.69834775987962
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_ht_under_0.5": {
+      "0-59": {
+        "success": 164,
+        "total": 335,
+        "avgPredicted": 41.54655115763288
+      },
+      "60-69": {
+        "success": 5,
+        "total": 15,
+        "avgPredicted": 64.1969001494464
+      },
+      "70-79": {
+        "success": 0,
+        "total": 1,
+        "avgPredicted": 70.71588192872713
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_ht_over_1.5": {
+      "0-59": {
+        "success": 56,
+        "total": 351,
+        "avgPredicted": 11.809703624574805
       },
       "60-69": {
         "success": 0,
-        "total": 0
+        "total": 0,
+        "avgPredicted": 0
       },
       "70-79": {
-        "success": 2,
-        "total": 2
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "80-89": {
-        "success": 3,
-        "total": 6
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "90-100": {
-        "success": 313,
-        "total": 339
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "home_ht_under_1.5": {
       "0-59": {
-        "success": 11,
-        "total": 20
+        "success": 78,
+        "total": 95,
+        "avgPredicted": 50.70366099886782
       },
       "60-69": {
-        "success": 28,
-        "total": 47
+        "success": 56,
+        "total": 69,
+        "avgPredicted": 63.507188240616216
       },
       "70-79": {
-        "success": 183,
-        "total": 210
+        "success": 51,
+        "total": 66,
+        "avgPredicted": 75.58479225996302
       },
       "80-89": {
-        "success": 62,
-        "total": 63
+        "success": 90,
+        "total": 100,
+        "avgPredicted": 85.31125754238597
       },
       "90-100": {
-        "success": 11,
-        "total": 11
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 92.20134289919642
+      }
+    },
+    "home_ht_under_2.5": {
+      "0-59": {
+        "success": 76,
+        "total": 78,
+        "avgPredicted": 54.90313649021502
+      },
+      "60-69": {
+        "success": 59,
+        "total": 61,
+        "avgPredicted": 68.07217325430169
+      },
+      "70-79": {
+        "success": 29,
+        "total": 31,
+        "avgPredicted": 77.55573758068496
+      },
+      "80-89": {
+        "success": 43,
+        "total": 46,
+        "avgPredicted": 87.1031591781452
+      },
+      "90-100": {
+        "success": 131,
+        "total": 135,
+        "avgPredicted": 96.68561625068907
+      }
+    },
+    "home_ht_under_3.5": {
+      "0-59": {
+        "success": 78,
+        "total": 78,
+        "avgPredicted": 56.175863314973704
+      },
+      "60-69": {
+        "success": 61,
+        "total": 61,
+        "avgPredicted": 69.6966036341449
+      },
+      "70-79": {
+        "success": 31,
+        "total": 31,
+        "avgPredicted": 79.5916208579587
+      },
+      "80-89": {
+        "success": 44,
+        "total": 45,
+        "avgPredicted": 89.51777595419205
+      },
+      "90-100": {
+        "success": 135,
+        "total": 136,
+        "avgPredicted": 99.3778234944586
+      }
+    },
+    "home_st_over_0.5": {
+      "0-59": {
+        "success": 153,
+        "total": 315,
+        "avgPredicted": 42.847098045112176
+      },
+      "60-69": {
+        "success": 23,
+        "total": 29,
+        "avgPredicted": 63.65712397653366
+      },
+      "70-79": {
+        "success": 6,
+        "total": 7,
+        "avgPredicted": 72.75230075126484
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_st_under_0.5": {
+      "0-59": {
+        "success": 166,
+        "total": 347,
+        "avgPredicted": 36.58668445211675
+      },
+      "60-69": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 63.06547758170605
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_st_over_1.5": {
+      "0-59": {
+        "success": 72,
+        "total": 351,
+        "avgPredicted": 16.03034892908399
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "home_st_under_1.5": {
       "0-59": {
-        "success": 11,
-        "total": 38
+        "success": 117,
+        "total": 140,
+        "avgPredicted": 50.907219304821396
       },
       "60-69": {
-        "success": 92,
-        "total": 122
+        "success": 35,
+        "total": 53,
+        "avgPredicted": 65.75139432220584
       },
       "70-79": {
-        "success": 138,
-        "total": 153
+        "success": 63,
+        "total": 81,
+        "avgPredicted": 74.70372938767024
       },
       "80-89": {
-        "success": 38,
-        "total": 38
+        "success": 58,
+        "total": 71,
+        "avgPredicted": 83.95701687687759
+      },
+      "90-100": {
+        "success": 6,
+        "total": 6,
+        "avgPredicted": 91.59377424666913
+      }
+    },
+    "home_st_over_2.5": {
+      "0-59": {
+        "success": 24,
+        "total": 351,
+        "avgPredicted": 4.183090024759568
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "90-100": {
         "success": 0,
-        "total": 0
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_st_under_2.5": {
+      "0-59": {
+        "success": 74,
+        "total": 78,
+        "avgPredicted": 53.928410214854885
+      },
+      "60-69": {
+        "success": 58,
+        "total": 62,
+        "avgPredicted": 66.87668273604433
+      },
+      "70-79": {
+        "success": 27,
+        "total": 31,
+        "avgPredicted": 76.32870701774152
+      },
+      "80-89": {
+        "success": 49,
+        "total": 56,
+        "avgPredicted": 85.74806290928375
+      },
+      "90-100": {
+        "success": 119,
+        "total": 124,
+        "avgPredicted": 95.2490615681135
+      }
+    },
+    "home_st_under_3.5": {
+      "0-59": {
+        "success": 78,
+        "total": 78,
+        "avgPredicted": 55.942807219707234
+      },
+      "60-69": {
+        "success": 61,
+        "total": 61,
+        "avgPredicted": 69.3957583567081
+      },
+      "70-79": {
+        "success": 29,
+        "total": 31,
+        "avgPredicted": 79.19386468927361
+      },
+      "80-89": {
+        "success": 44,
+        "total": 45,
+        "avgPredicted": 89.0464944511011
+      },
+      "90-100": {
+        "success": 135,
+        "total": 136,
+        "avgPredicted": 98.79051121517702
+      }
+    },
+    "away_ht_over_0.5": {
+      "0-59": {
+        "success": 144,
+        "total": 339,
+        "avgPredicted": 38.58041490815953
+      },
+      "60-69": {
+        "success": 3,
+        "total": 8,
+        "avgPredicted": 64.14732205083867
+      },
+      "70-79": {
+        "success": 4,
+        "total": 4,
+        "avgPredicted": 73.63382159193708
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_ht_under_0.5": {
+      "0-59": {
+        "success": 183,
+        "total": 329,
+        "avgPredicted": 41.07422819532849
+      },
+      "60-69": {
+        "success": 17,
+        "total": 22,
+        "avgPredicted": 63.64110941347206
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_ht_over_1.5": {
+      "0-59": {
+        "success": 42,
+        "total": 351,
+        "avgPredicted": 11.977477280684182
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "away_ht_under_1.5": {
       "0-59": {
-        "success": 10,
-        "total": 22
+        "success": 90,
+        "total": 106,
+        "avgPredicted": 51.39474274019545
       },
       "60-69": {
-        "success": 43,
-        "total": 52
+        "success": 53,
+        "total": 61,
+        "avgPredicted": 64.23434884757343
       },
       "70-79": {
-        "success": 185,
-        "total": 205
+        "success": 61,
+        "total": 69,
+        "avgPredicted": 75.99389797237362
       },
       "80-89": {
-        "success": 58,
-        "total": 59
+        "success": 79,
+        "total": 88,
+        "avgPredicted": 85.2495852979957
       },
       "90-100": {
-        "success": 13,
-        "total": 13
+        "success": 26,
+        "total": 27,
+        "avgPredicted": 92.00833325925016
+      }
+    },
+    "away_ht_under_2.5": {
+      "0-59": {
+        "success": 76,
+        "total": 78,
+        "avgPredicted": 54.827202719231245
+      },
+      "60-69": {
+        "success": 61,
+        "total": 61,
+        "avgPredicted": 67.99604309351952
+      },
+      "70-79": {
+        "success": 29,
+        "total": 31,
+        "avgPredicted": 77.79250971565216
+      },
+      "80-89": {
+        "success": 48,
+        "total": 50,
+        "avgPredicted": 87.14963632321066
+      },
+      "90-100": {
+        "success": 127,
+        "total": 131,
+        "avgPredicted": 96.70734978504628
+      }
+    },
+    "away_ht_under_3.5": {
+      "0-59": {
+        "success": 78,
+        "total": 78,
+        "avgPredicted": 56.15809208679153
+      },
+      "60-69": {
+        "success": 61,
+        "total": 61,
+        "avgPredicted": 69.67814900300822
+      },
+      "70-79": {
+        "success": 30,
+        "total": 31,
+        "avgPredicted": 79.65079011975052
+      },
+      "80-89": {
+        "success": 45,
+        "total": 45,
+        "avgPredicted": 89.555765493084
+      },
+      "90-100": {
+        "success": 136,
+        "total": 136,
+        "avgPredicted": 99.26726668512899
+      }
+    },
+    "away_st_over_0.5": {
+      "0-59": {
+        "success": 158,
+        "total": 313,
+        "avgPredicted": 42.56677083010813
+      },
+      "60-69": {
+        "success": 22,
+        "total": 28,
+        "avgPredicted": 64.53536640242547
+      },
+      "70-79": {
+        "success": 8,
+        "total": 8,
+        "avgPredicted": 73.77394223102884
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.1693268314571
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_st_under_0.5": {
+      "0-59": {
+        "success": 161,
+        "total": 350,
+        "avgPredicted": 36.72413988344536
+      },
+      "60-69": {
+        "success": 0,
+        "total": 1,
+        "avgPredicted": 61.63132019122896
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_st_over_1.5": {
+      "0-59": {
+        "success": 71,
+        "total": 351,
+        "avgPredicted": 16.220281048201958
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     },
     "away_st_under_1.5": {
       "0-59": {
-        "success": 18,
-        "total": 39
+        "success": 113,
+        "total": 139,
+        "avgPredicted": 50.423006962332956
       },
       "60-69": {
-        "success": 86,
-        "total": 120
+        "success": 40,
+        "total": 56,
+        "avgPredicted": 65.39686232020769
       },
       "70-79": {
-        "success": 141,
-        "total": 157
+        "success": 58,
+        "total": 79,
+        "avgPredicted": 74.79315967927
       },
       "80-89": {
-        "success": 35,
-        "total": 35
+        "success": 64,
+        "total": 72,
+        "avgPredicted": 84.35223554173133
+      },
+      "90-100": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 90.72770414364304
+      }
+    },
+    "away_st_over_2.5": {
+      "0-59": {
+        "success": 22,
+        "total": 351,
+        "avgPredicted": 4.329435594001017
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "90-100": {
         "success": 0,
-        "total": 0
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_st_under_2.5": {
+      "0-59": {
+        "success": 75,
+        "total": 78,
+        "avgPredicted": 53.80977904041212
+      },
+      "60-69": {
+        "success": 59,
+        "total": 61,
+        "avgPredicted": 66.710968698211
+      },
+      "70-79": {
+        "success": 29,
+        "total": 34,
+        "avgPredicted": 76.35059449047995
+      },
+      "80-89": {
+        "success": 54,
+        "total": 60,
+        "avgPredicted": 86.06323766003801
+      },
+      "90-100": {
+        "success": 112,
+        "total": 118,
+        "avgPredicted": 95.37391337698324
+      }
+    },
+    "away_st_under_3.5": {
+      "0-59": {
+        "success": 78,
+        "total": 78,
+        "avgPredicted": 55.90894707977566
+      },
+      "60-69": {
+        "success": 61,
+        "total": 61,
+        "avgPredicted": 69.36076175503726
+      },
+      "70-79": {
+        "success": 31,
+        "total": 31,
+        "avgPredicted": 79.30505064730907
+      },
+      "80-89": {
+        "success": 45,
+        "total": 45,
+        "avgPredicted": 89.12052051998572
+      },
+      "90-100": {
+        "success": 130,
+        "total": 136,
+        "avgPredicted": 98.59723522888868
+      }
+    },
+    "draw": {
+      "0-59": {
+        "success": 58,
+        "total": 215,
+        "avgPredicted": 48.27906976744186
+      },
+      "60-69": {
+        "success": 29,
+        "total": 136,
+        "avgPredicted": 60
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "favorite_win": {
+      "0-59": {
+        "success": 118,
+        "total": 215,
+        "avgPredicted": 48.27906976744186
+      },
+      "60-69": {
+        "success": 74,
+        "total": 136,
+        "avgPredicted": 60
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "outsider_win": {
+      "0-59": {
+        "success": 39,
+        "total": 215,
+        "avgPredicted": 48.27906976744186
+      },
+      "60-69": {
+        "success": 33,
+        "total": 136,
+        "avgPredicted": 60
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "double_chance_favorite": {
+      "0-59": {
+        "success": 279,
+        "total": 351,
+        "avgPredicted": 44.01709401709395
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "double_chance_outsider": {
+      "0-59": {
+        "success": 159,
+        "total": 351,
+        "avgPredicted": 44.01709401709395
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "btts": {
+      "0-59": {
+        "success": 156,
+        "total": 288,
+        "avgPredicted": 43.804362721841095
+      },
+      "60-69": {
+        "success": 35,
+        "total": 52,
+        "avgPredicted": 64.12177280447861
+      },
+      "70-79": {
+        "success": 9,
+        "total": 11,
+        "avgPredicted": 72.72978181834885
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "btts_no": {
+      "0-59": {
+        "success": 151,
+        "total": 351,
+        "avgPredicted": 34.33043803497162
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "match_over_0.5": {
+      "0-59": {
+        "success": 72,
+        "total": 78,
+        "avgPredicted": 53.05894668204351
+      },
+      "60-69": {
+        "success": 53,
+        "total": 61,
+        "avgPredicted": 65.92088783901458
+      },
+      "70-79": {
+        "success": 28,
+        "total": 31,
+        "avgPredicted": 75.46481130188629
+      },
+      "80-89": {
+        "success": 47,
+        "total": 50,
+        "avgPredicted": 85.70974996960132
+      },
+      "90-100": {
+        "success": 125,
+        "total": 131,
+        "avgPredicted": 94.79032061589055
+      }
+    },
+    "match_under_0.5": {
+      "0-59": {
+        "success": 26,
+        "total": 351,
+        "avgPredicted": 4.552134903420257
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "match_over_1.5": {
+      "0-59": {
+        "success": 101,
+        "total": 143,
+        "avgPredicted": 48.63352503874695
+      },
+      "60-69": {
+        "success": 42,
+        "total": 59,
+        "avgPredicted": 65.98332263456648
+      },
+      "70-79": {
+        "success": 69,
+        "total": 80,
+        "avgPredicted": 74.30283065557497
+      },
+      "80-89": {
+        "success": 51,
+        "total": 61,
+        "avgPredicted": 84.40362515319813
+      },
+      "90-100": {
+        "success": 7,
+        "total": 8,
+        "avgPredicted": 91.57223522760475
+      }
+    },
+    "match_under_1.5": {
+      "0-59": {
+        "success": 81,
+        "total": 351,
+        "avgPredicted": 17.45573907523602
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "match_over_2.5": {
+      "0-59": {
+        "success": 160,
+        "total": 297,
+        "avgPredicted": 42.014323968881975
+      },
+      "60-69": {
+        "success": 24,
+        "total": 33,
+        "avgPredicted": 64.75483102472138
+      },
+      "70-79": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 73.30939014436659
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 81.80772399078587
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "match_under_2.5": {
+      "0-59": {
+        "success": 145,
+        "total": 346,
+        "avgPredicted": 35.61522788846797
+      },
+      "60-69": {
+        "success": 3,
+        "total": 5,
+        "avgPredicted": 61.094729458359936
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "match_over_3.5": {
+      "0-59": {
+        "success": 119,
+        "total": 348,
+        "avgPredicted": 27.80682155665939
+      },
+      "60-69": {
+        "success": 1,
+        "total": 3,
+        "avgPredicted": 63.049662942191766
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "match_under_3.5": {
+      "0-59": {
+        "success": 151,
+        "total": 239,
+        "avgPredicted": 46.97378792553767
+      },
+      "60-69": {
+        "success": 43,
+        "total": 61,
+        "avgPredicted": 63.57674625557389
+      },
+      "70-79": {
+        "success": 33,
+        "total": 46,
+        "avgPredicted": 74.43157193279849
+      },
+      "80-89": {
+        "success": 4,
+        "total": 5,
+        "avgPredicted": 81.06159295074458
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       }
     }
   },
   "marketOccurrences": {
-    "favorite_win": 203,
-    "double_chance_favorite": 290,
+    "favorite_win": 192,
+    "double_chance_favorite": 279,
+    "btts_no": 151,
     "match_over_0.5": 325,
     "ht_under_0.5": 99,
     "st_over_0.5": 275,
     "home_under_0.5": 84,
     "away_over_0.5": 258,
+    "away_under_0.5": 84,
     "home_ht_under_0.5": 169,
     "away_ht_under_0.5": 200,
     "home_st_under_0.5": 169,
@@ -700,7 +1991,7 @@
     "ht_under_1.5": 220,
     "st_under_1.5": 184,
     "home_under_1.5": 204,
-    "away_under_1.5": 208,
+    "away_under_1.5": 204,
     "home_ht_under_1.5": 295,
     "away_ht_under_1.5": 309,
     "home_st_under_1.5": 279,
@@ -709,7 +2000,7 @@
     "ht_under_2.5": 294,
     "st_under_2.5": 268,
     "home_under_2.5": 277,
-    "away_under_2.5": 292,
+    "away_under_2.5": 277,
     "home_ht_under_2.5": 338,
     "away_ht_under_2.5": 341,
     "home_st_under_2.5": 327,
@@ -718,13 +2009,13 @@
     "ht_under_3.5": 336,
     "st_under_3.5": 320,
     "home_under_3.5": 325,
-    "away_under_3.5": 331,
+    "away_under_3.5": 325,
     "home_ht_under_3.5": 349,
     "away_ht_under_3.5": 350,
     "home_st_under_3.5": 347,
     "away_st_under_3.5": 345,
     "draw": 87,
-    "double_chance_outsider": 148,
+    "double_chance_outsider": 159,
     "btts": 200,
     "ht_over_0.5": 252,
     "home_over_0.5": 267,
@@ -741,12 +2032,11 @@
     "away_ht_over_1.5": 42,
     "match_over_2.5": 203,
     "ht_over_2.5": 57,
-    "outsider_win": 61,
+    "outsider_win": 72,
     "home_over_1.5": 147,
     "home_ht_over_1.5": 56,
     "home_over_2.5": 74,
     "match_over_3.5": 120,
-    "away_under_0.5": 93,
     "match_under_0.5": 26,
     "home_st_over_1.5": 72,
     "st_over_2.5": 83,
@@ -763,5 +2053,1046 @@
     "home_ht_over_3.5": 2,
     "home_st_over_3.5": 4,
     "away_ht_over_3.5": 1
+  },
+  "calibration": {
+    "home_over_0.5": {
+      "0-59": {
+        "predicted": "47.88",
+        "actual": "68.21"
+      },
+      "60-69": {
+        "predicted": "64.85",
+        "actual": "75.00"
+      },
+      "70-79": {
+        "predicted": "74.46",
+        "actual": "82.65"
+      },
+      "80-89": {
+        "predicted": "83.81",
+        "actual": "89.19"
+      },
+      "90-100": {
+        "predicted": "91.06",
+        "actual": "100.00"
+      }
+    },
+    "home_under_0.5": {
+      "0-59": {
+        "predicted": "19.45",
+        "actual": "23.93"
+      }
+    },
+    "home_over_1.5": {
+      "0-59": {
+        "predicted": "34.12",
+        "actual": "40.41"
+      },
+      "60-69": {
+        "predicted": "64.57",
+        "actual": "81.82"
+      },
+      "70-79": {
+        "predicted": "76.98",
+        "actual": "100.00"
+      }
+    },
+    "home_under_1.5": {
+      "0-59": {
+        "predicted": "42.99",
+        "actual": "55.97"
+      },
+      "60-69": {
+        "predicted": "63.56",
+        "actual": "65.91"
+      },
+      "70-79": {
+        "predicted": "74.72",
+        "actual": "76.92"
+      },
+      "80-89": {
+        "predicted": "81.95",
+        "actual": "100.00"
+      }
+    },
+    "home_over_2.5": {
+      "0-59": {
+        "predicted": "15.32",
+        "actual": "21.08"
+      }
+    },
+    "home_under_2.5": {
+      "0-59": {
+        "predicted": "51.43",
+        "actual": "73.91"
+      },
+      "60-69": {
+        "predicted": "65.30",
+        "actual": "72.22"
+      },
+      "70-79": {
+        "predicted": "74.98",
+        "actual": "79.27"
+      },
+      "80-89": {
+        "predicted": "84.79",
+        "actual": "90.16"
+      },
+      "90-100": {
+        "predicted": "92.38",
+        "actual": "100.00"
+      }
+    },
+    "home_over_3.5": {
+      "0-59": {
+        "predicted": "5.44",
+        "actual": "7.41"
+      }
+    },
+    "home_under_3.5": {
+      "0-59": {
+        "predicted": "53.30",
+        "actual": "94.87"
+      },
+      "60-69": {
+        "predicted": "66.04",
+        "actual": "90.48"
+      },
+      "70-79": {
+        "predicted": "75.75",
+        "actual": "85.71"
+      },
+      "80-89": {
+        "predicted": "84.99",
+        "actual": "91.04"
+      },
+      "90-100": {
+        "predicted": "94.69",
+        "actual": "95.37"
+      }
+    },
+    "away_over_0.5": {
+      "0-59": {
+        "predicted": "48.16",
+        "actual": "69.54"
+      },
+      "60-69": {
+        "predicted": "65.15",
+        "actual": "71.25"
+      },
+      "70-79": {
+        "predicted": "75.06",
+        "actual": "75.68"
+      },
+      "80-89": {
+        "predicted": "84.11",
+        "actual": "84.21"
+      },
+      "90-100": {
+        "predicted": "92.82",
+        "actual": "100.00"
+      }
+    },
+    "away_under_0.5": {
+      "0-59": {
+        "predicted": "19.44",
+        "actual": "23.93"
+      }
+    },
+    "away_over_1.5": {
+      "0-59": {
+        "predicted": "33.63",
+        "actual": "38.74"
+      },
+      "60-69": {
+        "predicted": "63.28",
+        "actual": "69.23"
+      },
+      "70-79": {
+        "predicted": "74.86",
+        "actual": "100.00"
+      },
+      "80-89": {
+        "predicted": "82.01",
+        "actual": "100.00"
+      }
+    },
+    "away_under_1.5": {
+      "0-59": {
+        "predicted": "42.72",
+        "actual": "60.00"
+      },
+      "60-69": {
+        "predicted": "64.39",
+        "actual": "45.95"
+      },
+      "70-79": {
+        "predicted": "73.94",
+        "actual": "52.63"
+      }
+    },
+    "away_over_2.5": {
+      "0-59": {
+        "predicted": "15.33",
+        "actual": "16.33"
+      },
+      "60-69": {
+        "predicted": "60.64",
+        "actual": "100.00"
+      }
+    },
+    "away_under_2.5": {
+      "0-59": {
+        "predicted": "50.63",
+        "actual": "82.48"
+      },
+      "60-69": {
+        "predicted": "65.29",
+        "actual": "80.33"
+      },
+      "70-79": {
+        "predicted": "75.52",
+        "actual": "71.05"
+      },
+      "80-89": {
+        "predicted": "84.51",
+        "actual": "81.82"
+      },
+      "90-100": {
+        "predicted": "91.85",
+        "actual": "72.73"
+      }
+    },
+    "away_over_3.5": {
+      "0-59": {
+        "predicted": "5.69",
+        "actual": "5.70"
+      }
+    },
+    "away_under_3.5": {
+      "0-59": {
+        "predicted": "53.21",
+        "actual": "94.94"
+      },
+      "60-69": {
+        "predicted": "65.79",
+        "actual": "93.65"
+      },
+      "70-79": {
+        "predicted": "75.73",
+        "actual": "89.47"
+      },
+      "80-89": {
+        "predicted": "85.46",
+        "actual": "91.43"
+      },
+      "90-100": {
+        "predicted": "95.01",
+        "actual": "92.08"
+      }
+    },
+    "ht_over_0.5": {
+      "0-59": {
+        "predicted": "46.98",
+        "actual": "67.88"
+      },
+      "60-69": {
+        "predicted": "65.97",
+        "actual": "70.24"
+      },
+      "70-79": {
+        "predicted": "74.74",
+        "actual": "77.78"
+      },
+      "80-89": {
+        "predicted": "82.43",
+        "actual": "85.71"
+      }
+    },
+    "ht_under_0.5": {
+      "0-59": {
+        "predicted": "22.00",
+        "actual": "28.21"
+      }
+    },
+    "ht_over_1.5": {
+      "0-59": {
+        "predicted": "31.38",
+        "actual": "37.32"
+      }
+    },
+    "ht_under_1.5": {
+      "0-59": {
+        "predicted": "46.41",
+        "actual": "60.87"
+      },
+      "60-69": {
+        "predicted": "64.84",
+        "actual": "67.24"
+      },
+      "70-79": {
+        "predicted": "71.59",
+        "actual": "76.47"
+      }
+    },
+    "ht_over_2.5": {
+      "0-59": {
+        "predicted": "12.42",
+        "actual": "16.24"
+      }
+    },
+    "ht_under_2.5": {
+      "0-59": {
+        "predicted": "51.22",
+        "actual": "81.73"
+      },
+      "60-69": {
+        "predicted": "64.08",
+        "actual": "83.87"
+      },
+      "70-79": {
+        "predicted": "75.94",
+        "actual": "81.01"
+      },
+      "80-89": {
+        "predicted": "85.33",
+        "actual": "86.52"
+      },
+      "90-100": {
+        "predicted": "90.94",
+        "actual": "94.12"
+      }
+    },
+    "ht_under_3.5": {
+      "0-59": {
+        "predicted": "54.10",
+        "actual": "98.72"
+      },
+      "60-69": {
+        "predicted": "67.04",
+        "actual": "93.44"
+      },
+      "70-79": {
+        "predicted": "76.50",
+        "actual": "93.55"
+      },
+      "80-89": {
+        "predicted": "86.10",
+        "actual": "94.34"
+      },
+      "90-100": {
+        "predicted": "95.10",
+        "actual": "96.09"
+      }
+    },
+    "st_over_0.5": {
+      "0-59": {
+        "predicted": "49.36",
+        "actual": "75.00"
+      },
+      "60-69": {
+        "predicted": "64.40",
+        "actual": "70.59"
+      },
+      "70-79": {
+        "predicted": "74.58",
+        "actual": "79.81"
+      },
+      "80-89": {
+        "predicted": "84.18",
+        "actual": "85.92"
+      },
+      "90-100": {
+        "predicted": "91.24",
+        "actual": "100.00"
+      }
+    },
+    "st_under_0.5": {
+      "0-59": {
+        "predicted": "16.48",
+        "actual": "21.65"
+      }
+    },
+    "st_over_1.5": {
+      "0-59": {
+        "predicted": "38.14",
+        "actual": "45.95"
+      },
+      "60-69": {
+        "predicted": "62.91",
+        "actual": "82.35"
+      },
+      "70-79": {
+        "predicted": "70.23",
+        "actual": "0.00"
+      }
+    },
+    "st_under_1.5": {
+      "0-59": {
+        "predicted": "41.17",
+        "actual": "51.38"
+      },
+      "60-69": {
+        "predicted": "62.35",
+        "actual": "66.67"
+      }
+    },
+    "st_over_2.5": {
+      "0-59": {
+        "predicted": "18.41",
+        "actual": "23.65"
+      }
+    },
+    "st_under_2.5": {
+      "0-59": {
+        "predicted": "49.74",
+        "actual": "82.07"
+      },
+      "60-69": {
+        "predicted": "65.52",
+        "actual": "63.01"
+      },
+      "70-79": {
+        "predicted": "74.19",
+        "actual": "74.39"
+      },
+      "80-89": {
+        "predicted": "83.52",
+        "actual": "82.35"
+      }
+    },
+    "st_over_3.5": {
+      "0-59": {
+        "predicted": "6.96",
+        "actual": "8.83"
+      }
+    },
+    "st_under_3.5": {
+      "0-59": {
+        "predicted": "52.26",
+        "actual": "97.44"
+      },
+      "60-69": {
+        "predicted": "64.69",
+        "actual": "96.72"
+      },
+      "70-79": {
+        "predicted": "74.44",
+        "actual": "75.68"
+      },
+      "80-89": {
+        "predicted": "84.76",
+        "actual": "84.09"
+      },
+      "90-100": {
+        "predicted": "93.34",
+        "actual": "95.40"
+      }
+    },
+    "home_ht_over_0.5": {
+      "0-59": {
+        "predicted": "38.72",
+        "actual": "51.03"
+      },
+      "60-69": {
+        "predicted": "63.52",
+        "actual": "77.78"
+      },
+      "70-79": {
+        "predicted": "71.70",
+        "actual": "100.00"
+      }
+    },
+    "home_ht_under_0.5": {
+      "0-59": {
+        "predicted": "41.55",
+        "actual": "48.96"
+      },
+      "60-69": {
+        "predicted": "64.20",
+        "actual": "33.33"
+      },
+      "70-79": {
+        "predicted": "70.72",
+        "actual": "0.00"
+      }
+    },
+    "home_ht_over_1.5": {
+      "0-59": {
+        "predicted": "11.81",
+        "actual": "15.95"
+      }
+    },
+    "home_ht_under_1.5": {
+      "0-59": {
+        "predicted": "50.70",
+        "actual": "82.11"
+      },
+      "60-69": {
+        "predicted": "63.51",
+        "actual": "81.16"
+      },
+      "70-79": {
+        "predicted": "75.58",
+        "actual": "77.27"
+      },
+      "80-89": {
+        "predicted": "85.31",
+        "actual": "90.00"
+      },
+      "90-100": {
+        "predicted": "92.20",
+        "actual": "95.24"
+      }
+    },
+    "home_ht_under_2.5": {
+      "0-59": {
+        "predicted": "54.90",
+        "actual": "97.44"
+      },
+      "60-69": {
+        "predicted": "68.07",
+        "actual": "96.72"
+      },
+      "70-79": {
+        "predicted": "77.56",
+        "actual": "93.55"
+      },
+      "80-89": {
+        "predicted": "87.10",
+        "actual": "93.48"
+      },
+      "90-100": {
+        "predicted": "96.69",
+        "actual": "97.04"
+      }
+    },
+    "home_ht_under_3.5": {
+      "0-59": {
+        "predicted": "56.18",
+        "actual": "100.00"
+      },
+      "60-69": {
+        "predicted": "69.70",
+        "actual": "100.00"
+      },
+      "70-79": {
+        "predicted": "79.59",
+        "actual": "100.00"
+      },
+      "80-89": {
+        "predicted": "89.52",
+        "actual": "97.78"
+      },
+      "90-100": {
+        "predicted": "99.38",
+        "actual": "99.26"
+      }
+    },
+    "home_st_over_0.5": {
+      "0-59": {
+        "predicted": "42.85",
+        "actual": "48.57"
+      },
+      "60-69": {
+        "predicted": "63.66",
+        "actual": "79.31"
+      },
+      "70-79": {
+        "predicted": "72.75",
+        "actual": "85.71"
+      }
+    },
+    "home_st_under_0.5": {
+      "0-59": {
+        "predicted": "36.59",
+        "actual": "47.84"
+      },
+      "60-69": {
+        "predicted": "63.07",
+        "actual": "75.00"
+      }
+    },
+    "home_st_over_1.5": {
+      "0-59": {
+        "predicted": "16.03",
+        "actual": "20.51"
+      }
+    },
+    "home_st_under_1.5": {
+      "0-59": {
+        "predicted": "50.91",
+        "actual": "83.57"
+      },
+      "60-69": {
+        "predicted": "65.75",
+        "actual": "66.04"
+      },
+      "70-79": {
+        "predicted": "74.70",
+        "actual": "77.78"
+      },
+      "80-89": {
+        "predicted": "83.96",
+        "actual": "81.69"
+      },
+      "90-100": {
+        "predicted": "91.59",
+        "actual": "100.00"
+      }
+    },
+    "home_st_over_2.5": {
+      "0-59": {
+        "predicted": "4.18",
+        "actual": "6.84"
+      }
+    },
+    "home_st_under_2.5": {
+      "0-59": {
+        "predicted": "53.93",
+        "actual": "94.87"
+      },
+      "60-69": {
+        "predicted": "66.88",
+        "actual": "93.55"
+      },
+      "70-79": {
+        "predicted": "76.33",
+        "actual": "87.10"
+      },
+      "80-89": {
+        "predicted": "85.75",
+        "actual": "87.50"
+      },
+      "90-100": {
+        "predicted": "95.25",
+        "actual": "95.97"
+      }
+    },
+    "home_st_under_3.5": {
+      "0-59": {
+        "predicted": "55.94",
+        "actual": "100.00"
+      },
+      "60-69": {
+        "predicted": "69.40",
+        "actual": "100.00"
+      },
+      "70-79": {
+        "predicted": "79.19",
+        "actual": "93.55"
+      },
+      "80-89": {
+        "predicted": "89.05",
+        "actual": "97.78"
+      },
+      "90-100": {
+        "predicted": "98.79",
+        "actual": "99.26"
+      }
+    },
+    "away_ht_over_0.5": {
+      "0-59": {
+        "predicted": "38.58",
+        "actual": "42.48"
+      },
+      "60-69": {
+        "predicted": "64.15",
+        "actual": "37.50"
+      },
+      "70-79": {
+        "predicted": "73.63",
+        "actual": "100.00"
+      }
+    },
+    "away_ht_under_0.5": {
+      "0-59": {
+        "predicted": "41.07",
+        "actual": "55.62"
+      },
+      "60-69": {
+        "predicted": "63.64",
+        "actual": "77.27"
+      }
+    },
+    "away_ht_over_1.5": {
+      "0-59": {
+        "predicted": "11.98",
+        "actual": "11.97"
+      }
+    },
+    "away_ht_under_1.5": {
+      "0-59": {
+        "predicted": "51.39",
+        "actual": "84.91"
+      },
+      "60-69": {
+        "predicted": "64.23",
+        "actual": "86.89"
+      },
+      "70-79": {
+        "predicted": "75.99",
+        "actual": "88.41"
+      },
+      "80-89": {
+        "predicted": "85.25",
+        "actual": "89.77"
+      },
+      "90-100": {
+        "predicted": "92.01",
+        "actual": "96.30"
+      }
+    },
+    "away_ht_under_2.5": {
+      "0-59": {
+        "predicted": "54.83",
+        "actual": "97.44"
+      },
+      "60-69": {
+        "predicted": "68.00",
+        "actual": "100.00"
+      },
+      "70-79": {
+        "predicted": "77.79",
+        "actual": "93.55"
+      },
+      "80-89": {
+        "predicted": "87.15",
+        "actual": "96.00"
+      },
+      "90-100": {
+        "predicted": "96.71",
+        "actual": "96.95"
+      }
+    },
+    "away_ht_under_3.5": {
+      "0-59": {
+        "predicted": "56.16",
+        "actual": "100.00"
+      },
+      "60-69": {
+        "predicted": "69.68",
+        "actual": "100.00"
+      },
+      "70-79": {
+        "predicted": "79.65",
+        "actual": "96.77"
+      },
+      "80-89": {
+        "predicted": "89.56",
+        "actual": "100.00"
+      },
+      "90-100": {
+        "predicted": "99.27",
+        "actual": "100.00"
+      }
+    },
+    "away_st_over_0.5": {
+      "0-59": {
+        "predicted": "42.57",
+        "actual": "50.48"
+      },
+      "60-69": {
+        "predicted": "64.54",
+        "actual": "78.57"
+      },
+      "70-79": {
+        "predicted": "73.77",
+        "actual": "100.00"
+      },
+      "80-89": {
+        "predicted": "82.17",
+        "actual": "100.00"
+      }
+    },
+    "away_st_under_0.5": {
+      "0-59": {
+        "predicted": "36.72",
+        "actual": "46.00"
+      },
+      "60-69": {
+        "predicted": "61.63",
+        "actual": "0.00"
+      }
+    },
+    "away_st_over_1.5": {
+      "0-59": {
+        "predicted": "16.22",
+        "actual": "20.23"
+      }
+    },
+    "away_st_under_1.5": {
+      "0-59": {
+        "predicted": "50.42",
+        "actual": "81.29"
+      },
+      "60-69": {
+        "predicted": "65.40",
+        "actual": "71.43"
+      },
+      "70-79": {
+        "predicted": "74.79",
+        "actual": "73.42"
+      },
+      "80-89": {
+        "predicted": "84.35",
+        "actual": "88.89"
+      },
+      "90-100": {
+        "predicted": "90.73",
+        "actual": "100.00"
+      }
+    },
+    "away_st_over_2.5": {
+      "0-59": {
+        "predicted": "4.33",
+        "actual": "6.27"
+      }
+    },
+    "away_st_under_2.5": {
+      "0-59": {
+        "predicted": "53.81",
+        "actual": "96.15"
+      },
+      "60-69": {
+        "predicted": "66.71",
+        "actual": "96.72"
+      },
+      "70-79": {
+        "predicted": "76.35",
+        "actual": "85.29"
+      },
+      "80-89": {
+        "predicted": "86.06",
+        "actual": "90.00"
+      },
+      "90-100": {
+        "predicted": "95.37",
+        "actual": "94.92"
+      }
+    },
+    "away_st_under_3.5": {
+      "0-59": {
+        "predicted": "55.91",
+        "actual": "100.00"
+      },
+      "60-69": {
+        "predicted": "69.36",
+        "actual": "100.00"
+      },
+      "70-79": {
+        "predicted": "79.31",
+        "actual": "100.00"
+      },
+      "80-89": {
+        "predicted": "89.12",
+        "actual": "100.00"
+      },
+      "90-100": {
+        "predicted": "98.60",
+        "actual": "95.59"
+      }
+    },
+    "draw": {
+      "0-59": {
+        "predicted": "48.28",
+        "actual": "26.98"
+      },
+      "60-69": {
+        "predicted": "60.00",
+        "actual": "21.32"
+      }
+    },
+    "favorite_win": {
+      "0-59": {
+        "predicted": "48.28",
+        "actual": "54.88"
+      },
+      "60-69": {
+        "predicted": "60.00",
+        "actual": "54.41"
+      }
+    },
+    "outsider_win": {
+      "0-59": {
+        "predicted": "48.28",
+        "actual": "18.14"
+      },
+      "60-69": {
+        "predicted": "60.00",
+        "actual": "24.26"
+      }
+    },
+    "double_chance_favorite": {
+      "0-59": {
+        "predicted": "44.02",
+        "actual": "79.49"
+      }
+    },
+    "double_chance_outsider": {
+      "0-59": {
+        "predicted": "44.02",
+        "actual": "45.30"
+      }
+    },
+    "btts": {
+      "0-59": {
+        "predicted": "43.80",
+        "actual": "54.17"
+      },
+      "60-69": {
+        "predicted": "64.12",
+        "actual": "67.31"
+      },
+      "70-79": {
+        "predicted": "72.73",
+        "actual": "81.82"
+      }
+    },
+    "btts_no": {
+      "0-59": {
+        "predicted": "34.33",
+        "actual": "43.02"
+      }
+    },
+    "match_over_0.5": {
+      "0-59": {
+        "predicted": "53.06",
+        "actual": "92.31"
+      },
+      "60-69": {
+        "predicted": "65.92",
+        "actual": "86.89"
+      },
+      "70-79": {
+        "predicted": "75.46",
+        "actual": "90.32"
+      },
+      "80-89": {
+        "predicted": "85.71",
+        "actual": "94.00"
+      },
+      "90-100": {
+        "predicted": "94.79",
+        "actual": "95.42"
+      }
+    },
+    "match_under_0.5": {
+      "0-59": {
+        "predicted": "4.55",
+        "actual": "7.41"
+      }
+    },
+    "match_over_1.5": {
+      "0-59": {
+        "predicted": "48.63",
+        "actual": "70.63"
+      },
+      "60-69": {
+        "predicted": "65.98",
+        "actual": "71.19"
+      },
+      "70-79": {
+        "predicted": "74.30",
+        "actual": "86.25"
+      },
+      "80-89": {
+        "predicted": "84.40",
+        "actual": "83.61"
+      },
+      "90-100": {
+        "predicted": "91.57",
+        "actual": "87.50"
+      }
+    },
+    "match_under_1.5": {
+      "0-59": {
+        "predicted": "17.46",
+        "actual": "23.08"
+      }
+    },
+    "match_over_2.5": {
+      "0-59": {
+        "predicted": "42.01",
+        "actual": "53.87"
+      },
+      "60-69": {
+        "predicted": "64.75",
+        "actual": "72.73"
+      },
+      "70-79": {
+        "predicted": "73.31",
+        "actual": "89.47"
+      },
+      "80-89": {
+        "predicted": "81.81",
+        "actual": "100.00"
+      }
+    },
+    "match_under_2.5": {
+      "0-59": {
+        "predicted": "35.62",
+        "actual": "41.91"
+      },
+      "60-69": {
+        "predicted": "61.09",
+        "actual": "60.00"
+      }
+    },
+    "match_over_3.5": {
+      "0-59": {
+        "predicted": "27.81",
+        "actual": "34.20"
+      },
+      "60-69": {
+        "predicted": "63.05",
+        "actual": "33.33"
+      }
+    },
+    "match_under_3.5": {
+      "0-59": {
+        "predicted": "46.97",
+        "actual": "63.18"
+      },
+      "60-69": {
+        "predicted": "63.58",
+        "actual": "70.49"
+      },
+      "70-79": {
+        "predicted": "74.43",
+        "actual": "71.74"
+      },
+      "80-89": {
+        "predicted": "81.06",
+        "actual": "80.00"
+      }
+    }
+  },
+  "earlySeasonSummary": {
+    "0-59": {
+      "success": 5862,
+      "total": 14108,
+      "avgPredicted": 28.400786859703015
+    },
+    "60-69": {
+      "success": 1277,
+      "total": 1452,
+      "avgPredicted": 66.2029490736838
+    },
+    "70-79": {
+      "success": 729,
+      "total": 839,
+      "avgPredicted": 75.5097768014881
+    },
+    "80-89": {
+      "success": 554,
+      "total": 586,
+      "avgPredicted": 86.48859077111481
+    },
+    "90-100": {
+      "success": 0,
+      "total": 0,
+      "avgPredicted": 0
+    }
   }
 }
