@@ -1,0 +1,29 @@
+{
+  "period": "3 prochains matchs MLB 2025",
+  "totalMatches": 3,
+  "totalRequestsUsed": 10,
+  "matches": [
+    {
+      "id": 165245,
+      "homeTeam": "Baltimore Orioles",
+      "awayTeam": "Boston Red Sox",
+      "date": "2025-08-26T00:35:00+02:00",
+      "markets": []
+    },
+    {
+      "id": 165247,
+      "homeTeam": "Cleveland Guardians",
+      "awayTeam": "Tampa Bay Rays",
+      "date": "2025-08-26T00:40:00+02:00",
+      "markets": []
+    },
+    {
+      "id": 165253,
+      "homeTeam": "Miami Marlins",
+      "awayTeam": "Atlanta Braves",
+      "date": "2025-08-26T00:40:00+02:00",
+      "markets": []
+    }
+  ],
+  "uniqueMarkets": []
+}

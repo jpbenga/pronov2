@@ -1,65 +1,65 @@
 {
-  "totalMatchesAnalyzed": 351,
+  "totalMatchesAnalyzed": 345,
   "globalSummary": {
     "0-59": {
-      "success": 7480,
-      "total": 17868,
-      "avgPredicted": 564220.2647462653
+      "success": 6871,
+      "total": 16607,
+      "avgPredicted": 534372.9341231775
     },
     "60-69": {
-      "success": 1820,
-      "total": 2488,
-      "avgPredicted": 161181.556954646
+      "success": 1993,
+      "total": 2757,
+      "avgPredicted": 178243.22359963736
     },
     "70-79": {
-      "success": 1328,
-      "total": 1625,
-      "avgPredicted": 122508.73168987007
+      "success": 1272,
+      "total": 1546,
+      "avgPredicted": 116803.85017991687
     },
     "80-89": {
-      "success": 1384,
-      "total": 1547,
-      "avgPredicted": 132264.56280747245
+      "success": 1279,
+      "total": 1458,
+      "avgPredicted": 124360.6276406467
     },
     "90-100": {
-      "success": 1679,
-      "total": 1744,
-      "avgPredicted": 167761.16224517056
+      "success": 2061,
+      "total": 2127,
+      "avgPredicted": 204571.04222480088
     }
   },
   "perMarketSummary": {
     "home_over_0.5": {
       "0-59": {
-        "success": 103,
-        "total": 151,
-        "avgPredicted": 47.87603718792942
+        "success": 97,
+        "total": 149,
+        "avgPredicted": 49.80536796419332
       },
       "60-69": {
-        "success": 45,
-        "total": 60,
-        "avgPredicted": 64.84574162909827
+        "success": 38,
+        "total": 57,
+        "avgPredicted": 65.29580340946814
       },
       "70-79": {
-        "success": 81,
-        "total": 98,
-        "avgPredicted": 74.45920667006499
+        "success": 60,
+        "total": 83,
+        "avgPredicted": 74.5802472783782
       },
       "80-89": {
-        "success": 33,
-        "total": 37,
-        "avgPredicted": 83.80948606680255
+        "success": 44,
+        "total": 48,
+        "avgPredicted": 83.98710272962664
       },
       "90-100": {
-        "success": 5,
-        "total": 5,
-        "avgPredicted": 91.0614424994234
+        "success": 8,
+        "total": 8,
+        "avgPredicted": 91.603850659495
       }
     },
     "home_under_0.5": {
       "0-59": {
-        "success": 84,
-        "total": 351,
-        "avgPredicted": 19.449326029178284
+        "success": 98,
+        "total": 345,
+        "avgPredicted": 20.38483222780314
       },
       "60-69": {
         "success": 0,
@@ -84,19 +84,19 @@
     },
     "home_over_1.5": {
       "0-59": {
-        "success": 137,
-        "total": 339,
-        "avgPredicted": 34.116401083083616
+        "success": 129,
+        "total": 329,
+        "avgPredicted": 34.43646715956858
       },
       "60-69": {
         "success": 9,
-        "total": 11,
-        "avgPredicted": 64.57178636446613
+        "total": 12,
+        "avgPredicted": 64.58948720467453
       },
       "70-79": {
-        "success": 1,
-        "total": 1,
-        "avgPredicted": 76.97717356883315
+        "success": 4,
+        "total": 4,
+        "avgPredicted": 74.44552109584448
       },
       "80-89": {
         "success": 0,
@@ -111,24 +111,24 @@
     },
     "home_under_1.5": {
       "0-59": {
-        "success": 164,
-        "total": 293,
-        "avgPredicted": 42.993841652242644
+        "success": 143,
+        "total": 264,
+        "avgPredicted": 42.8063338954291
       },
       "60-69": {
-        "success": 29,
-        "total": 44,
-        "avgPredicted": 63.56359879263373
+        "success": 43,
+        "total": 63,
+        "avgPredicted": 64.15673178088119
       },
       "70-79": {
-        "success": 10,
+        "success": 12,
         "total": 13,
-        "avgPredicted": 74.71738039866403
+        "avgPredicted": 74.40794469382566
       },
       "80-89": {
-        "success": 1,
-        "total": 1,
-        "avgPredicted": 81.95331309108738
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 83.49936841078771
       },
       "90-100": {
         "success": 0,
@@ -138,9 +138,9 @@
     },
     "home_over_2.5": {
       "0-59": {
-        "success": 74,
-        "total": 351,
-        "avgPredicted": 15.323616026850337
+        "success": 72,
+        "total": 345,
+        "avgPredicted": 15.766258677301556
       },
       "60-69": {
         "success": 0,
@@ -165,36 +165,36 @@
     },
     "home_under_2.5": {
       "0-59": {
-        "success": 102,
-        "total": 138,
-        "avgPredicted": 51.42754143879012
+        "success": 88,
+        "total": 123,
+        "avgPredicted": 52.184345127841794
       },
       "60-69": {
-        "success": 39,
-        "total": 54,
-        "avgPredicted": 65.29540113450572
+        "success": 47,
+        "total": 61,
+        "avgPredicted": 65.14585390253853
       },
       "70-79": {
-        "success": 65,
-        "total": 82,
-        "avgPredicted": 74.97948593874723
+        "success": 51,
+        "total": 63,
+        "avgPredicted": 75.82088088589738
       },
       "80-89": {
-        "success": 55,
-        "total": 61,
-        "avgPredicted": 84.78768827761746
+        "success": 61,
+        "total": 72,
+        "avgPredicted": 84.99186596802079
       },
       "90-100": {
-        "success": 16,
-        "total": 16,
-        "avgPredicted": 92.38072267795306
+        "success": 26,
+        "total": 26,
+        "avgPredicted": 92.38228354009759
       }
     },
     "home_over_3.5": {
       "0-59": {
-        "success": 26,
-        "total": 351,
-        "avgPredicted": 5.442848988367825
+        "success": 25,
+        "total": 345,
+        "avgPredicted": 5.7024938312071365
       },
       "60-69": {
         "success": 0,
@@ -219,63 +219,63 @@
     },
     "home_under_3.5": {
       "0-59": {
-        "success": 74,
-        "total": 78,
-        "avgPredicted": 53.30089381826872
+        "success": 55,
+        "total": 61,
+        "avgPredicted": 54.528330454007616
       },
       "60-69": {
-        "success": 57,
-        "total": 63,
-        "avgPredicted": 66.0350597509485
+        "success": 61,
+        "total": 68,
+        "avgPredicted": 65.83302451325062
       },
       "70-79": {
-        "success": 30,
-        "total": 35,
-        "avgPredicted": 75.75085328686329
+        "success": 33,
+        "total": 36,
+        "avgPredicted": 75.5818424328059
       },
       "80-89": {
-        "success": 61,
-        "total": 67,
-        "avgPredicted": 84.99000149424906
+        "success": 45,
+        "total": 50,
+        "avgPredicted": 85.85311268402725
       },
       "90-100": {
-        "success": 103,
-        "total": 108,
-        "avgPredicted": 94.68769960919708
+        "success": 126,
+        "total": 130,
+        "avgPredicted": 94.97049109119742
       }
     },
     "away_over_0.5": {
       "0-59": {
-        "success": 105,
-        "total": 151,
-        "avgPredicted": 48.162796415728685
+        "success": 93,
+        "total": 141,
+        "avgPredicted": 49.184866289347625
       },
       "60-69": {
-        "success": 57,
-        "total": 80,
-        "avgPredicted": 65.14576407048278
+        "success": 42,
+        "total": 62,
+        "avgPredicted": 65.00882736266145
       },
       "70-79": {
-        "success": 56,
-        "total": 74,
-        "avgPredicted": 75.06148178486451
+        "success": 60,
+        "total": 78,
+        "avgPredicted": 75.4864236488276
       },
       "80-89": {
-        "success": 32,
-        "total": 38,
-        "avgPredicted": 84.11196547080418
+        "success": 45,
+        "total": 52,
+        "avgPredicted": 84.38205235152114
       },
       "90-100": {
-        "success": 8,
-        "total": 8,
-        "avgPredicted": 92.81553985214312
+        "success": 12,
+        "total": 12,
+        "avgPredicted": 92.35803929564982
       }
     },
     "away_under_0.5": {
       "0-59": {
-        "success": 84,
-        "total": 351,
-        "avgPredicted": 19.437116686036084
+        "success": 98,
+        "total": 345,
+        "avgPredicted": 19.652992226902974
       },
       "60-69": {
         "success": 0,
@@ -300,24 +300,24 @@
     },
     "away_over_1.5": {
       "0-59": {
-        "success": 129,
-        "total": 333,
-        "avgPredicted": 33.62840215178105
+        "success": 124,
+        "total": 318,
+        "avgPredicted": 34.480022358525055
       },
       "60-69": {
-        "success": 9,
-        "total": 13,
-        "avgPredicted": 63.27993892196473
+        "success": 14,
+        "total": 19,
+        "avgPredicted": 64.09822553117598
       },
       "70-79": {
-        "success": 3,
-        "total": 3,
-        "avgPredicted": 74.8585242235332
+        "success": 7,
+        "total": 7,
+        "avgPredicted": 74.40948329642367
       },
       "80-89": {
-        "success": 2,
-        "total": 2,
-        "avgPredicted": 82.01285179158332
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 80.45547693882101
       },
       "90-100": {
         "success": 0,
@@ -327,24 +327,24 @@
     },
     "away_under_1.5": {
       "0-59": {
-        "success": 177,
-        "total": 295,
-        "avgPredicted": 42.72274776256353
+        "success": 175,
+        "total": 284,
+        "avgPredicted": 43.087242070514606
       },
       "60-69": {
-        "success": 17,
-        "total": 37,
-        "avgPredicted": 64.38849755296877
+        "success": 20,
+        "total": 42,
+        "avgPredicted": 63.96208134929522
       },
       "70-79": {
-        "success": 10,
-        "total": 19,
-        "avgPredicted": 73.94297904218513
+        "success": 8,
+        "total": 18,
+        "avgPredicted": 74.50151483862633
       },
       "80-89": {
         "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "total": 1,
+        "avgPredicted": 81.95331309108738
       },
       "90-100": {
         "success": 0,
@@ -354,14 +354,14 @@
     },
     "away_over_2.5": {
       "0-59": {
-        "success": 57,
-        "total": 349,
-        "avgPredicted": 15.334794079828617
+        "success": 59,
+        "total": 345,
+        "avgPredicted": 16.680040647341837
       },
       "60-69": {
-        "success": 2,
-        "total": 2,
-        "avgPredicted": 60.63658338763337
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "70-79": {
         "success": 0,
@@ -381,36 +381,36 @@
     },
     "away_under_2.5": {
       "0-59": {
-        "success": 113,
-        "total": 137,
-        "avgPredicted": 50.62749859351711
+        "success": 105,
+        "total": 129,
+        "avgPredicted": 52.47695855053714
       },
       "60-69": {
         "success": 49,
         "total": 61,
-        "avgPredicted": 65.28614841289067
+        "avgPredicted": 64.6019921198153
       },
       "70-79": {
-        "success": 54,
-        "total": 76,
-        "avgPredicted": 75.5219577870198
+        "success": 51,
+        "total": 68,
+        "avgPredicted": 75.6483721719845
       },
       "80-89": {
-        "success": 45,
-        "total": 55,
-        "avgPredicted": 84.51198522120013
+        "success": 51,
+        "total": 62,
+        "avgPredicted": 84.22901943585269
       },
       "90-100": {
-        "success": 16,
-        "total": 22,
-        "avgPredicted": 91.84697090394822
+        "success": 17,
+        "total": 25,
+        "avgPredicted": 91.95393166484904
       }
     },
     "away_over_3.5": {
       "0-59": {
-        "success": 20,
-        "total": 351,
-        "avgPredicted": 5.685644372943325
+        "success": 21,
+        "total": 345,
+        "avgPredicted": 6.248007761212024
       },
       "60-69": {
         "success": 0,
@@ -435,51 +435,51 @@
     },
     "away_under_3.5": {
       "0-59": {
-        "success": 75,
-        "total": 79,
-        "avgPredicted": 53.205408431905
+        "success": 55,
+        "total": 60,
+        "avgPredicted": 54.50209468666784
       },
       "60-69": {
-        "success": 59,
-        "total": 63,
-        "avgPredicted": 65.79433694756578
+        "success": 66,
+        "total": 73,
+        "avgPredicted": 66.1379678180032
       },
       "70-79": {
-        "success": 34,
-        "total": 38,
-        "avgPredicted": 75.73168299721287
+        "success": 36,
+        "total": 37,
+        "avgPredicted": 75.59877637427559
       },
       "80-89": {
-        "success": 64,
-        "total": 70,
-        "avgPredicted": 85.45761776637559
+        "success": 55,
+        "total": 59,
+        "avgPredicted": 85.96110609106132
       },
       "90-100": {
-        "success": 93,
-        "total": 101,
-        "avgPredicted": 95.0121894429642
+        "success": 108,
+        "total": 116,
+        "avgPredicted": 94.89120694178231
       }
     },
     "ht_over_0.5": {
       "0-59": {
-        "success": 112,
-        "total": 165,
-        "avgPredicted": 46.97813020754181
+        "success": 107,
+        "total": 151,
+        "avgPredicted": 47.97110660921445
       },
       "60-69": {
-        "success": 59,
-        "total": 84,
-        "avgPredicted": 65.97175802500038
+        "success": 46,
+        "total": 69,
+        "avgPredicted": 65.58326204303563
       },
       "70-79": {
-        "success": 63,
-        "total": 81,
-        "avgPredicted": 74.7381779903638
+        "success": 76,
+        "total": 97,
+        "avgPredicted": 75.09598887366425
       },
       "80-89": {
-        "success": 18,
-        "total": 21,
-        "avgPredicted": 82.43050092370261
+        "success": 23,
+        "total": 28,
+        "avgPredicted": 82.69729063234409
       },
       "90-100": {
         "success": 0,
@@ -489,9 +489,9 @@
     },
     "ht_under_0.5": {
       "0-59": {
-        "success": 99,
-        "total": 351,
-        "avgPredicted": 22.00042138187563
+        "success": 93,
+        "total": 345,
+        "avgPredicted": 22.496471775617668
       },
       "60-69": {
         "success": 0,
@@ -516,14 +516,14 @@
     },
     "ht_over_1.5": {
       "0-59": {
-        "success": 131,
-        "total": 351,
-        "avgPredicted": 31.379013665426097
+        "success": 129,
+        "total": 344,
+        "avgPredicted": 32.48393387818502
       },
       "60-69": {
         "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "total": 1,
+        "avgPredicted": 60.19200484565701
       },
       "70-79": {
         "success": 0,
@@ -543,19 +543,19 @@
     },
     "ht_under_1.5": {
       "0-59": {
-        "success": 168,
-        "total": 276,
-        "avgPredicted": 46.40584932660305
+        "success": 154,
+        "total": 253,
+        "avgPredicted": 46.66080614516591
       },
       "60-69": {
-        "success": 39,
-        "total": 58,
-        "avgPredicted": 64.84370991967197
+        "success": 47,
+        "total": 72,
+        "avgPredicted": 64.5384716046031
       },
       "70-79": {
-        "success": 13,
-        "total": 17,
-        "avgPredicted": 71.58921258541307
+        "success": 15,
+        "total": 20,
+        "avgPredicted": 72.16904154001455
       },
       "80-89": {
         "success": 0,
@@ -570,9 +570,9 @@
     },
     "ht_over_2.5": {
       "0-59": {
-        "success": 57,
-        "total": 351,
-        "avgPredicted": 12.424157624872182
+        "success": 51,
+        "total": 345,
+        "avgPredicted": 13.027177655840166
       },
       "60-69": {
         "success": 0,
@@ -597,90 +597,90 @@
     },
     "ht_under_2.5": {
       "0-59": {
-        "success": 85,
-        "total": 104,
-        "avgPredicted": 51.2191442084378
-      },
-      "60-69": {
-        "success": 52,
-        "total": 62,
-        "avgPredicted": 64.08198589040198
-      },
-      "70-79": {
-        "success": 64,
-        "total": 79,
-        "avgPredicted": 75.93895549462304
-      },
-      "80-89": {
-        "success": 77,
-        "total": 89,
-        "avgPredicted": 85.3271480669133
-      },
-      "90-100": {
-        "success": 16,
-        "total": 17,
-        "avgPredicted": 90.93840522099435
-      }
-    },
-    "ht_under_3.5": {
-      "0-59": {
-        "success": 77,
-        "total": 78,
-        "avgPredicted": 54.10269431817813
+        "success": 79,
+        "total": 92,
+        "avgPredicted": 53.05938249742813
       },
       "60-69": {
         "success": 57,
         "total": 61,
-        "avgPredicted": 67.03797507498031
+        "avgPredicted": 63.76575665974752
       },
       "70-79": {
-        "success": 29,
-        "total": 31,
-        "avgPredicted": 76.5028531659191
+        "success": 50,
+        "total": 66,
+        "avgPredicted": 76.02985601317229
       },
       "80-89": {
-        "success": 50,
-        "total": 53,
-        "avgPredicted": 86.10293433575183
+        "success": 89,
+        "total": 106,
+        "avgPredicted": 85.11244142995717
       },
       "90-100": {
-        "success": 123,
-        "total": 128,
-        "avgPredicted": 95.09977682459466
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.22800371411603
+      }
+    },
+    "ht_under_3.5": {
+      "0-59": {
+        "success": 60,
+        "total": 60,
+        "avgPredicted": 55.354704879439986
+      },
+      "60-69": {
+        "success": 66,
+        "total": 68,
+        "avgPredicted": 67.03875122256154
+      },
+      "70-79": {
+        "success": 28,
+        "total": 29,
+        "avgPredicted": 76.43842010788647
+      },
+      "80-89": {
+        "success": 30,
+        "total": 31,
+        "avgPredicted": 86.73079302516187
+      },
+      "90-100": {
+        "success": 150,
+        "total": 157,
+        "avgPredicted": 94.89571391711969
       }
     },
     "st_over_0.5": {
       "0-59": {
-        "success": 105,
-        "total": 140,
-        "avgPredicted": 49.36221638862582
+        "success": 99,
+        "total": 129,
+        "avgPredicted": 50.76359946880206
       },
       "60-69": {
-        "success": 24,
-        "total": 34,
-        "avgPredicted": 64.39918157447448
+        "success": 29,
+        "total": 36,
+        "avgPredicted": 64.89307386323159
       },
       "70-79": {
-        "success": 83,
-        "total": 104,
-        "avgPredicted": 74.58022611058662
+        "success": 61,
+        "total": 88,
+        "avgPredicted": 75.4117524430057
       },
       "80-89": {
-        "success": 61,
-        "total": 71,
-        "avgPredicted": 84.18233447426564
+        "success": 76,
+        "total": 88,
+        "avgPredicted": 84.47020369753044
       },
       "90-100": {
-        "success": 2,
-        "total": 2,
-        "avgPredicted": 91.2403183370709
+        "success": 4,
+        "total": 4,
+        "avgPredicted": 91.15964644212323
       }
     },
     "st_under_0.5": {
       "0-59": {
         "success": 76,
-        "total": 351,
-        "avgPredicted": 16.478483282655954
+        "total": 345,
+        "avgPredicted": 16.8437515458334
       },
       "60-69": {
         "success": 0,
@@ -705,19 +705,19 @@
     },
     "st_over_1.5": {
       "0-59": {
-        "success": 153,
-        "total": 333,
-        "avgPredicted": 38.14280295093629
+        "success": 140,
+        "total": 319,
+        "avgPredicted": 39.007169869895144
       },
       "60-69": {
-        "success": 14,
-        "total": 17,
-        "avgPredicted": 62.908851027019466
+        "success": 17,
+        "total": 23,
+        "avgPredicted": 62.61381009161692
       },
       "70-79": {
-        "success": 0,
-        "total": 1,
-        "avgPredicted": 70.23399774888256
+        "success": 2,
+        "total": 3,
+        "avgPredicted": 70.44524520082949
       },
       "80-89": {
         "success": 0,
@@ -733,18 +733,18 @@
     "st_under_1.5": {
       "0-59": {
         "success": 168,
-        "total": 327,
-        "avgPredicted": 41.16905785253769
+        "total": 320,
+        "avgPredicted": 42.05201602631165
       },
       "60-69": {
-        "success": 16,
+        "success": 18,
         "total": 24,
-        "avgPredicted": 62.35334309792384
+        "avgPredicted": 62.79993797657406
       },
       "70-79": {
         "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "total": 1,
+        "avgPredicted": 71.41580393626413
       },
       "80-89": {
         "success": 0,
@@ -759,9 +759,9 @@
     },
     "st_over_2.5": {
       "0-59": {
-        "success": 83,
-        "total": 351,
-        "avgPredicted": 18.40826391366081
+        "success": 76,
+        "total": 345,
+        "avgPredicted": 19.245395376194992
       },
       "60-69": {
         "success": 0,
@@ -786,36 +786,36 @@
     },
     "st_under_2.5": {
       "0-59": {
-        "success": 119,
-        "total": 145,
-        "avgPredicted": 49.740323946324516
+        "success": 108,
+        "total": 137,
+        "avgPredicted": 51.350587931242515
       },
       "60-69": {
-        "success": 46,
-        "total": 73,
-        "avgPredicted": 65.52360702060736
+        "success": 41,
+        "total": 63,
+        "avgPredicted": 65.1836966278267
       },
       "70-79": {
-        "success": 61,
-        "total": 82,
-        "avgPredicted": 74.18727816509521
+        "success": 73,
+        "total": 90,
+        "avgPredicted": 74.84390666400958
       },
       "80-89": {
-        "success": 42,
-        "total": 51,
-        "avgPredicted": 83.524946510703
+        "success": 46,
+        "total": 54,
+        "avgPredicted": 83.73936038144348
       },
       "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 90.85810072061118
       }
     },
     "st_over_3.5": {
       "0-59": {
-        "success": 31,
-        "total": 351,
-        "avgPredicted": 6.962313599307429
+        "success": 25,
+        "total": 345,
+        "avgPredicted": 7.375952151176362
       },
       "60-69": {
         "success": 0,
@@ -840,46 +840,46 @@
     },
     "st_under_3.5": {
       "0-59": {
-        "success": 76,
-        "total": 78,
-        "avgPredicted": 52.261548384861385
+        "success": 56,
+        "total": 60,
+        "avgPredicted": 53.50502793381356
       },
       "60-69": {
-        "success": 59,
-        "total": 61,
-        "avgPredicted": 64.69076021422615
+        "success": 65,
+        "total": 68,
+        "avgPredicted": 64.69139474270335
       },
       "70-79": {
-        "success": 28,
-        "total": 37,
-        "avgPredicted": 74.43999478121475
+        "success": 32,
+        "total": 34,
+        "avgPredicted": 74.25589849766132
       },
       "80-89": {
         "success": 74,
-        "total": 88,
-        "avgPredicted": 84.76101464835718
+        "total": 86,
+        "avgPredicted": 85.84690606000683
       },
       "90-100": {
-        "success": 83,
-        "total": 87,
-        "avgPredicted": 93.33841015627276
+        "success": 93,
+        "total": 97,
+        "avgPredicted": 93.48912906423139
       }
     },
     "home_ht_over_0.5": {
       "0-59": {
-        "success": 174,
-        "total": 341,
-        "avgPredicted": 38.72401479167646
+        "success": 155,
+        "total": 330,
+        "avgPredicted": 39.26303034351583
       },
       "60-69": {
-        "success": 7,
-        "total": 9,
-        "avgPredicted": 63.5165095890013
+        "success": 9,
+        "total": 13,
+        "avgPredicted": 63.945455621062585
       },
       "70-79": {
-        "success": 1,
-        "total": 1,
-        "avgPredicted": 71.69834775987962
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 71.34374470175706
       },
       "80-89": {
         "success": 0,
@@ -894,17 +894,368 @@
     },
     "home_ht_under_0.5": {
       "0-59": {
-        "success": 164,
-        "total": 335,
-        "avgPredicted": 41.54655115763288
+        "success": 162,
+        "total": 319,
+        "avgPredicted": 42.360584684530345
       },
       "60-69": {
-        "success": 5,
-        "total": 15,
-        "avgPredicted": 64.1969001494464
+        "success": 13,
+        "total": 21,
+        "avgPredicted": 63.11823891420872
+      },
+      "70-79": {
+        "success": 4,
+        "total": 5,
+        "avgPredicted": 72.14240851977729
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_ht_over_1.5": {
+      "0-59": {
+        "success": 52,
+        "total": 345,
+        "avgPredicted": 12.133470805002705
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
       },
       "70-79": {
         "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_ht_under_1.5": {
+      "0-59": {
+        "success": 71,
+        "total": 87,
+        "avgPredicted": 52.593493693577656
+      },
+      "60-69": {
+        "success": 55,
+        "total": 65,
+        "avgPredicted": 63.710126473003264
+      },
+      "70-79": {
+        "success": 44,
+        "total": 53,
+        "avgPredicted": 75.86638514236132
+      },
+      "80-89": {
+        "success": 91,
+        "total": 108,
+        "avgPredicted": 85.657645626711
+      },
+      "90-100": {
+        "success": 32,
+        "total": 32,
+        "avgPredicted": 92.35050812367713
+      }
+    },
+    "home_ht_under_2.5": {
+      "0-59": {
+        "success": 58,
+        "total": 60,
+        "avgPredicted": 56.106025878899466
+      },
+      "60-69": {
+        "success": 66,
+        "total": 68,
+        "avgPredicted": 67.94575838547757
+      },
+      "70-79": {
+        "success": 29,
+        "total": 29,
+        "avgPredicted": 77.74443022701145
+      },
+      "80-89": {
+        "success": 25,
+        "total": 25,
+        "avgPredicted": 87.64303629517214
+      },
+      "90-100": {
+        "success": 159,
+        "total": 163,
+        "avgPredicted": 96.76423717056656
+      }
+    },
+    "home_ht_under_3.5": {
+      "0-59": {
+        "success": 60,
+        "total": 60,
+        "avgPredicted": 57.42247982237857
+      },
+      "60-69": {
+        "success": 67,
+        "total": 68,
+        "avgPredicted": 69.66476620262765
+      },
+      "70-79": {
+        "success": 29,
+        "total": 29,
+        "avgPredicted": 79.64039857483718
+      },
+      "80-89": {
+        "success": 21,
+        "total": 21,
+        "avgPredicted": 89.62375666933397
+      },
+      "90-100": {
+        "success": 166,
+        "total": 167,
+        "avgPredicted": 99.34877835860837
+      }
+    },
+    "home_st_over_0.5": {
+      "0-59": {
+        "success": 137,
+        "total": 297,
+        "avgPredicted": 43.00002120079
+      },
+      "60-69": {
+        "success": 29,
+        "total": 38,
+        "avgPredicted": 64.07633347171506
+      },
+      "70-79": {
+        "success": 9,
+        "total": 10,
+        "avgPredicted": 73.73497121798701
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_st_under_0.5": {
+      "0-59": {
+        "success": 163,
+        "total": 337,
+        "avgPredicted": 37.58566313918405
+      },
+      "60-69": {
+        "success": 7,
+        "total": 8,
+        "avgPredicted": 65.04685516941356
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_st_over_1.5": {
+      "0-59": {
+        "success": 71,
+        "total": 345,
+        "avgPredicted": 16.446018613208288
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_st_under_1.5": {
+      "0-59": {
+        "success": 97,
+        "total": 127,
+        "avgPredicted": 52.00165353770132
+      },
+      "60-69": {
+        "success": 37,
+        "total": 47,
+        "avgPredicted": 64.82766076920888
+      },
+      "70-79": {
+        "success": 54,
+        "total": 73,
+        "avgPredicted": 74.90941185157116
+      },
+      "80-89": {
+        "success": 75,
+        "total": 87,
+        "avgPredicted": 84.15338800436722
+      },
+      "90-100": {
+        "success": 11,
+        "total": 11,
+        "avgPredicted": 92.29833649614696
+      }
+    },
+    "home_st_over_2.5": {
+      "0-59": {
+        "success": 21,
+        "total": 345,
+        "avgPredicted": 4.352489012382491
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "home_st_under_2.5": {
+      "0-59": {
+        "success": 54,
+        "total": 60,
+        "avgPredicted": 55.09826510031965
+      },
+      "60-69": {
+        "success": 62,
+        "total": 68,
+        "avgPredicted": 66.63409089972731
+      },
+      "70-79": {
+        "success": 28,
+        "total": 30,
+        "avgPredicted": 76.41214027623855
+      },
+      "80-89": {
+        "success": 32,
+        "total": 36,
+        "avgPredicted": 86.2641955124143
+      },
+      "90-100": {
+        "success": 148,
+        "total": 151,
+        "avgPredicted": 95.32120501187629
+      }
+    },
+    "home_st_under_3.5": {
+      "0-59": {
+        "success": 60,
+        "total": 60,
+        "avgPredicted": 57.18007947651501
+      },
+      "60-69": {
+        "success": 68,
+        "total": 68,
+        "avgPredicted": 69.33573497755822
+      },
+      "70-79": {
+        "success": 29,
+        "total": 29,
+        "avgPredicted": 79.28499589024906
+      },
+      "80-89": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 89.2500550230508
+      },
+      "90-100": {
+        "success": 166,
+        "total": 167,
+        "avgPredicted": 98.74061234055773
+      }
+    },
+    "away_ht_over_0.5": {
+      "0-59": {
+        "success": 145,
+        "total": 322,
+        "avgPredicted": 39.40625994840564
+      },
+      "60-69": {
+        "success": 12,
+        "total": 19,
+        "avgPredicted": 64.22758159395117
+      },
+      "70-79": {
+        "success": 4,
+        "total": 4,
+        "avgPredicted": 72.85423667107507
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    },
+    "away_ht_under_0.5": {
+      "0-59": {
+        "success": 166,
+        "total": 320,
+        "avgPredicted": 41.66116837139686
+      },
+      "60-69": {
+        "success": 17,
+        "total": 24,
+        "avgPredicted": 63.631397452845015
+      },
+      "70-79": {
+        "success": 1,
         "total": 1,
         "avgPredicted": 70.71588192872713
       },
@@ -919,362 +1270,11 @@
         "avgPredicted": 0
       }
     },
-    "home_ht_over_1.5": {
-      "0-59": {
-        "success": 56,
-        "total": 351,
-        "avgPredicted": 11.809703624574805
-      },
-      "60-69": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      }
-    },
-    "home_ht_under_1.5": {
-      "0-59": {
-        "success": 78,
-        "total": 95,
-        "avgPredicted": 50.70366099886782
-      },
-      "60-69": {
-        "success": 56,
-        "total": 69,
-        "avgPredicted": 63.507188240616216
-      },
-      "70-79": {
-        "success": 51,
-        "total": 66,
-        "avgPredicted": 75.58479225996302
-      },
-      "80-89": {
-        "success": 90,
-        "total": 100,
-        "avgPredicted": 85.31125754238597
-      },
-      "90-100": {
-        "success": 20,
-        "total": 21,
-        "avgPredicted": 92.20134289919642
-      }
-    },
-    "home_ht_under_2.5": {
-      "0-59": {
-        "success": 76,
-        "total": 78,
-        "avgPredicted": 54.90313649021502
-      },
-      "60-69": {
-        "success": 59,
-        "total": 61,
-        "avgPredicted": 68.07217325430169
-      },
-      "70-79": {
-        "success": 29,
-        "total": 31,
-        "avgPredicted": 77.55573758068496
-      },
-      "80-89": {
-        "success": 43,
-        "total": 46,
-        "avgPredicted": 87.1031591781452
-      },
-      "90-100": {
-        "success": 131,
-        "total": 135,
-        "avgPredicted": 96.68561625068907
-      }
-    },
-    "home_ht_under_3.5": {
-      "0-59": {
-        "success": 78,
-        "total": 78,
-        "avgPredicted": 56.175863314973704
-      },
-      "60-69": {
-        "success": 61,
-        "total": 61,
-        "avgPredicted": 69.6966036341449
-      },
-      "70-79": {
-        "success": 31,
-        "total": 31,
-        "avgPredicted": 79.5916208579587
-      },
-      "80-89": {
-        "success": 44,
-        "total": 45,
-        "avgPredicted": 89.51777595419205
-      },
-      "90-100": {
-        "success": 135,
-        "total": 136,
-        "avgPredicted": 99.3778234944586
-      }
-    },
-    "home_st_over_0.5": {
-      "0-59": {
-        "success": 153,
-        "total": 315,
-        "avgPredicted": 42.847098045112176
-      },
-      "60-69": {
-        "success": 23,
-        "total": 29,
-        "avgPredicted": 63.65712397653366
-      },
-      "70-79": {
-        "success": 6,
-        "total": 7,
-        "avgPredicted": 72.75230075126484
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      }
-    },
-    "home_st_under_0.5": {
-      "0-59": {
-        "success": 166,
-        "total": 347,
-        "avgPredicted": 36.58668445211675
-      },
-      "60-69": {
-        "success": 3,
-        "total": 4,
-        "avgPredicted": 63.06547758170605
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      }
-    },
-    "home_st_over_1.5": {
-      "0-59": {
-        "success": 72,
-        "total": 351,
-        "avgPredicted": 16.03034892908399
-      },
-      "60-69": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      }
-    },
-    "home_st_under_1.5": {
-      "0-59": {
-        "success": 117,
-        "total": 140,
-        "avgPredicted": 50.907219304821396
-      },
-      "60-69": {
-        "success": 35,
-        "total": 53,
-        "avgPredicted": 65.75139432220584
-      },
-      "70-79": {
-        "success": 63,
-        "total": 81,
-        "avgPredicted": 74.70372938767024
-      },
-      "80-89": {
-        "success": 58,
-        "total": 71,
-        "avgPredicted": 83.95701687687759
-      },
-      "90-100": {
-        "success": 6,
-        "total": 6,
-        "avgPredicted": 91.59377424666913
-      }
-    },
-    "home_st_over_2.5": {
-      "0-59": {
-        "success": 24,
-        "total": 351,
-        "avgPredicted": 4.183090024759568
-      },
-      "60-69": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      }
-    },
-    "home_st_under_2.5": {
-      "0-59": {
-        "success": 74,
-        "total": 78,
-        "avgPredicted": 53.928410214854885
-      },
-      "60-69": {
-        "success": 58,
-        "total": 62,
-        "avgPredicted": 66.87668273604433
-      },
-      "70-79": {
-        "success": 27,
-        "total": 31,
-        "avgPredicted": 76.32870701774152
-      },
-      "80-89": {
-        "success": 49,
-        "total": 56,
-        "avgPredicted": 85.74806290928375
-      },
-      "90-100": {
-        "success": 119,
-        "total": 124,
-        "avgPredicted": 95.2490615681135
-      }
-    },
-    "home_st_under_3.5": {
-      "0-59": {
-        "success": 78,
-        "total": 78,
-        "avgPredicted": 55.942807219707234
-      },
-      "60-69": {
-        "success": 61,
-        "total": 61,
-        "avgPredicted": 69.3957583567081
-      },
-      "70-79": {
-        "success": 29,
-        "total": 31,
-        "avgPredicted": 79.19386468927361
-      },
-      "80-89": {
-        "success": 44,
-        "total": 45,
-        "avgPredicted": 89.0464944511011
-      },
-      "90-100": {
-        "success": 135,
-        "total": 136,
-        "avgPredicted": 98.79051121517702
-      }
-    },
-    "away_ht_over_0.5": {
-      "0-59": {
-        "success": 144,
-        "total": 339,
-        "avgPredicted": 38.58041490815953
-      },
-      "60-69": {
-        "success": 3,
-        "total": 8,
-        "avgPredicted": 64.14732205083867
-      },
-      "70-79": {
-        "success": 4,
-        "total": 4,
-        "avgPredicted": 73.63382159193708
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      }
-    },
-    "away_ht_under_0.5": {
-      "0-59": {
-        "success": 183,
-        "total": 329,
-        "avgPredicted": 41.07422819532849
-      },
-      "60-69": {
-        "success": 17,
-        "total": 22,
-        "avgPredicted": 63.64110941347206
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      }
-    },
     "away_ht_over_1.5": {
       "0-59": {
-        "success": 42,
-        "total": 351,
-        "avgPredicted": 11.977477280684182
+        "success": 41,
+        "total": 345,
+        "avgPredicted": 12.709347002368636
       },
       "60-69": {
         "success": 0,
@@ -1299,105 +1299,105 @@
     },
     "away_ht_under_1.5": {
       "0-59": {
-        "success": 90,
-        "total": 106,
-        "avgPredicted": 51.39474274019545
+        "success": 75,
+        "total": 84,
+        "avgPredicted": 52.62653416108546
       },
       "60-69": {
-        "success": 53,
-        "total": 61,
-        "avgPredicted": 64.23434884757343
+        "success": 61,
+        "total": 73,
+        "avgPredicted": 63.640063816393294
       },
       "70-79": {
-        "success": 61,
-        "total": 69,
-        "avgPredicted": 75.99389797237362
+        "success": 47,
+        "total": 54,
+        "avgPredicted": 75.41221272786699
       },
       "80-89": {
-        "success": 79,
-        "total": 88,
-        "avgPredicted": 85.2495852979957
+        "success": 92,
+        "total": 104,
+        "avgPredicted": 85.02937372496314
       },
       "90-100": {
-        "success": 26,
-        "total": 27,
-        "avgPredicted": 92.00833325925016
+        "success": 29,
+        "total": 30,
+        "avgPredicted": 92.12024671179847
       }
     },
     "away_ht_under_2.5": {
       "0-59": {
-        "success": 76,
-        "total": 78,
-        "avgPredicted": 54.827202719231245
+        "success": 58,
+        "total": 60,
+        "avgPredicted": 56.13159127438889
       },
       "60-69": {
-        "success": 61,
-        "total": 61,
-        "avgPredicted": 67.99604309351952
+        "success": 67,
+        "total": 68,
+        "avgPredicted": 68.1039261909626
       },
       "70-79": {
         "success": 29,
-        "total": 31,
-        "avgPredicted": 77.79250971565216
+        "total": 29,
+        "avgPredicted": 77.54106448853172
       },
       "80-89": {
-        "success": 48,
-        "total": 50,
-        "avgPredicted": 87.14963632321066
+        "success": 25,
+        "total": 29,
+        "avgPredicted": 87.38453793836818
       },
       "90-100": {
-        "success": 127,
-        "total": 131,
-        "avgPredicted": 96.70734978504628
+        "success": 154,
+        "total": 159,
+        "avgPredicted": 96.4988515223274
       }
     },
     "away_ht_under_3.5": {
       "0-59": {
-        "success": 78,
-        "total": 78,
-        "avgPredicted": 56.15809208679153
+        "success": 60,
+        "total": 60,
+        "avgPredicted": 57.428575118101875
       },
       "60-69": {
-        "success": 61,
-        "total": 61,
-        "avgPredicted": 69.67814900300822
+        "success": 68,
+        "total": 68,
+        "avgPredicted": 69.70306531017525
       },
       "70-79": {
-        "success": 30,
-        "total": 31,
-        "avgPredicted": 79.65079011975052
+        "success": 29,
+        "total": 29,
+        "avgPredicted": 79.58801108120703
       },
       "80-89": {
-        "success": 45,
-        "total": 45,
-        "avgPredicted": 89.555765493084
+        "success": 21,
+        "total": 21,
+        "avgPredicted": 89.57705892059201
       },
       "90-100": {
-        "success": 136,
-        "total": 136,
-        "avgPredicted": 99.26726668512899
+        "success": 166,
+        "total": 167,
+        "avgPredicted": 99.20801495714979
       }
     },
     "away_st_over_0.5": {
       "0-59": {
-        "success": 158,
-        "total": 313,
-        "avgPredicted": 42.56677083010813
+        "success": 138,
+        "total": 290,
+        "avgPredicted": 43.15551829266622
       },
       "60-69": {
-        "success": 22,
-        "total": 28,
-        "avgPredicted": 64.53536640242547
+        "success": 24,
+        "total": 37,
+        "avgPredicted": 64.19986593822227
       },
       "70-79": {
-        "success": 8,
-        "total": 8,
-        "avgPredicted": 73.77394223102884
+        "success": 13,
+        "total": 16,
+        "avgPredicted": 73.219853948652
       },
       "80-89": {
         "success": 2,
         "total": 2,
-        "avgPredicted": 82.1693268314571
+        "avgPredicted": 80.76638432707418
       },
       "90-100": {
         "success": 0,
@@ -1407,14 +1407,14 @@
     },
     "away_st_under_0.5": {
       "0-59": {
-        "success": 161,
-        "total": 350,
-        "avgPredicted": 36.72413988344536
+        "success": 168,
+        "total": 342,
+        "avgPredicted": 37.17523626098805
       },
       "60-69": {
         "success": 0,
-        "total": 1,
-        "avgPredicted": 61.63132019122896
+        "total": 3,
+        "avgPredicted": 64.17447410736305
       },
       "70-79": {
         "success": 0,
@@ -1434,9 +1434,9 @@
     },
     "away_st_over_1.5": {
       "0-59": {
-        "success": 71,
-        "total": 351,
-        "avgPredicted": 16.220281048201958
+        "success": 76,
+        "total": 345,
+        "avgPredicted": 17.166555144731902
       },
       "60-69": {
         "success": 0,
@@ -1461,121 +1461,94 @@
     },
     "away_st_under_1.5": {
       "0-59": {
-        "success": 113,
-        "total": 139,
-        "avgPredicted": 50.423006962332956
+        "success": 106,
+        "total": 133,
+        "avgPredicted": 52.476830859337184
       },
       "60-69": {
-        "success": 40,
-        "total": 56,
-        "avgPredicted": 65.39686232020769
+        "success": 37,
+        "total": 53,
+        "avgPredicted": 65.11928596786238
       },
       "70-79": {
-        "success": 58,
-        "total": 79,
-        "avgPredicted": 74.79315967927
-      },
-      "80-89": {
-        "success": 64,
+        "success": 50,
         "total": 72,
-        "avgPredicted": 84.35223554173133
-      },
-      "90-100": {
-        "success": 5,
-        "total": 5,
-        "avgPredicted": 90.72770414364304
-      }
-    },
-    "away_st_over_2.5": {
-      "0-59": {
-        "success": 22,
-        "total": 351,
-        "avgPredicted": 4.329435594001017
-      },
-      "60-69": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
-      },
-      "70-79": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "avgPredicted": 75.18224896384784
       },
       "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "success": 68,
+        "total": 79,
+        "avgPredicted": 83.96270296512043
       },
       "90-100": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "success": 8,
+        "total": 8,
+        "avgPredicted": 91.32779435467317
       }
     },
     "away_st_under_2.5": {
       "0-59": {
-        "success": 75,
-        "total": 78,
-        "avgPredicted": 53.80977904041212
+        "success": 59,
+        "total": 60,
+        "avgPredicted": 55.13809008856169
       },
       "60-69": {
-        "success": 59,
-        "total": 61,
-        "avgPredicted": 66.710968698211
+        "success": 67,
+        "total": 68,
+        "avgPredicted": 66.87986843037189
       },
       "70-79": {
-        "success": 29,
-        "total": 34,
-        "avgPredicted": 76.35059449047995
+        "success": 32,
+        "total": 32,
+        "avgPredicted": 76.1213981316555
       },
       "80-89": {
-        "success": 54,
-        "total": 60,
-        "avgPredicted": 86.06323766003801
+        "success": 38,
+        "total": 45,
+        "avgPredicted": 86.3281923089108
       },
       "90-100": {
-        "success": 112,
-        "total": 118,
-        "avgPredicted": 95.37391337698324
+        "success": 135,
+        "total": 140,
+        "avgPredicted": 95.22361706863222
       }
     },
     "away_st_under_3.5": {
       "0-59": {
-        "success": 78,
-        "total": 78,
-        "avgPredicted": 55.90894707977566
+        "success": 60,
+        "total": 60,
+        "avgPredicted": 57.191656918776786
       },
       "60-69": {
-        "success": 61,
-        "total": 61,
-        "avgPredicted": 69.36076175503726
+        "success": 68,
+        "total": 68,
+        "avgPredicted": 69.40830522589293
       },
       "70-79": {
-        "success": 31,
-        "total": 31,
-        "avgPredicted": 79.30505064730907
+        "success": 29,
+        "total": 29,
+        "avgPredicted": 79.1866685233693
       },
       "80-89": {
-        "success": 45,
-        "total": 45,
-        "avgPredicted": 89.12052051998572
+        "success": 21,
+        "total": 21,
+        "avgPredicted": 89.16018882383766
       },
       "90-100": {
-        "success": 130,
-        "total": 136,
-        "avgPredicted": 98.59723522888868
+        "success": 162,
+        "total": 167,
+        "avgPredicted": 98.48432284335686
       }
     },
     "draw": {
       "0-59": {
-        "success": 58,
-        "total": 215,
-        "avgPredicted": 48.27906976744186
+        "success": 46,
+        "total": 178,
+        "avgPredicted": 47.93258426966292
       },
       "60-69": {
-        "success": 29,
-        "total": 136,
+        "success": 38,
+        "total": 167,
         "avgPredicted": 60
       },
       "70-79": {
@@ -1596,13 +1569,13 @@
     },
     "favorite_win": {
       "0-59": {
-        "success": 118,
-        "total": 215,
-        "avgPredicted": 48.27906976744186
+        "success": 112,
+        "total": 178,
+        "avgPredicted": 47.93258426966292
       },
       "60-69": {
-        "success": 74,
-        "total": 136,
+        "success": 97,
+        "total": 167,
         "avgPredicted": 60
       },
       "70-79": {
@@ -1623,13 +1596,13 @@
     },
     "outsider_win": {
       "0-59": {
-        "success": 39,
-        "total": 215,
-        "avgPredicted": 48.27906976744186
+        "success": 20,
+        "total": 178,
+        "avgPredicted": 47.93258426966292
       },
       "60-69": {
-        "success": 33,
-        "total": 136,
+        "success": 32,
+        "total": 167,
         "avgPredicted": 60
       },
       "70-79": {
@@ -1650,9 +1623,9 @@
     },
     "double_chance_favorite": {
       "0-59": {
-        "success": 279,
-        "total": 351,
-        "avgPredicted": 44.01709401709395
+        "success": 293,
+        "total": 345,
+        "avgPredicted": 44.81159420289857
       },
       "60-69": {
         "success": 0,
@@ -1677,9 +1650,9 @@
     },
     "double_chance_outsider": {
       "0-59": {
-        "success": 159,
-        "total": 351,
-        "avgPredicted": 44.01709401709395
+        "success": 136,
+        "total": 345,
+        "avgPredicted": 44.81159420289857
       },
       "60-69": {
         "success": 0,
@@ -1704,24 +1677,24 @@
     },
     "btts": {
       "0-59": {
-        "success": 156,
-        "total": 288,
-        "avgPredicted": 43.804362721841095
+        "success": 131,
+        "total": 269,
+        "avgPredicted": 44.19650052541283
       },
       "60-69": {
-        "success": 35,
-        "total": 52,
-        "avgPredicted": 64.12177280447861
+        "success": 37,
+        "total": 61,
+        "avgPredicted": 64.65911437088403
       },
       "70-79": {
-        "success": 9,
-        "total": 11,
-        "avgPredicted": 72.72978181834885
+        "success": 11,
+        "total": 14,
+        "avgPredicted": 72.46832255375905
       },
       "80-89": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 80.10539287624714
       },
       "90-100": {
         "success": 0,
@@ -1731,14 +1704,14 @@
     },
     "btts_no": {
       "0-59": {
-        "success": 151,
-        "total": 351,
-        "avgPredicted": 34.33043803497162
+        "success": 163,
+        "total": 343,
+        "avgPredicted": 35.20885138480329
       },
       "60-69": {
-        "success": 0,
-        "total": 0,
-        "avgPredicted": 0
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 62.81872421180976
       },
       "70-79": {
         "success": 0,
@@ -1758,36 +1731,36 @@
     },
     "match_over_0.5": {
       "0-59": {
-        "success": 72,
-        "total": 78,
-        "avgPredicted": 53.05894668204351
+        "success": 55,
+        "total": 60,
+        "avgPredicted": 54.169585412792046
       },
       "60-69": {
-        "success": 53,
-        "total": 61,
-        "avgPredicted": 65.92088783901458
+        "success": 60,
+        "total": 68,
+        "avgPredicted": 65.92929269922541
       },
       "70-79": {
         "success": 28,
-        "total": 31,
-        "avgPredicted": 75.46481130188629
+        "total": 29,
+        "avgPredicted": 75.49327741596916
       },
       "80-89": {
-        "success": 47,
-        "total": 50,
-        "avgPredicted": 85.70974996960132
+        "success": 24,
+        "total": 29,
+        "avgPredicted": 85.84671124766031
       },
       "90-100": {
-        "success": 125,
-        "total": 131,
-        "avgPredicted": 94.79032061589055
+        "success": 152,
+        "total": 159,
+        "avgPredicted": 95.02231067497662
       }
     },
     "match_under_0.5": {
       "0-59": {
         "success": 26,
-        "total": 351,
-        "avgPredicted": 4.552134903420257
+        "total": 345,
+        "avgPredicted": 4.66442290759018
       },
       "60-69": {
         "success": 0,
@@ -1812,36 +1785,36 @@
     },
     "match_over_1.5": {
       "0-59": {
-        "success": 101,
-        "total": 143,
-        "avgPredicted": 48.63352503874695
+        "success": 92,
+        "total": 134,
+        "avgPredicted": 50.07572754581011
       },
       "60-69": {
-        "success": 42,
-        "total": 59,
-        "avgPredicted": 65.98332263456648
+        "success": 38,
+        "total": 56,
+        "avgPredicted": 65.96505908832368
       },
       "70-79": {
-        "success": 69,
-        "total": 80,
-        "avgPredicted": 74.30283065557497
+        "success": 56,
+        "total": 70,
+        "avgPredicted": 75.31413901057776
       },
       "80-89": {
-        "success": 51,
-        "total": 61,
-        "avgPredicted": 84.40362515319813
+        "success": 67,
+        "total": 75,
+        "avgPredicted": 85.12152226213657
       },
       "90-100": {
-        "success": 7,
-        "total": 8,
-        "avgPredicted": 91.57223522760475
+        "success": 9,
+        "total": 10,
+        "avgPredicted": 91.89339005937725
       }
     },
     "match_under_1.5": {
       "0-59": {
-        "success": 81,
-        "total": 351,
-        "avgPredicted": 17.45573907523602
+        "success": 83,
+        "total": 345,
+        "avgPredicted": 17.828322895422776
       },
       "60-69": {
         "success": 0,
@@ -1866,24 +1839,24 @@
     },
     "match_over_2.5": {
       "0-59": {
-        "success": 160,
-        "total": 297,
-        "avgPredicted": 42.014323968881975
+        "success": 141,
+        "total": 271,
+        "avgPredicted": 42.01085466652312
       },
       "60-69": {
-        "success": 24,
-        "total": 33,
-        "avgPredicted": 64.75483102472138
+        "success": 26,
+        "total": 46,
+        "avgPredicted": 64.9835710461114
       },
       "70-79": {
-        "success": 17,
-        "total": 19,
-        "avgPredicted": 73.30939014436659
+        "success": 22,
+        "total": 25,
+        "avgPredicted": 73.7210050899195
       },
       "80-89": {
-        "success": 2,
-        "total": 2,
-        "avgPredicted": 81.80772399078587
+        "success": 3,
+        "total": 3,
+        "avgPredicted": 82.33790418761062
       },
       "90-100": {
         "success": 0,
@@ -1893,14 +1866,14 @@
     },
     "match_under_2.5": {
       "0-59": {
-        "success": 145,
-        "total": 346,
-        "avgPredicted": 35.61522788846797
+        "success": 146,
+        "total": 337,
+        "avgPredicted": 36.10543912646988
       },
       "60-69": {
-        "success": 3,
-        "total": 5,
-        "avgPredicted": 61.094729458359936
+        "success": 7,
+        "total": 8,
+        "avgPredicted": 62.280286477492204
       },
       "70-79": {
         "success": 0,
@@ -1920,14 +1893,14 @@
     },
     "match_over_3.5": {
       "0-59": {
-        "success": 119,
-        "total": 348,
-        "avgPredicted": 27.80682155665939
+        "success": 113,
+        "total": 341,
+        "avgPredicted": 28.937567323185533
       },
       "60-69": {
-        "success": 1,
-        "total": 3,
-        "avgPredicted": 63.049662942191766
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 64.26357761001694
       },
       "70-79": {
         "success": 0,
@@ -1947,24 +1920,24 @@
     },
     "match_under_3.5": {
       "0-59": {
-        "success": 151,
-        "total": 239,
-        "avgPredicted": 46.97378792553767
+        "success": 143,
+        "total": 227,
+        "avgPredicted": 47.44717304250162
       },
       "60-69": {
-        "success": 43,
-        "total": 61,
-        "avgPredicted": 63.57674625557389
+        "success": 44,
+        "total": 63,
+        "avgPredicted": 64.67531671761964
       },
       "70-79": {
-        "success": 33,
-        "total": 46,
-        "avgPredicted": 74.43157193279849
+        "success": 34,
+        "total": 47,
+        "avgPredicted": 74.57565777627137
       },
       "80-89": {
-        "success": 4,
-        "total": 5,
-        "avgPredicted": 81.06159295074458
+        "success": 8,
+        "total": 8,
+        "avgPredicted": 81.8907603763756
       },
       "90-100": {
         "success": 0,
@@ -1974,169 +1947,169 @@
     }
   },
   "marketOccurrences": {
-    "favorite_win": 192,
-    "double_chance_favorite": 279,
-    "btts_no": 151,
-    "match_over_0.5": 325,
-    "ht_under_0.5": 99,
-    "st_over_0.5": 275,
-    "home_under_0.5": 84,
-    "away_over_0.5": 258,
-    "away_under_0.5": 84,
-    "home_ht_under_0.5": 169,
-    "away_ht_under_0.5": 200,
-    "home_st_under_0.5": 169,
-    "away_st_over_0.5": 190,
-    "match_under_1.5": 81,
-    "ht_under_1.5": 220,
-    "st_under_1.5": 184,
-    "home_under_1.5": 204,
-    "away_under_1.5": 204,
-    "home_ht_under_1.5": 295,
-    "away_ht_under_1.5": 309,
-    "home_st_under_1.5": 279,
-    "away_st_under_1.5": 280,
-    "match_under_2.5": 148,
-    "ht_under_2.5": 294,
-    "st_under_2.5": 268,
-    "home_under_2.5": 277,
-    "away_under_2.5": 277,
-    "home_ht_under_2.5": 338,
-    "away_ht_under_2.5": 341,
-    "home_st_under_2.5": 327,
-    "away_st_under_2.5": 329,
-    "match_under_3.5": 231,
-    "ht_under_3.5": 336,
-    "st_under_3.5": 320,
-    "home_under_3.5": 325,
-    "away_under_3.5": 325,
-    "home_ht_under_3.5": 349,
-    "away_ht_under_3.5": 350,
-    "home_st_under_3.5": 347,
-    "away_st_under_3.5": 345,
-    "draw": 87,
-    "double_chance_outsider": 159,
-    "btts": 200,
+    "favorite_win": 209,
+    "double_chance_favorite": 293,
+    "btts_no": 165,
+    "match_over_0.5": 319,
     "ht_over_0.5": 252,
-    "home_over_0.5": 267,
-    "away_ht_over_0.5": 151,
-    "home_st_over_0.5": 182,
-    "away_st_under_0.5": 161,
-    "match_over_1.5": 270,
-    "st_over_1.5": 167,
-    "away_over_1.5": 143,
-    "away_st_over_1.5": 71,
-    "st_under_0.5": 76,
-    "home_ht_over_0.5": 182,
-    "ht_over_1.5": 131,
-    "away_ht_over_1.5": 42,
-    "match_over_2.5": 203,
-    "ht_over_2.5": 57,
-    "outsider_win": 72,
-    "home_over_1.5": 147,
-    "home_ht_over_1.5": 56,
-    "home_over_2.5": 74,
-    "match_over_3.5": 120,
-    "match_under_0.5": 26,
-    "home_st_over_1.5": 72,
-    "st_over_2.5": 83,
-    "home_st_over_2.5": 24,
-    "st_over_3.5": 31,
-    "home_over_3.5": 26,
+    "st_over_0.5": 269,
+    "home_over_0.5": 247,
+    "home_ht_over_0.5": 166,
+    "away_ht_under_0.5": 184,
+    "home_st_over_0.5": 175,
+    "away_st_under_0.5": 168,
+    "match_over_1.5": 262,
+    "ht_over_1.5": 129,
+    "st_over_1.5": 159,
+    "home_over_1.5": 142,
+    "home_ht_over_1.5": 52,
+    "away_ht_under_1.5": 304,
+    "home_st_over_1.5": 71,
+    "away_st_under_1.5": 269,
+    "match_over_2.5": 192,
+    "ht_over_2.5": 51,
+    "st_over_2.5": 76,
+    "home_over_2.5": 72,
+    "home_ht_over_2.5": 8,
+    "away_ht_under_2.5": 333,
+    "home_st_over_2.5": 21,
+    "away_st_under_2.5": 331,
+    "match_over_3.5": 116,
+    "ht_under_3.5": 334,
+    "st_under_3.5": 320,
+    "home_over_3.5": 25,
+    "home_ht_under_3.5": 343,
+    "away_ht_under_3.5": 344,
+    "home_st_under_3.5": 343,
+    "away_st_under_3.5": 340,
+    "btts": 180,
+    "away_over_0.5": 252,
+    "home_ht_under_0.5": 179,
+    "away_ht_over_0.5": 161,
+    "st_under_1.5": 186,
+    "home_under_1.5": 203,
+    "away_over_1.5": 146,
+    "away_under_1.5": 203,
+    "home_ht_under_1.5": 293,
+    "away_ht_over_1.5": 41,
+    "home_st_under_1.5": 274,
+    "st_under_2.5": 269,
+    "home_under_2.5": 273,
     "away_over_2.5": 59,
-    "away_over_3.5": 20,
-    "home_ht_over_2.5": 13,
-    "away_st_over_2.5": 22,
-    "ht_over_3.5": 15,
-    "away_ht_over_2.5": 10,
-    "away_st_over_3.5": 6,
+    "away_under_2.5": 273,
+    "home_ht_under_2.5": 337,
+    "away_ht_over_2.5": 12,
+    "home_st_under_2.5": 324,
+    "home_under_3.5": 320,
+    "away_under_3.5": 320,
+    "outsider_win": 52,
+    "double_chance_outsider": 136,
+    "home_st_under_0.5": 170,
+    "away_st_over_0.5": 177,
+    "ht_under_2.5": 294,
+    "match_under_3.5": 229,
+    "away_st_over_1.5": 76,
+    "draw": 84,
+    "ht_under_1.5": 216,
+    "st_over_3.5": 25,
+    "ht_under_0.5": 93,
+    "home_under_0.5": 98,
+    "away_under_0.5": 98,
+    "match_under_1.5": 83,
+    "match_under_2.5": 153,
+    "match_under_0.5": 26,
+    "st_under_0.5": 76,
+    "away_over_3.5": 21,
+    "ht_over_3.5": 11,
     "home_ht_over_3.5": 2,
-    "home_st_over_3.5": 4,
+    "away_st_over_2.5": 14,
+    "away_st_over_3.5": 5,
+    "home_st_over_3.5": 2,
     "away_ht_over_3.5": 1
   },
   "calibration": {
     "home_over_0.5": {
       "0-59": {
-        "predicted": "47.88",
-        "actual": "68.21"
+        "predicted": "49.81",
+        "actual": "65.10"
       },
       "60-69": {
-        "predicted": "64.85",
-        "actual": "75.00"
+        "predicted": "65.30",
+        "actual": "66.67"
       },
       "70-79": {
-        "predicted": "74.46",
-        "actual": "82.65"
+        "predicted": "74.58",
+        "actual": "72.29"
       },
       "80-89": {
-        "predicted": "83.81",
-        "actual": "89.19"
+        "predicted": "83.99",
+        "actual": "91.67"
       },
       "90-100": {
-        "predicted": "91.06",
+        "predicted": "91.60",
         "actual": "100.00"
       }
     },
     "home_under_0.5": {
       "0-59": {
-        "predicted": "19.45",
-        "actual": "23.93"
+        "predicted": "20.38",
+        "actual": "28.41"
       }
     },
     "home_over_1.5": {
       "0-59": {
-        "predicted": "34.12",
-        "actual": "40.41"
+        "predicted": "34.44",
+        "actual": "39.21"
       },
       "60-69": {
-        "predicted": "64.57",
-        "actual": "81.82"
+        "predicted": "64.59",
+        "actual": "75.00"
       },
       "70-79": {
-        "predicted": "76.98",
+        "predicted": "74.45",
         "actual": "100.00"
       }
     },
     "home_under_1.5": {
       "0-59": {
-        "predicted": "42.99",
-        "actual": "55.97"
+        "predicted": "42.81",
+        "actual": "54.17"
       },
       "60-69": {
-        "predicted": "63.56",
-        "actual": "65.91"
+        "predicted": "64.16",
+        "actual": "68.25"
       },
       "70-79": {
-        "predicted": "74.72",
-        "actual": "76.92"
+        "predicted": "74.41",
+        "actual": "92.31"
       },
       "80-89": {
-        "predicted": "81.95",
+        "predicted": "83.50",
         "actual": "100.00"
       }
     },
     "home_over_2.5": {
       "0-59": {
-        "predicted": "15.32",
-        "actual": "21.08"
+        "predicted": "15.77",
+        "actual": "20.87"
       }
     },
     "home_under_2.5": {
       "0-59": {
-        "predicted": "51.43",
-        "actual": "73.91"
+        "predicted": "52.18",
+        "actual": "71.54"
       },
       "60-69": {
-        "predicted": "65.30",
-        "actual": "72.22"
+        "predicted": "65.15",
+        "actual": "77.05"
       },
       "70-79": {
-        "predicted": "74.98",
-        "actual": "79.27"
+        "predicted": "75.82",
+        "actual": "80.95"
       },
       "80-89": {
-        "predicted": "84.79",
-        "actual": "90.16"
+        "predicted": "84.99",
+        "actual": "84.72"
       },
       "90-100": {
         "predicted": "92.38",
@@ -2145,431 +2118,645 @@
     },
     "home_over_3.5": {
       "0-59": {
-        "predicted": "5.44",
-        "actual": "7.41"
+        "predicted": "5.70",
+        "actual": "7.25"
       }
     },
     "home_under_3.5": {
       "0-59": {
-        "predicted": "53.30",
-        "actual": "94.87"
+        "predicted": "54.53",
+        "actual": "90.16"
       },
       "60-69": {
-        "predicted": "66.04",
-        "actual": "90.48"
+        "predicted": "65.83",
+        "actual": "89.71"
       },
       "70-79": {
-        "predicted": "75.75",
-        "actual": "85.71"
+        "predicted": "75.58",
+        "actual": "91.67"
       },
       "80-89": {
-        "predicted": "84.99",
-        "actual": "91.04"
+        "predicted": "85.85",
+        "actual": "90.00"
       },
       "90-100": {
-        "predicted": "94.69",
-        "actual": "95.37"
+        "predicted": "94.97",
+        "actual": "96.92"
       }
     },
     "away_over_0.5": {
       "0-59": {
-        "predicted": "48.16",
-        "actual": "69.54"
+        "predicted": "49.18",
+        "actual": "65.96"
       },
       "60-69": {
-        "predicted": "65.15",
-        "actual": "71.25"
+        "predicted": "65.01",
+        "actual": "67.74"
       },
       "70-79": {
-        "predicted": "75.06",
-        "actual": "75.68"
+        "predicted": "75.49",
+        "actual": "76.92"
       },
       "80-89": {
-        "predicted": "84.11",
-        "actual": "84.21"
+        "predicted": "84.38",
+        "actual": "86.54"
       },
       "90-100": {
-        "predicted": "92.82",
+        "predicted": "92.36",
         "actual": "100.00"
       }
     },
     "away_under_0.5": {
       "0-59": {
-        "predicted": "19.44",
-        "actual": "23.93"
+        "predicted": "19.65",
+        "actual": "28.41"
       }
     },
     "away_over_1.5": {
       "0-59": {
-        "predicted": "33.63",
-        "actual": "38.74"
+        "predicted": "34.48",
+        "actual": "38.99"
       },
       "60-69": {
-        "predicted": "63.28",
-        "actual": "69.23"
+        "predicted": "64.10",
+        "actual": "73.68"
       },
       "70-79": {
-        "predicted": "74.86",
+        "predicted": "74.41",
         "actual": "100.00"
       },
       "80-89": {
-        "predicted": "82.01",
+        "predicted": "80.46",
         "actual": "100.00"
       }
     },
     "away_under_1.5": {
       "0-59": {
-        "predicted": "42.72",
-        "actual": "60.00"
+        "predicted": "43.09",
+        "actual": "61.62"
       },
       "60-69": {
-        "predicted": "64.39",
-        "actual": "45.95"
+        "predicted": "63.96",
+        "actual": "47.62"
       },
       "70-79": {
-        "predicted": "73.94",
-        "actual": "52.63"
+        "predicted": "74.50",
+        "actual": "44.44"
+      },
+      "80-89": {
+        "predicted": "81.95",
+        "actual": "0.00"
       }
     },
     "away_over_2.5": {
       "0-59": {
-        "predicted": "15.33",
-        "actual": "16.33"
-      },
-      "60-69": {
-        "predicted": "60.64",
-        "actual": "100.00"
+        "predicted": "16.68",
+        "actual": "17.10"
       }
     },
     "away_under_2.5": {
       "0-59": {
-        "predicted": "50.63",
-        "actual": "82.48"
+        "predicted": "52.48",
+        "actual": "81.40"
       },
       "60-69": {
-        "predicted": "65.29",
+        "predicted": "64.60",
         "actual": "80.33"
       },
       "70-79": {
-        "predicted": "75.52",
-        "actual": "71.05"
+        "predicted": "75.65",
+        "actual": "75.00"
       },
       "80-89": {
-        "predicted": "84.51",
-        "actual": "81.82"
+        "predicted": "84.23",
+        "actual": "82.26"
       },
       "90-100": {
-        "predicted": "91.85",
-        "actual": "72.73"
+        "predicted": "91.95",
+        "actual": "68.00"
       }
     },
     "away_over_3.5": {
       "0-59": {
-        "predicted": "5.69",
-        "actual": "5.70"
+        "predicted": "6.25",
+        "actual": "6.09"
       }
     },
     "away_under_3.5": {
       "0-59": {
-        "predicted": "53.21",
-        "actual": "94.94"
+        "predicted": "54.50",
+        "actual": "91.67"
       },
       "60-69": {
-        "predicted": "65.79",
-        "actual": "93.65"
+        "predicted": "66.14",
+        "actual": "90.41"
       },
       "70-79": {
-        "predicted": "75.73",
-        "actual": "89.47"
+        "predicted": "75.60",
+        "actual": "97.30"
       },
       "80-89": {
-        "predicted": "85.46",
-        "actual": "91.43"
+        "predicted": "85.96",
+        "actual": "93.22"
       },
       "90-100": {
-        "predicted": "95.01",
-        "actual": "92.08"
+        "predicted": "94.89",
+        "actual": "93.10"
       }
     },
     "ht_over_0.5": {
       "0-59": {
-        "predicted": "46.98",
-        "actual": "67.88"
+        "predicted": "47.97",
+        "actual": "70.86"
       },
       "60-69": {
-        "predicted": "65.97",
-        "actual": "70.24"
+        "predicted": "65.58",
+        "actual": "66.67"
       },
       "70-79": {
-        "predicted": "74.74",
-        "actual": "77.78"
+        "predicted": "75.10",
+        "actual": "78.35"
       },
       "80-89": {
-        "predicted": "82.43",
-        "actual": "85.71"
+        "predicted": "82.70",
+        "actual": "82.14"
       }
     },
     "ht_under_0.5": {
       "0-59": {
-        "predicted": "22.00",
-        "actual": "28.21"
+        "predicted": "22.50",
+        "actual": "26.96"
       }
     },
     "ht_over_1.5": {
       "0-59": {
-        "predicted": "31.38",
-        "actual": "37.32"
+        "predicted": "32.48",
+        "actual": "37.50"
+      },
+      "60-69": {
+        "predicted": "60.19",
+        "actual": "0.00"
       }
     },
     "ht_under_1.5": {
       "0-59": {
-        "predicted": "46.41",
+        "predicted": "46.66",
         "actual": "60.87"
       },
       "60-69": {
-        "predicted": "64.84",
-        "actual": "67.24"
+        "predicted": "64.54",
+        "actual": "65.28"
       },
       "70-79": {
-        "predicted": "71.59",
-        "actual": "76.47"
+        "predicted": "72.17",
+        "actual": "75.00"
       }
     },
     "ht_over_2.5": {
       "0-59": {
-        "predicted": "12.42",
-        "actual": "16.24"
+        "predicted": "13.03",
+        "actual": "14.78"
       }
     },
     "ht_under_2.5": {
       "0-59": {
-        "predicted": "51.22",
-        "actual": "81.73"
+        "predicted": "53.06",
+        "actual": "85.87"
       },
       "60-69": {
-        "predicted": "64.08",
-        "actual": "83.87"
+        "predicted": "63.77",
+        "actual": "93.44"
       },
       "70-79": {
-        "predicted": "75.94",
-        "actual": "81.01"
+        "predicted": "76.03",
+        "actual": "75.76"
       },
       "80-89": {
-        "predicted": "85.33",
-        "actual": "86.52"
+        "predicted": "85.11",
+        "actual": "83.96"
       },
       "90-100": {
-        "predicted": "90.94",
-        "actual": "94.12"
+        "predicted": "91.23",
+        "actual": "95.00"
       }
     },
     "ht_under_3.5": {
       "0-59": {
-        "predicted": "54.10",
-        "actual": "98.72"
+        "predicted": "55.35",
+        "actual": "100.00"
       },
       "60-69": {
         "predicted": "67.04",
-        "actual": "93.44"
+        "actual": "97.06"
       },
       "70-79": {
-        "predicted": "76.50",
-        "actual": "93.55"
+        "predicted": "76.44",
+        "actual": "96.55"
       },
       "80-89": {
-        "predicted": "86.10",
-        "actual": "94.34"
+        "predicted": "86.73",
+        "actual": "96.77"
       },
       "90-100": {
-        "predicted": "95.10",
-        "actual": "96.09"
+        "predicted": "94.90",
+        "actual": "95.54"
       }
     },
     "st_over_0.5": {
       "0-59": {
-        "predicted": "49.36",
-        "actual": "75.00"
+        "predicted": "50.76",
+        "actual": "76.74"
       },
       "60-69": {
-        "predicted": "64.40",
-        "actual": "70.59"
+        "predicted": "64.89",
+        "actual": "80.56"
       },
       "70-79": {
-        "predicted": "74.58",
-        "actual": "79.81"
+        "predicted": "75.41",
+        "actual": "69.32"
       },
       "80-89": {
-        "predicted": "84.18",
-        "actual": "85.92"
+        "predicted": "84.47",
+        "actual": "86.36"
       },
       "90-100": {
-        "predicted": "91.24",
+        "predicted": "91.16",
         "actual": "100.00"
       }
     },
     "st_under_0.5": {
       "0-59": {
-        "predicted": "16.48",
-        "actual": "21.65"
+        "predicted": "16.84",
+        "actual": "22.03"
       }
     },
     "st_over_1.5": {
       "0-59": {
-        "predicted": "38.14",
-        "actual": "45.95"
+        "predicted": "39.01",
+        "actual": "43.89"
       },
       "60-69": {
-        "predicted": "62.91",
-        "actual": "82.35"
+        "predicted": "62.61",
+        "actual": "73.91"
       },
       "70-79": {
-        "predicted": "70.23",
-        "actual": "0.00"
+        "predicted": "70.45",
+        "actual": "66.67"
       }
     },
     "st_under_1.5": {
       "0-59": {
-        "predicted": "41.17",
-        "actual": "51.38"
+        "predicted": "42.05",
+        "actual": "52.50"
       },
       "60-69": {
-        "predicted": "62.35",
-        "actual": "66.67"
+        "predicted": "62.80",
+        "actual": "75.00"
+      },
+      "70-79": {
+        "predicted": "71.42",
+        "actual": "0.00"
       }
     },
     "st_over_2.5": {
       "0-59": {
-        "predicted": "18.41",
-        "actual": "23.65"
+        "predicted": "19.25",
+        "actual": "22.03"
       }
     },
     "st_under_2.5": {
       "0-59": {
-        "predicted": "49.74",
-        "actual": "82.07"
+        "predicted": "51.35",
+        "actual": "78.83"
       },
       "60-69": {
-        "predicted": "65.52",
-        "actual": "63.01"
+        "predicted": "65.18",
+        "actual": "65.08"
       },
       "70-79": {
-        "predicted": "74.19",
-        "actual": "74.39"
+        "predicted": "74.84",
+        "actual": "81.11"
       },
       "80-89": {
-        "predicted": "83.52",
-        "actual": "82.35"
+        "predicted": "83.74",
+        "actual": "85.19"
+      },
+      "90-100": {
+        "predicted": "90.86",
+        "actual": "100.00"
       }
     },
     "st_over_3.5": {
       "0-59": {
-        "predicted": "6.96",
-        "actual": "8.83"
+        "predicted": "7.38",
+        "actual": "7.25"
       }
     },
     "st_under_3.5": {
       "0-59": {
-        "predicted": "52.26",
-        "actual": "97.44"
+        "predicted": "53.51",
+        "actual": "93.33"
       },
       "60-69": {
         "predicted": "64.69",
-        "actual": "96.72"
+        "actual": "95.59"
       },
       "70-79": {
-        "predicted": "74.44",
-        "actual": "75.68"
+        "predicted": "74.26",
+        "actual": "94.12"
       },
       "80-89": {
-        "predicted": "84.76",
-        "actual": "84.09"
+        "predicted": "85.85",
+        "actual": "86.05"
       },
       "90-100": {
-        "predicted": "93.34",
-        "actual": "95.40"
+        "predicted": "93.49",
+        "actual": "95.88"
       }
     },
     "home_ht_over_0.5": {
       "0-59": {
-        "predicted": "38.72",
-        "actual": "51.03"
+        "predicted": "39.26",
+        "actual": "46.97"
       },
       "60-69": {
-        "predicted": "63.52",
-        "actual": "77.78"
+        "predicted": "63.95",
+        "actual": "69.23"
       },
       "70-79": {
-        "predicted": "71.70",
+        "predicted": "71.34",
         "actual": "100.00"
       }
     },
     "home_ht_under_0.5": {
       "0-59": {
-        "predicted": "41.55",
-        "actual": "48.96"
+        "predicted": "42.36",
+        "actual": "50.78"
       },
       "60-69": {
-        "predicted": "64.20",
-        "actual": "33.33"
+        "predicted": "63.12",
+        "actual": "61.90"
       },
       "70-79": {
-        "predicted": "70.72",
-        "actual": "0.00"
+        "predicted": "72.14",
+        "actual": "80.00"
       }
     },
     "home_ht_over_1.5": {
       "0-59": {
-        "predicted": "11.81",
-        "actual": "15.95"
+        "predicted": "12.13",
+        "actual": "15.07"
       }
     },
     "home_ht_under_1.5": {
       "0-59": {
-        "predicted": "50.70",
-        "actual": "82.11"
+        "predicted": "52.59",
+        "actual": "81.61"
       },
       "60-69": {
-        "predicted": "63.51",
-        "actual": "81.16"
+        "predicted": "63.71",
+        "actual": "84.62"
       },
       "70-79": {
-        "predicted": "75.58",
-        "actual": "77.27"
+        "predicted": "75.87",
+        "actual": "83.02"
       },
       "80-89": {
-        "predicted": "85.31",
-        "actual": "90.00"
+        "predicted": "85.66",
+        "actual": "84.26"
       },
       "90-100": {
-        "predicted": "92.20",
-        "actual": "95.24"
+        "predicted": "92.35",
+        "actual": "100.00"
       }
     },
     "home_ht_under_2.5": {
       "0-59": {
-        "predicted": "54.90",
-        "actual": "97.44"
+        "predicted": "56.11",
+        "actual": "96.67"
       },
       "60-69": {
-        "predicted": "68.07",
-        "actual": "96.72"
+        "predicted": "67.95",
+        "actual": "97.06"
       },
       "70-79": {
-        "predicted": "77.56",
-        "actual": "93.55"
+        "predicted": "77.74",
+        "actual": "100.00"
       },
       "80-89": {
-        "predicted": "87.10",
-        "actual": "93.48"
+        "predicted": "87.64",
+        "actual": "100.00"
       },
       "90-100": {
-        "predicted": "96.69",
-        "actual": "97.04"
+        "predicted": "96.76",
+        "actual": "97.55"
       }
     },
     "home_ht_under_3.5": {
       "0-59": {
-        "predicted": "56.18",
+        "predicted": "57.42",
+        "actual": "100.00"
+      },
+      "60-69": {
+        "predicted": "69.66",
+        "actual": "98.53"
+      },
+      "70-79": {
+        "predicted": "79.64",
+        "actual": "100.00"
+      },
+      "80-89": {
+        "predicted": "89.62",
+        "actual": "100.00"
+      },
+      "90-100": {
+        "predicted": "99.35",
+        "actual": "99.40"
+      }
+    },
+    "home_st_over_0.5": {
+      "0-59": {
+        "predicted": "43.00",
+        "actual": "46.13"
+      },
+      "60-69": {
+        "predicted": "64.08",
+        "actual": "76.32"
+      },
+      "70-79": {
+        "predicted": "73.73",
+        "actual": "90.00"
+      }
+    },
+    "home_st_under_0.5": {
+      "0-59": {
+        "predicted": "37.59",
+        "actual": "48.37"
+      },
+      "60-69": {
+        "predicted": "65.05",
+        "actual": "87.50"
+      }
+    },
+    "home_st_over_1.5": {
+      "0-59": {
+        "predicted": "16.45",
+        "actual": "20.58"
+      }
+    },
+    "home_st_under_1.5": {
+      "0-59": {
+        "predicted": "52.00",
+        "actual": "76.38"
+      },
+      "60-69": {
+        "predicted": "64.83",
+        "actual": "78.72"
+      },
+      "70-79": {
+        "predicted": "74.91",
+        "actual": "73.97"
+      },
+      "80-89": {
+        "predicted": "84.15",
+        "actual": "86.21"
+      },
+      "90-100": {
+        "predicted": "92.30",
+        "actual": "100.00"
+      }
+    },
+    "home_st_over_2.5": {
+      "0-59": {
+        "predicted": "4.35",
+        "actual": "6.09"
+      }
+    },
+    "home_st_under_2.5": {
+      "0-59": {
+        "predicted": "55.10",
+        "actual": "90.00"
+      },
+      "60-69": {
+        "predicted": "66.63",
+        "actual": "91.18"
+      },
+      "70-79": {
+        "predicted": "76.41",
+        "actual": "93.33"
+      },
+      "80-89": {
+        "predicted": "86.26",
+        "actual": "88.89"
+      },
+      "90-100": {
+        "predicted": "95.32",
+        "actual": "98.01"
+      }
+    },
+    "home_st_under_3.5": {
+      "0-59": {
+        "predicted": "57.18",
+        "actual": "100.00"
+      },
+      "60-69": {
+        "predicted": "69.34",
+        "actual": "100.00"
+      },
+      "70-79": {
+        "predicted": "79.28",
+        "actual": "100.00"
+      },
+      "80-89": {
+        "predicted": "89.25",
+        "actual": "95.24"
+      },
+      "90-100": {
+        "predicted": "98.74",
+        "actual": "99.40"
+      }
+    },
+    "away_ht_over_0.5": {
+      "0-59": {
+        "predicted": "39.41",
+        "actual": "45.03"
+      },
+      "60-69": {
+        "predicted": "64.23",
+        "actual": "63.16"
+      },
+      "70-79": {
+        "predicted": "72.85",
+        "actual": "100.00"
+      }
+    },
+    "away_ht_under_0.5": {
+      "0-59": {
+        "predicted": "41.66",
+        "actual": "51.88"
+      },
+      "60-69": {
+        "predicted": "63.63",
+        "actual": "70.83"
+      },
+      "70-79": {
+        "predicted": "70.72",
+        "actual": "100.00"
+      }
+    },
+    "away_ht_over_1.5": {
+      "0-59": {
+        "predicted": "12.71",
+        "actual": "11.88"
+      }
+    },
+    "away_ht_under_1.5": {
+      "0-59": {
+        "predicted": "52.63",
+        "actual": "89.29"
+      },
+      "60-69": {
+        "predicted": "63.64",
+        "actual": "83.56"
+      },
+      "70-79": {
+        "predicted": "75.41",
+        "actual": "87.04"
+      },
+      "80-89": {
+        "predicted": "85.03",
+        "actual": "88.46"
+      },
+      "90-100": {
+        "predicted": "92.12",
+        "actual": "96.67"
+      }
+    },
+    "away_ht_under_2.5": {
+      "0-59": {
+        "predicted": "56.13",
+        "actual": "96.67"
+      },
+      "60-69": {
+        "predicted": "68.10",
+        "actual": "98.53"
+      },
+      "70-79": {
+        "predicted": "77.54",
+        "actual": "100.00"
+      },
+      "80-89": {
+        "predicted": "87.38",
+        "actual": "86.21"
+      },
+      "90-100": {
+        "predicted": "96.50",
+        "actual": "96.86"
+      }
+    },
+    "away_ht_under_3.5": {
+      "0-59": {
+        "predicted": "57.43",
         "actual": "100.00"
       },
       "60-69": {
@@ -2581,513 +2768,317 @@
         "actual": "100.00"
       },
       "80-89": {
-        "predicted": "89.52",
-        "actual": "97.78"
-      },
-      "90-100": {
-        "predicted": "99.38",
-        "actual": "99.26"
-      }
-    },
-    "home_st_over_0.5": {
-      "0-59": {
-        "predicted": "42.85",
-        "actual": "48.57"
-      },
-      "60-69": {
-        "predicted": "63.66",
-        "actual": "79.31"
-      },
-      "70-79": {
-        "predicted": "72.75",
-        "actual": "85.71"
-      }
-    },
-    "home_st_under_0.5": {
-      "0-59": {
-        "predicted": "36.59",
-        "actual": "47.84"
-      },
-      "60-69": {
-        "predicted": "63.07",
-        "actual": "75.00"
-      }
-    },
-    "home_st_over_1.5": {
-      "0-59": {
-        "predicted": "16.03",
-        "actual": "20.51"
-      }
-    },
-    "home_st_under_1.5": {
-      "0-59": {
-        "predicted": "50.91",
-        "actual": "83.57"
-      },
-      "60-69": {
-        "predicted": "65.75",
-        "actual": "66.04"
-      },
-      "70-79": {
-        "predicted": "74.70",
-        "actual": "77.78"
-      },
-      "80-89": {
-        "predicted": "83.96",
-        "actual": "81.69"
-      },
-      "90-100": {
-        "predicted": "91.59",
-        "actual": "100.00"
-      }
-    },
-    "home_st_over_2.5": {
-      "0-59": {
-        "predicted": "4.18",
-        "actual": "6.84"
-      }
-    },
-    "home_st_under_2.5": {
-      "0-59": {
-        "predicted": "53.93",
-        "actual": "94.87"
-      },
-      "60-69": {
-        "predicted": "66.88",
-        "actual": "93.55"
-      },
-      "70-79": {
-        "predicted": "76.33",
-        "actual": "87.10"
-      },
-      "80-89": {
-        "predicted": "85.75",
-        "actual": "87.50"
-      },
-      "90-100": {
-        "predicted": "95.25",
-        "actual": "95.97"
-      }
-    },
-    "home_st_under_3.5": {
-      "0-59": {
-        "predicted": "55.94",
-        "actual": "100.00"
-      },
-      "60-69": {
-        "predicted": "69.40",
-        "actual": "100.00"
-      },
-      "70-79": {
-        "predicted": "79.19",
-        "actual": "93.55"
-      },
-      "80-89": {
-        "predicted": "89.05",
-        "actual": "97.78"
-      },
-      "90-100": {
-        "predicted": "98.79",
-        "actual": "99.26"
-      }
-    },
-    "away_ht_over_0.5": {
-      "0-59": {
-        "predicted": "38.58",
-        "actual": "42.48"
-      },
-      "60-69": {
-        "predicted": "64.15",
-        "actual": "37.50"
-      },
-      "70-79": {
-        "predicted": "73.63",
-        "actual": "100.00"
-      }
-    },
-    "away_ht_under_0.5": {
-      "0-59": {
-        "predicted": "41.07",
-        "actual": "55.62"
-      },
-      "60-69": {
-        "predicted": "63.64",
-        "actual": "77.27"
-      }
-    },
-    "away_ht_over_1.5": {
-      "0-59": {
-        "predicted": "11.98",
-        "actual": "11.97"
-      }
-    },
-    "away_ht_under_1.5": {
-      "0-59": {
-        "predicted": "51.39",
-        "actual": "84.91"
-      },
-      "60-69": {
-        "predicted": "64.23",
-        "actual": "86.89"
-      },
-      "70-79": {
-        "predicted": "75.99",
-        "actual": "88.41"
-      },
-      "80-89": {
-        "predicted": "85.25",
-        "actual": "89.77"
-      },
-      "90-100": {
-        "predicted": "92.01",
-        "actual": "96.30"
-      }
-    },
-    "away_ht_under_2.5": {
-      "0-59": {
-        "predicted": "54.83",
-        "actual": "97.44"
-      },
-      "60-69": {
-        "predicted": "68.00",
-        "actual": "100.00"
-      },
-      "70-79": {
-        "predicted": "77.79",
-        "actual": "93.55"
-      },
-      "80-89": {
-        "predicted": "87.15",
-        "actual": "96.00"
-      },
-      "90-100": {
-        "predicted": "96.71",
-        "actual": "96.95"
-      }
-    },
-    "away_ht_under_3.5": {
-      "0-59": {
-        "predicted": "56.16",
-        "actual": "100.00"
-      },
-      "60-69": {
-        "predicted": "69.68",
-        "actual": "100.00"
-      },
-      "70-79": {
-        "predicted": "79.65",
-        "actual": "96.77"
-      },
-      "80-89": {
-        "predicted": "89.56",
+        "predicted": "89.58",
         "actual": "100.00"
       },
       "90-100": {
-        "predicted": "99.27",
-        "actual": "100.00"
+        "predicted": "99.21",
+        "actual": "99.40"
       }
     },
     "away_st_over_0.5": {
       "0-59": {
-        "predicted": "42.57",
-        "actual": "50.48"
+        "predicted": "43.16",
+        "actual": "47.59"
       },
       "60-69": {
-        "predicted": "64.54",
-        "actual": "78.57"
+        "predicted": "64.20",
+        "actual": "64.86"
       },
       "70-79": {
-        "predicted": "73.77",
-        "actual": "100.00"
+        "predicted": "73.22",
+        "actual": "81.25"
       },
       "80-89": {
-        "predicted": "82.17",
+        "predicted": "80.77",
         "actual": "100.00"
       }
     },
     "away_st_under_0.5": {
       "0-59": {
-        "predicted": "36.72",
-        "actual": "46.00"
+        "predicted": "37.18",
+        "actual": "49.12"
       },
       "60-69": {
-        "predicted": "61.63",
+        "predicted": "64.17",
         "actual": "0.00"
       }
     },
     "away_st_over_1.5": {
       "0-59": {
-        "predicted": "16.22",
-        "actual": "20.23"
+        "predicted": "17.17",
+        "actual": "22.03"
       }
     },
     "away_st_under_1.5": {
       "0-59": {
-        "predicted": "50.42",
-        "actual": "81.29"
+        "predicted": "52.48",
+        "actual": "79.70"
       },
       "60-69": {
-        "predicted": "65.40",
-        "actual": "71.43"
+        "predicted": "65.12",
+        "actual": "69.81"
       },
       "70-79": {
-        "predicted": "74.79",
-        "actual": "73.42"
+        "predicted": "75.18",
+        "actual": "69.44"
       },
       "80-89": {
-        "predicted": "84.35",
-        "actual": "88.89"
+        "predicted": "83.96",
+        "actual": "86.08"
       },
       "90-100": {
-        "predicted": "90.73",
+        "predicted": "91.33",
         "actual": "100.00"
-      }
-    },
-    "away_st_over_2.5": {
-      "0-59": {
-        "predicted": "4.33",
-        "actual": "6.27"
       }
     },
     "away_st_under_2.5": {
       "0-59": {
-        "predicted": "53.81",
-        "actual": "96.15"
+        "predicted": "55.14",
+        "actual": "98.33"
       },
       "60-69": {
-        "predicted": "66.71",
-        "actual": "96.72"
+        "predicted": "66.88",
+        "actual": "98.53"
       },
       "70-79": {
-        "predicted": "76.35",
-        "actual": "85.29"
+        "predicted": "76.12",
+        "actual": "100.00"
       },
       "80-89": {
-        "predicted": "86.06",
-        "actual": "90.00"
+        "predicted": "86.33",
+        "actual": "84.44"
       },
       "90-100": {
-        "predicted": "95.37",
-        "actual": "94.92"
+        "predicted": "95.22",
+        "actual": "96.43"
       }
     },
     "away_st_under_3.5": {
       "0-59": {
-        "predicted": "55.91",
+        "predicted": "57.19",
         "actual": "100.00"
       },
       "60-69": {
-        "predicted": "69.36",
+        "predicted": "69.41",
         "actual": "100.00"
       },
       "70-79": {
-        "predicted": "79.31",
+        "predicted": "79.19",
         "actual": "100.00"
       },
       "80-89": {
-        "predicted": "89.12",
+        "predicted": "89.16",
         "actual": "100.00"
       },
       "90-100": {
-        "predicted": "98.60",
-        "actual": "95.59"
+        "predicted": "98.48",
+        "actual": "97.01"
       }
     },
     "draw": {
       "0-59": {
-        "predicted": "48.28",
-        "actual": "26.98"
+        "predicted": "47.93",
+        "actual": "25.84"
       },
       "60-69": {
         "predicted": "60.00",
-        "actual": "21.32"
+        "actual": "22.75"
       }
     },
     "favorite_win": {
       "0-59": {
-        "predicted": "48.28",
-        "actual": "54.88"
+        "predicted": "47.93",
+        "actual": "62.92"
       },
       "60-69": {
         "predicted": "60.00",
-        "actual": "54.41"
+        "actual": "58.08"
       }
     },
     "outsider_win": {
       "0-59": {
-        "predicted": "48.28",
-        "actual": "18.14"
+        "predicted": "47.93",
+        "actual": "11.24"
       },
       "60-69": {
         "predicted": "60.00",
-        "actual": "24.26"
+        "actual": "19.16"
       }
     },
     "double_chance_favorite": {
       "0-59": {
-        "predicted": "44.02",
-        "actual": "79.49"
+        "predicted": "44.81",
+        "actual": "84.93"
       }
     },
     "double_chance_outsider": {
       "0-59": {
-        "predicted": "44.02",
-        "actual": "45.30"
+        "predicted": "44.81",
+        "actual": "39.42"
       }
     },
     "btts": {
       "0-59": {
-        "predicted": "43.80",
-        "actual": "54.17"
+        "predicted": "44.20",
+        "actual": "48.70"
       },
       "60-69": {
-        "predicted": "64.12",
-        "actual": "67.31"
+        "predicted": "64.66",
+        "actual": "60.66"
       },
       "70-79": {
-        "predicted": "72.73",
-        "actual": "81.82"
+        "predicted": "72.47",
+        "actual": "78.57"
+      },
+      "80-89": {
+        "predicted": "80.11",
+        "actual": "100.00"
       }
     },
     "btts_no": {
       "0-59": {
-        "predicted": "34.33",
-        "actual": "43.02"
+        "predicted": "35.21",
+        "actual": "47.52"
+      },
+      "60-69": {
+        "predicted": "62.82",
+        "actual": "100.00"
       }
     },
     "match_over_0.5": {
       "0-59": {
-        "predicted": "53.06",
-        "actual": "92.31"
+        "predicted": "54.17",
+        "actual": "91.67"
       },
       "60-69": {
-        "predicted": "65.92",
-        "actual": "86.89"
+        "predicted": "65.93",
+        "actual": "88.24"
       },
       "70-79": {
-        "predicted": "75.46",
-        "actual": "90.32"
+        "predicted": "75.49",
+        "actual": "96.55"
       },
       "80-89": {
-        "predicted": "85.71",
-        "actual": "94.00"
+        "predicted": "85.85",
+        "actual": "82.76"
       },
       "90-100": {
-        "predicted": "94.79",
-        "actual": "95.42"
+        "predicted": "95.02",
+        "actual": "95.60"
       }
     },
     "match_under_0.5": {
       "0-59": {
-        "predicted": "4.55",
-        "actual": "7.41"
+        "predicted": "4.66",
+        "actual": "7.54"
       }
     },
     "match_over_1.5": {
       "0-59": {
-        "predicted": "48.63",
-        "actual": "70.63"
+        "predicted": "50.08",
+        "actual": "68.66"
       },
       "60-69": {
-        "predicted": "65.98",
-        "actual": "71.19"
+        "predicted": "65.97",
+        "actual": "67.86"
       },
       "70-79": {
-        "predicted": "74.30",
-        "actual": "86.25"
+        "predicted": "75.31",
+        "actual": "80.00"
       },
       "80-89": {
-        "predicted": "84.40",
-        "actual": "83.61"
+        "predicted": "85.12",
+        "actual": "89.33"
       },
       "90-100": {
-        "predicted": "91.57",
-        "actual": "87.50"
+        "predicted": "91.89",
+        "actual": "90.00"
       }
     },
     "match_under_1.5": {
       "0-59": {
-        "predicted": "17.46",
-        "actual": "23.08"
+        "predicted": "17.83",
+        "actual": "24.06"
       }
     },
     "match_over_2.5": {
       "0-59": {
         "predicted": "42.01",
-        "actual": "53.87"
+        "actual": "52.03"
       },
       "60-69": {
-        "predicted": "64.75",
-        "actual": "72.73"
+        "predicted": "64.98",
+        "actual": "56.52"
       },
       "70-79": {
-        "predicted": "73.31",
-        "actual": "89.47"
+        "predicted": "73.72",
+        "actual": "88.00"
       },
       "80-89": {
-        "predicted": "81.81",
+        "predicted": "82.34",
         "actual": "100.00"
       }
     },
     "match_under_2.5": {
       "0-59": {
-        "predicted": "35.62",
-        "actual": "41.91"
+        "predicted": "36.11",
+        "actual": "43.32"
       },
       "60-69": {
-        "predicted": "61.09",
-        "actual": "60.00"
+        "predicted": "62.28",
+        "actual": "87.50"
       }
     },
     "match_over_3.5": {
       "0-59": {
-        "predicted": "27.81",
-        "actual": "34.20"
+        "predicted": "28.94",
+        "actual": "33.14"
       },
       "60-69": {
-        "predicted": "63.05",
-        "actual": "33.33"
+        "predicted": "64.26",
+        "actual": "75.00"
       }
     },
     "match_under_3.5": {
       "0-59": {
-        "predicted": "46.97",
-        "actual": "63.18"
+        "predicted": "47.45",
+        "actual": "63.00"
       },
       "60-69": {
-        "predicted": "63.58",
-        "actual": "70.49"
+        "predicted": "64.68",
+        "actual": "69.84"
       },
       "70-79": {
-        "predicted": "74.43",
-        "actual": "71.74"
+        "predicted": "74.58",
+        "actual": "72.34"
       },
       "80-89": {
-        "predicted": "81.06",
-        "actual": "80.00"
+        "predicted": "81.89",
+        "actual": "100.00"
       }
     }
   },
   "earlySeasonSummary": {
     "0-59": {
-      "success": 5862,
-      "total": 14108,
-      "avgPredicted": 28.400786859703015
+      "success": 4858,
+      "total": 11766,
+      "avgPredicted": 28.577119128521588
     },
     "60-69": {
-      "success": 1277,
-      "total": 1452,
-      "avgPredicted": 66.2029490736838
+      "success": 1309,
+      "total": 1435,
+      "avgPredicted": 66.23395277361521
     },
     "70-79": {
-      "success": 729,
-      "total": 839,
-      "avgPredicted": 75.5097768014881
+      "success": 551,
+      "total": 584,
+      "avgPredicted": 76.0715227264897
     },
     "80-89": {
-      "success": 554,
-      "total": 586,
-      "avgPredicted": 86.48859077111481
+      "success": 264,
+      "total": 277,
+      "avgPredicted": 86.70081166572756
     },
     "90-100": {
       "success": 0,
