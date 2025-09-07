@@ -7,17 +7,10 @@ schemes:
 produces:
   - application/json
 
-# =================================================================
-# DÉBUT DE LA SECTION AJOUTÉE : Configuration CORS
-# =================================================================
-# Cette section indique à API Gateway d'autoriser les requêtes 
-# provenant de votre application web Firebase.
+# Configuration CORS pour autoriser votre application web
 x-google-cors:
   allow_origin:
     - "https://oracle-prediction-app.firebaseapp.com"
-# =================================================================
-# FIN DE LA SECTION AJOUTÉE
-# =================================================================
 
 securityDefinitions:
   firebase:
@@ -28,7 +21,11 @@ securityDefinitions:
     x-google-jwks_uri: "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"
     x-google-audiences: "oracle-prediction-app"
 
+# =================================================================
+# DÉBUT DE LA SECTION MISE À JOUR : Déclaration des chemins
+# =================================================================
 paths:
+  # --- Ancien chemin ---
   /health:
     get:
       summary: "Health check"
@@ -40,6 +37,8 @@ paths:
       responses:
         '200':
           description: "Health check response"
+  
+  # --- Ancien chemin ---
   /run-daily-pipeline:
     get:
       summary: "Run Daily Pipeline"
@@ -54,3 +53,44 @@ paths:
           description: "Pipeline started"
         'default':
           description: "Default response from backend"
+          
+  # =================================================================
+  # NOUVEAUX CHEMINS AJOUTÉS CI-DESSOUS
+  # =================================================================
+
+  # --- Nouveau chemin pour les prédictions ---
+  /api/predictions:
+    get:
+      summary: "Get daily predictions"
+      operationId: "get-predictions"
+      security:
+        - firebase: []
+      x-google-backend:
+        address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
+        # Important : On ajoute /api/predictions à l'adresse du backend
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        '200':
+          description: "List of predictions"
+        'default':
+          description: "Default response from backend"
+
+  # --- Nouveau chemin pour les tickets ---
+  /api/tickets:
+    get:
+      summary: "Get daily tickets"
+      operationId: "get-tickets"
+      security:
+        - firebase: []
+      x-google-backend:
+        address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
+        # Important : On ajoute /api/tickets à l'adresse du backend
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        '200':
+          description: "List of tickets"
+        'default':
+          description: "Default response from backend"
+# =================================================================
+# FIN DE LA SECTION MISE À JOUR
+# =================================================================
