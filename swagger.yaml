@@ -1,25 +1,15 @@
 swagger: '2.0'
 info:
-  title: Oracle Prediction API (Passthrough Strategy)
-  version: '10.0.1'
+  title: Oracle Prediction API (Correct CORS)
+  version: '10.0.6'
 schemes:
   - https
 produces:
   - application/json
 
-# =================================================================
-# DÉBUT DE LA SECTION MISE À JOUR
-# =================================================================
-# La section "x-google-endpoints" est une méthode recommandée
-# par la documentation de Google pour gérer CORS au niveau du service
-# et non uniquement au niveau de la passerelle.
-host: oracle-prediction-gateway-43pysj5a.ew.gateway.dev
-x-google-endpoints:
-- name: "oracle-prediction-gateway-43pysj5a.ew.gateway.dev"
-  allowCors: True
-# =================================================================
-# FIN DE LA SECTION MISE À JOUR
-# =================================================================
+# La sécurité est définie au niveau supérieur
+security:
+  - firebase: []
 
 securityDefinitions:
   firebase:
@@ -31,16 +21,20 @@ securityDefinitions:
     x-google-audiences: "oracle-prediction-app"
 
 paths:
-  # On utilise une expression régulière pour capturer toutes les requêtes
-  # OPTIONS et y répondre correctement sans les envoyer au backend.
-  /{path=**}:
+  # =================================================================
+  # DÉBUT DE LA SOLUTION DE L'ARTICLE
+  # Cette section "catch-all" intercepte TOUTES les requêtes
+  # OPTIONS et y répond directement depuis la passerelle.
+  # =================================================================
+  /{proxy+}:
     options:
-      summary: CORS support
-      operationId: cors-handler
+      summary: CORS preflight handler
+      operationId: cors-preflight
+      # Pas de sécurité sur la requête OPTIONS
       security: []
       responses:
         '204':
-          description: Preflight response
+          description: No content
           headers:
             Access-Control-Allow-Origin:
               type: string
@@ -50,13 +44,15 @@ paths:
               type: string
             Access-Control-Max-Age:
               type: string
-
+  # =================================================================
+  # FIN DE LA SOLUTION
+  # =================================================================
+  
   /api/predictions:
     get:
       summary: Get daily predictions
       operationId: get-predictions
-      security:
-        - firebase: []
+      # La sécurité est héritée du niveau supérieur
       x-google-backend:
         address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
         path_translation: APPEND_PATH_TO_ADDRESS
@@ -70,8 +66,7 @@ paths:
     get:
       summary: Get daily tickets
       operationId: get-tickets
-      security:
-        - firebase: []
+      # La sécurité est héritée du niveau supérieur
       x-google-backend:
         address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
         path_translation: APPEND_PATH_TO_ADDRESS
