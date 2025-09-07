@@ -1,96 +1,82 @@
 swagger: '2.0'
 info:
-  title: 'Oracle Prediction API (Passthrough Strategy)'
+  title: Oracle Prediction API (Passthrough Strategy)
   version: '10.0.1'
 schemes:
   - https
 produces:
   - application/json
 
-# Configuration CORS pour autoriser votre application web
-x-google-cors:
-  allow_origin:
-    - "https://oracle-prediction-app.firebaseapp.com"
+# =================================================================
+# DÉBUT DE LA SECTION MISE À JOUR
+# =================================================================
+# La section "x-google-endpoints" est une méthode recommandée
+# par la documentation de Google pour gérer CORS au niveau du service
+# et non uniquement au niveau de la passerelle.
+host: oracle-prediction-gateway-43pysj5a.ew.gateway.dev
+x-google-endpoints:
+- name: "oracle-prediction-gateway-43pysj5a.ew.gateway.dev"
+  allowCors: True
+# =================================================================
+# FIN DE LA SECTION MISE À JOUR
+# =================================================================
 
 securityDefinitions:
   firebase:
     authorizationUrl: ""
-    flow: "implicit"
-    type: "oauth2"
+    flow: implicit
+    type: oauth2
     x-google-issuer: "https://securetoken.google.com/oracle-prediction-app"
     x-google-jwks_uri: "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"
     x-google-audiences: "oracle-prediction-app"
 
-# =================================================================
-# DÉBUT DE LA SECTION MISE À JOUR : Déclaration des chemins
-# =================================================================
 paths:
-  # --- Ancien chemin ---
-  /health:
-    get:
-      summary: "Health check"
-      operationId: "health-check"
+  # On utilise une expression régulière pour capturer toutes les requêtes
+  # OPTIONS et y répondre correctement sans les envoyer au backend.
+  /{path=**}:
+    options:
+      summary: CORS support
+      operationId: cors-handler
       security: []
-      x-google-backend:
-        address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
-        path_translation: APPEND_PATH_TO_ADDRESS
       responses:
-        '200':
-          description: "Health check response"
-  
-  # --- Ancien chemin ---
-  /run-daily-pipeline:
-    get:
-      summary: "Run Daily Pipeline"
-      operationId: "run-daily-pipeline"
-      security:
-        - firebase: []
-      x-google-backend:
-        address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
-        path_translation: APPEND_PATH_TO_ADDRESS
-      responses:
-        '202':
-          description: "Pipeline started"
-        'default':
-          description: "Default response from backend"
-          
-  # =================================================================
-  # NOUVEAUX CHEMINS AJOUTÉS CI-DESSOUS
-  # =================================================================
+        '204':
+          description: Preflight response
+          headers:
+            Access-Control-Allow-Origin:
+              type: string
+            Access-Control-Allow-Methods:
+              type: string
+            Access-Control-Allow-Headers:
+              type: string
+            Access-Control-Max-Age:
+              type: string
 
-  # --- Nouveau chemin pour les prédictions ---
   /api/predictions:
     get:
-      summary: "Get daily predictions"
-      operationId: "get-predictions"
+      summary: Get daily predictions
+      operationId: get-predictions
       security:
         - firebase: []
       x-google-backend:
         address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
-        # Important : On ajoute /api/predictions à l'adresse du backend
         path_translation: APPEND_PATH_TO_ADDRESS
       responses:
         '200':
-          description: "List of predictions"
+          description: List of predictions
         'default':
-          description: "Default response from backend"
+          description: Default response from backend
 
-  # --- Nouveau chemin pour les tickets ---
   /api/tickets:
     get:
-      summary: "Get daily tickets"
-      operationId: "get-tickets"
+      summary: Get daily tickets
+      operationId: get-tickets
       security:
         - firebase: []
       x-google-backend:
         address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
-        # Important : On ajoute /api/tickets à l'adresse du backend
         path_translation: APPEND_PATH_TO_ADDRESS
       responses:
         '200':
-          description: "List of tickets"
+          description: List of tickets
         'default':
-          description: "Default response from backend"
-# =================================================================
-# FIN DE LA SECTION MISE À JOUR
-# =================================================================
+          description: Default response from backend
