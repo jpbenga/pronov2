@@ -1,0 +1,56 @@
+swagger: '2.0'
+info:
+  title: 'Oracle Prediction API (Passthrough Strategy)'
+  version: '10.0.1'
+schemes:
+  - https
+produces:
+  - application/json
+
+# =================================================================
+# DÉBUT DE LA SECTION AJOUTÉE : Configuration CORS
+# =================================================================
+# Cette section indique à API Gateway d'autoriser les requêtes 
+# provenant de votre application web Firebase.
+x-google-cors:
+  allow_origin:
+    - "https://oracle-prediction-app.firebaseapp.com"
+# =================================================================
+# FIN DE LA SECTION AJOUTÉE
+# =================================================================
+
+securityDefinitions:
+  firebase:
+    authorizationUrl: ""
+    flow: "implicit"
+    type: "oauth2"
+    x-google-issuer: "https://securetoken.google.com/oracle-prediction-app"
+    x-google-jwks_uri: "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"
+    x-google-audiences: "oracle-prediction-app"
+
+paths:
+  /health:
+    get:
+      summary: "Health check"
+      operationId: "health-check"
+      security: []
+      x-google-backend:
+        address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        '200':
+          description: "Health check response"
+  /run-daily-pipeline:
+    get:
+      summary: "Run Daily Pipeline"
+      operationId: "run-daily-pipeline"
+      security:
+        - firebase: []
+      x-google-backend:
+        address: https://oracle-prediction-football-co4b4rv5mq-ew.a.run.app
+        path_translation: APPEND_PATH_TO_ADDRESS
+      responses:
+        '202':
+          description: "Pipeline started"
+        'default':
+          description: "Default response from backend"
