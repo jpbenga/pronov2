@@ -1,0 +1,4109 @@
+[
+  {
+    "market": "home_under_3.5",
+    "confidence": 92.44370374666887,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "Real Madrid",
+      "away_team": "Espanyol",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 9,
+        "total": 12,
+        "avgPredicted": 53.10381459816651
+      },
+      "60-69": {
+        "success": 37,
+        "total": 42,
+        "avgPredicted": 66.1013257223661
+      },
+      "70-79": {
+        "success": 34,
+        "total": 38,
+        "avgPredicted": 75.10265798838554
+      },
+      "80-89": {
+        "success": 123,
+        "total": 128,
+        "avgPredicted": 85.49948174955416
+      },
+      "90-100": {
+        "success": 152,
+        "total": 162,
+        "avgPredicted": 94.90987018230547
+      }
+    }
+  },
+  {
+    "market": "home_under_3.5",
+    "confidence": 91.86161164692433,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Al-Nassr",
+      "away_team": "Al Riyadh",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 9,
+        "total": 12,
+        "avgPredicted": 53.10381459816651
+      },
+      "60-69": {
+        "success": 37,
+        "total": 42,
+        "avgPredicted": 66.1013257223661
+      },
+      "70-79": {
+        "success": 34,
+        "total": 38,
+        "avgPredicted": 75.10265798838554
+      },
+      "80-89": {
+        "success": 123,
+        "total": 128,
+        "avgPredicted": 85.49948174955416
+      },
+      "90-100": {
+        "success": 152,
+        "total": 162,
+        "avgPredicted": 94.90987018230547
+      }
+    }
+  },
+  {
+    "market": "home_under_3.5",
+    "confidence": 91.13194580442186,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Ferencvarosi TC",
+      "away_team": "Diosgyori VTK",
+      "date": "19/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 9,
+        "total": 12,
+        "avgPredicted": 53.10381459816651
+      },
+      "60-69": {
+        "success": 37,
+        "total": 42,
+        "avgPredicted": 66.1013257223661
+      },
+      "70-79": {
+        "success": 34,
+        "total": 38,
+        "avgPredicted": 75.10265798838554
+      },
+      "80-89": {
+        "success": 123,
+        "total": 128,
+        "avgPredicted": 85.49948174955416
+      },
+      "90-100": {
+        "success": 152,
+        "total": 162,
+        "avgPredicted": 94.90987018230547
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 89.51264562637131,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Odense",
+      "away_team": "FC Fredericia",
+      "date": "19/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "home_over_0.5",
+    "confidence": 89.51264562637131,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "FK Partizan",
+      "away_team": "FK Crvena Zvezda",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 43,
+        "total": 66,
+        "avgPredicted": 51.66322257915852
+      },
+      "60-69": {
+        "success": 73,
+        "total": 109,
+        "avgPredicted": 65.34585945152055
+      },
+      "70-79": {
+        "success": 98,
+        "total": 119,
+        "avgPredicted": 74.48965911492898
+      },
+      "80-89": {
+        "success": 73,
+        "total": 78,
+        "avgPredicted": 83.99365311907515
+      },
+      "90-100": {
+        "success": 10,
+        "total": 10,
+        "avgPredicted": 92.89716498332457
+      }
+    }
+  },
+  {
+    "market": "away_under_3.5",
+    "confidence": 88.64236394871712,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "1899 Hoffenheim",
+      "away_team": "Bayern München",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 9,
+        "total": 10,
+        "avgPredicted": 53.02851120130249
+      },
+      "60-69": {
+        "success": 38,
+        "total": 42,
+        "avgPredicted": 66.02315111352499
+      },
+      "70-79": {
+        "success": 40,
+        "total": 42,
+        "avgPredicted": 75.42452367842613
+      },
+      "80-89": {
+        "success": 125,
+        "total": 128,
+        "avgPredicted": 85.56722969273075
+      },
+      "90-100": {
+        "success": 143,
+        "total": 160,
+        "avgPredicted": 95.0886311984747
+      }
+    }
+  },
+  {
+    "market": "home_under_2.5",
+    "confidence": 87.73113059467,
+    "odds": 1.57,
+    "match_details": {
+      "home_team": "Club Brugge KV",
+      "away_team": "St. Truiden",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 37,
+        "total": 57,
+        "avgPredicted": 54.12597933553802
+      },
+      "60-69": {
+        "success": 52,
+        "total": 72,
+        "avgPredicted": 65.8831158921854
+      },
+      "70-79": {
+        "success": 109,
+        "total": 132,
+        "avgPredicted": 75.22521123611443
+      },
+      "80-89": {
+        "success": 74,
+        "total": 87,
+        "avgPredicted": 84.6181161603631
+      },
+      "90-100": {
+        "success": 34,
+        "total": 34,
+        "avgPredicted": 92.59502859582838
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 87.18294270829352,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Csikszereda",
+      "away_team": "Metaloglobus",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 86.93195174959749,
+    "odds": 1.62,
+    "match_details": {
+      "home_team": "CFR 1907 Cluj",
+      "away_team": "Uta Arad",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 86.93195174959749,
+    "odds": 1.45,
+    "match_details": {
+      "home_team": "Olimpija Ljubljana",
+      "away_team": "Bravo",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "home_over_0.5",
+    "confidence": 86.19307626891072,
+    "odds": 1.53,
+    "match_details": {
+      "home_team": "FC Botosani",
+      "away_team": "FCSB",
+      "date": "19/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 43,
+        "total": 66,
+        "avgPredicted": 51.66322257915852
+      },
+      "60-69": {
+        "success": 73,
+        "total": 109,
+        "avgPredicted": 65.34585945152055
+      },
+      "70-79": {
+        "success": 98,
+        "total": 119,
+        "avgPredicted": 74.48965911492898
+      },
+      "80-89": {
+        "success": 73,
+        "total": 78,
+        "avgPredicted": 83.99365311907515
+      },
+      "90-100": {
+        "success": 10,
+        "total": 10,
+        "avgPredicted": 92.89716498332457
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 84.58763381848686,
+    "odds": 1.53,
+    "match_details": {
+      "home_team": "Csikszereda",
+      "away_team": "Metaloglobus",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 84.1402380174668,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Slavia Sofia",
+      "away_team": "Beroe",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 84.1402380174668,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Pescara",
+      "away_team": "Empoli",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "home_under_3.5",
+    "confidence": 84.05288979822524,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Sepsi OSK Sfantu Gheorghe",
+      "away_team": "Muscelul Câmpulung Elite",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 9,
+        "total": 12,
+        "avgPredicted": 53.10381459816651
+      },
+      "60-69": {
+        "success": 37,
+        "total": 42,
+        "avgPredicted": 66.1013257223661
+      },
+      "70-79": {
+        "success": 34,
+        "total": 38,
+        "avgPredicted": 75.10265798838554
+      },
+      "80-89": {
+        "success": 123,
+        "total": 128,
+        "avgPredicted": 85.49948174955416
+      },
+      "90-100": {
+        "success": 152,
+        "total": 162,
+        "avgPredicted": 94.90987018230547
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 83.7162091609803,
+    "odds": 1.62,
+    "match_details": {
+      "home_team": "Slavia Sofia",
+      "away_team": "Beroe",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 83.7162091609803,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Valerenga",
+      "away_team": "KFUM Oslo",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "ht_over_0.5",
+    "confidence": 83.58131220171927,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Mazatlán",
+      "away_team": "Atlas",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 50,
+        "total": 75,
+        "avgPredicted": 51.18975325413576
+      },
+      "60-69": {
+        "success": 91,
+        "total": 144,
+        "avgPredicted": 65.44321798127342
+      },
+      "70-79": {
+        "success": 100,
+        "total": 125,
+        "avgPredicted": 75.14585617979739
+      },
+      "80-89": {
+        "success": 36,
+        "total": 38,
+        "avgPredicted": 82.96346723540988
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 82.79551361769495,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Viitorul Şelimbăr",
+      "away_team": "CSM Satu Mare",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 82.79551361769495,
+    "odds": 1.78,
+    "match_details": {
+      "home_team": "Spartak Moscow",
+      "away_team": "Krylia Sovetov",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "ht_over_0.5",
+    "confidence": 82.74813616600521,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Viitorul Şelimbăr",
+      "away_team": "CSM Satu Mare",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 50,
+        "total": 75,
+        "avgPredicted": 51.18975325413576
+      },
+      "60-69": {
+        "success": 91,
+        "total": 144,
+        "avgPredicted": 65.44321798127342
+      },
+      "70-79": {
+        "success": 100,
+        "total": 125,
+        "avgPredicted": 75.14585617979739
+      },
+      "80-89": {
+        "success": 36,
+        "total": 38,
+        "avgPredicted": 82.96346723540988
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_under_2.5",
+    "confidence": 82.6370284008119,
+    "odds": 1.73,
+    "match_details": {
+      "home_team": "PAOK",
+      "away_team": "Panetolikos",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 37,
+        "total": 57,
+        "avgPredicted": 54.12597933553802
+      },
+      "60-69": {
+        "success": 52,
+        "total": 72,
+        "avgPredicted": 65.8831158921854
+      },
+      "70-79": {
+        "success": 109,
+        "total": 132,
+        "avgPredicted": 75.22521123611443
+      },
+      "80-89": {
+        "success": 74,
+        "total": 87,
+        "avgPredicted": 84.6181161603631
+      },
+      "90-100": {
+        "success": 34,
+        "total": 34,
+        "avgPredicted": 92.59502859582838
+      }
+    }
+  },
+  {
+    "market": "home_under_2.5",
+    "confidence": 82.54063600902019,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "RB Leipzig",
+      "away_team": "1.FC Köln",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 37,
+        "total": 57,
+        "avgPredicted": 54.12597933553802
+      },
+      "60-69": {
+        "success": 52,
+        "total": 72,
+        "avgPredicted": 65.8831158921854
+      },
+      "70-79": {
+        "success": 109,
+        "total": 132,
+        "avgPredicted": 75.22521123611443
+      },
+      "80-89": {
+        "success": 74,
+        "total": 87,
+        "avgPredicted": 84.6181161603631
+      },
+      "90-100": {
+        "success": 34,
+        "total": 34,
+        "avgPredicted": 92.59502859582838
+      }
+    }
+  },
+  {
+    "market": "ht_over_0.5",
+    "confidence": 82.31582475026555,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Olimpija Ljubljana",
+      "away_team": "Bravo",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 50,
+        "total": 75,
+        "avgPredicted": 51.18975325413576
+      },
+      "60-69": {
+        "success": 91,
+        "total": 144,
+        "avgPredicted": 65.44321798127342
+      },
+      "70-79": {
+        "success": 100,
+        "total": 125,
+        "avgPredicted": 75.14585617979739
+      },
+      "80-89": {
+        "success": 36,
+        "total": 38,
+        "avgPredicted": 82.96346723540988
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 82.29215035280517,
+    "odds": 1.44,
+    "match_details": {
+      "home_team": "Kifisia",
+      "away_team": "Aris Thessalonikis",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 82.03509403893669,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "RB Leipzig",
+      "away_team": "1.FC Köln",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 82.01285179158332,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "Makhachkala",
+      "away_team": "Lokomotiv",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 82.0128517915833,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Mirassol",
+      "away_team": "Juventude",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 81.82276138246326,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Red Bull Salzburg",
+      "away_team": "Sturm Graz",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 81.82276138246326,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Bala Town",
+      "away_team": "Briton Ferry",
+      "date": "19/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 81.82276138246326,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Pardubice",
+      "away_team": "Slovácko",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "home_under_2.5",
+    "confidence": 81.50334885934336,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Trabzonspor",
+      "away_team": "Gazişehir Gaziantep",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 37,
+        "total": 57,
+        "avgPredicted": 54.12597933553802
+      },
+      "60-69": {
+        "success": 52,
+        "total": 72,
+        "avgPredicted": 65.8831158921854
+      },
+      "70-79": {
+        "success": 109,
+        "total": 132,
+        "avgPredicted": 75.22521123611443
+      },
+      "80-89": {
+        "success": 74,
+        "total": 87,
+        "avgPredicted": 84.6181161603631
+      },
+      "90-100": {
+        "success": 34,
+        "total": 34,
+        "avgPredicted": 92.59502859582838
+      }
+    }
+  },
+  {
+    "market": "ht_over_0.5",
+    "confidence": 81.41843080438704,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Guadalajara Chivas",
+      "away_team": "Toluca",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 50,
+        "total": 75,
+        "avgPredicted": 51.18975325413576
+      },
+      "60-69": {
+        "success": 91,
+        "total": 144,
+        "avgPredicted": 65.44321798127342
+      },
+      "70-79": {
+        "success": 100,
+        "total": 125,
+        "avgPredicted": 75.14585617979739
+      },
+      "80-89": {
+        "success": 36,
+        "total": 38,
+        "avgPredicted": 82.96346723540988
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_under_2.5",
+    "confidence": 81.36320848025531,
+    "odds": 1.55,
+    "match_details": {
+      "home_team": "Napoli",
+      "away_team": "Pisa",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 37,
+        "total": 57,
+        "avgPredicted": 54.12597933553802
+      },
+      "60-69": {
+        "success": 52,
+        "total": 72,
+        "avgPredicted": 65.8831158921854
+      },
+      "70-79": {
+        "success": 109,
+        "total": 132,
+        "avgPredicted": 75.22521123611443
+      },
+      "80-89": {
+        "success": 74,
+        "total": 87,
+        "avgPredicted": 84.6181161603631
+      },
+      "90-100": {
+        "success": 34,
+        "total": 34,
+        "avgPredicted": 92.59502859582838
+      }
+    }
+  },
+  {
+    "market": "home_under_2.5",
+    "confidence": 81.26026286901578,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "Gent",
+      "away_team": "Dender",
+      "date": "19/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 37,
+        "total": 57,
+        "avgPredicted": 54.12597933553802
+      },
+      "60-69": {
+        "success": 52,
+        "total": 72,
+        "avgPredicted": 65.8831158921854
+      },
+      "70-79": {
+        "success": 109,
+        "total": 132,
+        "avgPredicted": 75.22521123611443
+      },
+      "80-89": {
+        "success": 74,
+        "total": 87,
+        "avgPredicted": 84.6181161603631
+      },
+      "90-100": {
+        "success": 34,
+        "total": 34,
+        "avgPredicted": 92.59502859582838
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 81.24862328718996,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "HNK Gorica",
+      "away_team": "NK Slaven Belupo",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 80.7950091379246,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "Lask Linz",
+      "away_team": "FC BW Linz",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 80.7950091379246,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Tunari",
+      "away_team": "CS Afumati",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 80.7950091379246,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "Mura",
+      "away_team": "Radomlje",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 80.74729180104399,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "AD Ceuta FC",
+      "away_team": "Zaragoza",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 80.66493694983825,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "AD Ceuta FC",
+      "away_team": "Zaragoza",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "away_over_0.5",
+    "confidence": 80.62999488390307,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Le Havre",
+      "away_team": "Lorient",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 44,
+        "total": 80,
+        "avgPredicted": 52.42136428618718
+      },
+      "60-69": {
+        "success": 66,
+        "total": 109,
+        "avgPredicted": 65.77950331296319
+      },
+      "70-79": {
+        "success": 78,
+        "total": 106,
+        "avgPredicted": 74.74572845143848
+      },
+      "80-89": {
+        "success": 66,
+        "total": 76,
+        "avgPredicted": 84.33153329773154
+      },
+      "90-100": {
+        "success": 10,
+        "total": 11,
+        "avgPredicted": 92.39479335955716
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 80.61645929911244,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "FC Andorra",
+      "away_team": "Mirandes",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "home_under_2.5",
+    "confidence": 80.49460680251488,
+    "odds": 1.85,
+    "match_details": {
+      "home_team": "Monaco",
+      "away_team": "Metz",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 37,
+        "total": 57,
+        "avgPredicted": 54.12597933553802
+      },
+      "60-69": {
+        "success": 52,
+        "total": 72,
+        "avgPredicted": 65.8831158921854
+      },
+      "70-79": {
+        "success": 109,
+        "total": 132,
+        "avgPredicted": 75.22521123611443
+      },
+      "80-89": {
+        "success": 74,
+        "total": 87,
+        "avgPredicted": 84.6181161603631
+      },
+      "90-100": {
+        "success": 34,
+        "total": 34,
+        "avgPredicted": 92.59502859582838
+      }
+    }
+  },
+  {
+    "market": "ht_over_0.5",
+    "confidence": 80.47549807127493,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "CFR 1907 Cluj",
+      "away_team": "Uta Arad",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 50,
+        "total": 75,
+        "avgPredicted": 51.18975325413576
+      },
+      "60-69": {
+        "success": 91,
+        "total": 144,
+        "avgPredicted": 65.44321798127342
+      },
+      "70-79": {
+        "success": 100,
+        "total": 125,
+        "avgPredicted": 75.14585617979739
+      },
+      "80-89": {
+        "success": 36,
+        "total": 38,
+        "avgPredicted": 82.96346723540988
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "match_over_1.5",
+    "confidence": 80.45547693882101,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "HNK Hajduk Split",
+      "away_team": "Dinamo Zagreb",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 39,
+        "total": 58,
+        "avgPredicted": 52.59292539992192
+      },
+      "60-69": {
+        "success": 53,
+        "total": 90,
+        "avgPredicted": 66.27968744110133
+      },
+      "70-79": {
+        "success": 89,
+        "total": 120,
+        "avgPredicted": 74.34873545186726
+      },
+      "80-89": {
+        "success": 85,
+        "total": 94,
+        "avgPredicted": 84.76601360685497
+      },
+      "90-100": {
+        "success": 19,
+        "total": 20,
+        "avgPredicted": 91.75051891031706
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 79.97788612485324,
+    "odds": 1.45,
+    "match_details": {
+      "home_team": "Arka Gdynia",
+      "away_team": "Korona Kielce",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_ht_under_1.5",
+    "confidence": 79.64947565386385,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Sporting CP",
+      "away_team": "Moreirense",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 15,
+        "total": 21,
+        "avgPredicted": 53.241364918050294
+      },
+      "60-69": {
+        "success": 53,
+        "total": 60,
+        "avgPredicted": 64.1895976730892
+      },
+      "70-79": {
+        "success": 98,
+        "total": 115,
+        "avgPredicted": 76.59294121580609
+      },
+      "80-89": {
+        "success": 119,
+        "total": 142,
+        "avgPredicted": 84.9476589739284
+      },
+      "90-100": {
+        "success": 41,
+        "total": 44,
+        "avgPredicted": 92.38907939843206
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 78.48058394063678,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Botev Vratsa",
+      "away_team": "CSKA Sofia",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 77.97918739613729,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "Tokyo Verdy",
+      "away_team": "Fagiano Okayama",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 76.29066030845334,
+    "odds": 1.5,
+    "match_details": {
+      "home_team": "Gent",
+      "away_team": "Dender",
+      "date": "19/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 75.96536498034881,
+    "odds": 1.45,
+    "match_details": {
+      "home_team": "Genk",
+      "away_team": "Union St. Gilloise",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 75.96536498034881,
+    "odds": 1.44,
+    "match_details": {
+      "home_team": "Arda Kardzhali",
+      "away_team": "Cherno More Varna",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 75.96536498034881,
+    "odds": 1.4,
+    "match_details": {
+      "home_team": "La Equidad",
+      "away_team": "Deportivo Cali",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 75.76344025918277,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Dobrudzha",
+      "away_team": "Lokomotiv Sofia",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_under_1.5",
+    "confidence": 75.76344025918277,
+    "odds": 1.43,
+    "match_details": {
+      "home_team": "Sepsi OSK Sfantu Gheorghe",
+      "away_team": "Muscelul Câmpulung Elite",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 15,
+        "total": 21,
+        "avgPredicted": 53.241364918050294
+      },
+      "60-69": {
+        "success": 53,
+        "total": 60,
+        "avgPredicted": 64.1895976730892
+      },
+      "70-79": {
+        "success": 98,
+        "total": 115,
+        "avgPredicted": 76.59294121580609
+      },
+      "80-89": {
+        "success": 119,
+        "total": 142,
+        "avgPredicted": 84.9476589739284
+      },
+      "90-100": {
+        "success": 41,
+        "total": 44,
+        "avgPredicted": 92.38907939843206
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 75.11444264262977,
+    "odds": 1.65,
+    "match_details": {
+      "home_team": "Club Brugge KV",
+      "away_team": "St. Truiden",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "home_ht_under_1.5",
+    "confidence": 74.85400748751869,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "Inter Miami",
+      "away_team": "DC United",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 15,
+        "total": 21,
+        "avgPredicted": 53.241364918050294
+      },
+      "60-69": {
+        "success": 53,
+        "total": 60,
+        "avgPredicted": 64.1895976730892
+      },
+      "70-79": {
+        "success": 98,
+        "total": 115,
+        "avgPredicted": 76.59294121580609
+      },
+      "80-89": {
+        "success": 119,
+        "total": 142,
+        "avgPredicted": 84.9476589739284
+      },
+      "90-100": {
+        "success": 41,
+        "total": 44,
+        "avgPredicted": 92.38907939843206
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 73.94376151338709,
+    "odds": 1.48,
+    "match_details": {
+      "home_team": "Belgrano Cordoba",
+      "away_team": "Newells Old Boys",
+      "date": "23/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 73.94376151338709,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "Independiente",
+      "away_team": "San Lorenzo",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 73.94376151338709,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "America de Cali",
+      "away_team": "Once Caldas",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 73.94376151338709,
+    "odds": 1.62,
+    "match_details": {
+      "home_team": "Istra 1961",
+      "away_team": "NK Osijek",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 73.94376151338709,
+    "odds": 1.67,
+    "match_details": {
+      "home_team": "Politehnica Iasi",
+      "away_team": "Metalul Buzău",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 73.94376151338709,
+    "odds": 1.6,
+    "match_details": {
+      "home_team": "Raków Częstochowa",
+      "away_team": "Legia Warszawa",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 73.94376151338709,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Dukla Praha",
+      "away_team": "Bohemians 1905",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_under_3.5",
+    "confidence": 73.92614082618144,
+    "odds": 1.6,
+    "match_details": {
+      "home_team": "Flora Tallinn",
+      "away_team": "Tammeka",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 9,
+        "total": 12,
+        "avgPredicted": 53.10381459816651
+      },
+      "60-69": {
+        "success": 37,
+        "total": 42,
+        "avgPredicted": 66.1013257223661
+      },
+      "70-79": {
+        "success": 34,
+        "total": 38,
+        "avgPredicted": 75.10265798838554
+      },
+      "80-89": {
+        "success": 123,
+        "total": 128,
+        "avgPredicted": 85.49948174955416
+      },
+      "90-100": {
+        "success": 152,
+        "total": 162,
+        "avgPredicted": 94.90987018230547
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 73.6273583290554,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "Napoli",
+      "away_team": "Pisa",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "home_ht_under_1.5",
+    "confidence": 73.03328558979845,
+    "odds": 1.39,
+    "match_details": {
+      "home_team": "Corvinul Hunedoara",
+      "away_team": "Dumbrăviţa",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 15,
+        "total": 21,
+        "avgPredicted": 53.241364918050294
+      },
+      "60-69": {
+        "success": 53,
+        "total": 60,
+        "avgPredicted": 64.1895976730892
+      },
+      "70-79": {
+        "success": 98,
+        "total": 115,
+        "avgPredicted": 76.59294121580609
+      },
+      "80-89": {
+        "success": 119,
+        "total": 142,
+        "avgPredicted": 84.9476589739284
+      },
+      "90-100": {
+        "success": 41,
+        "total": 44,
+        "avgPredicted": 92.38907939843206
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 72.72729552274222,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Palmeiras",
+      "away_team": "Fortaleza EC",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 72.72729552274222,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Malmo FF",
+      "away_team": "Djurgardens IF",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 72.12313493907325,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "CSKA 1948",
+      "away_team": "Lokomotiv Plovdiv",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 72.12313493907325,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Arka Gdynia",
+      "away_team": "Korona Kielce",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 71.92097706281469,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "Godoy Cruz",
+      "away_team": "Instituto Cordoba",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 71.92097706281466,
+    "odds": 1.6,
+    "match_details": {
+      "home_team": "Popayan",
+      "away_team": "Tigres FC",
+      "date": "22/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "home_under_1.5",
+    "confidence": 71.92097706281466,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Kolkheti Poti",
+      "away_team": "Torpedo Kutaisi",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 144,
+        "total": 286,
+        "avgPredicted": 46.68550830572577
+      },
+      "60-69": {
+        "success": 47,
+        "total": 71,
+        "avgPredicted": 63.887886034323124
+      },
+      "70-79": {
+        "success": 20,
+        "total": 21,
+        "avgPredicted": 75.28609123475887
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 82.92488013207912
+      },
+      "90-100": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 92.68663187756681
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 71.90463303966142,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Kocaelispor",
+      "away_team": "Rizespor",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 71.81802926932369,
+    "odds": 1.45,
+    "match_details": {
+      "home_team": "PAOK",
+      "away_team": "Panetolikos",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 71.62956129580891,
+    "odds": 1.35,
+    "match_details": {
+      "home_team": "Portsmouth",
+      "away_team": "Sheffield Wednesday",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 71.4092175616211,
+    "odds": 1.48,
+    "match_details": {
+      "home_team": "Hertha BSC",
+      "away_team": "SC Paderborn 07",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 71.2138377747689,
+    "odds": 1.36,
+    "match_details": {
+      "home_team": "Istra 1961",
+      "away_team": "NK Osijek",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 71.2138377747689,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Yokohama F. Marinos",
+      "away_team": "Avispa Fukuoka",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 71.2138377747689,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Sigma Olomouc",
+      "away_team": "Teplice",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 70.33169578152808,
+    "odds": 1.48,
+    "match_details": {
+      "home_team": "VfB Stuttgart",
+      "away_team": "FC St. Pauli",
+      "date": "19/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "ht_under_1.5",
+    "confidence": 70.30589629039356,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Rapid",
+      "away_team": "AFC Hermannstadt",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 165,
+        "total": 261,
+        "avgPredicted": 51.59679294830803
+      },
+      "60-69": {
+        "success": 67,
+        "total": 95,
+        "avgPredicted": 64.90877459144932
+      },
+      "70-79": {
+        "success": 24,
+        "total": 25,
+        "avgPredicted": 73.03341579151056
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.35772828375788
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 70.30399944685574,
+    "odds": 1.44,
+    "match_details": {
+      "home_team": "Cruz Azul",
+      "away_team": "FC Juarez",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "match_under_3.5",
+    "confidence": 70.30399944685574,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Mjallby AIF",
+      "away_team": "Osters IF",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 123,
+        "total": 189,
+        "avgPredicted": 50.62373569621537
+      },
+      "60-69": {
+        "success": 84,
+        "total": 113,
+        "avgPredicted": 63.81496542728853
+      },
+      "70-79": {
+        "success": 55,
+        "total": 64,
+        "avgPredicted": 74.13421273895332
+      },
+      "80-89": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 81.98670165168821
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 94.2833559531724
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 68.38606042600675,
+    "odds": 1.85,
+    "match_details": {
+      "home_team": "MTK Budapest",
+      "away_team": "Zalaegerszegi TE",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 68.38606042600675,
+    "odds": 1.55,
+    "match_details": {
+      "home_team": "ASA Targu Mures",
+      "away_team": "Ceahlăul Piatra Neamţ",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_under_1.5",
+    "confidence": 67.59485742042392,
+    "odds": 1.57,
+    "match_details": {
+      "home_team": "Flora Tallinn",
+      "away_team": "Tammeka",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 15,
+        "total": 21,
+        "avgPredicted": 53.241364918050294
+      },
+      "60-69": {
+        "success": 53,
+        "total": 60,
+        "avgPredicted": 64.1895976730892
+      },
+      "70-79": {
+        "success": 98,
+        "total": 115,
+        "avgPredicted": 76.59294121580609
+      },
+      "80-89": {
+        "success": 119,
+        "total": 142,
+        "avgPredicted": 84.9476589739284
+      },
+      "90-100": {
+        "success": 41,
+        "total": 44,
+        "avgPredicted": 92.38907939843206
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 67.16745707111986,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "FC Copenhagen",
+      "away_team": "Silkeborg",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 67.1445257337573,
+    "odds": 1.48,
+    "match_details": {
+      "home_team": "FC Midtjylland",
+      "away_team": "Viborg",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 65.86366151383861,
+    "odds": 1.9,
+    "match_details": {
+      "home_team": "Caernarfon Town",
+      "away_team": "Penybont",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 65.86366151383861,
+    "odds": 2.65,
+    "match_details": {
+      "home_team": "FK Partizan",
+      "away_team": "FK Crvena Zvezda",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 65.50135023627521,
+    "odds": 1.75,
+    "match_details": {
+      "home_team": "MTK Budapest",
+      "away_team": "Zalaegerszegi TE",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 65.50135023627521,
+    "odds": 1.6,
+    "match_details": {
+      "home_team": "ASA Targu Mures",
+      "away_team": "Ceahlăul Piatra Neamţ",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 64.63685465110407,
+    "odds": 1.5,
+    "match_details": {
+      "home_team": "FC Midtjylland",
+      "away_team": "Viborg",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 63.75069582340318,
+    "odds": 1.41,
+    "match_details": {
+      "home_team": "Corvinul Hunedoara",
+      "away_team": "Dumbrăviţa",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 63.75069582340318,
+    "odds": 1.79,
+    "match_details": {
+      "home_team": "Caernarfon Town",
+      "away_team": "Penybont",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 63.75069582340318,
+    "odds": 2.2,
+    "match_details": {
+      "home_team": "FK Partizan",
+      "away_team": "FK Crvena Zvezda",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 63.18210234962227,
+    "odds": 1.93,
+    "match_details": {
+      "home_team": "Viitorul Şelimbăr",
+      "away_team": "CSM Satu Mare",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 61.91120341558647,
+    "odds": 1.38,
+    "match_details": {
+      "home_team": "Inter Miami",
+      "away_team": "DC United",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 61.91120341558647,
+    "odds": 1.81,
+    "match_details": {
+      "home_team": "Viitorul Şelimbăr",
+      "away_team": "CSM Satu Mare",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 61.78067503240645,
+    "odds": 1.83,
+    "match_details": {
+      "home_team": "Mirassol",
+      "away_team": "Juventude",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 61.78067503240645,
+    "odds": 1.65,
+    "match_details": {
+      "home_team": "Pogon Szczecin",
+      "away_team": "Lechia Gdansk",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 60.95674297388158,
+    "odds": 1.65,
+    "match_details": {
+      "home_team": "Mirassol",
+      "away_team": "Juventude",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_ht_over_0.5",
+    "confidence": 60.95674297388158,
+    "odds": 1.65,
+    "match_details": {
+      "home_team": "Pogon Szczecin",
+      "away_team": "Lechia Gdansk",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 177,
+        "total": 363,
+        "avgPredicted": 43.530850981536794
+      },
+      "60-69": {
+        "success": 14,
+        "total": 15,
+        "avgPredicted": 64.02029828981611
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.26497560072166
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 60.33847356002839,
+    "odds": 2.1,
+    "match_details": {
+      "home_team": "Mazatlán",
+      "away_team": "Atlas",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 60.33847356002839,
+    "odds": 1.42,
+    "match_details": {
+      "home_team": "Kristiansund BK",
+      "away_team": "Haugesund",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 60.33847356002839,
+    "odds": 1.5,
+    "match_details": {
+      "home_team": "Viking",
+      "away_team": "Molde",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 60.33847356002839,
+    "odds": 1.65,
+    "match_details": {
+      "home_team": "CSM Reşiţa",
+      "away_team": "Gloria Bistriţa",
+      "date": "20/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  },
+  {
+    "market": "home_over_1.5",
+    "confidence": 60.33847356002839,
+    "odds": 1.48,
+    "match_details": {
+      "home_team": "Hammarby FF",
+      "away_team": "BK Hacken",
+      "date": "21/09/2025"
+    },
+    "marketStats": {
+      "0-59": {
+        "success": 145,
+        "total": 357,
+        "avgPredicted": 38.25889697791
+      },
+      "60-69": {
+        "success": 17,
+        "total": 19,
+        "avgPredicted": 63.65564492443655
+      },
+      "70-79": {
+        "success": 3,
+        "total": 4,
+        "avgPredicted": 75.39112539156656
+      },
+      "80-89": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 85.11289996591887
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0
+      }
+    }
+  }
+]

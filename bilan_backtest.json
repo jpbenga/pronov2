@@ -1,85 +1,5719 @@
 {
-  "totalMatchesAnalyzed": 7,
+  "totalMatchesAnalyzed": 389,
   "globalSummary": {
     "0-59": {
-      "success": 0,
-      "total": 0,
-      "avgPredicted": 0
+      "success": 5062,
+      "total": 14915,
+      "avgPredicted": 0.19915533190965545,
+      "rate": 33.938987596379484,
+      "ci": {
+        "lower": 33.18329230688224,
+        "upper": 34.70295430357845
+      }
     },
     "60-69": {
-      "success": 0,
-      "total": 0,
-      "avgPredicted": 0
+      "success": 1516,
+      "total": 2120,
+      "avgPredicted": 1.5162311597059395,
+      "rate": 71.50943396226414,
+      "ci": {
+        "lower": 69.55046069492155,
+        "upper": 73.3905947962224
+      }
     },
     "70-79": {
-      "success": 0,
-      "total": 0,
-      "avgPredicted": 0
+      "success": 1930,
+      "total": 2380,
+      "avgPredicted": 1.4524599958992723,
+      "rate": 81.09243697478992,
+      "ci": {
+        "lower": 79.46963111299603,
+        "upper": 82.61503088803626
+      }
     },
     "80-89": {
-      "success": 0,
-      "total": 0,
-      "avgPredicted": 0
+      "success": 2477,
+      "total": 2746,
+      "avgPredicted": 1.1835544104281603,
+      "rate": 90.20393299344501,
+      "ci": {
+        "lower": 89.03527981258212,
+        "upper": 91.26025430109192
+      }
     },
     "90-100": {
-      "success": 0,
-      "total": 0,
-      "avgPredicted": 0
+      "success": 4211,
+      "total": 4291,
+      "avgPredicted": 0.6802500671845442,
+      "rate": 98.13563271964577,
+      "ci": {
+        "lower": 97.68575200743304,
+        "upper": 98.49940182920672
+      }
     }
   },
-  "perMarketSummary": {},
-  "marketOccurrences": {
-    "outsider_win": 4,
-    "double_chance_outsider": 4,
-    "btts": 7,
-    "match_over_20.5": 7,
-    "home_over_20.5": 5,
-    "away_over_20.5": 6,
-    "match_over_30.5": 7,
-    "home_under_30.5": 5,
-    "away_under_30.5": 5,
-    "match_over_40.5": 6,
-    "home_under_40.5": 7,
-    "away_under_40.5": 5,
-    "match_over_50.5": 5,
-    "home_under_50.5": 7,
-    "away_under_50.5": 7,
-    "favorite_win": 3,
-    "double_chance_favorite": 3,
-    "home_under_20.5": 2,
-    "match_under_40.5": 1,
-    "match_under_50.5": 2,
-    "away_over_30.5": 2,
-    "away_over_40.5": 2,
-    "away_under_20.5": 1,
-    "home_over_30.5": 2
+  "perMarketSummary": {
+    "home_over_0.5": {
+      "0-59": {
+        "success": 20,
+        "total": 41,
+        "avgPredicted": 54.504067836882356,
+        "rate": 48.78048780487805,
+        "ci": {
+          "lower": 34.254187239935696,
+          "upper": 63.515740684134805
+        }
+      },
+      "60-69": {
+        "success": 63,
+        "total": 84,
+        "avgPredicted": 65.35071215957981,
+        "rate": 75,
+        "ci": {
+          "lower": 64.78552553489342,
+          "upper": 83.0278111984994
+        }
+      },
+      "70-79": {
+        "success": 125,
+        "total": 153,
+        "avgPredicted": 75.02796733922708,
+        "rate": 81.69934640522875,
+        "ci": {
+          "lower": 74.8217435434973,
+          "upper": 87.02409327530589
+        }
+      },
+      "80-89": {
+        "success": 89,
+        "total": 97,
+        "avgPredicted": 84.46091038870995,
+        "rate": 91.75257731958763,
+        "ci": {
+          "lower": 84.56221298338818,
+          "upper": 95.76178028922945
+        }
+      },
+      "90-100": {
+        "success": 14,
+        "total": 14,
+        "avgPredicted": 91.49633020128078,
+        "rate": 100,
+        "ci": {
+          "lower": 78.46829880728185,
+          "upper": 100
+        }
+      }
+    },
+    "home_under_0.5": {
+      "0-59": {
+        "success": 78,
+        "total": 389,
+        "avgPredicted": 23.503695279842116,
+        "rate": 20.051413881748072,
+        "ci": {
+          "lower": 16.37410239914968,
+          "upper": 24.31446011561454
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_over_1.5": {
+      "0-59": {
+        "success": 123,
+        "total": 347,
+        "avgPredicted": 39.05716988248785,
+        "rate": 35.44668587896253,
+        "ci": {
+          "lower": 30.598002162391303,
+          "upper": 40.614077590978894
+        }
+      },
+      "60-69": {
+        "success": 27,
+        "total": 35,
+        "avgPredicted": 63.72945932861838,
+        "rate": 77.14285714285715,
+        "ci": {
+          "lower": 60.982362219898015,
+          "upper": 87.9342632538209
+        }
+      },
+      "70-79": {
+        "success": 6,
+        "total": 7,
+        "avgPredicted": 73.44753645268062,
+        "rate": 85.71428571428571,
+        "ci": {
+          "lower": 48.68654966809701,
+          "upper": 97.43210440510252
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_under_1.5": {
+      "0-59": {
+        "success": 120,
+        "total": 242,
+        "avgPredicted": 47.611528924694746,
+        "rate": 49.586776859504134,
+        "ci": {
+          "lower": 43.34317974387047,
+          "upper": 55.84328829083155
+        }
+      },
+      "60-69": {
+        "success": 73,
+        "total": 104,
+        "avgPredicted": 64.03574460538181,
+        "rate": 70.1923076923077,
+        "ci": {
+          "lower": 60.809890256901745,
+          "upper": 78.13611944621837
+        }
+      },
+      "70-79": {
+        "success": 31,
+        "total": 34,
+        "avgPredicted": 75.83963167955903,
+        "rate": 91.17647058823529,
+        "ci": {
+          "lower": 77.03918204763958,
+          "upper": 96.953460969569
+        }
+      },
+      "80-89": {
+        "success": 9,
+        "total": 9,
+        "avgPredicted": 84.6937003628311,
+        "rate": 100,
+        "ci": {
+          "lower": 70.08472464490407,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_over_2.5": {
+      "0-59": {
+        "success": 67,
+        "total": 389,
+        "avgPredicted": 18.88862851517011,
+        "rate": 17.223650385604113,
+        "ci": {
+          "lower": 13.796535579026806,
+          "upper": 21.291805370607854
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_under_2.5": {
+      "0-59": {
+        "success": 12,
+        "total": 21,
+        "avgPredicted": 55.49154130863527,
+        "rate": 57.14285714285714,
+        "ci": {
+          "lower": 36.546216297032444,
+          "upper": 75.53030051347895
+        }
+      },
+      "60-69": {
+        "success": 48,
+        "total": 68,
+        "avgPredicted": 65.89290165134199,
+        "rate": 70.58823529411765,
+        "ci": {
+          "lower": 58.89349573627328,
+          "upper": 80.08113734539529
+        }
+      },
+      "70-79": {
+        "success": 93,
+        "total": 120,
+        "avgPredicted": 75.82768007213305,
+        "rate": 77.5,
+        "ci": {
+          "lower": 69.24293655773725,
+          "upper": 84.05094853418662
+        }
+      },
+      "80-89": {
+        "success": 113,
+        "total": 124,
+        "avgPredicted": 84.87294919911993,
+        "rate": 91.12903225806451,
+        "ci": {
+          "lower": 84.8118056419356,
+          "upper": 94.97442982445405
+        }
+      },
+      "90-100": {
+        "success": 56,
+        "total": 56,
+        "avgPredicted": 92.90565211570349,
+        "rate": 100,
+        "ci": {
+          "lower": 93.58038555118846,
+          "upper": 100
+        }
+      }
+    },
+    "home_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 58.11349653488742,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 6,
+        "total": 6,
+        "avgPredicted": 66.47500383895631,
+        "rate": 100,
+        "ci": {
+          "lower": 60.96569663469354,
+          "upper": 99.99999999999999
+        }
+      },
+      "70-79": {
+        "success": 33,
+        "total": 39,
+        "avgPredicted": 75.82628583463018,
+        "rate": 84.61538461538461,
+        "ci": {
+          "lower": 70.27023013426569,
+          "upper": 92.75262615494853
+        }
+      },
+      "80-89": {
+        "success": 94,
+        "total": 102,
+        "avgPredicted": 85.79193335276783,
+        "rate": 92.15686274509804,
+        "ci": {
+          "lower": 85.28111615000344,
+          "upper": 95.9723796399317
+        }
+      },
+      "90-100": {
+        "success": 236,
+        "total": 240,
+        "avgPredicted": 95.12852369471405,
+        "rate": 98.33333333333333,
+        "ci": {
+          "lower": 95.79371621145086,
+          "upper": 99.35001644122201
+        }
+      }
+    },
+    "away_over_0.5": {
+      "0-59": {
+        "success": 15,
+        "total": 28,
+        "avgPredicted": 54.27592670817973,
+        "rate": 53.57142857142857,
+        "ci": {
+          "lower": 35.81239514210167,
+          "upper": 70.46869626034041
+        }
+      },
+      "60-69": {
+        "success": 60,
+        "total": 91,
+        "avgPredicted": 65.2454713573965,
+        "rate": 65.93406593406593,
+        "ci": {
+          "lower": 55.728522201045905,
+          "upper": 74.84877721186994
+        }
+      },
+      "70-79": {
+        "success": 99,
+        "total": 146,
+        "avgPredicted": 74.53981652727593,
+        "rate": 67.8082191780822,
+        "ci": {
+          "lower": 59.85684283399851,
+          "upper": 74.84647053158221
+        }
+      },
+      "80-89": {
+        "success": 97,
+        "total": 109,
+        "avgPredicted": 84.23833499288078,
+        "rate": 88.9908256880734,
+        "ci": {
+          "lower": 81.73757042606518,
+          "upper": 93.58925939556089
+        }
+      },
+      "90-100": {
+        "success": 15,
+        "total": 15,
+        "avgPredicted": 91.91573167210726,
+        "rate": 100,
+        "ci": {
+          "lower": 79.6110733695652,
+          "upper": 100
+        }
+      }
+    },
+    "away_under_0.5": {
+      "0-59": {
+        "success": 102,
+        "total": 388,
+        "avgPredicted": 22.80287650262059,
+        "rate": 26.288659793814436,
+        "ci": {
+          "lower": 22.156278281674574,
+          "upper": 30.885971443724664
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 71.89237334319262,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_over_1.5": {
+      "0-59": {
+        "success": 119,
+        "total": 355,
+        "avgPredicted": 40.32468387888753,
+        "rate": 33.52112676056338,
+        "ci": {
+          "lower": 28.810018302721492,
+          "upper": 38.58506632514775
+        }
+      },
+      "60-69": {
+        "success": 22,
+        "total": 25,
+        "avgPredicted": 63.913612945658116,
+        "rate": 88,
+        "ci": {
+          "lower": 70.04380781662651,
+          "upper": 95.83325864293191
+        }
+      },
+      "70-79": {
+        "success": 7,
+        "total": 8,
+        "avgPredicted": 73.19371791913953,
+        "rate": 87.5,
+        "ci": {
+          "lower": 52.91051942301386,
+          "upper": 97.75830911367038
+        }
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 81.24862328718996,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_under_1.5": {
+      "0-59": {
+        "success": 124,
+        "total": 247,
+        "avgPredicted": 47.23072636926594,
+        "rate": 50.20242914979757,
+        "ci": {
+          "lower": 44.01172101476941,
+          "upper": 56.38693694308128
+        }
+      },
+      "60-69": {
+        "success": 82,
+        "total": 104,
+        "avgPredicted": 64.25616141142727,
+        "rate": 78.84615384615384,
+        "ci": {
+          "lower": 70.04227763289637,
+          "upper": 85.59487908584667
+        }
+      },
+      "70-79": {
+        "success": 30,
+        "total": 34,
+        "avgPredicted": 74.77363294197887,
+        "rate": 88.23529411764706,
+        "ci": {
+          "lower": 73.37882520370121,
+          "upper": 95.32862902656389
+        }
+      },
+      "80-89": {
+        "success": 3,
+        "total": 3,
+        "avgPredicted": 84.51598538077717,
+        "rate": 100,
+        "ci": {
+          "lower": 43.84939195509823,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 95.61685654644619,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "away_over_2.5": {
+      "0-59": {
+        "success": 56,
+        "total": 389,
+        "avgPredicted": 19.381272407532762,
+        "rate": 14.395886889460154,
+        "ci": {
+          "lower": 11.255169734828053,
+          "upper": 18.23294964967705
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_under_2.5": {
+      "0-59": {
+        "success": 11,
+        "total": 21,
+        "avgPredicted": 53.446016207759484,
+        "rate": 52.38095238095239,
+        "ci": {
+          "lower": 32.369217900266754,
+          "upper": 71.65628770323706
+        }
+      },
+      "60-69": {
+        "success": 48,
+        "total": 69,
+        "avgPredicted": 66.29634451638456,
+        "rate": 69.56521739130434,
+        "ci": {
+          "lower": 57.91620736176137,
+          "upper": 79.15052373695144
+        }
+      },
+      "70-79": {
+        "success": 104,
+        "total": 122,
+        "avgPredicted": 75.14034590413473,
+        "rate": 85.24590163934425,
+        "ci": {
+          "lower": 77.88085157665064,
+          "upper": 90.45902967088594
+        }
+      },
+      "80-89": {
+        "success": 125,
+        "total": 130,
+        "avgPredicted": 85.16323271805071,
+        "rate": 96.15384615384616,
+        "ci": {
+          "lower": 91.31204109992453,
+          "upper": 98.34618175455421
+        }
+      },
+      "90-100": {
+        "success": 45,
+        "total": 47,
+        "avgPredicted": 92.45805250692042,
+        "rate": 95.74468085106383,
+        "ci": {
+          "lower": 85.75121280614056,
+          "upper": 98.82519706294303
+        }
+      }
+    },
+    "away_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 56.13584982459765,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 6,
+        "total": 7,
+        "avgPredicted": 65.68279590213339,
+        "rate": 85.71428571428571,
+        "ci": {
+          "lower": 48.68654966809701,
+          "upper": 97.43210440510252
+        }
+      },
+      "70-79": {
+        "success": 35,
+        "total": 40,
+        "avgPredicted": 75.65171190846574,
+        "rate": 87.5,
+        "ci": {
+          "lower": 73.88757932976186,
+          "upper": 94.54058022645873
+        }
+      },
+      "80-89": {
+        "success": 110,
+        "total": 116,
+        "avgPredicted": 86.4763391149998,
+        "rate": 94.82758620689656,
+        "ci": {
+          "lower": 89.17305061462193,
+          "upper": 97.60816725963876
+        }
+      },
+      "90-100": {
+        "success": 223,
+        "total": 224,
+        "avgPredicted": 95.22266630687724,
+        "rate": 99.55357142857143,
+        "ci": {
+          "lower": 97.51496060262478,
+          "upper": 99.92115290781408
+        }
+      }
+    },
+    "ht_over_0.5": {
+      "0-59": {
+        "success": 23,
+        "total": 41,
+        "avgPredicted": 55.78419265076443,
+        "rate": 56.09756097560976,
+        "ci": {
+          "lower": 41.0402651517573,
+          "upper": 70.11009522789017
+        }
+      },
+      "60-69": {
+        "success": 70,
+        "total": 111,
+        "avgPredicted": 65.75154495359801,
+        "rate": 63.06306306306306,
+        "ci": {
+          "lower": 53.788047847727505,
+          "upper": 71.46412558071655
+        }
+      },
+      "70-79": {
+        "success": 140,
+        "total": 189,
+        "avgPredicted": 75.14956958678643,
+        "rate": 74.07407407407408,
+        "ci": {
+          "lower": 67.39069802586289,
+          "upper": 79.79829024222863
+        }
+      },
+      "80-89": {
+        "success": 39,
+        "total": 47,
+        "avgPredicted": 82.46675023624407,
+        "rate": 82.97872340425532,
+        "ci": {
+          "lower": 69.85994892711489,
+          "upper": 91.11374190873607
+        }
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 90.2363121163335,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "ht_under_0.5": {
+      "0-59": {
+        "success": 116,
+        "total": 389,
+        "avgPredicted": 25.873995851791356,
+        "rate": 29.82005141388175,
+        "ci": {
+          "lower": 25.48924058702941,
+          "upper": 34.545541880000556
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "ht_over_1.5": {
+      "0-59": {
+        "success": 132,
+        "total": 387,
+        "avgPredicted": 37.65351002090607,
+        "rate": 34.10852713178294,
+        "ci": {
+          "lower": 29.562088026888862,
+          "upper": 38.96736226704097
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 2,
+        "avgPredicted": 63.85654855032019,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 65.76280471103807
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "ht_under_1.5": {
+      "0-59": {
+        "success": 123,
+        "total": 216,
+        "avgPredicted": 53.17284719045894,
+        "rate": 56.94444444444444,
+        "ci": {
+          "lower": 50.27649098523377,
+          "upper": 63.36969790713236
+        }
+      },
+      "60-69": {
+        "success": 88,
+        "total": 121,
+        "avgPredicted": 64.47778516766148,
+        "rate": 72.72727272727273,
+        "ci": {
+          "lower": 64.184185941249,
+          "upper": 79.8716416034156
+        }
+      },
+      "70-79": {
+        "success": 45,
+        "total": 51,
+        "avgPredicted": 73.38934657286205,
+        "rate": 88.23529411764706,
+        "ci": {
+          "lower": 76.6188977022052,
+          "upper": 94.49500123582723
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 90.37485116658317,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "ht_over_2.5": {
+      "0-59": {
+        "success": 43,
+        "total": 389,
+        "avgPredicted": 15.344475023043241,
+        "rate": 11.053984575835475,
+        "ci": {
+          "lower": 8.310762939855302,
+          "upper": 14.558912776769414
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "ht_under_2.5": {
+      "0-59": {
+        "success": 4,
+        "total": 4,
+        "avgPredicted": 55.7480246117853,
+        "rate": 100,
+        "ci": {
+          "lower": 51.009997959600085,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 24,
+        "total": 31,
+        "avgPredicted": 67.25467896695149,
+        "rate": 77.41935483870968,
+        "ci": {
+          "lower": 60.187239941302614,
+          "upper": 88.60500840550121
+        }
+      },
+      "70-79": {
+        "success": 85,
+        "total": 98,
+        "avgPredicted": 76.39772449153023,
+        "rate": 86.73469387755102,
+        "ci": {
+          "lower": 78.61693677036048,
+          "upper": 92.08108839813649
+        }
+      },
+      "80-89": {
+        "success": 181,
+        "total": 204,
+        "avgPredicted": 84.67785440241319,
+        "rate": 88.72549019607843,
+        "ci": {
+          "lower": 83.65060297109271,
+          "upper": 92.36882721035315
+        }
+      },
+      "90-100": {
+        "success": 52,
+        "total": 52,
+        "avgPredicted": 91.95870714137094,
+        "rate": 100,
+        "ci": {
+          "lower": 93.12054095871179,
+          "upper": 100
+        }
+      }
+    },
+    "ht_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 58.016279879322894,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 67.10820352181499,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 26,
+        "total": 27,
+        "avgPredicted": 76.67632633453307,
+        "rate": 96.29629629629629,
+        "ci": {
+          "lower": 81.71614606584347,
+          "upper": 99.34320234669025
+        }
+      },
+      "80-89": {
+        "success": 47,
+        "total": 50,
+        "avgPredicted": 86.64332739651424,
+        "rate": 94,
+        "ci": {
+          "lower": 83.78265662912298,
+          "upper": 97.93854036353696
+        }
+      },
+      "90-100": {
+        "success": 300,
+        "total": 305,
+        "avgPredicted": 95.09440347130904,
+        "rate": 98.36065573770492,
+        "ci": {
+          "lower": 96.22042043814061,
+          "upper": 99.29779990523282
+        }
+      }
+    },
+    "st_over_0.5": {
+      "0-59": {
+        "success": 5,
+        "total": 8,
+        "avgPredicted": 51.89898813336618,
+        "rate": 62.5,
+        "ci": {
+          "lower": 30.573785458380186,
+          "upper": 86.3158240538479
+        }
+      },
+      "60-69": {
+        "success": 38,
+        "total": 53,
+        "avgPredicted": 65.71095015368228,
+        "rate": 71.69811320754717,
+        "ci": {
+          "lower": 58.429457999892264,
+          "upper": 82.03386463704966
+        }
+      },
+      "70-79": {
+        "success": 117,
+        "total": 152,
+        "avgPredicted": 75.55771770530595,
+        "rate": 76.97368421052632,
+        "ci": {
+          "lower": 69.66546223835559,
+          "upper": 82.95206735579642
+        }
+      },
+      "80-89": {
+        "success": 144,
+        "total": 169,
+        "avgPredicted": 84.27754070855234,
+        "rate": 85.20710059171599,
+        "ci": {
+          "lower": 79.07411718755772,
+          "upper": 89.77504875397486
+        }
+      },
+      "90-100": {
+        "success": 7,
+        "total": 7,
+        "avgPredicted": 91.46373190893283,
+        "rate": 100,
+        "ci": {
+          "lower": 64.56611570247934,
+          "upper": 100
+        }
+      }
+    },
+    "st_under_0.5": {
+      "0-59": {
+        "success": 78,
+        "total": 389,
+        "avgPredicted": 19.4195479240965,
+        "rate": 20.051413881748072,
+        "ci": {
+          "lower": 16.37410239914968,
+          "upper": 24.31446011561454
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "st_over_1.5": {
+      "0-59": {
+        "success": 153,
+        "total": 347,
+        "avgPredicted": 45.309603356942524,
+        "rate": 44.09221902017291,
+        "ci": {
+          "lower": 38.96112077647504,
+          "upper": 49.35269377687326
+        }
+      },
+      "60-69": {
+        "success": 29,
+        "total": 40,
+        "avgPredicted": 63.141498866314734,
+        "rate": 72.5,
+        "ci": {
+          "lower": 57.16474916687543,
+          "upper": 83.89214656685692
+        }
+      },
+      "70-79": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 74.24514683783701,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "st_under_1.5": {
+      "0-59": {
+        "success": 163,
+        "total": 328,
+        "avgPredicted": 47.14538852264432,
+        "rate": 49.69512195121951,
+        "ci": {
+          "lower": 44.3190180073736,
+          "upper": 55.07828480215963
+        }
+      },
+      "60-69": {
+        "success": 37,
+        "total": 55,
+        "avgPredicted": 63.94768982119822,
+        "rate": 67.27272727272727,
+        "ci": {
+          "lower": 54.102976176099475,
+          "upper": 78.18710431117483
+        }
+      },
+      "70-79": {
+        "success": 4,
+        "total": 5,
+        "avgPredicted": 71.19419444193294,
+        "rate": 80,
+        "ci": {
+          "lower": 37.55282641185388,
+          "upper": 96.37768390302125
+        }
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.6360390097761,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "st_over_2.5": {
+      "0-59": {
+        "success": 78,
+        "total": 389,
+        "avgPredicted": 22.56934754220361,
+        "rate": 20.051413881748072,
+        "ci": {
+          "lower": 16.37410239914968,
+          "upper": 24.31446011561454
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "st_under_2.5": {
+      "0-59": {
+        "success": 10,
+        "total": 21,
+        "avgPredicted": 55.97729785669634,
+        "rate": 47.61904761904761,
+        "ci": {
+          "lower": 28.343712296762945,
+          "upper": 67.63078209973324
+        }
+      },
+      "60-69": {
+        "success": 60,
+        "total": 79,
+        "avgPredicted": 65.60033569997508,
+        "rate": 75.9493670886076,
+        "ci": {
+          "lower": 65.46409953317426,
+          "upper": 84.0279431120668
+        }
+      },
+      "70-79": {
+        "success": 145,
+        "total": 179,
+        "avgPredicted": 74.62061580848986,
+        "rate": 81.00558659217877,
+        "ci": {
+          "lower": 74.63117868755953,
+          "upper": 86.07710651668283
+        }
+      },
+      "80-89": {
+        "success": 90,
+        "total": 104,
+        "avgPredicted": 84.36999152600441,
+        "rate": 86.53846153846155,
+        "ci": {
+          "lower": 78.66477402039114,
+          "upper": 91.80895782335006
+        }
+      },
+      "90-100": {
+        "success": 6,
+        "total": 6,
+        "avgPredicted": 91.83411372833159,
+        "rate": 100,
+        "ci": {
+          "lower": 60.96569663469354,
+          "upper": 99.99999999999999
+        }
+      }
+    },
+    "st_over_3.5": {
+      "0-59": {
+        "success": 27,
+        "total": 389,
+        "avgPredicted": 8.821409126138484,
+        "rate": 6.940874035989718,
+        "ci": {
+          "lower": 4.813679835843478,
+          "upper": 9.91021905877461
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "st_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 56.388119575062795,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 6,
+        "total": 7,
+        "avgPredicted": 66.02718243909781,
+        "rate": 85.71428571428571,
+        "ci": {
+          "lower": 48.68654966809701,
+          "upper": 97.43210440510252
+        }
+      },
+      "70-79": {
+        "success": 28,
+        "total": 38,
+        "avgPredicted": 75.61368511343264,
+        "rate": 73.68421052631578,
+        "ci": {
+          "lower": 57.990849793624655,
+          "upper": 85.0285376102987
+        }
+      },
+      "80-89": {
+        "success": 141,
+        "total": 150,
+        "avgPredicted": 86.3721320434981,
+        "rate": 94,
+        "ci": {
+          "lower": 88.99090795570952,
+          "upper": 96.81163179946721
+        }
+      },
+      "90-100": {
+        "success": 185,
+        "total": 192,
+        "avgPredicted": 93.66857027538104,
+        "rate": 96.35416666666666,
+        "ci": {
+          "lower": 92.66682232288456,
+          "upper": 98.22295798936779
+        }
+      }
+    },
+    "home_ht_over_0.5": {
+      "0-59": {
+        "success": 157,
+        "total": 354,
+        "avgPredicted": 45.04365787540565,
+        "rate": 44.35028248587571,
+        "ci": {
+          "lower": 39.26314892533929,
+          "upper": 49.558720862857506
+        }
+      },
+      "60-69": {
+        "success": 21,
+        "total": 32,
+        "avgPredicted": 63.460237036595565,
+        "rate": 65.625,
+        "ci": {
+          "lower": 48.31077350878594,
+          "upper": 79.58976664567146
+        }
+      },
+      "70-79": {
+        "success": 2,
+        "total": 3,
+        "avgPredicted": 71.19649963062884,
+        "rate": 66.66666666666666,
+        "ci": {
+          "lower": 20.76549551264879,
+          "upper": 93.85096847238394
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_ht_under_0.5": {
+      "0-59": {
+        "success": 164,
+        "total": 333,
+        "avgPredicted": 47.890225452956656,
+        "rate": 49.249249249249246,
+        "ci": {
+          "lower": 43.9187512590408,
+          "upper": 54.596871514393364
+        }
+      },
+      "60-69": {
+        "success": 37,
+        "total": 47,
+        "avgPredicted": 64.31407341332256,
+        "rate": 78.72340425531915,
+        "ci": {
+          "lower": 65.09569794902073,
+          "upper": 88.01041987575269
+        }
+      },
+      "70-79": {
+        "success": 8,
+        "total": 9,
+        "avgPredicted": 73.33572242030388,
+        "rate": 88.88888888888889,
+        "ci": {
+          "lower": 56.49937852319399,
+          "upper": 98.01096286728695
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_ht_over_1.5": {
+      "0-59": {
+        "success": 48,
+        "total": 389,
+        "avgPredicted": 14.386756663186311,
+        "rate": 12.339331619537274,
+        "ci": {
+          "lower": 9.434493261582583,
+          "upper": 15.980737711919202
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_ht_under_1.5": {
+      "0-59": {
+        "success": 3,
+        "total": 3,
+        "avgPredicted": 55.87453745681179,
+        "rate": 100,
+        "ci": {
+          "lower": 43.84939195509823,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 22,
+        "total": 27,
+        "avgPredicted": 66.76450378793038,
+        "rate": 81.48148148148148,
+        "ci": {
+          "lower": 63.30094349480825,
+          "upper": 91.81941342571469
+        }
+      },
+      "70-79": {
+        "success": 75,
+        "total": 93,
+        "avgPredicted": 75.77989691579646,
+        "rate": 80.64516129032258,
+        "ci": {
+          "lower": 71.46734140699786,
+          "upper": 87.39166133562513
+        }
+      },
+      "80-89": {
+        "success": 174,
+        "total": 197,
+        "avgPredicted": 85.34255829307668,
+        "rate": 88.3248730964467,
+        "ci": {
+          "lower": 83.09050890320474,
+          "upper": 92.09311839313227
+        }
+      },
+      "90-100": {
+        "success": 67,
+        "total": 69,
+        "avgPredicted": 92.65611661551877,
+        "rate": 97.10144927536231,
+        "ci": {
+          "lower": 90.03322653873424,
+          "upper": 99.2014964766855
+        }
+      }
+    },
+    "home_ht_under_2.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 59.00596469656672,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 68.25717144957271,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 25,
+        "total": 26,
+        "avgPredicted": 77.7434609013583,
+        "rate": 96.15384615384616,
+        "ci": {
+          "lower": 81.1068230080416,
+          "upper": 99.31781910230102
+        }
+      },
+      "80-89": {
+        "success": 38,
+        "total": 40,
+        "avgPredicted": 87.58331735171313,
+        "rate": 95,
+        "ci": {
+          "lower": 83.4958291820748,
+          "upper": 98.6179622853899
+        }
+      },
+      "90-100": {
+        "success": 313,
+        "total": 316,
+        "avgPredicted": 96.67896359786991,
+        "rate": 99.0506329113924,
+        "ci": {
+          "lower": 97.24635659176877,
+          "upper": 99.67662028178363
+        }
+      }
+    },
+    "home_ht_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 59.87232182883406,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 69.73689074127479,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 26,
+        "total": 26,
+        "avgPredicted": 79.63732687681805,
+        "rate": 100,
+        "ci": {
+          "lower": 87.12669561953784,
+          "upper": 100.00000000000003
+        }
+      },
+      "80-89": {
+        "success": 33,
+        "total": 33,
+        "avgPredicted": 89.58310143217884,
+        "rate": 100,
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 322,
+        "total": 323,
+        "avgPredicted": 99.33393449787384,
+        "rate": 99.69040247678018,
+        "ci": {
+          "lower": 98.2673832927213,
+          "upper": 99.94532892016711
+        }
+      }
+    },
+    "home_st_over_0.5": {
+      "0-59": {
+        "success": 156,
+        "total": 289,
+        "avgPredicted": 49.03959563530287,
+        "rate": 53.979238754325266,
+        "ci": {
+          "lower": 48.218194428321986,
+          "upper": 59.63588094894682
+        }
+      },
+      "60-69": {
+        "success": 56,
+        "total": 78,
+        "avgPredicted": 64.21356260304368,
+        "rate": 71.7948717948718,
+        "ci": {
+          "lower": 60.96886185077566,
+          "upper": 80.57480298471143
+        }
+      },
+      "70-79": {
+        "success": 20,
+        "total": 22,
+        "avgPredicted": 72.96819058015024,
+        "rate": 90.9090909090909,
+        "ci": {
+          "lower": 72.18461934161421,
+          "upper": 97.47051037171623
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_st_under_0.5": {
+      "0-59": {
+        "success": 140,
+        "total": 366,
+        "avgPredicted": 42.473011484852364,
+        "rate": 38.25136612021858,
+        "ci": {
+          "lower": 33.41870377909255,
+          "upper": 43.32809809500705
+        }
+      },
+      "60-69": {
+        "success": 15,
+        "total": 21,
+        "avgPredicted": 63.842042118525015,
+        "rate": 71.42857142857143,
+        "ci": {
+          "lower": 50.0432261771624,
+          "upper": 86.1863242543718
+        }
+      },
+      "70-79": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 73.89684882589442,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_st_over_1.5": {
+      "0-59": {
+        "success": 70,
+        "total": 389,
+        "avgPredicted": 19.427602482804314,
+        "rate": 17.994858611825194,
+        "ci": {
+          "lower": 14.496203679483804,
+          "upper": 22.1194704242771
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "home_st_under_1.5": {
+      "0-59": {
+        "success": 8,
+        "total": 14,
+        "avgPredicted": 56.71502265191365,
+        "rate": 57.14285714285714,
+        "ci": {
+          "lower": 32.59026690286937,
+          "upper": 78.61949006959948
+        }
+      },
+      "60-69": {
+        "success": 50,
+        "total": 66,
+        "avgPredicted": 66.12115643768564,
+        "rate": 75.75757575757575,
+        "ci": {
+          "lower": 64.19064250894372,
+          "upper": 84.49094554173094
+        }
+      },
+      "70-79": {
+        "success": 101,
+        "total": 129,
+        "avgPredicted": 75.34635144654216,
+        "rate": 78.29457364341084,
+        "ci": {
+          "lower": 70.41840313317833,
+          "upper": 84.53426229692789
+        }
+      },
+      "80-89": {
+        "success": 132,
+        "total": 151,
+        "avgPredicted": 84.15753504477136,
+        "rate": 87.41721854304636,
+        "ci": {
+          "lower": 81.18310994380352,
+          "upper": 91.79469447051409
+        }
+      },
+      "90-100": {
+        "success": 28,
+        "total": 29,
+        "avgPredicted": 92.31685737278164,
+        "rate": 96.55172413793103,
+        "ci": {
+          "lower": 82.82410893529976,
+          "upper": 99.38869433859678
+        }
+      }
+    },
+    "home_st_under_2.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 58.33356639485844,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 67.12138579605627,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 23,
+        "total": 27,
+        "avgPredicted": 76.36901634206579,
+        "rate": 85.18518518518519,
+        "ci": {
+          "lower": 67.52093665317051,
+          "upper": 94.08416814035512
+        }
+      },
+      "80-89": {
+        "success": 70,
+        "total": 74,
+        "avgPredicted": 86.62440969607164,
+        "rate": 94.5945945945946,
+        "ci": {
+          "lower": 86.90943547687496,
+          "upper": 97.87813312397599
+        }
+      },
+      "90-100": {
+        "success": 273,
+        "total": 281,
+        "avgPredicted": 95.4478775714216,
+        "rate": 97.15302491103202,
+        "ci": {
+          "lower": 94.48366930367665,
+          "upper": 98.55049424546786
+        }
+      }
+    },
+    "home_st_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 59.74014199785533,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 69.47342492185176,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 25,
+        "total": 26,
+        "avgPredicted": 79.28005107231544,
+        "rate": 96.15384615384616,
+        "ci": {
+          "lower": 81.1068230080416,
+          "upper": 99.31781910230102
+        }
+      },
+      "80-89": {
+        "success": 33,
+        "total": 33,
+        "avgPredicted": 89.17214490194166,
+        "rate": 100,
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 321,
+        "total": 323,
+        "avgPredicted": 98.71261662277298,
+        "rate": 99.38080495356037,
+        "ci": {
+          "lower": 97.77076161951447,
+          "upper": 99.83003338332482
+        }
+      }
+    },
+    "away_ht_over_0.5": {
+      "0-59": {
+        "success": 148,
+        "total": 358,
+        "avgPredicted": 45.777694305403315,
+        "rate": 41.340782122905026,
+        "ci": {
+          "lower": 36.35783768406057,
+          "upper": 46.507592935304366
+        }
+      },
+      "60-69": {
+        "success": 22,
+        "total": 28,
+        "avgPredicted": 63.955010175476744,
+        "rate": 78.57142857142857,
+        "ci": {
+          "lower": 60.46105292072612,
+          "upper": 89.78767829881058
+        }
+      },
+      "70-79": {
+        "success": 1,
+        "total": 3,
+        "avgPredicted": 72.08131506290725,
+        "rate": 33.33333333333333,
+        "ci": {
+          "lower": 6.14903152761605,
+          "upper": 79.23450448735122
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_ht_under_0.5": {
+      "0-59": {
+        "success": 184,
+        "total": 342,
+        "avgPredicted": 47.864333414946735,
+        "rate": 53.80116959064327,
+        "ci": {
+          "lower": 48.50430800809594,
+          "upper": 59.01358457625481
+        }
+      },
+      "60-69": {
+        "success": 30,
+        "total": 43,
+        "avgPredicted": 63.94126733799066,
+        "rate": 69.76744186046511,
+        "ci": {
+          "lower": 54.89435424759017,
+          "upper": 81.39817205381712
+        }
+      },
+      "70-79": {
+        "success": 3,
+        "total": 3,
+        "avgPredicted": 73.10822813370504,
+        "rate": 100,
+        "ci": {
+          "lower": 43.84939195509823,
+          "upper": 100
+        }
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 86.20000071704987,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_ht_over_1.5": {
+      "0-59": {
+        "success": 47,
+        "total": 389,
+        "avgPredicted": 14.705777241826398,
+        "rate": 12.082262210796916,
+        "ci": {
+          "lower": 9.208804762835552,
+          "upper": 15.69731515929082
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_ht_under_1.5": {
+      "0-59": {
+        "success": 6,
+        "total": 6,
+        "avgPredicted": 56.37841562222371,
+        "rate": 100,
+        "ci": {
+          "lower": 60.96569663469354,
+          "upper": 99.99999999999999
+        }
+      },
+      "60-69": {
+        "success": 22,
+        "total": 28,
+        "avgPredicted": 67.27778142276013,
+        "rate": 78.57142857142857,
+        "ci": {
+          "lower": 60.46105292072612,
+          "upper": 89.78767829881058
+        }
+      },
+      "70-79": {
+        "success": 72,
+        "total": 92,
+        "avgPredicted": 76.24523361545388,
+        "rate": 78.26086956521739,
+        "ci": {
+          "lower": 68.79280920305374,
+          "upper": 85.46338017608852
+        }
+      },
+      "80-89": {
+        "success": 179,
+        "total": 199,
+        "avgPredicted": 85.23666704402038,
+        "rate": 89.9497487437186,
+        "ci": {
+          "lower": 84.98677199873816,
+          "upper": 93.3995156266799
+        }
+      },
+      "90-100": {
+        "success": 63,
+        "total": 64,
+        "avgPredicted": 92.19915695276714,
+        "rate": 98.4375,
+        "ci": {
+          "lower": 91.66570109970937,
+          "upper": 99.72365292495986
+        }
+      }
+    },
+    "away_ht_under_2.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 58.17055438527767,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 67.84478068992925,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 24,
+        "total": 26,
+        "avgPredicted": 77.68903341910337,
+        "rate": 92.3076923076923,
+        "ci": {
+          "lower": 75.85805251948496,
+          "upper": 97.86453608166245
+        }
+      },
+      "80-89": {
+        "success": 40,
+        "total": 42,
+        "avgPredicted": 87.53978258716833,
+        "rate": 95.23809523809523,
+        "ci": {
+          "lower": 84.20986468452027,
+          "upper": 98.68427513607936
+        }
+      },
+      "90-100": {
+        "success": 312,
+        "total": 314,
+        "avgPredicted": 96.62879286581577,
+        "rate": 99.36305732484077,
+        "ci": {
+          "lower": 97.70770226798263,
+          "upper": 99.82515686688205
+        }
+      }
+    },
+    "away_ht_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 59.693374442519094,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 69.6397783155792,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 26,
+        "total": 26,
+        "avgPredicted": 79.62531130482914,
+        "rate": 100,
+        "ci": {
+          "lower": 87.12669561953784,
+          "upper": 100.00000000000003
+        }
+      },
+      "80-89": {
+        "success": 33,
+        "total": 33,
+        "avgPredicted": 89.58088129140256,
+        "rate": 100,
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 323,
+        "total": 323,
+        "avgPredicted": 99.30692614304259,
+        "rate": 100,
+        "ci": {
+          "lower": 98.82462942293758,
+          "upper": 99.99999999999999
+        }
+      }
+    },
+    "away_st_over_0.5": {
+      "0-59": {
+        "success": 125,
+        "total": 278,
+        "avgPredicted": 49.24625403024093,
+        "rate": 44.96402877697842,
+        "ci": {
+          "lower": 39.22449466608725,
+          "upper": 50.84084700100519
+        }
+      },
+      "60-69": {
+        "success": 57,
+        "total": 93,
+        "avgPredicted": 64.27994530414571,
+        "rate": 61.29032258064516,
+        "ci": {
+          "lower": 51.13079516226957,
+          "upper": 70.55410058501259
+        }
+      },
+      "70-79": {
+        "success": 15,
+        "total": 17,
+        "avgPredicted": 73.89669984874878,
+        "rate": 88.23529411764706,
+        "ci": {
+          "lower": 65.66315750229009,
+          "upper": 96.7120919987079
+        }
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 81.62170799130324,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_st_under_0.5": {
+      "0-59": {
+        "success": 183,
+        "total": 378,
+        "avgPredicted": 42.57231364699885,
+        "rate": 48.41269841269841,
+        "ci": {
+          "lower": 43.41601406810798,
+          "upper": 53.44132153911764
+        }
+      },
+      "60-69": {
+        "success": 7,
+        "total": 10,
+        "avgPredicted": 63.79044777915591,
+        "rate": 70,
+        "ci": {
+          "lower": 39.67732199795652,
+          "upper": 89.2210712513788
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 83.40182453034795,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_st_over_1.5": {
+      "0-59": {
+        "success": 69,
+        "total": 389,
+        "avgPredicted": 19.839660454075677,
+        "rate": 17.737789203084834,
+        "ci": {
+          "lower": 14.262692091807704,
+          "upper": 21.84387096057778
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "away_st_under_1.5": {
+      "0-59": {
+        "success": 10,
+        "total": 16,
+        "avgPredicted": 55.61232310517121,
+        "rate": 62.5,
+        "ci": {
+          "lower": 38.64064709793481,
+          "upper": 81.5190174452472
+        }
+      },
+      "60-69": {
+        "success": 38,
+        "total": 56,
+        "avgPredicted": 65.91805693548172,
+        "rate": 67.85714285714286,
+        "ci": {
+          "lower": 54.822394156003895,
+          "upper": 78.59917211227771
+        }
+      },
+      "70-79": {
+        "success": 113,
+        "total": 140,
+        "avgPredicted": 74.57391784316852,
+        "rate": 80.71428571428572,
+        "ci": {
+          "lower": 73.39429387953547,
+          "upper": 86.39369513059792
+        }
+      },
+      "80-89": {
+        "success": 142,
+        "total": 159,
+        "avgPredicted": 84.43101192275857,
+        "rate": 89.30817610062893,
+        "ci": {
+          "lower": 83.54492597135501,
+          "upper": 93.21678602361433
+        }
+      },
+      "90-100": {
+        "success": 17,
+        "total": 18,
+        "avgPredicted": 92.01579619625828,
+        "rate": 94.44444444444444,
+        "ci": {
+          "lower": 74.24220019799247,
+          "upper": 99.01250641690757
+        }
+      }
+    },
+    "away_st_under_2.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 57.01109032280783,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 66.47776002419539,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 26,
+        "total": 27,
+        "avgPredicted": 76.19861002463448,
+        "rate": 96.29629629629629,
+        "ci": {
+          "lower": 81.71614606584347,
+          "upper": 99.34320234669025
+        }
+      },
+      "80-89": {
+        "success": 60,
+        "total": 66,
+        "avgPredicted": 86.20362393279285,
+        "rate": 90.9090909090909,
+        "ci": {
+          "lower": 81.55105617491718,
+          "upper": 95.76676014086023
+        }
+      },
+      "90-100": {
+        "success": 282,
+        "total": 289,
+        "avgPredicted": 95.11578911214838,
+        "rate": 97.57785467128028,
+        "ci": {
+          "lower": 95.08554440584165,
+          "upper": 98.82187858324187
+        }
+      }
+    },
+    "away_st_under_3.5": {
+      "0-59": {
+        "success": 2,
+        "total": 2,
+        "avgPredicted": 59.394533655842466,
+        "rate": 100,
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 5,
+        "avgPredicted": 69.28847370436225,
+        "rate": 100,
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 26,
+        "total": 26,
+        "avgPredicted": 79.25686361851805,
+        "rate": 100,
+        "ci": {
+          "lower": 87.12669561953784,
+          "upper": 100.00000000000003
+        }
+      },
+      "80-89": {
+        "success": 33,
+        "total": 33,
+        "avgPredicted": 89.16794237740767,
+        "rate": 100,
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 322,
+        "total": 323,
+        "avgPredicted": 98.66239272192692,
+        "rate": 99.69040247678018,
+        "ci": {
+          "lower": 98.2673832927213,
+          "upper": 99.94532892016711
+        }
+      }
+    },
+    "draw": {
+      "0-59": {
+        "success": 112,
+        "total": 389,
+        "avgPredicted": 48.84318766066839,
+        "rate": 28.79177377892031,
+        "ci": {
+          "lower": 24.516754828191367,
+          "upper": 33.48158343333695
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "favorite_win": {
+      "0-59": {
+        "success": 200,
+        "total": 389,
+        "avgPredicted": 48.84318766066839,
+        "rate": 51.41388174807198,
+        "ci": {
+          "lower": 46.45757069007366,
+          "upper": 56.34254009249111
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "outsider_win": {
+      "0-59": {
+        "success": 77,
+        "total": 389,
+        "avgPredicted": 48.84318766066839,
+        "rate": 19.794344473007712,
+        "ci": {
+          "lower": 16.1384502128257,
+          "upper": 24.041001250563106
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "double_chance_favorite": {
+      "0-59": {
+        "success": 312,
+        "total": 389,
+        "avgPredicted": 48.84318766066839,
+        "rate": 80.20565552699229,
+        "ci": {
+          "lower": 75.9589987494369,
+          "upper": 83.86154978717431
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "double_chance_outsider": {
+      "0-59": {
+        "success": 189,
+        "total": 389,
+        "avgPredicted": 48.84318766066839,
+        "rate": 48.58611825192802,
+        "ci": {
+          "lower": 43.65745990750889,
+          "upper": 53.54242930992634
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "btts": {
+      "0-59": {
+        "success": 104,
+        "total": 201,
+        "avgPredicted": 50.20501321376855,
+        "rate": 51.741293532338304,
+        "ci": {
+          "lower": 44.86545017852595,
+          "upper": 58.55182443756766
+        }
+      },
+      "60-69": {
+        "success": 83,
+        "total": 126,
+        "avgPredicted": 65.20876329514098,
+        "rate": 65.87301587301587,
+        "ci": {
+          "lower": 57.23434921846445,
+          "upper": 73.57241841224865
+        }
+      },
+      "70-79": {
+        "success": 21,
+        "total": 30,
+        "avgPredicted": 73.3321613130156,
+        "rate": 70,
+        "ci": {
+          "lower": 52.12387898833981,
+          "upper": 83.33543735604106
+        }
+      },
+      "80-89": {
+        "success": 27,
+        "total": 31,
+        "avgPredicted": 82.81148792385436,
+        "rate": 87.09677419354838,
+        "ci": {
+          "lower": 71.14724304561464,
+          "upper": 94.86579883535524
+        }
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 92.93880314534914,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "btts_no": {
+      "0-59": {
+        "success": 144,
+        "total": 375,
+        "avgPredicted": 38.17392200855903,
+        "rate": 38.4,
+        "ci": {
+          "lower": 33.61861727326304,
+          "upper": 43.41663967845504
+        }
+      },
+      "60-69": {
+        "success": 8,
+        "total": 13,
+        "avgPredicted": 62.27926358039871,
+        "rate": 61.53846153846154,
+        "ci": {
+          "lower": 35.52248097226855,
+          "upper": 82.2905534187632
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 83.94028302779867,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "match_over_0.5": {
+      "0-59": {
+        "success": 1,
+        "total": 2,
+        "avgPredicted": 55.61971818390579,
+        "rate": 50,
+        "ci": {
+          "lower": 9.452865480086615,
+          "upper": 90.54713451991339
+        }
+      },
+      "60-69": {
+        "success": 5,
+        "total": 6,
+        "avgPredicted": 66.3176414938433,
+        "rate": 83.33333333333334,
+        "ci": {
+          "lower": 43.649056343635394,
+          "upper": 96.99474141282697
+        }
+      },
+      "70-79": {
+        "success": 24,
+        "total": 26,
+        "avgPredicted": 75.3601353983696,
+        "rate": 92.3076923076923,
+        "ci": {
+          "lower": 75.85805251948496,
+          "upper": 97.86453608166245
+        }
+      },
+      "80-89": {
+        "success": 52,
+        "total": 60,
+        "avgPredicted": 86.18871527420177,
+        "rate": 86.66666666666667,
+        "ci": {
+          "lower": 75.83460540992789,
+          "upper": 93.08597302169036
+        }
+      },
+      "90-100": {
+        "success": 279,
+        "total": 295,
+        "avgPredicted": 95.04093636888348,
+        "rate": 94.57627118644068,
+        "ci": {
+          "lower": 91.3722001563677,
+          "upper": 96.63428890004212
+        }
+      }
+    },
+    "match_under_0.5": {
+      "0-59": {
+        "success": 28,
+        "total": 389,
+        "avgPredicted": 5.509234059225653,
+        "rate": 7.197943444730077,
+        "ci": {
+          "lower": 5.026637749515593,
+          "upper": 10.206372196477908
+        }
+      },
+      "60-69": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "match_over_1.5": {
+      "0-59": {
+        "success": 6,
+        "total": 12,
+        "avgPredicted": 51.519795479916496,
+        "rate": 50,
+        "ci": {
+          "lower": 25.377817039342222,
+          "upper": 74.62218296065778
+        }
+      },
+      "60-69": {
+        "success": 44,
+        "total": 71,
+        "avgPredicted": 65.96516826948483,
+        "rate": 61.97183098591549,
+        "ci": {
+          "lower": 50.341642238898274,
+          "upper": 72.37299774741948
+        }
+      },
+      "70-79": {
+        "success": 49,
+        "total": 68,
+        "avgPredicted": 76.0126691083975,
+        "rate": 72.05882352941177,
+        "ci": {
+          "lower": 60.436340451653315,
+          "upper": 81.32219499299158
+        }
+      },
+      "80-89": {
+        "success": 96,
+        "total": 122,
+        "avgPredicted": 84.7469921510877,
+        "rate": 78.68852459016394,
+        "ci": {
+          "lower": 70.60439583463517,
+          "upper": 85.02108890173183
+        }
+      },
+      "90-100": {
+        "success": 106,
+        "total": 116,
+        "avgPredicted": 93.19133995445837,
+        "rate": 91.37931034482759,
+        "ci": {
+          "lower": 84.85562378006445,
+          "upper": 95.2501157961762
+        }
+      }
+    },
+    "match_under_1.5": {
+      "0-59": {
+        "success": 87,
+        "total": 388,
+        "avgPredicted": 20.499153522299487,
+        "rate": 22.422680412371136,
+        "ci": {
+          "lower": 18.554568733296517,
+          "upper": 26.831526056026515
+        }
+      },
+      "60-69": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 67.89489920268556,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "match_over_2.5": {
+      "0-59": {
+        "success": 105,
+        "total": 244,
+        "avgPredicted": 44.33137422710733,
+        "rate": 43.0327868852459,
+        "ci": {
+          "lower": 36.975570864075905,
+          "upper": 49.30598961648911
+        }
+      },
+      "60-69": {
+        "success": 61,
+        "total": 93,
+        "avgPredicted": 65.36193626464008,
+        "rate": 65.59139784946237,
+        "ci": {
+          "lower": 55.49073090695003,
+          "upper": 74.45507750596343
+        }
+      },
+      "70-79": {
+        "success": 23,
+        "total": 31,
+        "avgPredicted": 76.91775681026265,
+        "rate": 74.19354838709677,
+        "ci": {
+          "lower": 56.75352757228489,
+          "upper": 86.29845626313025
+        }
+      },
+      "80-89": {
+        "success": 17,
+        "total": 20,
+        "avgPredicted": 84.63975273088954,
+        "rate": 85,
+        "ci": {
+          "lower": 63.95767041130426,
+          "upper": 94.7632208040504
+        }
+      },
+      "90-100": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 95.84366641956737,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "match_under_2.5": {
+      "0-59": {
+        "success": 159,
+        "total": 361,
+        "avgPredicted": 40.22264622144367,
+        "rate": 44.04432132963989,
+        "ci": {
+          "lower": 39.01250492489694,
+          "upper": 49.201558383673145
+        }
+      },
+      "60-69": {
+        "success": 21,
+        "total": 26,
+        "avgPredicted": 64.3277633611144,
+        "rate": 80.76923076923077,
+        "ci": {
+          "lower": 62.12336384535001,
+          "upper": 91.49306422821174
+        }
+      },
+      "70-79": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 71.18124259100937,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "80-89": {
+        "success": 1,
+        "total": 1,
+        "avgPredicted": 88.90963073606436,
+        "rate": 100,
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "match_over_3.5": {
+      "0-59": {
+        "success": 111,
+        "total": 378,
+        "avgPredicted": 33.489303067365704,
+        "rate": 29.365079365079367,
+        "ci": {
+          "lower": 24.99982273154681,
+          "upper": 34.145540162386176
+        }
+      },
+      "60-69": {
+        "success": 10,
+        "total": 10,
+        "avgPredicted": 62.26832910457157,
+        "rate": 100,
+        "ci": {
+          "lower": 72.24598312333835,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "success": 0,
+        "total": 1,
+        "avgPredicted": 75.80314840098559,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 79.34567085261071
+        }
+      },
+      "80-89": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "90-100": {
+        "success": 0,
+        "total": 0,
+        "avgPredicted": 0,
+        "rate": 0,
+        "ci": {
+          "lower": 0,
+          "upper": 0
+        }
+      }
+    },
+    "match_under_3.5": {
+      "0-59": {
+        "success": 83,
+        "total": 149,
+        "avgPredicted": 52.65644045022998,
+        "rate": 55.70469798657718,
+        "ci": {
+          "lower": 47.684836279164045,
+          "upper": 63.43779002152896
+        }
+      },
+      "60-69": {
+        "success": 74,
+        "total": 108,
+        "avgPredicted": 65.31391815228429,
+        "rate": 68.51851851851852,
+        "ci": {
+          "lower": 59.25128648973632,
+          "upper": 76.5135809656649
+        }
+      },
+      "70-79": {
+        "success": 43,
+        "total": 55,
+        "avgPredicted": 76.01407192015851,
+        "rate": 78.18181818181819,
+        "ci": {
+          "lower": 65.62971335952183,
+          "upper": 87.05410217234679
+        }
+      },
+      "80-89": {
+        "success": 29,
+        "total": 32,
+        "avgPredicted": 86.05139595749813,
+        "rate": 90.625,
+        "ci": {
+          "lower": 75.78150066422116,
+          "upper": 96.75990373736805
+        }
+      },
+      "90-100": {
+        "success": 39,
+        "total": 45,
+        "avgPredicted": 93.4885692781306,
+        "rate": 86.66666666666667,
+        "ci": {
+          "lower": 73.8224177587027,
+          "upper": 93.74293636565034
+        }
+      }
+    }
   },
-  "calibration": {},
+  "marketOccurrences": {
+    "favorite_win": 200,
+    "double_chance_favorite": 312,
+    "btts_no": 153,
+    "match_over_0.5": 361,
+    "ht_over_0.5": 273,
+    "st_over_0.5": 311,
+    "home_over_0.5": 311,
+    "away_under_0.5": 103,
+    "home_ht_over_0.5": 180,
+    "away_ht_under_0.5": 218,
+    "home_st_over_0.5": 232,
+    "away_st_under_0.5": 191,
+    "match_over_1.5": 301,
+    "ht_under_1.5": 257,
+    "st_under_1.5": 205,
+    "home_over_1.5": 156,
+    "away_under_1.5": 240,
+    "home_ht_under_1.5": 341,
+    "away_ht_under_1.5": 342,
+    "home_st_under_1.5": 319,
+    "away_st_under_1.5": 320,
+    "match_under_2.5": 182,
+    "ht_under_2.5": 346,
+    "st_under_2.5": 311,
+    "home_under_2.5": 322,
+    "away_under_2.5": 333,
+    "home_ht_under_2.5": 383,
+    "away_ht_under_2.5": 383,
+    "home_st_under_2.5": 373,
+    "away_st_under_2.5": 375,
+    "match_under_3.5": 268,
+    "ht_under_3.5": 380,
+    "st_under_3.5": 362,
+    "home_under_3.5": 371,
+    "away_under_3.5": 376,
+    "home_ht_under_3.5": 388,
+    "away_ht_under_3.5": 389,
+    "home_st_under_3.5": 386,
+    "away_st_under_3.5": 388,
+    "home_under_0.5": 78,
+    "away_over_0.5": 286,
+    "home_ht_under_0.5": 209,
+    "away_ht_over_0.5": 171,
+    "home_st_under_0.5": 157,
+    "away_st_over_0.5": 198,
+    "st_over_1.5": 184,
+    "home_under_1.5": 233,
+    "away_over_1.5": 149,
+    "away_st_over_1.5": 69,
+    "match_over_2.5": 207,
+    "away_over_2.5": 56,
+    "btts": 236,
+    "st_over_2.5": 78,
+    "away_st_over_2.5": 14,
+    "match_over_3.5": 121,
+    "st_over_3.5": 27,
+    "away_over_3.5": 13,
+    "ht_over_1.5": 132,
+    "away_ht_over_1.5": 47,
+    "outsider_win": 77,
+    "double_chance_outsider": 189,
+    "st_under_0.5": 78,
+    "home_ht_over_1.5": 48,
+    "ht_over_2.5": 43,
+    "home_over_2.5": 67,
+    "home_ht_over_2.5": 6,
+    "ht_over_3.5": 9,
+    "home_st_over_1.5": 70,
+    "draw": 112,
+    "ht_under_0.5": 116,
+    "match_under_1.5": 88,
+    "home_over_3.5": 18,
+    "away_ht_over_2.5": 6,
+    "match_under_0.5": 28,
+    "home_st_over_2.5": 16,
+    "home_st_over_3.5": 3,
+    "home_ht_over_3.5": 1,
+    "away_st_over_3.5": 1
+  },
+  "calibration": {
+    "home_over_0.5": {
+      "0-59": {
+        "predicted": "54.50",
+        "actual": "48.78",
+        "ci": {
+          "lower": 34.254187239935696,
+          "upper": 63.515740684134805
+        }
+      },
+      "60-69": {
+        "predicted": "65.35",
+        "actual": "75.00",
+        "ci": {
+          "lower": 64.78552553489342,
+          "upper": 83.0278111984994
+        }
+      },
+      "70-79": {
+        "predicted": "75.03",
+        "actual": "81.70",
+        "ci": {
+          "lower": 74.8217435434973,
+          "upper": 87.02409327530589
+        }
+      },
+      "80-89": {
+        "predicted": "84.46",
+        "actual": "91.75",
+        "ci": {
+          "lower": 84.56221298338818,
+          "upper": 95.76178028922945
+        }
+      },
+      "90-100": {
+        "predicted": "91.50",
+        "actual": "100.00",
+        "ci": {
+          "lower": 78.46829880728185,
+          "upper": 100
+        }
+      }
+    },
+    "home_under_0.5": {
+      "0-59": {
+        "predicted": "23.50",
+        "actual": "20.05",
+        "ci": {
+          "lower": 16.37410239914968,
+          "upper": 24.31446011561454
+        }
+      }
+    },
+    "home_over_1.5": {
+      "0-59": {
+        "predicted": "39.06",
+        "actual": "35.45",
+        "ci": {
+          "lower": 30.598002162391303,
+          "upper": 40.614077590978894
+        }
+      },
+      "60-69": {
+        "predicted": "63.73",
+        "actual": "77.14",
+        "ci": {
+          "lower": 60.982362219898015,
+          "upper": 87.9342632538209
+        }
+      },
+      "70-79": {
+        "predicted": "73.45",
+        "actual": "85.71",
+        "ci": {
+          "lower": 48.68654966809701,
+          "upper": 97.43210440510252
+        }
+      }
+    },
+    "home_under_1.5": {
+      "0-59": {
+        "predicted": "47.61",
+        "actual": "49.59",
+        "ci": {
+          "lower": 43.34317974387047,
+          "upper": 55.84328829083155
+        }
+      },
+      "60-69": {
+        "predicted": "64.04",
+        "actual": "70.19",
+        "ci": {
+          "lower": 60.809890256901745,
+          "upper": 78.13611944621837
+        }
+      },
+      "70-79": {
+        "predicted": "75.84",
+        "actual": "91.18",
+        "ci": {
+          "lower": 77.03918204763958,
+          "upper": 96.953460969569
+        }
+      },
+      "80-89": {
+        "predicted": "84.69",
+        "actual": "100.00",
+        "ci": {
+          "lower": 70.08472464490407,
+          "upper": 100
+        }
+      }
+    },
+    "home_over_2.5": {
+      "0-59": {
+        "predicted": "18.89",
+        "actual": "17.22",
+        "ci": {
+          "lower": 13.796535579026806,
+          "upper": 21.291805370607854
+        }
+      }
+    },
+    "home_under_2.5": {
+      "0-59": {
+        "predicted": "55.49",
+        "actual": "57.14",
+        "ci": {
+          "lower": 36.546216297032444,
+          "upper": 75.53030051347895
+        }
+      },
+      "60-69": {
+        "predicted": "65.89",
+        "actual": "70.59",
+        "ci": {
+          "lower": 58.89349573627328,
+          "upper": 80.08113734539529
+        }
+      },
+      "70-79": {
+        "predicted": "75.83",
+        "actual": "77.50",
+        "ci": {
+          "lower": 69.24293655773725,
+          "upper": 84.05094853418662
+        }
+      },
+      "80-89": {
+        "predicted": "84.87",
+        "actual": "91.13",
+        "ci": {
+          "lower": 84.8118056419356,
+          "upper": 94.97442982445405
+        }
+      },
+      "90-100": {
+        "predicted": "92.91",
+        "actual": "100.00",
+        "ci": {
+          "lower": 93.58038555118846,
+          "upper": 100
+        }
+      }
+    },
+    "home_under_3.5": {
+      "0-59": {
+        "predicted": "58.11",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "66.48",
+        "actual": "100.00",
+        "ci": {
+          "lower": 60.96569663469354,
+          "upper": 99.99999999999999
+        }
+      },
+      "70-79": {
+        "predicted": "75.83",
+        "actual": "84.62",
+        "ci": {
+          "lower": 70.27023013426569,
+          "upper": 92.75262615494853
+        }
+      },
+      "80-89": {
+        "predicted": "85.79",
+        "actual": "92.16",
+        "ci": {
+          "lower": 85.28111615000344,
+          "upper": 95.9723796399317
+        }
+      },
+      "90-100": {
+        "predicted": "95.13",
+        "actual": "98.33",
+        "ci": {
+          "lower": 95.79371621145086,
+          "upper": 99.35001644122201
+        }
+      }
+    },
+    "away_over_0.5": {
+      "0-59": {
+        "predicted": "54.28",
+        "actual": "53.57",
+        "ci": {
+          "lower": 35.81239514210167,
+          "upper": 70.46869626034041
+        }
+      },
+      "60-69": {
+        "predicted": "65.25",
+        "actual": "65.93",
+        "ci": {
+          "lower": 55.728522201045905,
+          "upper": 74.84877721186994
+        }
+      },
+      "70-79": {
+        "predicted": "74.54",
+        "actual": "67.81",
+        "ci": {
+          "lower": 59.85684283399851,
+          "upper": 74.84647053158221
+        }
+      },
+      "80-89": {
+        "predicted": "84.24",
+        "actual": "88.99",
+        "ci": {
+          "lower": 81.73757042606518,
+          "upper": 93.58925939556089
+        }
+      },
+      "90-100": {
+        "predicted": "91.92",
+        "actual": "100.00",
+        "ci": {
+          "lower": 79.6110733695652,
+          "upper": 100
+        }
+      }
+    },
+    "away_under_0.5": {
+      "0-59": {
+        "predicted": "22.80",
+        "actual": "26.29",
+        "ci": {
+          "lower": 22.156278281674574,
+          "upper": 30.885971443724664
+        }
+      },
+      "70-79": {
+        "predicted": "71.89",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "away_over_1.5": {
+      "0-59": {
+        "predicted": "40.32",
+        "actual": "33.52",
+        "ci": {
+          "lower": 28.810018302721492,
+          "upper": 38.58506632514775
+        }
+      },
+      "60-69": {
+        "predicted": "63.91",
+        "actual": "88.00",
+        "ci": {
+          "lower": 70.04380781662651,
+          "upper": 95.83325864293191
+        }
+      },
+      "70-79": {
+        "predicted": "73.19",
+        "actual": "87.50",
+        "ci": {
+          "lower": 52.91051942301386,
+          "upper": 97.75830911367038
+        }
+      },
+      "80-89": {
+        "predicted": "81.25",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "away_under_1.5": {
+      "0-59": {
+        "predicted": "47.23",
+        "actual": "50.20",
+        "ci": {
+          "lower": 44.01172101476941,
+          "upper": 56.38693694308128
+        }
+      },
+      "60-69": {
+        "predicted": "64.26",
+        "actual": "78.85",
+        "ci": {
+          "lower": 70.04227763289637,
+          "upper": 85.59487908584667
+        }
+      },
+      "70-79": {
+        "predicted": "74.77",
+        "actual": "88.24",
+        "ci": {
+          "lower": 73.37882520370121,
+          "upper": 95.32862902656389
+        }
+      },
+      "80-89": {
+        "predicted": "84.52",
+        "actual": "100.00",
+        "ci": {
+          "lower": 43.84939195509823,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "predicted": "95.62",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "away_over_2.5": {
+      "0-59": {
+        "predicted": "19.38",
+        "actual": "14.40",
+        "ci": {
+          "lower": 11.255169734828053,
+          "upper": 18.23294964967705
+        }
+      }
+    },
+    "away_under_2.5": {
+      "0-59": {
+        "predicted": "53.45",
+        "actual": "52.38",
+        "ci": {
+          "lower": 32.369217900266754,
+          "upper": 71.65628770323706
+        }
+      },
+      "60-69": {
+        "predicted": "66.30",
+        "actual": "69.57",
+        "ci": {
+          "lower": 57.91620736176137,
+          "upper": 79.15052373695144
+        }
+      },
+      "70-79": {
+        "predicted": "75.14",
+        "actual": "85.25",
+        "ci": {
+          "lower": 77.88085157665064,
+          "upper": 90.45902967088594
+        }
+      },
+      "80-89": {
+        "predicted": "85.16",
+        "actual": "96.15",
+        "ci": {
+          "lower": 91.31204109992453,
+          "upper": 98.34618175455421
+        }
+      },
+      "90-100": {
+        "predicted": "92.46",
+        "actual": "95.74",
+        "ci": {
+          "lower": 85.75121280614056,
+          "upper": 98.82519706294303
+        }
+      }
+    },
+    "away_under_3.5": {
+      "0-59": {
+        "predicted": "56.14",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "65.68",
+        "actual": "85.71",
+        "ci": {
+          "lower": 48.68654966809701,
+          "upper": 97.43210440510252
+        }
+      },
+      "70-79": {
+        "predicted": "75.65",
+        "actual": "87.50",
+        "ci": {
+          "lower": 73.88757932976186,
+          "upper": 94.54058022645873
+        }
+      },
+      "80-89": {
+        "predicted": "86.48",
+        "actual": "94.83",
+        "ci": {
+          "lower": 89.17305061462193,
+          "upper": 97.60816725963876
+        }
+      },
+      "90-100": {
+        "predicted": "95.22",
+        "actual": "99.55",
+        "ci": {
+          "lower": 97.51496060262478,
+          "upper": 99.92115290781408
+        }
+      }
+    },
+    "ht_over_0.5": {
+      "0-59": {
+        "predicted": "55.78",
+        "actual": "56.10",
+        "ci": {
+          "lower": 41.0402651517573,
+          "upper": 70.11009522789017
+        }
+      },
+      "60-69": {
+        "predicted": "65.75",
+        "actual": "63.06",
+        "ci": {
+          "lower": 53.788047847727505,
+          "upper": 71.46412558071655
+        }
+      },
+      "70-79": {
+        "predicted": "75.15",
+        "actual": "74.07",
+        "ci": {
+          "lower": 67.39069802586289,
+          "upper": 79.79829024222863
+        }
+      },
+      "80-89": {
+        "predicted": "82.47",
+        "actual": "82.98",
+        "ci": {
+          "lower": 69.85994892711489,
+          "upper": 91.11374190873607
+        }
+      },
+      "90-100": {
+        "predicted": "90.24",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "ht_under_0.5": {
+      "0-59": {
+        "predicted": "25.87",
+        "actual": "29.82",
+        "ci": {
+          "lower": 25.48924058702941,
+          "upper": 34.545541880000556
+        }
+      }
+    },
+    "ht_over_1.5": {
+      "0-59": {
+        "predicted": "37.65",
+        "actual": "34.11",
+        "ci": {
+          "lower": 29.562088026888862,
+          "upper": 38.96736226704097
+        }
+      },
+      "60-69": {
+        "predicted": "63.86",
+        "actual": "0.00",
+        "ci": {
+          "lower": 0,
+          "upper": 65.76280471103807
+        }
+      }
+    },
+    "ht_under_1.5": {
+      "0-59": {
+        "predicted": "53.17",
+        "actual": "56.94",
+        "ci": {
+          "lower": 50.27649098523377,
+          "upper": 63.36969790713236
+        }
+      },
+      "60-69": {
+        "predicted": "64.48",
+        "actual": "72.73",
+        "ci": {
+          "lower": 64.184185941249,
+          "upper": 79.8716416034156
+        }
+      },
+      "70-79": {
+        "predicted": "73.39",
+        "actual": "88.24",
+        "ci": {
+          "lower": 76.6188977022052,
+          "upper": 94.49500123582723
+        }
+      },
+      "90-100": {
+        "predicted": "90.37",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "ht_over_2.5": {
+      "0-59": {
+        "predicted": "15.34",
+        "actual": "11.05",
+        "ci": {
+          "lower": 8.310762939855302,
+          "upper": 14.558912776769414
+        }
+      }
+    },
+    "ht_under_2.5": {
+      "0-59": {
+        "predicted": "55.75",
+        "actual": "100.00",
+        "ci": {
+          "lower": 51.009997959600085,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "67.25",
+        "actual": "77.42",
+        "ci": {
+          "lower": 60.187239941302614,
+          "upper": 88.60500840550121
+        }
+      },
+      "70-79": {
+        "predicted": "76.40",
+        "actual": "86.73",
+        "ci": {
+          "lower": 78.61693677036048,
+          "upper": 92.08108839813649
+        }
+      },
+      "80-89": {
+        "predicted": "84.68",
+        "actual": "88.73",
+        "ci": {
+          "lower": 83.65060297109271,
+          "upper": 92.36882721035315
+        }
+      },
+      "90-100": {
+        "predicted": "91.96",
+        "actual": "100.00",
+        "ci": {
+          "lower": 93.12054095871179,
+          "upper": 100
+        }
+      }
+    },
+    "ht_under_3.5": {
+      "0-59": {
+        "predicted": "58.02",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "67.11",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "76.68",
+        "actual": "96.30",
+        "ci": {
+          "lower": 81.71614606584347,
+          "upper": 99.34320234669025
+        }
+      },
+      "80-89": {
+        "predicted": "86.64",
+        "actual": "94.00",
+        "ci": {
+          "lower": 83.78265662912298,
+          "upper": 97.93854036353696
+        }
+      },
+      "90-100": {
+        "predicted": "95.09",
+        "actual": "98.36",
+        "ci": {
+          "lower": 96.22042043814061,
+          "upper": 99.29779990523282
+        }
+      }
+    },
+    "st_over_0.5": {
+      "0-59": {
+        "predicted": "51.90",
+        "actual": "62.50",
+        "ci": {
+          "lower": 30.573785458380186,
+          "upper": 86.3158240538479
+        }
+      },
+      "60-69": {
+        "predicted": "65.71",
+        "actual": "71.70",
+        "ci": {
+          "lower": 58.429457999892264,
+          "upper": 82.03386463704966
+        }
+      },
+      "70-79": {
+        "predicted": "75.56",
+        "actual": "76.97",
+        "ci": {
+          "lower": 69.66546223835559,
+          "upper": 82.95206735579642
+        }
+      },
+      "80-89": {
+        "predicted": "84.28",
+        "actual": "85.21",
+        "ci": {
+          "lower": 79.07411718755772,
+          "upper": 89.77504875397486
+        }
+      },
+      "90-100": {
+        "predicted": "91.46",
+        "actual": "100.00",
+        "ci": {
+          "lower": 64.56611570247934,
+          "upper": 100
+        }
+      }
+    },
+    "st_under_0.5": {
+      "0-59": {
+        "predicted": "19.42",
+        "actual": "20.05",
+        "ci": {
+          "lower": 16.37410239914968,
+          "upper": 24.31446011561454
+        }
+      }
+    },
+    "st_over_1.5": {
+      "0-59": {
+        "predicted": "45.31",
+        "actual": "44.09",
+        "ci": {
+          "lower": 38.96112077647504,
+          "upper": 49.35269377687326
+        }
+      },
+      "60-69": {
+        "predicted": "63.14",
+        "actual": "72.50",
+        "ci": {
+          "lower": 57.16474916687543,
+          "upper": 83.89214656685692
+        }
+      },
+      "70-79": {
+        "predicted": "74.25",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      }
+    },
+    "st_under_1.5": {
+      "0-59": {
+        "predicted": "47.15",
+        "actual": "49.70",
+        "ci": {
+          "lower": 44.3190180073736,
+          "upper": 55.07828480215963
+        }
+      },
+      "60-69": {
+        "predicted": "63.95",
+        "actual": "67.27",
+        "ci": {
+          "lower": 54.102976176099475,
+          "upper": 78.18710431117483
+        }
+      },
+      "70-79": {
+        "predicted": "71.19",
+        "actual": "80.00",
+        "ci": {
+          "lower": 37.55282641185388,
+          "upper": 96.37768390302125
+        }
+      },
+      "80-89": {
+        "predicted": "86.64",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "st_over_2.5": {
+      "0-59": {
+        "predicted": "22.57",
+        "actual": "20.05",
+        "ci": {
+          "lower": 16.37410239914968,
+          "upper": 24.31446011561454
+        }
+      }
+    },
+    "st_under_2.5": {
+      "0-59": {
+        "predicted": "55.98",
+        "actual": "47.62",
+        "ci": {
+          "lower": 28.343712296762945,
+          "upper": 67.63078209973324
+        }
+      },
+      "60-69": {
+        "predicted": "65.60",
+        "actual": "75.95",
+        "ci": {
+          "lower": 65.46409953317426,
+          "upper": 84.0279431120668
+        }
+      },
+      "70-79": {
+        "predicted": "74.62",
+        "actual": "81.01",
+        "ci": {
+          "lower": 74.63117868755953,
+          "upper": 86.07710651668283
+        }
+      },
+      "80-89": {
+        "predicted": "84.37",
+        "actual": "86.54",
+        "ci": {
+          "lower": 78.66477402039114,
+          "upper": 91.80895782335006
+        }
+      },
+      "90-100": {
+        "predicted": "91.83",
+        "actual": "100.00",
+        "ci": {
+          "lower": 60.96569663469354,
+          "upper": 99.99999999999999
+        }
+      }
+    },
+    "st_over_3.5": {
+      "0-59": {
+        "predicted": "8.82",
+        "actual": "6.94",
+        "ci": {
+          "lower": 4.813679835843478,
+          "upper": 9.91021905877461
+        }
+      }
+    },
+    "st_under_3.5": {
+      "0-59": {
+        "predicted": "56.39",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "66.03",
+        "actual": "85.71",
+        "ci": {
+          "lower": 48.68654966809701,
+          "upper": 97.43210440510252
+        }
+      },
+      "70-79": {
+        "predicted": "75.61",
+        "actual": "73.68",
+        "ci": {
+          "lower": 57.990849793624655,
+          "upper": 85.0285376102987
+        }
+      },
+      "80-89": {
+        "predicted": "86.37",
+        "actual": "94.00",
+        "ci": {
+          "lower": 88.99090795570952,
+          "upper": 96.81163179946721
+        }
+      },
+      "90-100": {
+        "predicted": "93.67",
+        "actual": "96.35",
+        "ci": {
+          "lower": 92.66682232288456,
+          "upper": 98.22295798936779
+        }
+      }
+    },
+    "home_ht_over_0.5": {
+      "0-59": {
+        "predicted": "45.04",
+        "actual": "44.35",
+        "ci": {
+          "lower": 39.26314892533929,
+          "upper": 49.558720862857506
+        }
+      },
+      "60-69": {
+        "predicted": "63.46",
+        "actual": "65.63",
+        "ci": {
+          "lower": 48.31077350878594,
+          "upper": 79.58976664567146
+        }
+      },
+      "70-79": {
+        "predicted": "71.20",
+        "actual": "66.67",
+        "ci": {
+          "lower": 20.76549551264879,
+          "upper": 93.85096847238394
+        }
+      }
+    },
+    "home_ht_under_0.5": {
+      "0-59": {
+        "predicted": "47.89",
+        "actual": "49.25",
+        "ci": {
+          "lower": 43.9187512590408,
+          "upper": 54.596871514393364
+        }
+      },
+      "60-69": {
+        "predicted": "64.31",
+        "actual": "78.72",
+        "ci": {
+          "lower": 65.09569794902073,
+          "upper": 88.01041987575269
+        }
+      },
+      "70-79": {
+        "predicted": "73.34",
+        "actual": "88.89",
+        "ci": {
+          "lower": 56.49937852319399,
+          "upper": 98.01096286728695
+        }
+      }
+    },
+    "home_ht_over_1.5": {
+      "0-59": {
+        "predicted": "14.39",
+        "actual": "12.34",
+        "ci": {
+          "lower": 9.434493261582583,
+          "upper": 15.980737711919202
+        }
+      }
+    },
+    "home_ht_under_1.5": {
+      "0-59": {
+        "predicted": "55.87",
+        "actual": "100.00",
+        "ci": {
+          "lower": 43.84939195509823,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "66.76",
+        "actual": "81.48",
+        "ci": {
+          "lower": 63.30094349480825,
+          "upper": 91.81941342571469
+        }
+      },
+      "70-79": {
+        "predicted": "75.78",
+        "actual": "80.65",
+        "ci": {
+          "lower": 71.46734140699786,
+          "upper": 87.39166133562513
+        }
+      },
+      "80-89": {
+        "predicted": "85.34",
+        "actual": "88.32",
+        "ci": {
+          "lower": 83.09050890320474,
+          "upper": 92.09311839313227
+        }
+      },
+      "90-100": {
+        "predicted": "92.66",
+        "actual": "97.10",
+        "ci": {
+          "lower": 90.03322653873424,
+          "upper": 99.2014964766855
+        }
+      }
+    },
+    "home_ht_under_2.5": {
+      "0-59": {
+        "predicted": "59.01",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "68.26",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "77.74",
+        "actual": "96.15",
+        "ci": {
+          "lower": 81.1068230080416,
+          "upper": 99.31781910230102
+        }
+      },
+      "80-89": {
+        "predicted": "87.58",
+        "actual": "95.00",
+        "ci": {
+          "lower": 83.4958291820748,
+          "upper": 98.6179622853899
+        }
+      },
+      "90-100": {
+        "predicted": "96.68",
+        "actual": "99.05",
+        "ci": {
+          "lower": 97.24635659176877,
+          "upper": 99.67662028178363
+        }
+      }
+    },
+    "home_ht_under_3.5": {
+      "0-59": {
+        "predicted": "59.87",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "69.74",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "79.64",
+        "actual": "100.00",
+        "ci": {
+          "lower": 87.12669561953784,
+          "upper": 100.00000000000003
+        }
+      },
+      "80-89": {
+        "predicted": "89.58",
+        "actual": "100.00",
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "predicted": "99.33",
+        "actual": "99.69",
+        "ci": {
+          "lower": 98.2673832927213,
+          "upper": 99.94532892016711
+        }
+      }
+    },
+    "home_st_over_0.5": {
+      "0-59": {
+        "predicted": "49.04",
+        "actual": "53.98",
+        "ci": {
+          "lower": 48.218194428321986,
+          "upper": 59.63588094894682
+        }
+      },
+      "60-69": {
+        "predicted": "64.21",
+        "actual": "71.79",
+        "ci": {
+          "lower": 60.96886185077566,
+          "upper": 80.57480298471143
+        }
+      },
+      "70-79": {
+        "predicted": "72.97",
+        "actual": "90.91",
+        "ci": {
+          "lower": 72.18461934161421,
+          "upper": 97.47051037171623
+        }
+      }
+    },
+    "home_st_under_0.5": {
+      "0-59": {
+        "predicted": "42.47",
+        "actual": "38.25",
+        "ci": {
+          "lower": 33.41870377909255,
+          "upper": 43.32809809500705
+        }
+      },
+      "60-69": {
+        "predicted": "63.84",
+        "actual": "71.43",
+        "ci": {
+          "lower": 50.0432261771624,
+          "upper": 86.1863242543718
+        }
+      },
+      "70-79": {
+        "predicted": "73.90",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      }
+    },
+    "home_st_over_1.5": {
+      "0-59": {
+        "predicted": "19.43",
+        "actual": "17.99",
+        "ci": {
+          "lower": 14.496203679483804,
+          "upper": 22.1194704242771
+        }
+      }
+    },
+    "home_st_under_1.5": {
+      "0-59": {
+        "predicted": "56.72",
+        "actual": "57.14",
+        "ci": {
+          "lower": 32.59026690286937,
+          "upper": 78.61949006959948
+        }
+      },
+      "60-69": {
+        "predicted": "66.12",
+        "actual": "75.76",
+        "ci": {
+          "lower": 64.19064250894372,
+          "upper": 84.49094554173094
+        }
+      },
+      "70-79": {
+        "predicted": "75.35",
+        "actual": "78.29",
+        "ci": {
+          "lower": 70.41840313317833,
+          "upper": 84.53426229692789
+        }
+      },
+      "80-89": {
+        "predicted": "84.16",
+        "actual": "87.42",
+        "ci": {
+          "lower": 81.18310994380352,
+          "upper": 91.79469447051409
+        }
+      },
+      "90-100": {
+        "predicted": "92.32",
+        "actual": "96.55",
+        "ci": {
+          "lower": 82.82410893529976,
+          "upper": 99.38869433859678
+        }
+      }
+    },
+    "home_st_under_2.5": {
+      "0-59": {
+        "predicted": "58.33",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "67.12",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "76.37",
+        "actual": "85.19",
+        "ci": {
+          "lower": 67.52093665317051,
+          "upper": 94.08416814035512
+        }
+      },
+      "80-89": {
+        "predicted": "86.62",
+        "actual": "94.59",
+        "ci": {
+          "lower": 86.90943547687496,
+          "upper": 97.87813312397599
+        }
+      },
+      "90-100": {
+        "predicted": "95.45",
+        "actual": "97.15",
+        "ci": {
+          "lower": 94.48366930367665,
+          "upper": 98.55049424546786
+        }
+      }
+    },
+    "home_st_under_3.5": {
+      "0-59": {
+        "predicted": "59.74",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "69.47",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "79.28",
+        "actual": "96.15",
+        "ci": {
+          "lower": 81.1068230080416,
+          "upper": 99.31781910230102
+        }
+      },
+      "80-89": {
+        "predicted": "89.17",
+        "actual": "100.00",
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "predicted": "98.71",
+        "actual": "99.38",
+        "ci": {
+          "lower": 97.77076161951447,
+          "upper": 99.83003338332482
+        }
+      }
+    },
+    "away_ht_over_0.5": {
+      "0-59": {
+        "predicted": "45.78",
+        "actual": "41.34",
+        "ci": {
+          "lower": 36.35783768406057,
+          "upper": 46.507592935304366
+        }
+      },
+      "60-69": {
+        "predicted": "63.96",
+        "actual": "78.57",
+        "ci": {
+          "lower": 60.46105292072612,
+          "upper": 89.78767829881058
+        }
+      },
+      "70-79": {
+        "predicted": "72.08",
+        "actual": "33.33",
+        "ci": {
+          "lower": 6.14903152761605,
+          "upper": 79.23450448735122
+        }
+      }
+    },
+    "away_ht_under_0.5": {
+      "0-59": {
+        "predicted": "47.86",
+        "actual": "53.80",
+        "ci": {
+          "lower": 48.50430800809594,
+          "upper": 59.01358457625481
+        }
+      },
+      "60-69": {
+        "predicted": "63.94",
+        "actual": "69.77",
+        "ci": {
+          "lower": 54.89435424759017,
+          "upper": 81.39817205381712
+        }
+      },
+      "70-79": {
+        "predicted": "73.11",
+        "actual": "100.00",
+        "ci": {
+          "lower": 43.84939195509823,
+          "upper": 100
+        }
+      },
+      "80-89": {
+        "predicted": "86.20",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "away_ht_over_1.5": {
+      "0-59": {
+        "predicted": "14.71",
+        "actual": "12.08",
+        "ci": {
+          "lower": 9.208804762835552,
+          "upper": 15.69731515929082
+        }
+      }
+    },
+    "away_ht_under_1.5": {
+      "0-59": {
+        "predicted": "56.38",
+        "actual": "100.00",
+        "ci": {
+          "lower": 60.96569663469354,
+          "upper": 99.99999999999999
+        }
+      },
+      "60-69": {
+        "predicted": "67.28",
+        "actual": "78.57",
+        "ci": {
+          "lower": 60.46105292072612,
+          "upper": 89.78767829881058
+        }
+      },
+      "70-79": {
+        "predicted": "76.25",
+        "actual": "78.26",
+        "ci": {
+          "lower": 68.79280920305374,
+          "upper": 85.46338017608852
+        }
+      },
+      "80-89": {
+        "predicted": "85.24",
+        "actual": "89.95",
+        "ci": {
+          "lower": 84.98677199873816,
+          "upper": 93.3995156266799
+        }
+      },
+      "90-100": {
+        "predicted": "92.20",
+        "actual": "98.44",
+        "ci": {
+          "lower": 91.66570109970937,
+          "upper": 99.72365292495986
+        }
+      }
+    },
+    "away_ht_under_2.5": {
+      "0-59": {
+        "predicted": "58.17",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "67.84",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "77.69",
+        "actual": "92.31",
+        "ci": {
+          "lower": 75.85805251948496,
+          "upper": 97.86453608166245
+        }
+      },
+      "80-89": {
+        "predicted": "87.54",
+        "actual": "95.24",
+        "ci": {
+          "lower": 84.20986468452027,
+          "upper": 98.68427513607936
+        }
+      },
+      "90-100": {
+        "predicted": "96.63",
+        "actual": "99.36",
+        "ci": {
+          "lower": 97.70770226798263,
+          "upper": 99.82515686688205
+        }
+      }
+    },
+    "away_ht_under_3.5": {
+      "0-59": {
+        "predicted": "59.69",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "69.64",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "79.63",
+        "actual": "100.00",
+        "ci": {
+          "lower": 87.12669561953784,
+          "upper": 100.00000000000003
+        }
+      },
+      "80-89": {
+        "predicted": "89.58",
+        "actual": "100.00",
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "predicted": "99.31",
+        "actual": "100.00",
+        "ci": {
+          "lower": 98.82462942293758,
+          "upper": 99.99999999999999
+        }
+      }
+    },
+    "away_st_over_0.5": {
+      "0-59": {
+        "predicted": "49.25",
+        "actual": "44.96",
+        "ci": {
+          "lower": 39.22449466608725,
+          "upper": 50.84084700100519
+        }
+      },
+      "60-69": {
+        "predicted": "64.28",
+        "actual": "61.29",
+        "ci": {
+          "lower": 51.13079516226957,
+          "upper": 70.55410058501259
+        }
+      },
+      "70-79": {
+        "predicted": "73.90",
+        "actual": "88.24",
+        "ci": {
+          "lower": 65.66315750229009,
+          "upper": 96.7120919987079
+        }
+      },
+      "80-89": {
+        "predicted": "81.62",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "away_st_under_0.5": {
+      "0-59": {
+        "predicted": "42.57",
+        "actual": "48.41",
+        "ci": {
+          "lower": 43.41601406810798,
+          "upper": 53.44132153911764
+        }
+      },
+      "60-69": {
+        "predicted": "63.79",
+        "actual": "70.00",
+        "ci": {
+          "lower": 39.67732199795652,
+          "upper": 89.2210712513788
+        }
+      },
+      "80-89": {
+        "predicted": "83.40",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "away_st_over_1.5": {
+      "0-59": {
+        "predicted": "19.84",
+        "actual": "17.74",
+        "ci": {
+          "lower": 14.262692091807704,
+          "upper": 21.84387096057778
+        }
+      }
+    },
+    "away_st_under_1.5": {
+      "0-59": {
+        "predicted": "55.61",
+        "actual": "62.50",
+        "ci": {
+          "lower": 38.64064709793481,
+          "upper": 81.5190174452472
+        }
+      },
+      "60-69": {
+        "predicted": "65.92",
+        "actual": "67.86",
+        "ci": {
+          "lower": 54.822394156003895,
+          "upper": 78.59917211227771
+        }
+      },
+      "70-79": {
+        "predicted": "74.57",
+        "actual": "80.71",
+        "ci": {
+          "lower": 73.39429387953547,
+          "upper": 86.39369513059792
+        }
+      },
+      "80-89": {
+        "predicted": "84.43",
+        "actual": "89.31",
+        "ci": {
+          "lower": 83.54492597135501,
+          "upper": 93.21678602361433
+        }
+      },
+      "90-100": {
+        "predicted": "92.02",
+        "actual": "94.44",
+        "ci": {
+          "lower": 74.24220019799247,
+          "upper": 99.01250641690757
+        }
+      }
+    },
+    "away_st_under_2.5": {
+      "0-59": {
+        "predicted": "57.01",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "66.48",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "76.20",
+        "actual": "96.30",
+        "ci": {
+          "lower": 81.71614606584347,
+          "upper": 99.34320234669025
+        }
+      },
+      "80-89": {
+        "predicted": "86.20",
+        "actual": "90.91",
+        "ci": {
+          "lower": 81.55105617491718,
+          "upper": 95.76676014086023
+        }
+      },
+      "90-100": {
+        "predicted": "95.12",
+        "actual": "97.58",
+        "ci": {
+          "lower": 95.08554440584165,
+          "upper": 98.82187858324187
+        }
+      }
+    },
+    "away_st_under_3.5": {
+      "0-59": {
+        "predicted": "59.39",
+        "actual": "100.00",
+        "ci": {
+          "lower": 34.23719528896193,
+          "upper": 100
+        }
+      },
+      "60-69": {
+        "predicted": "69.29",
+        "actual": "100.00",
+        "ci": {
+          "lower": 56.550850524791905,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "79.26",
+        "actual": "100.00",
+        "ci": {
+          "lower": 87.12669561953784,
+          "upper": 100.00000000000003
+        }
+      },
+      "80-89": {
+        "predicted": "89.17",
+        "actual": "100.00",
+        "ci": {
+          "lower": 89.57265699643881,
+          "upper": 100
+        }
+      },
+      "90-100": {
+        "predicted": "98.66",
+        "actual": "99.69",
+        "ci": {
+          "lower": 98.2673832927213,
+          "upper": 99.94532892016711
+        }
+      }
+    },
+    "draw": {
+      "0-59": {
+        "predicted": "48.84",
+        "actual": "28.79",
+        "ci": {
+          "lower": 24.516754828191367,
+          "upper": 33.48158343333695
+        }
+      }
+    },
+    "favorite_win": {
+      "0-59": {
+        "predicted": "48.84",
+        "actual": "51.41",
+        "ci": {
+          "lower": 46.45757069007366,
+          "upper": 56.34254009249111
+        }
+      }
+    },
+    "outsider_win": {
+      "0-59": {
+        "predicted": "48.84",
+        "actual": "19.79",
+        "ci": {
+          "lower": 16.1384502128257,
+          "upper": 24.041001250563106
+        }
+      }
+    },
+    "double_chance_favorite": {
+      "0-59": {
+        "predicted": "48.84",
+        "actual": "80.21",
+        "ci": {
+          "lower": 75.9589987494369,
+          "upper": 83.86154978717431
+        }
+      }
+    },
+    "double_chance_outsider": {
+      "0-59": {
+        "predicted": "48.84",
+        "actual": "48.59",
+        "ci": {
+          "lower": 43.65745990750889,
+          "upper": 53.54242930992634
+        }
+      }
+    },
+    "btts": {
+      "0-59": {
+        "predicted": "50.21",
+        "actual": "51.74",
+        "ci": {
+          "lower": 44.86545017852595,
+          "upper": 58.55182443756766
+        }
+      },
+      "60-69": {
+        "predicted": "65.21",
+        "actual": "65.87",
+        "ci": {
+          "lower": 57.23434921846445,
+          "upper": 73.57241841224865
+        }
+      },
+      "70-79": {
+        "predicted": "73.33",
+        "actual": "70.00",
+        "ci": {
+          "lower": 52.12387898833981,
+          "upper": 83.33543735604106
+        }
+      },
+      "80-89": {
+        "predicted": "82.81",
+        "actual": "87.10",
+        "ci": {
+          "lower": 71.14724304561464,
+          "upper": 94.86579883535524
+        }
+      },
+      "90-100": {
+        "predicted": "92.94",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "btts_no": {
+      "0-59": {
+        "predicted": "38.17",
+        "actual": "38.40",
+        "ci": {
+          "lower": 33.61861727326304,
+          "upper": 43.41663967845504
+        }
+      },
+      "60-69": {
+        "predicted": "62.28",
+        "actual": "61.54",
+        "ci": {
+          "lower": 35.52248097226855,
+          "upper": 82.2905534187632
+        }
+      },
+      "80-89": {
+        "predicted": "83.94",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "match_over_0.5": {
+      "0-59": {
+        "predicted": "55.62",
+        "actual": "50.00",
+        "ci": {
+          "lower": 9.452865480086615,
+          "upper": 90.54713451991339
+        }
+      },
+      "60-69": {
+        "predicted": "66.32",
+        "actual": "83.33",
+        "ci": {
+          "lower": 43.649056343635394,
+          "upper": 96.99474141282697
+        }
+      },
+      "70-79": {
+        "predicted": "75.36",
+        "actual": "92.31",
+        "ci": {
+          "lower": 75.85805251948496,
+          "upper": 97.86453608166245
+        }
+      },
+      "80-89": {
+        "predicted": "86.19",
+        "actual": "86.67",
+        "ci": {
+          "lower": 75.83460540992789,
+          "upper": 93.08597302169036
+        }
+      },
+      "90-100": {
+        "predicted": "95.04",
+        "actual": "94.58",
+        "ci": {
+          "lower": 91.3722001563677,
+          "upper": 96.63428890004212
+        }
+      }
+    },
+    "match_under_0.5": {
+      "0-59": {
+        "predicted": "5.51",
+        "actual": "7.20",
+        "ci": {
+          "lower": 5.026637749515593,
+          "upper": 10.206372196477908
+        }
+      }
+    },
+    "match_over_1.5": {
+      "0-59": {
+        "predicted": "51.52",
+        "actual": "50.00",
+        "ci": {
+          "lower": 25.377817039342222,
+          "upper": 74.62218296065778
+        }
+      },
+      "60-69": {
+        "predicted": "65.97",
+        "actual": "61.97",
+        "ci": {
+          "lower": 50.341642238898274,
+          "upper": 72.37299774741948
+        }
+      },
+      "70-79": {
+        "predicted": "76.01",
+        "actual": "72.06",
+        "ci": {
+          "lower": 60.436340451653315,
+          "upper": 81.32219499299158
+        }
+      },
+      "80-89": {
+        "predicted": "84.75",
+        "actual": "78.69",
+        "ci": {
+          "lower": 70.60439583463517,
+          "upper": 85.02108890173183
+        }
+      },
+      "90-100": {
+        "predicted": "93.19",
+        "actual": "91.38",
+        "ci": {
+          "lower": 84.85562378006445,
+          "upper": 95.2501157961762
+        }
+      }
+    },
+    "match_under_1.5": {
+      "0-59": {
+        "predicted": "20.50",
+        "actual": "22.42",
+        "ci": {
+          "lower": 18.554568733296517,
+          "upper": 26.831526056026515
+        }
+      },
+      "60-69": {
+        "predicted": "67.89",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "match_over_2.5": {
+      "0-59": {
+        "predicted": "44.33",
+        "actual": "43.03",
+        "ci": {
+          "lower": 36.975570864075905,
+          "upper": 49.30598961648911
+        }
+      },
+      "60-69": {
+        "predicted": "65.36",
+        "actual": "65.59",
+        "ci": {
+          "lower": 55.49073090695003,
+          "upper": 74.45507750596343
+        }
+      },
+      "70-79": {
+        "predicted": "76.92",
+        "actual": "74.19",
+        "ci": {
+          "lower": 56.75352757228489,
+          "upper": 86.29845626313025
+        }
+      },
+      "80-89": {
+        "predicted": "84.64",
+        "actual": "85.00",
+        "ci": {
+          "lower": 63.95767041130426,
+          "upper": 94.7632208040504
+        }
+      },
+      "90-100": {
+        "predicted": "95.84",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "match_under_2.5": {
+      "0-59": {
+        "predicted": "40.22",
+        "actual": "44.04",
+        "ci": {
+          "lower": 39.01250492489694,
+          "upper": 49.201558383673145
+        }
+      },
+      "60-69": {
+        "predicted": "64.33",
+        "actual": "80.77",
+        "ci": {
+          "lower": 62.12336384535001,
+          "upper": 91.49306422821174
+        }
+      },
+      "70-79": {
+        "predicted": "71.18",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      },
+      "80-89": {
+        "predicted": "88.91",
+        "actual": "100.00",
+        "ci": {
+          "lower": 20.654329147389294,
+          "upper": 100
+        }
+      }
+    },
+    "match_over_3.5": {
+      "0-59": {
+        "predicted": "33.49",
+        "actual": "29.37",
+        "ci": {
+          "lower": 24.99982273154681,
+          "upper": 34.145540162386176
+        }
+      },
+      "60-69": {
+        "predicted": "62.27",
+        "actual": "100.00",
+        "ci": {
+          "lower": 72.24598312333835,
+          "upper": 100
+        }
+      },
+      "70-79": {
+        "predicted": "75.80",
+        "actual": "0.00",
+        "ci": {
+          "lower": 0,
+          "upper": 79.34567085261071
+        }
+      }
+    },
+    "match_under_3.5": {
+      "0-59": {
+        "predicted": "52.66",
+        "actual": "55.70",
+        "ci": {
+          "lower": 47.684836279164045,
+          "upper": 63.43779002152896
+        }
+      },
+      "60-69": {
+        "predicted": "65.31",
+        "actual": "68.52",
+        "ci": {
+          "lower": 59.25128648973632,
+          "upper": 76.5135809656649
+        }
+      },
+      "70-79": {
+        "predicted": "76.01",
+        "actual": "78.18",
+        "ci": {
+          "lower": 65.62971335952183,
+          "upper": 87.05410217234679
+        }
+      },
+      "80-89": {
+        "predicted": "86.05",
+        "actual": "90.63",
+        "ci": {
+          "lower": 75.78150066422116,
+          "upper": 96.75990373736805
+        }
+      },
+      "90-100": {
+        "predicted": "93.49",
+        "actual": "86.67",
+        "ci": {
+          "lower": 73.8224177587027,
+          "upper": 93.74293636565034
+        }
+      }
+    }
+  },
   "earlySeasonSummary": {
     "0-59": {
-      "success": 34,
-      "total": 134,
-      "avgPredicted": 17.72950239644972
+      "success": 1162,
+      "total": 3607,
+      "avgPredicted": 26.95830025162174,
+      "rate": 32.21513723315775,
+      "ci": {
+        "lower": 30.709719304331795,
+        "upper": 33.75839804537415
+      }
     },
     "60-69": {
-      "success": 13,
-      "total": 19,
-      "avgPredicted": 65.87504357533862
+      "success": 397,
+      "total": 487,
+      "avgPredicted": 65.6701657042109,
+      "rate": 81.51950718685832,
+      "ci": {
+        "lower": 77.83018434025838,
+        "upper": 84.71545156346289
+      }
     },
     "70-79": {
-      "success": 58,
-      "total": 64,
-      "avgPredicted": 78.43325467684932
+      "success": 610,
+      "total": 683,
+      "avgPredicted": 75.73790615500961,
+      "rate": 89.31185944363104,
+      "ci": {
+        "lower": 86.77089880963878,
+        "upper": 91.41306675097955
+      }
     },
     "80-89": {
-      "success": 0,
-      "total": 0,
-      "avgPredicted": 0
+      "success": 426,
+      "total": 437,
+      "avgPredicted": 86.58923288711266,
+      "rate": 97.48283752860412,
+      "ci": {
+        "lower": 95.54935242812265,
+        "upper": 98.58876883810993
+      }
     },
     "90-100": {
       "success": 0,
       "total": 0,
-      "avgPredicted": 0
+      "avgPredicted": 0,
+      "rate": 0,
+      "ci": {
+        "lower": 0,
+        "upper": 0
+      }
     }
   }
 }
